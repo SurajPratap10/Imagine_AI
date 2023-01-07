@@ -34,7 +34,7 @@ async function generateImageRequest(prompt, size) {
 
     if (!response.ok) {
       removeSpinner();
-      throw new Error('That image was not generated');
+      throw new Error('The image was not generated');
     }
 
     const data = await response.json();
