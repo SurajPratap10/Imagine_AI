@@ -23,7 +23,7 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 
 # How to use
 
-Rename the `example.env` file to `.env`.
+Create a file named `.env`.
 
 Generate an API KEY at [OpenAI](https://beta.openai.com/) and add it to the `.env` file.
 
