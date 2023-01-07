@@ -46,4 +46,5 @@ The endpoint is at `POST http://localhost:5000/openai/generateimage`.
 <hr>
 
 <h4> Live Site: https://imagine-ai-fice.vercel.app/  </h4>
+<br>
 (Currently backend facing some deployment issues because of the API so image may not be generated will fix this soon ,  Frontend working fine)
