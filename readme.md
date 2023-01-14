@@ -21,7 +21,7 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 7) Postman
 
 
-# How to use
+# How to use the project
 
 Create a file named `.env`.
 
