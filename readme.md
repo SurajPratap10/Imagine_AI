@@ -9,6 +9,8 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
   <img src="cover.png" />
 </p>
 
+## Video Demo:
+<h4> YouTube: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
 <br>
 
 # Technologies used
