@@ -2,7 +2,7 @@
 
 <br>
 
-<h3>"IMAGINE - AI: Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images."</h3>
+<h3>"Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images."</h3>
 The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js and Express that uses [OpenAI's Dall-E models](https://beta.openai.com/docs/guides/images) to generate images.
 
 <p align="center">
