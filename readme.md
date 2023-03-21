@@ -12,7 +12,7 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 
 ## Links:
 <h4> YouTube: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
-<h4> Live Site: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
+<h4> Live Site: https://imagine-ai-17zf.vercel.app/ </h4>
 <br>
 
 # Technologies used
