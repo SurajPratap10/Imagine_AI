@@ -70,7 +70,7 @@ git clone  https://github.com/SurajPratap10/Imagine_AI
 **3.** Navigate to the project directory :file_folder: .
 
 ```
-cd Imagine_AI
+cd imagine_ai
 ```
 
 **4.** Add a reference(remote) to the original repository.
