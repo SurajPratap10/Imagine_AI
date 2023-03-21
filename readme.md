@@ -132,4 +132,8 @@ git push -u origin <your_branch_name>
 <hr>
 
 
+<h1 align=center> Project Maintainer & Admin </h1>
+<p align="center"> <a href="https://github.com/SurajPratap10"><img src="https://avatars.githubusercontent.com/u/92919173?v=4" width=100px height=100px /></a>
+<p align="center"> Suraj Pratap </p>
+
 
