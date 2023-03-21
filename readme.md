@@ -135,7 +135,10 @@ git push -u origin <your_branch_name>
 
 
 <h1 align=center> Project Maintainer & Admin </h1>
-<p align="center"> <a href="https://github.com/SurajPratap10"><img src="https://avatars.githubusercontent.com/u/92919173?v=4" width=100px height=100px /></a>
-<p align="center"> Suraj Pratap </p>
-
-
+<p align="center"> <a href="https://github.com/SurajPratap10"><img src="https://avatars.githubusercontent.com/u/92919173?v=4" width=100px height=100px /></a><br>
+<a href="https://github.com/SurajPratap10" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.linkedin.com/in/suraj-pratap-948a92225/" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
