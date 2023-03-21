@@ -127,7 +127,7 @@ git push -u origin <your_branch_name>
 
 **15.** Congratulations! You have made a succsessful PR to the Imagine_AI.<br>
 
-**16.** Sit back patiently and relax while your PR is reviewed.
+**16.** Now sit back patiently and relax while your PR is being reviewed.
 
 #### Note :-
 -   **Please follow best code formatting and linting practices to assure good code quality. You should use tools such as Prettier or Eslint for thy purpose.**
