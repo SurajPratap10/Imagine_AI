@@ -130,7 +130,7 @@ git push -u origin <your_branch_name>
 **16.** Now sit back patiently and relax while your PR is being reviewed.
 
 #### Note :-
--   **Please follow best code formatting and linting practices to assure good code quality. You should use tools such as Prettier or Eslint for thy purpose.**
+-   **Please follow best code formatting and linting practices to assure good code quality. You should use tools such as Prettier or Eslint for the purpose.**
 
 <hr>
 
