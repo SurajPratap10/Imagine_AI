@@ -143,3 +143,10 @@ git push -u origin <your_branch_name>
 <a href="https://www.linkedin.com/in/suraj-pratap-948a92225/" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
+  
+ # Open Source Events
+  - GSSoc'23
+  
+  
+  ![logo](https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c)
+
