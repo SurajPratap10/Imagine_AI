@@ -13,7 +13,6 @@
   right: 0;
   display: none;
 }
-
 .show {
   display: block;
 }
@@ -46,7 +45,7 @@
 }
 
 .spinner:not(:required):after {
-  content: '';
+  content: 'Please wait,while we load image for you.';
   display: block;
   font-size: 10px;
   width: 1em;

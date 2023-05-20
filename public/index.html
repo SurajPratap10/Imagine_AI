@@ -5,9 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/spinner.css" />
-
     <script src="js/main.js" defer></script>
     <title>IMAGINE - AI</title>
   </head>
@@ -15,12 +17,12 @@
     <header>
       <div class="navbar">
         <div class="logo">
-          <h2>IMAGINE - AI</h2>
+          <h2 class="AI">IMAGINE - AI</h2>
         </div>
         <div class="nav-links">
           <ul>
             <li>
-              <a href="https://openai.com/dall-e-2/" target="_blank"
+              <a class = "AI" href="https://openai.com/dall-e-2/" target="_blank"
                 >DALL.E 2 - OpenAI API</a
               >
             </li>
@@ -32,7 +34,7 @@
     <main>
       <section class="showcase">
         <form id="image-form">
-          <h1>IMAGE DESCRIPTION</h1>
+          <h1 class = "AI">IMAGE DESCRIPTION</h1>
           <div class="form-control">
             <input type="text" id="prompt" placeholder="Enter Text" />
           </div>
@@ -59,7 +61,8 @@
         </div>
       </section>
     </main>
-
-    <div class="spinner"></div>
+    <div class="spinner">
+    </div>
   </body>
+  <footer>&copy Suraj Pratap <br /> <a href= "https://github.com/SurajPratap10">Github </a></footer>
 </html>
