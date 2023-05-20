@@ -229,7 +229,9 @@ img {
     width: 100%;
     height: auto;
   }
-
+  .get-api-text p{
+    font-size: 10px;
+  }
 
 }
 footer{
