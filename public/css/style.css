@@ -216,8 +216,8 @@ img {
 
 }
 footer{
-  position: fixed;
-  bottom: 10%;
+  position: relative;
+  top: 10vh;
   width: 100%;
   color: white;
   text-align: center;
