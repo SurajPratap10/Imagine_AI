@@ -277,8 +277,13 @@ img {
 
 }
 footer{
+<<<<<<< HEAD
   position: fixed;
   /* bottom: 10%; */
+=======
+  position: relative;
+  top: 10vh;
+>>>>>>> 477c853435d52c2bb57a6df84b0824e39e424e98
   width: 100%;
   color: white;
   text-align: center;
