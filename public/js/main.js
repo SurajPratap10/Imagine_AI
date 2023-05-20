@@ -8,13 +8,13 @@ function onSubmit(e) {
 
   const prompt = document.querySelector('#prompt').value;
   const size = document.querySelector('#size').value;
-  const API_KEY = document.querySelector('#api-key').value;   //API Key
+  const API_KEY = document.querySelector('#api-key').value;   //API Key, this value can be passed as paramerter in the function as well...
 
   if (prompt === '') {
     alert('Please add some text');
     return;
   } else if (API_KEY === '') {
-    alert('Please add your API Key');
+    alert('Please add your API Key');      //if API Key is not added
     return;
   }
 
