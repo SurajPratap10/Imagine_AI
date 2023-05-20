@@ -125,6 +125,23 @@ form select:hover{
 }
 
 /* form button {
+=======
+.get-api-text {
+  color: white;
+}
+
+.get-api-text a {
+  color: gray;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.get-api-text a:hover {
+  color: cyan;
+  transition: 0.3s ease-in-out;
+}
+
+form button {
   border: none;
   border-radius: 60px;
   display: block;

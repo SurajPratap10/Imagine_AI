@@ -8,9 +8,13 @@ function onSubmit(e) {
 
   const prompt = document.querySelector('#prompt').value;
   const size = document.querySelector('#size').value;
+  const API_KEY = document.querySelector('#api-key').value;   //API Key, this value can be passed as paramerter in the function as well...
 
   if (prompt === '') {
     alert('Please add some text');
+    return;
+  } else if (API_KEY === '') {
+    alert('Please add your API Key');      //if API Key is not added
     return;
   }
 
@@ -19,7 +23,7 @@ function onSubmit(e) {
 
 async function generateImageRequest(prompt, size) {
   try {
-    showLoading()
+    // showLoading()
     showSpinner();
 
     const response = await fetch('/openai/generateimage', {
@@ -34,7 +38,7 @@ async function generateImageRequest(prompt, size) {
     });
 
     if (!response.ok) {
-      hideLoading();
+      // hideLoading();
       removeSpinner();
       throw new Error('The image was not generated');
     }
@@ -45,7 +49,7 @@ async function generateImageRequest(prompt, size) {
     //Displaying Image in the Frontend:
     const imageUrl = data.data;
     document.querySelector('#image').src = imageUrl;
-    hideLoading();
+    // hideLoading();
     removeSpinner();
   } catch (error) {
     document.querySelector('.msg').textContent = error;
