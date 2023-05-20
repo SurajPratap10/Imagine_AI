@@ -170,12 +170,11 @@ img {
   margin-top: 1rem;
 }
 
-
-
-
-
-
-
+.buttonsForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 
 /* Applying Media Queries for Mobile Responsivness */
 
@@ -211,6 +210,10 @@ img {
     height: auto;
   }
   
+  .buttonsForm {
+    display: flex;
+    flex-direction: column;
+  }
 
 }
 

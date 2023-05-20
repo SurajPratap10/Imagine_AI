@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/spinner.css" />
 
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
     <title>IMAGINE - AI</title>
   </head>
   <body>
@@ -48,7 +48,10 @@
               <option value="large">Large</option>
             </select>
           </div>
-          <button type="submit" class="btn">Generate</button>
+          <div class="buttonsForm">
+            <button type="submit" class="btn">Generate</button>
+            <button type="button" id="btnSurprise">Surprise Me</button>
+          </div>
         </form>
       </section>
 

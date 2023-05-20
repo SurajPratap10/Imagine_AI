@@ -1,3 +1,5 @@
+import { surpriseMePrompts } from './constants.js';
+
 function onSubmit(e) {
   e.preventDefault();
 
@@ -62,3 +64,15 @@ function removeSpinner() {
 }
 
 document.querySelector('#image-form').addEventListener('submit', onSubmit);
+
+//Generating random prompts
+function surpriseMe () {
+  const randomIndex = Math.floor(Math.random() * surpriseMePrompts.length);
+  const randomPrompt = surpriseMePrompts[randomIndex];
+  // console.log(randomPrompt);
+  document.getElementById("prompt").value = randomPrompt;
+};
+
+//Surprise Me button
+const button = document.getElementById("btnSurprise");
+button.addEventListener("click", surpriseMe);
