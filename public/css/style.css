@@ -162,6 +162,8 @@ button{
   overflow: hidden;
   margin: 0 auto;
   background-color: transparent;
+  border: none;
+  border-radius: 60px;
 }
 button span{
   position: relative;
