@@ -100,7 +100,9 @@ body {
   width: 100%;
   gap: 2rem;
 }
-
+.form-control select{
+  cursor: pointer;
+}
 .showcase form input,
 form select {
   font-weight: 700;
@@ -114,7 +116,7 @@ form select {
   color: rgb(17, 17, 17);
   text-decoration: none;
   transition: transform 0.5s;
-  cursor: pointer;
+  cursor: text;
   border-radius: 60px;
 
 
