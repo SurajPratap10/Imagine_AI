@@ -139,33 +139,10 @@ form select:hover{
   transition: 0.3s ease-in-out;
 }
 
-/* form button {
-  border: none;
-  border-radius: 60px;
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  outline: none;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-  background-color: #e31153;
-  padding: 17px 60px;
-  margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
-  margin-top: 40px;
-  transition: 0.3s ease-in;
-} */
-/* 
-form button:hover {
-  background: #e31153;
-  transform: translateY(10px);
-  opacity: 0.5;
+.get-api-text {
+  color: white;
+}
 
-} */
 button{
   outline: none;
   position:relative;
