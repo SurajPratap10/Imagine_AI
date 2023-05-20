@@ -15,7 +15,7 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 
 # Links:
 <h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
-<h4> Live Site: https://imagine-ai-suraj-pratap10-f54xqw0cc-sp10.vercel.app/ </h4>
+<h4> Live Site: https://imagine-ai-suraj-pratap10-git-fork-rutujp78-main-sp10.vercel.app/ </h4>
 
 # Technology Stack used:
 1) Node JS
