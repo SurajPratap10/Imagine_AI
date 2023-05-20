@@ -72,7 +72,7 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 450px;
+  height: 540px;
   width: 100%;
   background: var(--primary-color);
 }
@@ -98,6 +98,7 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  gap: 2rem;
 }
 
 .showcase form input,
@@ -282,10 +283,11 @@ img {
 }
 footer{
   position: relative;
-  top: 10vh;
+  top: 8vh;
   width: 100%;
   color: white;
   text-align: center;
+  margin-top: 5rem;
 }
 footer a {
   text-decoration: none;
