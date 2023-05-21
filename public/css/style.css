@@ -72,14 +72,14 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 450px;
+  height: 500px;
   width: 100%;
   background: var(--primary-color);
 }
 
 .showcase h1 {
     display: flex;
-    font-size: 40px;
+    font-size: 2.4rem;
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
     /* width: 100%; */
@@ -98,6 +98,7 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  gap: 1rem;
 }
 .form-control select{
   cursor: pointer;
@@ -125,7 +126,6 @@ form select:hover{
   background: #ffffff;
   transform: translateY(5px);
 }
-
 .get-api-text {
   color: white;
 }
@@ -141,32 +141,76 @@ form select:hover{
   transition: 0.3s ease-in-out;
 }
 
-form button {
-  border: none;
-  border-radius: 60px;
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  outline: none;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-  background-color: #e31153;
-  padding: 17px 60px;
-  margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
-  margin-top: 40px;
-  transition: 0.3s ease-in;
+.get-api-text {
+  color: white;
 }
 
-form button:hover {
+button{
+  outline: none;
+  position:relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 60px;
+  border: none;
+  margin-top: 40px;
+  text-align: center;
+}
+button span{
+  position: relative;
+  right:10px;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 7px;
+}
+button .flow{
+  position: absolute;
+  left: 0;
+  top:-80px;
+  width: 200px;
+  height: 200px;
   background: #e31153;
-  transform: translateY(10px);
-  opacity: 0.5;
-
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+button:hover .flow{
+  top: -120px;
+}
+button .flow:before,
+button .flow:after{
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-75%);
+}
+button .flow:before{
+  border-radius: 45%;
+  background: rgba(20,20,20,1);
+  animation: swing 5s linear infinite;
+}
+button .flow:after{
+  border-radius: 40%;
+  background: rgba(20,20,20,0.5);
+  animation: swing 10s linear infinite;
+}
+@keyframes swing{
+  0%
+  {
+      transform: translate(-50%,-75%) rotate(0deg);
+  }
+  100%
+  {
+      transform: translate(-50%,-75%) rotate(360deg);
+  }
 }
 
 
@@ -184,7 +228,7 @@ img {
 }
 
 .msg {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 1rem;
 }
