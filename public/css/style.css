@@ -243,7 +243,7 @@ img {
 
 /* Applying Media Queries for Mobile Responsivness */
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 750px){
 
   .showcase h1{
     font-size: 32px;
@@ -277,6 +277,12 @@ img {
   .get-api-text p{
     font-size: 10px;
   }
+
+  .about {
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+
   .about h1{
     font-size: 1.5rem;
   }
@@ -285,6 +291,7 @@ img {
   }
 
 }
+
 .about{
   height: 90vh;
   width: 100%;
