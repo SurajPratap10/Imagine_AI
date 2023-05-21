@@ -244,7 +244,7 @@ img {
 
 
 .about{
-  height: 90vh;
+  height: 94vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -277,7 +277,7 @@ font-weight: bolder;
   
   font-size: 20px;
   font-weight: 600;
-  padding: 17px 30px;
+  /* padding: 17px 30px; */
   letter-spacing: 6px;
   
   cursor: pointer;
@@ -324,6 +324,9 @@ font-weight: bolder;
 }
 .btn:hover{
   background-color:#7152ee;
+}
+#surpriseMeBtn{
+  color: white;
 }
 footer{
   position: relative;
@@ -399,7 +402,7 @@ footer a {
   }
 
 }
-=======
+
 span {
   position: absolute;
   top: 50%;
