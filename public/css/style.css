@@ -153,7 +153,7 @@ button,.btn{
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  width: 200px;
+  width: 250px;
   overflow: hidden;
   margin: 0 auto;
   background-color: transparent;
@@ -174,7 +174,7 @@ button .flow{
   position: absolute;
   left: 0;
   top:-80px;
-  width: 200px;
+  width: 250px;
   height: 200px;
   background: #e31153;
   box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
@@ -187,7 +187,7 @@ button .flow:before,
 button .flow:after{
   content: '';
   position: absolute;
-  width: 200%;
+  width: 180%;
   height: 200%;
   top: 0;
   left: 50%;
@@ -241,6 +241,109 @@ img {
 
 
 
+
+
+.about{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.about h1{
+padding: 70px 20px;
+font-size: 2.1rem;
+color: white;
+font-weight: bolder;
+
+}
+.about h4{
+  font-size:1.2rem;
+  padding:0 40px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.about h3{
+  font-size:1.2rem;
+  padding: 15px 40px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.btn{
+  background-color: black;
+  color:#fff;
+  white-space: nowrap;
+  
+  font-size: 20px;
+  font-weight: 600;
+  padding: 17px 30px;
+  letter-spacing: 6px;
+  
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  margin-top: 5px;
+}
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.btn .flow{
+  position: absolute;
+  left: 0;
+  top:-80px;
+  width: 250px;
+  height: 200px;
+
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+.btn:hover{
+  background-color:#7152ee;
+}
+footer{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.formBtns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 /* Applying Media Queries for Mobile Responsivness */
 
 @media screen and (max-width: 750px){
@@ -290,102 +393,13 @@ img {
     font-size: 1rem;
   }
 
-}
-
-.about{
-  height: 90vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-.about h1{
-padding: 70px 20px;
-font-size: 2.1rem;
-color: white;
-font-weight: bolder;
+  .formBtns {
+    display: flex;
+    flex-direction: column;
+  }
 
 }
-.about h4{
-  font-size:1.2rem;
-  padding:0 40px;
-  letter-spacing: 1px;
-  line-height: 30px;
-}
-.about h3{
-  font-size:1.2rem;
-  padding: 15px 40px;
-  letter-spacing: 1px;
-  line-height: 30px;
-}
-.btn{
-  background-color: black;
-  color:#fff;
-  white-space: nowrap;
-  
-  font-size: 20px;
-  font-weight: 600;
-  padding: 17px 30px;
-  letter-spacing: 6px;
-  
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: 0.2s;
-  margin-top: 60px;
-}
-.btn span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.btn span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.btn:hover span {
-  padding-right: 25px;
-}
-
-.btn:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
-.btn .flow{
-  position: absolute;
-  left: 0;
-  top:-80px;
-  width: 200px;
-  height: 200px;
-
-  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
-  transition: 0.5s;
-}
-.btn:hover{
-  background-color:#7152ee;
-}
-footer{
-  position: relative;
-  top: 10vh;
-  width: 100%;
-  color: white;
-  text-align: center;
-}
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
+=======
 span {
   position: absolute;
   top: 50%;
