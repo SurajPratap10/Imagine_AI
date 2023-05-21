@@ -150,3 +150,12 @@ git push -u origin <your_branch_name>
 <p align="center"> 
 <img src= https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c />
 </p>
+
+<h2>Thanks to all Contributors 💪 </h2>
+
+<br>
+
+<h4>Thanks a lot for spending your time helping Moksh grow. Thanks a lot! Keep rocking 🍻 </h4>
+
+<a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI" height="50" width="100%" align="right">
