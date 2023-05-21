@@ -72,7 +72,7 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 500px;
+  height: 90vh;
   width: 100%;
   background: var(--primary-color);
 }
@@ -89,6 +89,7 @@ body {
     outline: none;
     animation: animate 5s linear infinite;
     margin-bottom: 60px;
+    padding-top: 60px;
 }
 
 .showcase form {
@@ -145,7 +146,7 @@ form select:hover{
   color: white;
 }
 
-button{
+button,.btn{
   outline: none;
   position:relative;
   padding: 20px 50px;
@@ -276,7 +277,95 @@ img {
   .get-api-text p{
     font-size: 10px;
   }
+  .about h1{
+    font-size: 1.5rem;
+  }
+  .about h4,h3{
+    font-size: 1rem;
+  }
 
+}
+.about{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.about h1{
+padding: 70px 20px;
+font-size: 2.1rem;
+color: white;
+font-weight: bolder;
+
+}
+.about h4{
+  font-size:1.2rem;
+  padding:0 40px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.about h3{
+  font-size:1.2rem;
+  padding: 15px 40px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.btn{
+  background-color: black;
+  color:#fff;
+  white-space: nowrap;
+  
+  font-size: 20px;
+  font-weight: 600;
+  padding: 17px 30px;
+  letter-spacing: 6px;
+  
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  margin-top: 60px;
+}
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.btn .flow{
+  position: absolute;
+  left: 0;
+  top:-80px;
+  width: 200px;
+  height: 200px;
+
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+.btn:hover{
+  background-color:#7152ee;
 }
 footer{
   position: relative;
