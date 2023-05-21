@@ -337,6 +337,7 @@ footer a {
   color: white;
 }
 
+
 .formBtns {
   display: flex;
   flex-direction: row;
@@ -397,4 +398,19 @@ footer a {
     flex-direction: column;
   }
 
+}
+=======
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%, -50%);
+}
+
+#try-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
 }
