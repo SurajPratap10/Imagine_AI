@@ -18,10 +18,10 @@ function onSubmit(e) {
     return;
   }
 
-  generateImageRequest(prompt, size);
+  generateImageRequest(prompt, size, API_KEY);
 }
 
-async function generateImageRequest(prompt, size) {
+async function generateImageRequest(prompt, size, API_KEY) {
   try {
     // showLoading()
     showSpinner();
@@ -34,6 +34,7 @@ async function generateImageRequest(prompt, size) {
       body: JSON.stringify({
         prompt,
         size,
+        API_KEY
       }),
     });
 

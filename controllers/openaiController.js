@@ -1,14 +1,13 @@
 const { Configuration, OpenAIApi } = require('openai');
 
-
-
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-
 const generateImage = async (req, res) => {
-  const { prompt, size } = req.body;
+  const { prompt, size, API_KEY } = req.body;
+
+  const configuration = new Configuration({
+    apiKey: API_KEY,
+  });
+
+  const openai = new OpenAIApi(configuration);
 
   const imageSize =
     size === 'small' ? '256x256' : size === 'medium' ? '512x512' : '1024x1024';
@@ -33,9 +32,6 @@ const generateImage = async (req, res) => {
     } else {
       console.log(error.message);
     }
-
-    
- 
   
     res.status(400).json({
       success: false,
