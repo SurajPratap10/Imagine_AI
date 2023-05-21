@@ -72,14 +72,14 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 540px;
+  height: 500px;
   width: 100%;
   background: var(--primary-color);
 }
 
 .showcase h1 {
     display: flex;
-    font-size: 40px;
+    font-size: 2.4rem;
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
     /* width: 100%; */
@@ -98,7 +98,7 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 .form-control select{
   cursor: pointer;
@@ -158,6 +158,8 @@ button{
   background-color: transparent;
   border-radius: 60px;
   border: none;
+  margin-top: 40px;
+  text-align: center;
 }
 button span{
   position: relative;
@@ -226,7 +228,7 @@ img {
 }
 
 .msg {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -276,11 +278,10 @@ img {
 }
 footer{
   position: relative;
-  top: 8vh;
+  top: 10vh;
   width: 100%;
   color: white;
   text-align: center;
-  margin-top: 5rem;
 }
 footer a {
   text-decoration: none;
