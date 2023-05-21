@@ -145,7 +145,7 @@ git push -u origin <your_branch_name>
 </a>
   
  # Open Source Events
-  - GSSoc'23
+  - GSSoC'23
   
 <p align="center"> 
 <img src= https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c />
