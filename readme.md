@@ -151,7 +151,7 @@ git push -u origin <your_branch_name>
 <img src= https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c />
 </p>
 
-<h2>Thanks to all Contributors 💪 </h2>
+# Thanks to all Contributors 💪 
 
 <br>
 
