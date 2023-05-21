@@ -72,7 +72,7 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background: var(--primary-color);
 }
@@ -244,7 +244,7 @@ img {
 
 
 .about{
-  height: 90vh;
+  height: 94vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -277,14 +277,14 @@ font-weight: bolder;
   
   font-size: 20px;
   font-weight: 600;
-  padding: 17px 30px;
+  /* padding: 17px 30px; */
   letter-spacing: 6px;
   
   cursor: pointer;
   border: none;
   outline: none;
   transition: 0.2s;
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .btn span {
   cursor: pointer;
@@ -325,6 +325,9 @@ font-weight: bolder;
 .btn:hover{
   background-color:#7152ee;
 }
+#surpriseMeBtn{
+  color: white;
+}
 footer{
   position: relative;
   top: 10vh;
@@ -342,6 +345,7 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding-bottom: 20px;
 }
 
 /* Applying Media Queries for Mobile Responsivness */
@@ -399,7 +403,7 @@ footer a {
   }
 
 }
-=======
+
 span {
   position: absolute;
   top: 50%;
