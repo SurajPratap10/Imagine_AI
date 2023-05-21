@@ -153,13 +153,12 @@ button,.btn{
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  width: 200px;
+  width: 250px;
   overflow: hidden;
   margin: 0 auto;
   background-color: transparent;
   border-radius: 60px;
   border: none;
-  margin-top: 40px;
   text-align: center;
 }
 button span{
@@ -234,57 +233,12 @@ img {
   margin-top: 1rem;
 }
 
-
-
-
-
-
-
-
-/* Applying Media Queries for Mobile Responsivness */
-
-@media screen and (max-width: 600px){
-
-  .showcase h1{
-    font-size: 32px;
-    line-height: 50px;
-  }
-
-  .navbar a{
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .navbar{
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  body {
-    width: auto;
-  }
-
-  .showcase form input,
-    form select{
-      width: 300px;
-
-  }
-
-  img{
-    width: 100%;
-    height: auto;
-  }
-  .get-api-text p{
-    font-size: 10px;
-  }
-  .about h1{
-    font-size: 1.5rem;
-  }
-  .about h4,h3{
-    font-size: 1rem;
-  }
-
+.formBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
+
 .about{
   height: 90vh;
   width: 100%;
@@ -312,6 +266,7 @@ font-weight: bolder;
   letter-spacing: 1px;
   line-height: 30px;
 }
+
 .btn{
   background-color: black;
   color:#fff;
@@ -319,6 +274,7 @@ font-weight: bolder;
   
   font-size: 20px;
   font-weight: 600;
+  text-align: center;
   padding: 17px 30px;
   letter-spacing: 6px;
   
@@ -326,7 +282,7 @@ font-weight: bolder;
   border: none;
   outline: none;
   transition: 0.2s;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .btn span {
   cursor: pointer;
@@ -377,4 +333,54 @@ footer{
 footer a {
   text-decoration: none;
   color: white;
+}
+
+/* Applying Media Queries for Mobile Responsivness */
+
+@media screen and (max-width: 600px){
+
+  .showcase h1{
+    font-size: 32px;
+    line-height: 50px;
+  }
+
+  .navbar a{
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .navbar{
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  body {
+    width: auto;
+  }
+
+  .showcase form input,
+    form select{
+      width: 300px;
+
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .get-api-text p{
+    font-size: 10px;
+  }
+  .about h1{
+    font-size: 1.5rem;
+  }
+  .about h4,h3{
+    font-size: 1rem;
+  }
+
+  .formBtn{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
