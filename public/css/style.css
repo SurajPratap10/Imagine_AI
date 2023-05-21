@@ -72,7 +72,7 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background: var(--primary-color);
 }
@@ -284,7 +284,7 @@ font-weight: bolder;
   border: none;
   outline: none;
   transition: 0.2s;
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .btn span {
   cursor: pointer;
@@ -345,6 +345,7 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding-bottom: 20px;
 }
 
 /* Applying Media Queries for Mobile Responsivness */
