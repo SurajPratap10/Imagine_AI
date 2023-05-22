@@ -523,9 +523,9 @@ span {
   max-width: 385px;
   color: #ffffff;
   font-size: 16px;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-right: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-left: 0px;
 }
 
@@ -539,16 +539,6 @@ span {
   height: 40px;
 }
 
-.contact_us .social-media-links {
-  margin-top: 20px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  width: 250px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .contact_us .social-svg {
   width: 35px;
   height: 35px;
@@ -556,7 +546,7 @@ span {
 
 .contact_us .text-box {
   display: flex;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-right: 0px;
   margin-bottom: 15px;
 }
