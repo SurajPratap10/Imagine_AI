@@ -24,17 +24,18 @@
 
   <body>
     <header>
-      <div class="navbar">
-        <div class="logo">
-          <h2 class="AI">IMAGINE - AI</h2>
+        <div class="navbar">
+          <div class="logo">
+            <a class="AI <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
+            <a class="AI <%= path === '/imagineAI' ? 'active' : '' %>"  href="/imagineAI">IMAGINE - AI</a>
+          </div>
+    
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a class="AI" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 - OpenAI API</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="nav-links">
-          <ul>
-            <li>
-                <a class="AI <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
-                <a class="AI <%= path === '/imagineAI' ? 'active' : '' %>"  href="/imagineAI">IMAGINE - AI</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+      </header>
