@@ -1,5 +1,20 @@
 # Imagine_AI
 
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <br>
+  <img src="https://img.shields.io/github/repo-size/SurajPratap10/Imagine_AI?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-closed-raw/SurajPratap10/Imagine_AI?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-pr/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-pr-closed-raw/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/forks/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/contributors-anon/SurajPratap10/Imagine_AI?style=for-the-badge" />
+  </div>
 <br>
 
 <h3>"Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images."</h3>
