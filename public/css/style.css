@@ -568,15 +568,15 @@ span {
 .contact_us .input {
   height: 2.813rem;
   width: 90%;
-  border-width: 0.156rem 0.156rem 0.156rem 0.156rem;
-  border-color:#a2a2a2 #a2a2a2 #a2a2a2 #a2a2a2 ;
-  border-style: solid solid solid solid;
+  border-width: 0.156rem;
+  border-color:#a2a2a2;
+  border-style: solid;
   border-image-source: initial;
   border-image-slice: initial;
   border-image-width: initial;
   border-image-outset: initial;
   border-image-repeat: initial;
-  border-radius:0.313rem 0.313rem 0.313rem 0.313rem;
+  border-radius: 3.75rem;
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
 }
@@ -592,10 +592,11 @@ span {
   border-image-width: initial;
   border-image-outset: initial;
   border-image-repeat: initial;
-  border-radius:0.313rem;
+  border-radius:3.75rem;
   font-size: 1rem;
   padding: 1.25rem 1.875rem 1.25rem 1.25rem;
   margin-bottom: 1.25rem;
+  resize: none;
 }
 
 .contact_us .submit-btn {
@@ -613,7 +614,7 @@ span {
   border-image-width: initial;
   border-image-outset: initial;
   border-image-repeat: initial;
-  border-radius:0.313rem;
+  border-radius:3.75rem;
   margin-top: 10px;
   margin-right: auto;
   margin-bottom: 0px;
