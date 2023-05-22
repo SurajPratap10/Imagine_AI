@@ -328,13 +328,49 @@ font-weight: bolder;
 #surpriseMeBtn{
   color: white;
 }
+
 footer{
-  position: relative;
-  top: 10vh;
+  height: 15vh;
   width: 100%;
   color: white;
+ 
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.foot{
+
+  margin-top: 35px;
+  align-items: center;
   text-align: center;
 }
+
+.foot p{
+  font-size: 10px;
+}
+
+.outericon{
+  display: flex;
+  justify-content: center;
+}
+
+.icons{
+  display: flex;
+  
+}
+
+
+.icons .icon{
+  margin-top: 5px;
+  padding: 2px 2px;
+ 
+  height: 20px;
+  width: 20px;
+}
+
+
 footer a {
   text-decoration: none;
   color: white;
