@@ -246,32 +246,42 @@ img {
 }
 
 .about{
-  height: 94vh;
+  /* height: 94vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
+
 .about h1{
 padding: 70px 20px;
-font-size: 2.1rem;
+font-size: 1.9rem;
 color: white;
 font-weight: bolder;
-
-}
+text-transform: uppercase;
+text-align: center;}
 .about h4{
-  font-size:1.2rem;
-  padding:0 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding:0 300px 10px 300px;
   letter-spacing: 1px;
   line-height: 30px;
 }
 .about h3{
-  font-size:1.2rem;
-  padding: 15px 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size:1.4rem;
+  font-weight: 500;
+  padding: 15px 300px 120px 300px;
   letter-spacing: 1px;
   line-height: 30px;
 }
+.try-it-cover{
+  padding-bottom: 130px;
+}
+
 .btn{
   background-color: black;
   color:#fff;
@@ -472,27 +482,32 @@ border: 3px solid #cfcccc;
   }
 
   .about h1{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    padding: 50px 30px;
+    text-align: center;
   }
-  .about h4,h3{
+  .about h4{
     font-size: 1rem;
+    padding-left: 100px;
+    padding-right: 100px;
   }
-
+  .about h3{
+    font-size: 1rem;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+  }
+  .try-it-cover{
+    padding-bottom: 60px;
+  }
+  
   .formBtns {
     display: flex;
     flex-direction: column;
   }
 
 }
-@media screen and (min-width: 360px){
-  .about h4{
-    font-size: 1rem;
-  }
-  .about h3{
-    font-size: 1rem;
-  }
 
-}
 
 span {
   position: absolute;
@@ -714,6 +729,26 @@ span {
 }
 
 @media (max-width: 1024px) {
+
+  .about {
+    text-align: center;
+    padding-left: 15px;
+  }
+  .about h1{
+    padding-top: 50px;
+  }
+  .about h4{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .about h3{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 75px;
+  }
+  .try-it-cover{
+    padding-bottom: 75px;
+  }
   .contact_us .responsive-container-block.container {
     justify-content: center;
   }
@@ -812,6 +847,26 @@ span {
   .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
     margin: 0 0 25px 0;
   }
+  .about h1{
+    font-size: 1.5rem;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  .about h4{
+    font-size: 1rem;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .about h3{
+    font-size: 1rem;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+  }
+  .try-it-cover{
+    padding-bottom: 60px;
+  }
+
 }
 
 *,
