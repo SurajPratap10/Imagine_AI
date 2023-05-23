@@ -69,12 +69,20 @@ body {
   font-size: 1.5rem;
 }
 
+.logo{
+  display:flex;
+  flex-direction: row;
+}
+
 .AI {
+  padding: 0rem 1rem;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
 
-.navbar a:hover {
+.navbar a:hover ,
+.navbar a:active,
+.navbar a.active{
   color: var(--primary-color);
 }
 
