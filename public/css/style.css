@@ -146,6 +146,17 @@ form select:hover{
   color: white;
 }
 
+#size {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 10px;
+  background-image: url('./assets/angle-down-solid.svg');
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: right 15px center;
+}
+
 button,.btn{
   outline: none;
   position:relative;
@@ -233,15 +244,6 @@ img {
   text-align: center;
   margin-top: 1rem;
 }
-
-
-
-
-
-
-
-
-
 
 .about{
   height: 94vh;
