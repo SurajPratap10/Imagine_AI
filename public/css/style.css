@@ -439,6 +439,15 @@ footer a {
   }
 
 }
+@media screen and (min-width: 360px){
+  .about h4{
+    font-size: 1rem;
+  }
+  .about h3{
+    font-size: 1rem;
+  }
+
+}
 
 span {
   position: absolute;
