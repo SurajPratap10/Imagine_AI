@@ -340,43 +340,86 @@ footer a {
   color: white;
 }
 
-.foot{
-
-  margin-top: 35px;
-  align-items: center;
+.footer-wrapper {
   text-align: center;
-}
-
-.foot p{
-  font-size: 10px;
-}
-
-.outericon{
-  display: flex;
-  justify-content: center;
-}
-
-.icons{
-  display: flex;
-  
-}
-
-
-.icons .icon{
-  margin-top: 5px;
-  padding: 2px 2px;
- 
-  height: 20px;
-  width: 20px;
-}
-
-
-footer a {
-  text-decoration: none;
+  padding: 1rem;
+  /* background-color: #995734	; */
   color: white;
 }
+.icons ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.icons i{
+  font-size: 30px;
+}
 
+.icons ul li {
+  list-style: none;
+}
 
+.icons ul li a {
+  /* display: block; */
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 15px;
+  margin: 0 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+.icons ul li a:hover{
+border: 3px solid #cfcccc;
+}
+.icons ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.icons ul li a:hover .icon {
+  color: #fff;
+  /* transform: rotateY(360deg); */
+}
+
+.icons ul li a:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #55acee;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.icons ul li a:hover:before {
+  top: 0;
+}
+
+.icons ul li:nth-child(2) a:before {
+  background: rgb(93, 93, 93);
+}
+.icons ul li:nth-child(4) a:before {
+  background: #E1306C;
+}
+.footer-icons{
+  height: 30px;
+  width: 30px;
+}
 .formBtns {
   display: flex;
   flex-direction: row;
