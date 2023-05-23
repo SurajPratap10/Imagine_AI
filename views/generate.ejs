@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/spinner.css" />
+  <script src="js/main.js" defer></script>
+  <title>IMAGINE - AI</title>
+</head>
+
+<body>
+  <!-- <a class="try-it-cover" href="#showcase">
+  <button class="btn">
+  <span id="try-btn">Try it</span>
+  <div class="flow"></div>
+</button>
+</a> -->
+  <section class="showcase" id="showcase">
+    <form id="image-form">
+      <h1 class="AI">IMAGE DESCRIPTION</h1>
+      <div class="form-control">
+        <input type="text" id="prompt" placeholder="Enter Text" />
+      </div>
+
+      <!-- Input User API -->
+
+      <div class="get-api-text">
+        <p>
+          You can get your API key from:
+          <a target="_blank" href="https://platform.openai.com/account/api-keys">Open AI API key</a>
+        </p>
+      </div>
+
+      <div class="form-control">
+        <input id="api-key" type="text" id="api-key" placeholder="Enter your API key" />
+      </div>
+      <div class="form-control">
+        <select name="size" id="size">
+          <option value="small">Small</option>
+          <option value="medium" selected>Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+      <div class="formBtns">
+        <button type="submit" class="btn">
+          <span>Generate</span>
+          <div class="flow"></div>
+        </button>
+        <button type="button" class="btn" id="surpriseMeBtn">
+          <span>Surprise Me!</span>
+          <div class="flow"></div>
+        </button>
+      </div>
+    </form>
+  </section>
+
+
+
+  <section class="image">
+    <div class="image-container">
+      <h2 class="msg"></h2>
+      <img src="" alt="" id="image" />
+    </div>
+  </section>
+  </main>
+
+
+  <div class="spinner"></div>
+  <%- include('partials/footer') %>

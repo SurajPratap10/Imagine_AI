@@ -249,7 +249,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
 .about h1{
 padding: 70px 20px;
@@ -274,12 +274,12 @@ font-weight: bolder;
   background-color: black;
   color:#fff;
   white-space: nowrap;
-  
+
   font-size: 20px;
   font-weight: 600;
   /* padding: 17px 30px; */
   letter-spacing: 6px;
-  
+
   cursor: pointer;
   border: none;
   outline: none;
@@ -333,7 +333,7 @@ footer{
   height: 15vh;
   width: 100%;
   color: white;
- 
+
 }
 footer a {
   text-decoration: none;
@@ -358,14 +358,14 @@ footer a {
 
 .icons{
   display: flex;
-  
+
 }
 
 
 .icons .icon{
   margin-top: 5px;
   padding: 2px 2px;
- 
+
   height: 20px;
   width: 20px;
 }
@@ -452,5 +452,36 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
- 
+
+}
+.log {
+  letter-spacing: 0.8px;
+  font-size: 0.75vw;
+  display: inline-block;
+  margin: 1vw;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.git {
+  display: inline-block;
+}
+.hl{
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}
+.row {
+  justify-content:  center;
+  text-align: center;
+}
+.fab{
+  top: 0.4vw !important;
+  font-size: 1.5vw !important;
+}
+.s {
+  letter-spacing: 0.75px;
+  font-size: 0.75vw;
+  letter-spacing: 0.8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
