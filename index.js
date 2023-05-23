@@ -64,7 +64,7 @@ passport.deserializeUser(async function(id, done) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "http://localhost:5000/auth/google/generate",
+  callbackURL: "https://imagine-ai-17zf.vercel.app/auth/google/generate",
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 }, function(accessToken, refreshToken, profile, cb) {
   User.findOrCreate({
@@ -76,7 +76,7 @@ passport.use(new GoogleStrategy({
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000/auth/github/generate"
+    callbackURL: "https://imagine-ai-17zf.vercel.app/auth/github/generate"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ githubId: profile.id }, function (err, user) {
