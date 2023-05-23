@@ -254,12 +254,14 @@ img {
 }
 
 .about h1{
-padding: 70px 20px;
+padding: 65px 210px;
 font-size: 1.9rem;
 color: white;
 font-weight: bolder;
 text-transform: uppercase;
-text-align: center;}
+text-align: center;
+}
+
 .about h4{
   text-align: justify;
   text-justify: inter-word;
@@ -267,7 +269,7 @@ text-align: center;}
   font-weight: 500;
   padding:0 300px 10px 300px;
   letter-spacing: 1px;
-  line-height: 30px;
+  line-height: 26px;
 }
 .about h3{
   text-align: justify;
@@ -276,7 +278,7 @@ text-align: center;}
   font-weight: 500;
   padding: 15px 300px 120px 300px;
   letter-spacing: 1px;
-  line-height: 30px;
+  line-height: 26px;
 }
 .try-it-cover{
   padding-bottom: 130px;
@@ -482,7 +484,7 @@ border: 3px solid #cfcccc;
   }
 
   .about h1{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     padding: 50px 30px;
     text-align: center;
   }
@@ -732,18 +734,20 @@ span {
 
   .about {
     text-align: center;
-    padding-left: 15px;
+    
   }
   .about h1{
     padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
   .about h4{
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
   .about h3{
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
     padding-bottom: 75px;
   }
   .try-it-cover{
@@ -848,7 +852,7 @@ span {
     margin: 0 0 25px 0;
   }
   .about h1{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 40px 30px;
     text-align: center;
   }
