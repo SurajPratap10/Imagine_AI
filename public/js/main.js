@@ -63,8 +63,7 @@ function showSpinner() {
 function removeSpinner() {
 	document.querySelector('.spinner').classList.remove('show');
 }
-document.querySelector('#image-form').addEventListener('submit', onSubmit);
-
+if(document.querySelector('#image-form') !=null)document.querySelector('#image-form').addEventListener('submit', onSubmit);
 // Surprise Button
 const surpriseMePrompts = [
 	'an armchair in the shape of an avocado',
@@ -122,4 +121,4 @@ function surpriseMe () {
 }
 
 const surpriseMeBtn = document.getElementById("surpriseMeBtn");
-surpriseMeBtn.addEventListener("click", surpriseMe);
+if(surpriseMeBtn!=null)surpriseMeBtn.addEventListener("click", surpriseMe);
