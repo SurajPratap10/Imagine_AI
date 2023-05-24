@@ -1,3 +1,14 @@
+const popup = document.getElementById("popup");
+
+function closePopUp(){
+	popup.classList.remove("open-popup");
+}
+
+function openPopUp(text){
+	document.getElementById('text').innerHTML = text;
+	popup.classList.add("open-popup");
+}
+
 function onSubmit(e) {
 	e.preventDefault();
 
@@ -10,10 +21,12 @@ function onSubmit(e) {
 	const API_KEY = document.querySelector('#api-key').value; //API Key, this value can be passed as paramerter in the function as well...
 
 	if (prompt === '') {
-		alert('Please add some text');
+		let text ='Please add some text';
+		openPopUp(text);
 		return;
-	} else if (API_KEY === '') {
-		alert('Please add your API Key'); //if API Key is not added
+	} else if (API_KEY === '') {	
+		let text ='Please add your API Key';
+		openPopUp(text);  //if API Key is not added
 		return;
 	}
 
@@ -63,8 +76,7 @@ function showSpinner() {
 function removeSpinner() {
 	document.querySelector('.spinner').classList.remove('show');
 }
-document.querySelector('#image-form').addEventListener('submit', onSubmit);
-
+if(document.querySelector('#image-form') !=null)document.querySelector('#image-form').addEventListener('submit', onSubmit);
 // Surprise Button
 const surpriseMePrompts = [
 	'an armchair in the shape of an avocado',
@@ -122,4 +134,4 @@ function surpriseMe () {
 }
 
 const surpriseMeBtn = document.getElementById("surpriseMeBtn");
-surpriseMeBtn.addEventListener("click", surpriseMe);
+if(surpriseMeBtn!=null)surpriseMeBtn.addEventListener("click", surpriseMe);

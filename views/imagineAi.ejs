@@ -1,0 +1,68 @@
+<%- include('includes/header.ejs') %>
+<main>
+    <section class="showcase" id="showcase">
+        <form id="image-form">
+          <h1 class="AI">IMAGE DESCRIPTION</h1>
+          <div class="form-control">
+            <input type="text" id="prompt" placeholder="Enter Text" />
+          </div>
+
+          <!-- Input User API -->
+
+          <div class="get-api-text">
+            <p>
+              You can get your API key from:
+              <a
+                target="_blank"
+                href="https://platform.openai.com/account/api-keys"
+                >Open AI API key</a
+              >
+            </p>
+          </div>
+
+          <div class="form-control">
+            <input
+              id="api-key"
+              type="text"
+              id="api-key"
+              placeholder="Enter your API key"
+            />
+          </div>
+ <div class="form-control">
+          <select name="size" id="size">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div class="formBtns">
+          <button type="submit" class="btn">
+            <span>Generate</span>
+            <div class="flow"></div>
+          </button>
+          <button type="button" class="btn" id="surpriseMeBtn">
+            <span>Surprise Me!</span>
+            <div class="flow"></div>
+          </button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <div class="popup-container" id="popup">
+        <img src="./faviconicon/erroricon.png" alt="">
+          <h2 id="text"></h2>
+          <button class="popup-btn" onclick="closePopUp()"><span>OK</span></span>
+          <div class="flow"></div>
+          </button>
+      </div>
+  </section>
+    <section class="image">
+      <div class="image-container">
+        <h2 class="msg"></h2>
+        <img src="" alt="" id="image" />
+      </div>
+    </section>
+</main>
+<div class="spinner"></div>
+
+<%- include('includes/footer.ejs') %>
