@@ -531,6 +531,7 @@ footer a {
 }
 
 @media screen and (min-width: 360px) {
+
   .about h4 {
     font-size: 1rem;
   }
@@ -553,7 +554,6 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 /* ---------------Contact US---------------- */
@@ -1076,3 +1076,107 @@ body {
 .sign-in-btn{
   padding:20px 70px;
 }
+
+.stt {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgb(128, 128, 255) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+  box-shadow: 0 0.25rem 0.5rem 0 gray;
+  opacity: 0.7;
+}
+.stt:hover {
+  opacity: 0.8;
+}
+.stt:focus {
+  opacity: 0.9;
+}
+.stt:active {
+  opacity: 1;
+}
+
+
+/* <------------Popup Css-------------> */
+
+.popup-container{
+  width: 25rem;
+  height: 40vh;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.01);
+  text-align: center;
+  padding: 0px 30px 30px;
+  color: #333;
+  border-radius: 1.303rem;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+
+}
+
+.popup-btn{
+  margin-top: 50px;
+  padding: 10px 0px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: black;
+  color: #fff;
+  white-space: nowrap;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+
+}
+
+.popup-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.popup-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+.popup-btn:hover span {
+  padding-right: 25px;
+}
+
+.popup-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.popup-container img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup-container h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50vh;
+  transform: translate(-50%,-50%) scale(1);
+}
+
