@@ -1072,6 +1072,11 @@ body {
   }
 }
 
+/* signin & signup page submit button */
+.sign-in-btn{
+  padding:20px 70px;
+}
+
 .stt {
   position: fixed;
   right: 1rem;
@@ -1174,3 +1179,4 @@ body {
   top: 50vh;
   transform: translate(-50%,-50%) scale(1);
 }
+

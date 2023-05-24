@@ -14,4 +14,12 @@ router.get('/contactUs',(_req,res,_next)=>{
     res.render('contactUs',{path: '/contactUs'});
 });
 
+router.get('/login',(req,res,next)=>{
+    res.render('login',{path: 'login'})
+});
+
+router.get('/signup',(_req,res,_next)=>{
+    res.render('signup',{path: '/signup'});
+});
+
 module.exports = router;
