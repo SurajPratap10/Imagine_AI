@@ -531,6 +531,7 @@ footer a {
 }
 
 @media screen and (min-width: 360px) {
+
   .about h4 {
     font-size: 1rem;
   }
@@ -553,7 +554,6 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 /* ---------------Contact US---------------- */
@@ -1091,4 +1091,86 @@ body {
 }
 .stt:active {
   opacity: 1;
+}
+
+
+/* <------------Popup Css-------------> */
+
+.popup-container{
+  width: 25rem;
+  height: 40vh;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.01);
+  text-align: center;
+  padding: 0px 30px 30px;
+  color: #333;
+  border-radius: 1.303rem;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+
+}
+
+.popup-btn{
+  margin-top: 50px;
+  padding: 10px 0px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: black;
+  color: #fff;
+  white-space: nowrap;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+
+}
+
+.popup-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.popup-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+.popup-btn:hover span {
+  padding-right: 25px;
+}
+
+.popup-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.popup-container img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup-container h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50vh;
+  transform: translate(-50%,-50%) scale(1);
 }
