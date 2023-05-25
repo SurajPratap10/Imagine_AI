@@ -50,7 +50,7 @@ async function loginSubmit(e) {
 			// Hide the toast after 3 seconds
 			setTimeout(function () {
 				toast.style.display = 'none';
-				window.location.href = '../index.html';
+				window.location.href = '/imagineAi';
 			}, 3000);
 		}
 	} catch (error) {

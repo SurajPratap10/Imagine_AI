@@ -25,6 +25,7 @@ app.use((err, _req, res, _next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/openai', require('./routes/openaiRoutes'));
+app.use('/auth', require('./routes/auth'));
 
 app.use(viewRoutes);
 
