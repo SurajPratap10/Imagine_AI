@@ -674,7 +674,7 @@ span {
 
 .contact_us .textinput {
   height: 4rem;
-  width: 75%;
+  width: 95%;
   border-width: 0.125rem;
   border-style: solid;
   border-color: #a2a2a2;
@@ -683,42 +683,17 @@ span {
   border-image-width: initial;
   border-image-outset: initial;
   border-image-repeat: initial;
-  border-radius: 1rem;
+  border-radius: 3.75rem;
   font-size: 1rem;
   padding: 1.25rem 1.875rem 1.25rem 1.25rem;
   margin-bottom: 1.25rem;
   resize: none;
-  margin-left: 50px;
 }
 
-.contact_us .submit-btn {
-  min-width: 18.125rem;
-  height: 3.75rem;
-  background-color: #1c3b28;
-  font-size: 18px;
-  font-weight: 700;
-  color: white;
-  border-width: 0.125rem;
-  border-style: none;
-  border-color: #7676;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-  border-radius: 3.75rem;
-  margin-top: 10px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  cursor: pointer;
-  transition: 1s;
+.contact_us .btn-pos{
+  margin-left: -1.875rem;
 }
-.contact_us .submit-btn:hover{
-  background-color:rgba(204, 184, 204, 0.43);
-  color: rgb(54, 52, 52);
-  box-shadow: 1px 1px 10px rgb(40, 40, 40);
-}
+
 .contact_us .btn-wrapper {
   display: flex;
   justify-content: center;
@@ -858,10 +833,6 @@ span {
   .contact_us .text-blk.contactus-subhead {
     font-size: 16px;
     line-height: 23px;
-  }
-
-  .contact_us .input {
-    height: 25px;
   }
 
   .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
