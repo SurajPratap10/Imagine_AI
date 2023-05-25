@@ -19,27 +19,23 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/spinner.css" />
     <script src="js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/b421966dde.js" crossorigin="anonymous"></script>
     <title>IMAGINE - AI</title>
   </head>
 
   <body>
     <header>
-      <div class="navbar">
-        <div class="logo">
-          <a class="AI <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
-          <a class="AI <%= path === '/generateImg' ? 'active' : '' %>"  href="/generateImg">IMAGINE - AI</a>
-          <a class="AI <%= path === '/contactUs' ? 'active' : '' %>"  href="/contactUs">CONTACT - US</a>
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li>
-              <a class="AI" href="https://openai.com/dall-e-2/" target="_blank"
-                >DALL.E 2 - OpenAI API</a
-              >
-              
-            </li>
-            <li><a class="login AI" href="/login" >Login</a></li>
-          </ul>
-        </div>
-      </div>
+      <div class="nav1">
+        <div ><a class="logo" href="/">Imagine-AI</a></div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn" ><i class="fa-solid fa-bars"></i></label>
+        <ul>
+            <li><a href="/generateImg">Generate</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="https://openai.com/dall-e-2/">DALL.E 2-OpenAI API</a></li>
+            <li><a href="/login">Login</a></li>
+            
+        </ul>
+    </div>
+
     </header>
