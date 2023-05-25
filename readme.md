@@ -33,14 +33,15 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 <h4> Live Site: https://imagine-ai-17zf.vercel.app/ </h4>
 
 # Technology Stack used:
-1) Node JS
-2) Express JS
-3) Javascript
-4) HTML
-5) CSS
-6) OpenAI API
-7) Postman
-8) GitHub
+1. **[`Node JS`](https://nodejs.org/en/docs/guides)**
+2. **[`Express JS`](https://expressjs.com/en/guide/routing.html)**
+3. **[`Javascript`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)**
+4. **[`EJS`](https://ejs.co)**
+5. **[`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML)**
+6. **[`CSS`](https://developer.mozilla.org/en-US/docs/Web/CSS)**
+7. **[`OpenAI API`](https://platform.openai.com/docs/introduction)**
+8. **[`Postman`](https://learning.postman.com/docs/introduction/overview/)**
+9. **[`Git & GitHub`](https://docs.github.com/en/get-started/using-git/about-git)**
 
 
 # How to **use**?
