@@ -80,7 +80,7 @@ _If you don't have git on your machine, [install it](https://help.github.com/art
 **2.**  Clone your forked copy of the project.
 
 ```
-git clone  https://github.com/SurajPratap10/Imagine_AI
+git clone  https://github.com/<your_github_username>/Imagine_AI
 ```
 
 **3.** Navigate to the project directory :file_folder: .
