@@ -28,9 +28,7 @@ body {
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  width: 100%;
-  background: #33333348;
+  background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #fff;
@@ -38,7 +36,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(1rem);
 }
 
 @keyframes gradient {
@@ -60,7 +57,6 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  
 }
 
 .navbar ul li {
@@ -68,31 +64,11 @@ body {
 }
 
 .navbar a {
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
-.white-color{
-color: rgb(255, 255, 255);
-}
-#header-btn1{
-    color: black;
-    border: 2px solid white;
-    border-radius: 5px;
-    background: white;
-}
-#header-btn1:hover{
-  background: rgb(245, 245, 245);
-}
-#header-btn2{
-    color: white;
-    border: 2px solid #05D2FF;
-    border-radius: 5px;
-    background: #05D2FF;
-    font-weight: 300;
-}
-#header-btn2:hover{
-  background: #03c3ee;
-}
+
 .logo{
   display:flex;
   flex-direction: row;
@@ -101,13 +77,13 @@ color: rgb(255, 255, 255);
 .AI {
   padding: 0rem 1rem;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .navbar a:hover ,
 .navbar a:active,
 .navbar a.active{
-  color: rgb(54, 240, 206);
+  color: var(--primary-color);
 }
 
 /* Showcase */
@@ -297,7 +273,7 @@ img {
 }
 
 .about {
-  height: 94vh;
+  /* height: 94vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -306,25 +282,43 @@ img {
 }
 
 .about h1 {
-  padding: 70px 20px;
-  font-size: 2.1rem;
+  /* padding: 70px 20px;
+  font-size: 2.1rem; */
+  padding: 65px 210px;
+  font-size: 1.9rem;
   color: white;
   font-weight: bolder;
-
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .about h4 {
-  font-size: 1.2rem;
-  padding: 0 40px;
+  /* font-size: 1.2rem;
+  padding: 0 40px; */
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding:0 300px 10px 300px;
   letter-spacing: 1px;
-  line-height: 30px;
+  /* line-height: 30px; */
+  line-height: 26px;
 }
 
 .about h3 {
-  font-size: 1.2rem;
-  padding: 15px 40px;
+  /* font-size: 1.2rem;
+  padding: 15px 40px; */
+  text-align: justify;
+  text-justify: inter-word;
+  font-size:1.4rem;
+  font-weight: 500;
+  padding: 15px 300px 120px 300px;
   letter-spacing: 1px;
-  line-height: 30px;
+  /* line-height: 30px; */
+  line-height: 26px;
+}
+.try-it-cover{
+  padding-bottom: 130px;
 }
 
 .btn {
@@ -540,12 +534,29 @@ footer a {
 
   .about h1 {
     font-size: 1.5rem;
+    padding: 50px 30px;
+    text-align: center;
   }
 
-  .about h4,
+  /* .about h4,
   h3 {
     font-size: 1rem;
+  } */
+  .about h4{
+    font-size: 1rem;
+    padding-left: 100px;
+    padding-right: 100px;
   }
+  .about h3{
+    font-size: 1rem;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+  }
+  .try-it-cover{
+    padding-bottom: 60px;
+  }
+
 
   .formBtns {
     display: flex;
@@ -554,7 +565,7 @@ footer a {
 
 }
 
-@media screen and (min-width: 360px) {
+/* @media screen and (min-width: 360px) {
 
   .about h4 {
     font-size: 1rem;
@@ -564,7 +575,7 @@ footer a {
     font-size: 1rem;
   }
 
-}
+} */
 
 span {
   position: absolute;
@@ -628,7 +639,7 @@ span {
 }
 
 .contact_us .responsive-container-block.big-container {
-  padding-top: 58px;
+  padding-top: 0px;
   padding-right: 50px;
   padding-bottom: 0px;
   padding-left: 50px;
@@ -766,6 +777,27 @@ span {
 }
 
 @media (max-width: 1024px) {
+  .about {
+    text-align: center;
+
+  }
+  .about h1{
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .about h4{
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .about h3{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 75px;
+  }
+  .try-it-cover{
+    padding-bottom: 75px;
+  }
   .contact_us .responsive-container-block.container {
     justify-content: center;
   }
@@ -835,6 +867,25 @@ span {
 }
 
 @media (max-width: 500px) {
+  .about h1{
+    font-size: 1.4rem;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  .about h4{
+    font-size: 1rem;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .about h3{
+    font-size: 1rem;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+  }
+  .try-it-cover{
+    padding-bottom: 60px;
+  }
   .contact_us .responsive-container-block.big-container {
     padding-top: 0px;
     padding-right: 20px;
