@@ -28,7 +28,9 @@ body {
 
 /* Navbar */
 .navbar {
-  background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
+  position: fixed;
+  width: 100%;
+  background: #33333348;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #fff;
@@ -36,6 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(1rem);
 }
 
 @keyframes gradient {
@@ -57,6 +60,7 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
+  
 }
 
 .navbar ul li {
@@ -64,11 +68,31 @@ body {
 }
 
 .navbar a {
-  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
-
+.white-color{
+color: rgb(255, 255, 255);
+}
+#header-btn1{
+    color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: white;
+}
+#header-btn1:hover{
+  background: rgb(245, 245, 245);
+}
+#header-btn2{
+    color: white;
+    border: 2px solid #05D2FF;
+    border-radius: 5px;
+    background: #05D2FF;
+    font-weight: 300;
+}
+#header-btn2:hover{
+  background: #03c3ee;
+}
 .logo{
   display:flex;
   flex-direction: row;
@@ -77,13 +101,13 @@ body {
 .AI {
   padding: 0rem 1rem;
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .navbar a:hover ,
 .navbar a:active,
 .navbar a.active{
-  color: var(--primary-color);
+  color: rgb(54, 240, 206);
 }
 
 /* Showcase */
@@ -604,7 +628,7 @@ span {
 }
 
 .contact_us .responsive-container-block.big-container {
-  padding-top: 0px;
+  padding-top: 58px;
   padding-right: 50px;
   padding-bottom: 0px;
   padding-left: 50px;
