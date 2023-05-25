@@ -29,8 +29,10 @@ body {
 }
 
 /* Navbar */
+
 .nav1{
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 80px;
@@ -39,9 +41,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0px 50px 0px 50px;
+
 }
 .nav1 ul{
   display: flex;
+
   list-style: none;
 }
 .nav1 ul li a {
@@ -59,7 +63,6 @@ body {
 }
 .nav1 ul li{
   margin: 0px 20px;
-
 }
 .logo{
   font-size: 33px;
@@ -118,6 +121,9 @@ body {
   #click:checked ~ .menu-btn i::before{
       content: "\f00d";
   }
+
+
+
 }
 
 
@@ -639,7 +645,7 @@ span {
 }
 
 .contact_us .responsive-container-block.big-container {
-  padding-top: 0px;
+  padding-top: 58px;
   padding-right: 50px;
   padding-bottom: 0px;
   padding-left: 50px;
