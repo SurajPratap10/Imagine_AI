@@ -99,5 +99,13 @@
         </div>
        </section>
 </main>
-
+<script>
+  hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+      navBar = document.querySelector(".nav-bar");
+      navBar.classList.toggle("active");
+      subBtn= document.querySelector(".btn");
+      subBtn.classList.toggle("active")
+    }
+  </script>
 <%- include('includes/footer.ejs') %>

@@ -34,6 +34,7 @@ li{
   list-style: none;
 }
 header{
+  z-index: 1;
   font-family: "Montserrat";
   overflow-x: hidden;
   width: 100%;
@@ -64,7 +65,7 @@ header{
 }
 .nav-bar ul li a {
   display: block;
-  color: white;
+  color: #134D58;
   font-size: 20px;
 
   padding: 10px 15px;
@@ -123,13 +124,14 @@ header{
     color: #fefefe;
   }
   .nav-bar.active{
-    height: 450px;
+    height: 465px;
   }
   .nav-bar.active ul{
     opacity: 1;
   }
   .nav-bar ul li a{
     margin-bottom: 12px;
+    font-size: 28px;
   }
 }
 
@@ -245,6 +247,15 @@ form select {
   border-radius: 60px;
 
 
+}
+.form-control.active{
+  z-index: -1;
+}
+.fcl3.active{
+  z-index: -1;
+}
+.btn.active{
+  z-index: -1;
 }
 
 .showcase form input,
