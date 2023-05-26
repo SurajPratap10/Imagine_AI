@@ -583,6 +583,13 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* Span class for submit button of contactUS page*/
+.Span {
+  position: absolute;
+  top: 50%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+}
 
 #try-btn {
   position: absolute;
