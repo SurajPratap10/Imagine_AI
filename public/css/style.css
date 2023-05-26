@@ -6,9 +6,7 @@
   padding: 0;
   box-shadow: border-box;
 }
-a{
-  text-decoration: none;
-}
+
 :root {
 
   --primary-color: rgb(32, 32, 32);
@@ -29,100 +27,64 @@ body {
 }
 
 /* Navbar */
-
-.nav1{
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+.navbar {
+  background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 80px;
-  /* background-color: #AACFC4; */
+  color: #fff;
+  padding: 1rem;
   display: flex;
-  align-items: center;
-
   justify-content: space-between;
-  padding: 0px 50px 0px 50px;
+  align-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
 
 }
-.nav1 ul{
-  display: flex;
+
+.navbar ul {
   list-style: none;
+  display: flex;
 }
 
-.nav1 ul li a {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  color: #134D58;
+.navbar ul li {
+  margin-left: 1rem;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 1px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  padding-right: 2px;
+  font-size: 1.5rem;
+}
 
-}
-.nav1 ul li{
-  margin: 0px 20px;
-}
 .logo{
-  font-size: 33px;
-  color: #134D58;
-  font-family: 'Montserrat';
-}
-.logo:hover{
-  color: #ffffff;
-  transition: all ease-in-out 0.2s;
+  display:flex;
+  flex-direction: row;
 }
 
-.nav1 .menu-btn i{
-  font-size: 20px; 
-  cursor: pointer; 
-  display: none;
-}
-#click{
-  display: none;
-}
-.nav1 ul li a:hover{
-  color: #ffffff;
-  transition: all ease-in-out 0.2s;
+.AI {
+  padding: 0rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
-@media(max-width:940px){
-  .nav1 .menu-btn i{
-      display: block;
-  }
-  .nav1 ul{
-      position: fixed;
-      top: 80px;
-      left: -100%;
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      height: 100vh;
-      width: 100%;
-      display: block;
-      text-align: start;
-      transition: all 0.3s ease;
-  }
-  .nav1 ul li{
-      margin: 40px 45px;
-  }
-  .nav1 ul li a:hover{
-    color: #ffffff;
-    transition: all ease-in-out 0.2s;
-  }
-  .nav1 ul li a {
-      font-size: 24px;
-      display: block;
-  }
-  #click:checked ~ ul{
-      left: 0%;
-  }
-  #click:checked ~ .menu-btn i::before{
-      content: "\f00d";
-  }
+.navbar a:hover ,
+.navbar a:active,
+.navbar a.active{
+  color: var(--primary-color);
 }
-
 
 /* Showcase */
 .showcase {
