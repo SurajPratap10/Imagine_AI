@@ -10,6 +10,9 @@ function openPopUp(text){
 }
 
 function onSubmit(e) {
+	if(window.location.href == '/signup'){
+		return false;
+	}
 	e.preventDefault();
 
 	//clearing the message from box after submission:
