@@ -2,18 +2,18 @@
     <section class="showcase" id="showcase">
         <form id="image-form" action="index.html">
             <h1 class="AI">SIGN UP</h1>
-            <div class="form-control">
+            <div class="form-control fcss1">
                 <input type="text" id="prompt" placeholder="Enter Name" />
             </div>
-            <div class="form-control">
+            <div class="form-control fcss">
                 <input type="email" id="prompt" placeholder="Enter Email address" />
             </div>
-            <div class="form-control">
+            <div class="form-control fcss2">
                 <input type="password" id="prompt" placeholder="Enter password" />
             </div>
 
 
-            <div class="formBtns">
+            <div class="formBtns fcss4">
                 <button type="submit" class="btn sign-in-btn" href="index.html">
                     <span>Submit</span>
                     <div class="flow"></div>
@@ -28,4 +28,19 @@
             </div>
         </form>
     </section>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+          hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+            fcss1= document.querySelector(".fcss");
+            fcss1.classList.toggle("active")
+            fcss2= document.querySelector(".fcss1");
+            fcss2.classList.toggle("active")
+            fcss3= document.querySelector(".fcss2");
+            fcss3.classList.toggle("active")
+            fcss4= document.querySelector(".fcss4");
+            fcss4.classList.toggle("active")
+          }
+        </script>
 <%- include('includes/footer.ejs') %>

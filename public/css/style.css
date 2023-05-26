@@ -257,7 +257,9 @@ form select {
 .btn.active{
   z-index: -1;
 }
-
+.fcss4.active{
+  z-index: -1;
+}
 .showcase form input,
 form select:hover {
   background: #ffffff;
