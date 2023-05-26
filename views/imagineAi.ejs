@@ -20,7 +20,7 @@
             </p>
           </div>
 
-          <div class="form-control">
+          <div class="form-control fc">
             <input
               id="api-key"
               type="text"
@@ -28,7 +28,7 @@
               placeholder="Enter your API key"
             />
           </div>
- <div class="form-control">
+ <div class="form-control fc1">
           <select name="size" id="size">
             <option value="small">Small</option>
             <option value="medium" selected>Medium</option>
@@ -64,5 +64,18 @@
     </section>
 </main>
 <div class="spinner"></div>
-
+<script>
+  hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+      navBar = document.querySelector(".nav-bar");
+      navBar.classList.toggle("active");
+      formctr1= document.querySelector(".fc");
+      formctr1.classList.toggle("active")
+      formctr= document.querySelector(".form-control");
+      formctr.classList.toggle("active")
+      formctr2= document.querySelector(".fc1");
+      formctr2.classList.toggle("active")
+    }
+  </script>
+  
 <%- include('includes/footer.ejs') %>

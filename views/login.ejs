@@ -2,15 +2,15 @@
     <section class="showcase" id="showcase">
         <form id="image-form" action="index.html">
             <h1 class="AI">SIGN IN</h1>
-            <div class="form-control">
+            <div class="form-control fcl">
                 <input type="email" id="prompt" placeholder="Enter Email address" />
             </div>
-            <div class="form-control">
+            <div class="form-control fcl1">
                 <input type="password" id="prompt" placeholder="Enter password" />
             </div>
 
 
-            <div class="formBtns">
+            <div class="formBtns fcl3">
                 <button type="submit" class="btn sign-in-btn" href="index.html">
                     <span>Submit</span>
                     <div class="flow"></div>
@@ -26,4 +26,17 @@
             </div>
         </form>
     </section>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+          hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+            formctr2= document.querySelector(".fcl");
+            formctr2.classList.toggle("active")
+            formctr3= document.querySelector(".fcl1");
+            formctr3.classList.toggle("active")
+            formctr4= document.querySelector(".fcl3");
+            formctr4.classList.toggle("active")
+          }
+</script>
 <%- include('includes/footer.ejs') %>

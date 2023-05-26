@@ -24,23 +24,21 @@
 
 <body>
   <header>
-    <div class="navbar">
-      <div class="logo">
-        <a class="AI white-color <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
-        <a class="AI white-color <%= path === '/generateImg' ? 'active' : '' %>" href="/generateImg">IMAGINE - AI</a>
-        <a class="AI white-color <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT - US</a>
+    <div><a class="logo" href="/">Imagine-AI</a></div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
-      <div class="nav-links">
+      <nav class="nav-bar">
         <ul>
-          <li>
-            <a class="AI" id="header-btn1" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 - OpenAI API</a>
-
-          </li>
-          <li><a class="login AI white-color" id="header-btn2" href="/login">Login</a></li>
+          <li><a href="/generateImg">Generate</a></li>
+          <li><a href="/contactUs">Contact Us</a></li>
+          <li><a href="https://openai.com/dall-e-2/" target="_blank">Dall.E2 API</a></li>
+          <li><a href="/login">Login</a></li>
         </ul>
-      </div>
-    </div>
-  </header>
+      </nav>
+    </header>
   <main>
     <section class="about">
       <h1>Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images</h1>
@@ -88,4 +86,15 @@
     </section>
   </main>
 
+  <script>
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+      navBar = document.querySelector(".nav-bar");
+      navBar.classList.toggle("active");
+    }
+    // hamburger.addEventListener('click',function() {
+    //   navBar = document.querySelector(".nav-bar");
+    //   navBar.classList.toggle("active");
+    // })
+  </script>
   <%- include('includes/footer.ejs') %>
