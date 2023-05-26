@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/spinner.css" />
+		<link rel="stylesheet" href="css/vanilla-toast.css" />
+		<script src="js/main.js" defer></script>
+		<script src="js/signup.js" defer></script>
+		<script src="js/login.js" defer></script>
+		<title>IMAGINE - AI</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="navbar">
+				<div class="logo">
+					<a class="AI white-color <%= path === '/' ? 'active' : '' %>" href="/"
+						>HOME</a
+					>
+					<a
+						class="AI white-color <%= path === '/generateImg' ? 'active' : '' %>"
+						href="/generateImg"
+						>IMAGINE - AI</a
+					>
+					<a
+						class="AI white-color <%= path === '/contactUs' ? 'active' : '' %>"
+						href="/contactUs"
+						>CONTACT - US</a
+					>
+				</div>
+				<div class="nav-links">
+					<ul>
+						<li>
+							<a
+								class="AI"
+								id="header-btn1"
+								href="https://openai.com/dall-e-2/"
+								target="_blank"
+								>DALL.E 2 - OpenAI API</a
+							>
+						</li>
+						<li>
+							<a class="login AI white-color" id="header-btn2" href="/login"
+								>Login</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
