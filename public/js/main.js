@@ -10,7 +10,7 @@ function openPopUp(text){
 }
 
 function onSubmit(e) {
-	if(window.location.href == '/signup'){
+	if(window.location.href == '/signup' || window.location.href == '/login'){
 		return false;
 	}
 	e.preventDefault();
