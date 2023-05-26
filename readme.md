@@ -171,7 +171,7 @@ git push -u origin <your_branch_name>
 
 <br>
 
-<h4>Thanks a lot for spending your time helping Moksh grow. Thanks a lot! Keep rocking 🍻 </h4>
+<h4>Thanks a lot for spending your time helping Imagine_AI grow. Thanks a lot! Keep rocking 🍻 </h4>
 
 <a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI" height="50" width="100%" align="right">
