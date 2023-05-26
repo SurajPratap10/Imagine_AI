@@ -3,17 +3,21 @@
 	<form id="image-form" action="index.html">
 		<h1 class="AI">SIGN UP</h1>
 		<div class="form-control">
-			<input type="text" id="prompt" placeholder="Enter Name" />
+			<input type="text" id="name" placeholder="Enter Name" />
 		</div>
 		<div class="form-control">
-			<input type="email" id="prompt" placeholder="Enter Email address" />
+			<input type="email" id="email" placeholder="Enter Email address" />
 		</div>
 		<div class="form-control">
-			<input type="password" id="prompt" placeholder="Enter password" />
+			<input type="password" id="password" placeholder="Enter password" />
 		</div>
 
 		<div class="formBtns">
-			<button type="submit" class="btn sign-in-btn" href="index.html">
+			<button
+				type="submit"
+				class="btn sign-in-btn btn-signup-submit"
+				href="index.html"
+			>
 				<span>Submit</span>
 				<div class="flow"></div>
 			</button>
@@ -25,15 +29,4 @@
 	<div id="successToast" class="toast success-toast"></div>
 	<div id="errorToast" class="toast error-toast"></div>
 </section>
-<%- include('includes/footer.ejs') %>
-
-                </p>
-            </div>
-        </form>
-    </section>
-<%- include('includes/footer.ejs') %>
-                </p>
-            </div>
-        </form>
-    </section>
 <%- include('includes/footer.ejs') %>
