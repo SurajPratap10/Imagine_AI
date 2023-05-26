@@ -81,8 +81,7 @@ body {
 }
 
 .navbar a:hover ,
-.navbar a:active,
-.navbar a.active{
+.navbar a:active{
   color: var(--primary-color);
 }
 
@@ -864,7 +863,7 @@ span {
 
   .contact_us.textinput {
     width: 100%;
-    
+
   }
 
   .contact_us .text-blk.contactus-head {
@@ -1140,27 +1139,6 @@ body {
   padding:20px 70px;
 }
 
-.stt {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: rgb(128, 128, 255) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
-  box-shadow: 0 0.25rem 0.5rem 0 gray;
-  opacity: 0.7;
-}
-.stt:hover {
-  opacity: 0.8;
-}
-.stt:focus {
-  opacity: 0.9;
-}
-.stt:active {
-  opacity: 1;
-}
-
 
 /* <------------Popup Css-------------> */
 
@@ -1242,4 +1220,11 @@ body {
   top: 50vh;
   transform: translate(-50%,-50%) scale(1);
 }
-
+.di{
+  text-align: center;
+}
+.card {
+  display: inline-block;
+  margin-left: 2vw;
+  margin-top: 2vw;
+}
