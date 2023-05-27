@@ -22,4 +22,7 @@ router.get('/signup',(_req,res,_next)=>{
     res.render('signup',{path: '/signup'});
 });
 
+router.get('/privacypolicy',(req,res,next)=>{
+    res.render('privacypolicy',{path: 'privacypolicy'})
+});
 module.exports = router;
