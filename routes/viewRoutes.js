@@ -15,7 +15,7 @@ router.get('/contactUs',(_req,res,_next)=>{
 });
 
 router.get('/login',(req,res,next)=>{
-    res.render('login',{path: 'login'})
+    res.render('login',{path: '/login'})
 });
 
 router.get('/signup',(_req,res,_next)=>{
