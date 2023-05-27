@@ -20,9 +20,6 @@
     "ejs": "^3.1.9",
     "email-validator": "^2.0.4",
     "express": "^4.18.2",
-
-    "openai": "^3.1.0",
-    "start": "^5.1.0"
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.2.0",
     "openai": "^3.1.0",
