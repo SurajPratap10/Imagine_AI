@@ -1,0 +1,21 @@
+.toast {
+	background-color: #f44336;
+	color: white;
+	padding: 16px;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	font-size: 17px;
+	z-index: 1;
+	display: none;
+}
+.success-toast {
+	background-color: #4caf50;
+	color: white;
+}
+
+.error-toast {
+	background-color: #f44336;
+	color: white;
+}
