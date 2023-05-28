@@ -122,7 +122,7 @@ header{
     color: #fefefe;
   }
   .nav-bar.active{
-    height: 465px;
+    height: 4https://github.com/SurajPratap10/Imagine_AI/pull/168/conflict?name=public%252Fcss%252Fstyle.css&ancestor_oid=9437f63cf487b8bca09d7fc62c7a3d752adee987&base_oid=65aa55b1b4e886722f56934ca284055fe7813fc1&head_oid=e55debff10300f66b6b769835c769b642f81282765px;
   }
   .nav-bar.active ul{
     opacity: 1;
@@ -141,6 +141,13 @@ header{
 }
 .btn.active{
   z-index: -1;
+
+
+/* .navbar a:hover,
+.navbar a:active,
+.navbar a.active {
+	color: var(--primary-color); */
+
 }
 /* .fc1.active{
   z-index: -1;
