@@ -47,10 +47,13 @@ userSchema.methods.getSignedToken = function (res) {
 		{ expiresIn: '15d' }
 	);
 	res.cookie('refreshToken', `${refreshToken}`, {
-		maxAge: 86400 * 7000,
+		maxAge: 86400 * 100 * 15,
 		httpOnly: true,
 	});
-	return accessToken;
+	res.cookie('accessToken', `${accessToken}`, {
+		maxAge: 86400 * 100 * 1,
+		httpOnly: true,
+	});
 };
 
 const User = mongoose.model('User', userSchema);
