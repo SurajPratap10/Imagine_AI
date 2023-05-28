@@ -78,7 +78,8 @@ body {
 }
 
 .navbar a:hover,
-.navbar a:active {
+.navbar a:active,
+.navbar a.active {
 	color: var(--primary-color);
 }
 
