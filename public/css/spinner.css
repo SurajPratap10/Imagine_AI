@@ -48,6 +48,7 @@
   content: 'Please wait,while we load image for you.';
   display: block;
   font-size: 10px;
+  font-family: sans-serif;
   width: 1em;
   height: 1em;
   margin-top: -0.5em;

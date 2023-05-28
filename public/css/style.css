@@ -16,13 +16,16 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	font-family: sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	color: #333;
+	word-spacing: 3px;
+	color: #180303;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+	text-shadow:  1px 2px 5px rgba(255, 255, 255, 0.618);
 }
 
 /* Navbar */
@@ -61,10 +64,23 @@ body {
 }
 
 .navbar a {
-	color: rgb(255, 255, 255);
+	color: rgb(185, 227, 238);
 	text-decoration: none;
 	font-size: 1.5rem;
+text-shadow:  2px 3px 5px rgb(28, 24, 24);
+letter-spacing: 2px;
+font-family:Roboto;
+transform-origin: center;
+transition: .2s;
+
 }
+.navbar a:hover{
+	text-shadow:  2px 3px 5px rgb(255, 234, 234);
+	
+
+
+}
+
 
 .logo {
 	display: flex;
@@ -75,6 +91,8 @@ body {
 	padding: 0rem 1rem;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
+
+	text-shadow:  1px 2px 5px rgba(0, 0, 0, 0.119);
 }
 
 .navbar a:hover,
@@ -133,6 +151,7 @@ form select {
 	transition: transform 0.5s;
 	cursor: text;
 	border-radius: 60px;
+	font-family: sans-serif;
 }
 
 .showcase form input,
@@ -277,10 +296,15 @@ img {
   font-size: 2.1rem; */
 	padding: 65px 210px;
 	font-size: 1.9rem;
-	color: white;
+	color: transparent;
 	font-weight: bolder;
 	text-transform: uppercase;
 	text-align: center;
+	letter-spacing: .5px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.871);
+	
+
 }
 
 .about h4 {
@@ -294,6 +318,7 @@ img {
 	letter-spacing: 1px;
 	/* line-height: 30px; */
 	line-height: 26px;
+	font-family: sans-serif;
 }
 
 .about h3 {
@@ -307,6 +332,7 @@ img {
 	letter-spacing: 1px;
 	/* line-height: 30px; */
 	line-height: 26px;
+	font-family: sans-serif;
 }
 .try-it-cover {
 	padding-bottom: 130px;
@@ -316,7 +342,7 @@ img {
 	background-color: black;
 	color: #fff;
 	white-space: nowrap;
-
+font-family: sans-serif;
 	font-size: 20px;
 	font-weight: 600;
 	/* padding: 17px 30px; */
@@ -377,6 +403,7 @@ footer {
 	height: 15vh;
 	width: 100%;
 	color: white;
+	font-family: sans-serif;
 }
 
 footer a {
@@ -424,6 +451,7 @@ footer a {
 	z-index: 1;
 	border: 1px solid #fff;
 	text-decoration: none;
+	font-family: sans-serif;
 }
 
 .icons ul li a:hover {
@@ -1162,6 +1190,7 @@ body {
 	border: none;
 	outline: none;
 	transition: 0.2s;
+	font-family: sans-serif;
 }
 
 .popup-btn span {
@@ -1199,6 +1228,7 @@ body {
 	font-size: 38px;
 	font-weight: 500;
 	margin: 30px 0 10px;
+	font-family: sans-serif;
 }
 
 .open-popup {

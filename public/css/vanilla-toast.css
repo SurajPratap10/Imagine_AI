@@ -9,10 +9,13 @@
 	font-size: 17px;
 	z-index: 1;
 	display: none;
+	font-family: sans-serif;
 }
 .success-toast {
 	background-color: #4caf50;
 	color: white;
+	
+
 }
 
 .error-toast {
