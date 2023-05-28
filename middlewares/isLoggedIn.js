@@ -14,9 +14,6 @@ exports.isLoggedin = async (req, res, next) => {
 		}
 	}
 
-	console.log(
-		'Hello refresh-token checking as access token might be invalid/unavailable in cookies'
-	);
 	if (req.cookies?.refreshToken) {
 		//refresh-token is available
 		try {
