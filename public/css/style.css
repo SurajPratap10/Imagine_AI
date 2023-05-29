@@ -78,7 +78,8 @@ body {
 }
 
 .navbar a:hover,
-.navbar a:active {
+.navbar a:active,
+.navbar a.active {
 	color: var(--primary-color);
 }
 
@@ -1209,8 +1210,28 @@ body {
 .di {
 	text-align: center;
 }
+.di h1{
+  margin-bottom: 0px;
+}
 .card {
-	display: inline-block;
+  display: inline-block;
 	margin-left: 2vw;
 	margin-top: 2vw;
+  border-radius: 1.303rem;
+  margin-bottom: 5vh;
+}
+
+.card img{
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  border-top-left-radius: 1.303rem;
+  border-top-right-radius: 1.303rem;
+}
+
+.card :hover {
+  -webkit-transform: scale(1.07);
+	transform: scale(1.07);
+  border-radius: 1.303rem;
 }
