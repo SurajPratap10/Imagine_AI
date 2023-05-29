@@ -70,6 +70,11 @@ body {
 	display: flex;
 	flex-direction: row;
 }
+.nav-links{
+	position: absolute;
+	right: 12px;
+	top: 15px;
+}
 
 .AI {
 	padding: 0rem 1rem;
@@ -480,6 +485,50 @@ footer a {
 
 /* Applying Media Queries for Mobile Responsivness */
 
+/* Navbar Responsiveness */
+@media (max-width:600px) {
+	#header-btn1{
+		display: none;
+	}
+	.navbar{
+		justify-content: space-between;
+	}
+}
+@media (max-width:845px) {
+	#header-btn1{
+		display: none;
+	}
+	.navbar{
+		justify-content: space-between;
+	}
+}
+
+@media (max-width:400px) {
+	.logo{
+		margin-left: -20px;
+	}
+	.nav-links{
+		right: 2px;
+		top: 15px;
+	}
+}
+@media (max-width:338px	){
+		.nav-links{
+			position: relative;
+			top:55%;
+			right:14%;
+		}
+		
+		.logo{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.navbar{
+			justify-content: space-between;
+			flex-direction: column;
+		}
+}
 @media screen and (max-width: 750px) {
 	.showcase h1 {
 		font-size: 32px;
