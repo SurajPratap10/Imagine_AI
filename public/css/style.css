@@ -1284,3 +1284,25 @@ body {
 	transform: scale(1.07);
   border-radius: 1.303rem;
 }
+
+.privacypolicy
+{
+	text-align: justify;
+	text-justify: inter-word;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0 100px 10px 100px;
+	letter-spacing: 1px;
+	line-height: 26px;
+}
+.arrow{
+	font-weight: 700;
+	margin-top: 1rem;
+}
+
+.question
+{
+	margin-top: 2rem;
+	font-weight: 700;
+}
+
