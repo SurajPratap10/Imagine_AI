@@ -1,4 +1,4 @@
-<!-- <footer>
+<footer>
   <div class="footer-wrapper">
   <div class="icons">
 
@@ -90,23 +90,6 @@
     <p class="bot-l">Copyright © 2020 <a href="#">Imagine-AI</a> All rights reserved</p>
   </div>
 </footer>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycby0Fgr8147egnJYLp30zUPFPTKPEV_c2oV1_rvLU34dRDGiFYsxwhFEK2BpgIuT7RE_/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg");
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response =>{
-        msg.innerHTML= "Thank You For Subscribing"
-        setTimeout(function(){
-          msg.innerHTML= ""
-        },5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 </body>
 
 </html>
