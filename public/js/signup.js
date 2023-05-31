@@ -64,4 +64,4 @@ async function signup_submit(e) {
 const signup_submit_doc = document.querySelector('.btn-signup-submit');
 console.log('Hi Authjs ', signup_submit_doc);
 
-signup_submit_doc.addEventListener('click', signup_submit);
+if(signup_submit_doc)signup_submit_doc.addEventListener('click', signup_submit);
