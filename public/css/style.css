@@ -28,10 +28,11 @@ body {
 /* Navbar */
 .navbar {
 	background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+	background-color: #fff;
+	background-size: 100% 100%;
 	animation: gradient 15s ease infinite;
 	color: #fff;
-	padding: 1rem;
+	padding: -49rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -69,6 +70,11 @@ body {
 .logo {
 	display: flex;
 	flex-direction: row;
+}
+
+.logo_size{
+    width: 50px;
+  height: 50px;
 }
 .nav-links{
 	position: absolute;
@@ -216,6 +222,7 @@ button .flow {
 }
 
 button:hover .flow {
+	
 	top: -120px;
 }
 
