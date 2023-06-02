@@ -654,7 +654,11 @@ span {
 	outline-style: none;
 	outline-width: initial;
 }
+.contact_us textarea {
+font-family: sans-serif;
 
+	
+}
 .contact_us textarea:focus {
 	outline-color: initial;
 	outline-style: none;
