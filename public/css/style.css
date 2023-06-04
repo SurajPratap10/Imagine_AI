@@ -64,7 +64,7 @@ body {
 .navbar a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .logo {
@@ -89,6 +89,24 @@ body {
   color: var(--primary-color);
 }
 
+/*login arrow*/
+.navbar .login:after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin-left: 5px;
+}
+
+.navbar .login:hover:after{
+  border-top: black;
+  border-right: black;
+  transform: hidden;
+}
+
 /* Showcase */
 .showcase {
   height: 100vh;
@@ -98,7 +116,7 @@ body {
 
 .showcase h1 {
   display: flex;
-  font-size: 2.4rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   /* width: 100%; */
