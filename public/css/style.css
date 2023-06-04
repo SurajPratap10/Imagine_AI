@@ -1477,3 +1477,90 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+/* Contributor Section Styling */
+.contributor-section{
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  height: 76rem;
+  background: var(--primary-color);
+  overflow-x: hidden;
+}
+.contributor-wrapper{
+  display: flex;
+  /* border: 2px solid rgb(25, 152, 29); */
+  height: 15rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.contributor-card{
+  border: 2px solid #3f3f38;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.7s;
+}
+.contributor-card p{
+  color: white;
+  padding: 3px;
+}
+.contributor-card:hover{
+    scale: 1.1;
+    box-shadow: 1px 1px 12px rgb(105, 105, 105);
+}
+.pic{
+  width: 81px;
+  position: relative;
+  left: 26%;
+  top: 6%;
+}
+.pic img{
+  height: 82px;
+  border-radius: 50px;
+}
+
+.contributor-btn{
+  position: relative;
+  bottom: 11%;
+  right: 20%;
+}
+.contributor-btn a{
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+.contributor-btn a:hover{
+  color: rgb(1, 206, 182);
+}
+
+@media (max-width:1200px) {
+  .contributor-section{
+    height: 100rem;
+    gap: 1rem;
+  }
+  .contributor-wrapper{
+    height: 50rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width:600px) {
+  .contributor-section{
+    height: 100rem;
+    gap: 1rem;
+  }
+  .contributor-wrapper{
+    height: 50rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+  .contributor-card{
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+}
