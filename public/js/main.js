@@ -159,3 +159,27 @@ function surpriseMe() {
 
 const surpriseMeBtn = document.getElementById("surpriseMeBtn");
 if (surpriseMeBtn != null) surpriseMeBtn.addEventListener("click", surpriseMe);
+
+
+//Display Floating In Image cards on Homepage
+const cards = document.querySelectorAll('.float-in')
+const options = {
+  threshold: 0.5,
+};
+
+const animateCards = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }else {
+      entry.target.classList.remove('animate');
+    }
+    
+  });
+};
+
+const observer = new IntersectionObserver(animateCards, options);
+
+cards.forEach((card) => {
+  observer.observe(card);
+});
