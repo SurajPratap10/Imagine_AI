@@ -1,3 +1,9 @@
+
+var loader = document.getElementById("PRE");
+window.addEventListener("load", function(){
+    loader.style.display="none";
+})
+
 const popup = document.getElementById("popup");
 
 function closePopUp() {
