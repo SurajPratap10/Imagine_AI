@@ -1,3 +1,4 @@
+<%- include('includes/PRE.ejs') %>
 <%- include('includes/header.ejs') %>
 </head>
 <%- include('includes/navbar.ejs') %>
@@ -55,3 +56,10 @@
   </main>
 
   <%- include('includes/footer.ejs') %>
+<script>
+  var loader = document.getElementById("bodyPRE");
+
+window.addEventListener("load", function(){
+    loader.style.display="none";
+})
+</script>
