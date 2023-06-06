@@ -1521,3 +1521,22 @@ body::-webkit-scrollbar-thumb:hover {
   letter-spacing: 1px;
   line-height: 26px;
 }
+@media (max-width: 500px){
+  .hww p{
+      font-size: 1rem;
+      padding-left: 60px;
+      padding-right: 60px;
+  }
+  .hww h2{
+    font-size: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 750px){
+  .about h4 {
+      font-size: 1rem;
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+}
