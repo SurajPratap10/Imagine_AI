@@ -190,7 +190,7 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-const gap = 16;
+const gap = 42;
 
 const carousel = document.getElementById("carousel"),
   content = document.getElementById("content"),
