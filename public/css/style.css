@@ -642,10 +642,10 @@ span {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
   margin-right: auto;
-  /* margin-bottom: 60px; */
   margin-left: auto;
 }
 
@@ -678,6 +678,10 @@ span {
 .contact_us .responsive-container-block.container {
   max-width: 1320px;
   margin-top: 1.875rem;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+  rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+  rgba(0, 0, 0, 0.09) 0px 32px 16px;
   margin-right: auto;
   margin-bottom: 60px;
   margin-left: auto;
@@ -694,15 +698,18 @@ span {
   font-size: 2.5rem;
   line-height: 3.125rem;
   font-weight: 700;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin-top: 0px;
+  letter-spacing: 2px;
   margin-right: 0px;
   margin-bottom: 0.125rem;
+  color: white;
   margin-left: 0px;
 }
 
 .contact_us .text-blk.contactus-subhead {
   max-width: 385px;
-  color: #ffffff;
+  color:whitesmoke;
   font-size: 16px;
   margin-top: 20px;
   margin-right: 0px;
@@ -729,6 +736,9 @@ span {
   display: flex;
   margin-top: 10px;
   margin-right: 0px;
+  text-align: center;
+  padding-top: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   margin-bottom: 15px;
 }
 
@@ -738,32 +748,26 @@ span {
 
 .contact_us .input {
   height: 2.813rem;
-  width: 90%;
-  border-width: 0.156rem;
-  border-color: #a2a2a2;
-  border-style: solid;
+  width: 90%;box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   border-image-source: initial;
   border-image-slice: initial;
   border-image-width: initial;
   border-image-outset: initial;
   border-image-repeat: initial;
-  border-radius: 3.75rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
 }
 
 .contact_us .textinput {
   height: 4rem;
-  width: 95%;
-  border-width: 0.125rem;
-  border-style: solid;
-  border-color: #a2a2a2;
+  width: 95%;  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   border-image-source: initial;
   border-image-slice: initial;
   border-image-width: initial;
   border-image-outset: initial;
   border-image-repeat: initial;
-  border-radius: 3.75rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   padding: 1.25rem 1.875rem 1.25rem 1.25rem;
   margin-bottom: 1.25rem;
@@ -795,7 +799,7 @@ span {
 
 .contact_us
   .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
-  padding-top: 0px;
+   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 3.75rem;
@@ -1315,7 +1319,7 @@ body {
 
 .cardEx:hover {
   transform: rotateY(180deg);
- box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .cardEx:before {
   content: "";
