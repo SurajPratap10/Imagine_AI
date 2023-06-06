@@ -1497,3 +1497,27 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.hww{
+  padding-top: 30px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hww h2{
+  padding: 65px 210px;
+  font-size: 1.9rem;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hww p{
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0 300px 10px 300px;
+  letter-spacing: 1px;
+  line-height: 26px;
+}
