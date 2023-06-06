@@ -1304,7 +1304,7 @@ body {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
   border-radius: 10px;
   transition: all 1s ease-in-out;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .cardEx img {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
@@ -1312,13 +1312,10 @@ body {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
   border-radius: 10px;
 }
+
 .cardEx:hover {
   transform: rotateY(180deg);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .cardEx:before {
   content: "";
@@ -1359,14 +1356,12 @@ body {
   z-index: 3;
   color: #000000;
   opacity: 0;
-  backface-visibility: hidden;
   transform: translateY(30px);
-  transition: 0.5s all;
+  transition: 0.1s all;
 }
 .cardEx:hover .info {
-  backface-visibility: visible;
   opacity: 1;
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
 }
 .cardEx .info h1 {
   color: #000000;
