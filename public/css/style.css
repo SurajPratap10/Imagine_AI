@@ -1210,6 +1210,16 @@ body {
   .wk-tab-12 {
     width: 100%;
   }
+	
+  .di {
+    width: 80%;
+  }
+
+  #prev,
+  #next {
+   padding: 4px;
+   width: 200px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1259,6 +1269,16 @@ body {
 
   .wk-mobile-12 {
     width: 100%;
+  }
+
+  .di {
+    width: 85%;
+  }
+
+  #prev,
+  #next {
+   padding: 2px;
+   width: 80px;
   }
 }
 
@@ -1528,14 +1548,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #prev {
-	/* top: 50%; */
 	left: 0;
 	transform: translate(50%, -50%);
-	/* display: none; */
 }
 
 #next {
-	/* top: 50%; */
 	right: 0;
 	transform: translate(-50%, -50%);
 }
