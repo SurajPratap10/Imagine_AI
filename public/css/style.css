@@ -1299,12 +1299,26 @@ body {
   position: relative;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.5s ease-in-out;
-  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 10px;
+  transition: all 1s ease-in-out;
+  margin-bottom: 50px;
+}
+.cardEx img {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 10px;
 }
 .cardEx:hover {
-  transform: translateY(20px);
+  transform: rotateY(180deg);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
 }
 .cardEx:before {
   content: "";
@@ -1319,7 +1333,13 @@ body {
     rgba(136, 134, 137, 0.5),
     rgb(240, 237, 240)
   );
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   z-index: 2;
+  border-radius: 10px;
   transition: 0.5s all;
   opacity: 0;
 }
@@ -1336,16 +1356,17 @@ body {
   left: 0;
 }
 .cardEx .info {
-  position: relative;
   z-index: 3;
   color: #000000;
   opacity: 0;
+  backface-visibility: hidden;
   transform: translateY(30px);
   transition: 0.5s all;
 }
 .cardEx:hover .info {
+  backface-visibility: visible;
   opacity: 1;
-  transform: translateY(0px);
+  transform: rotateY(-180deg);
 }
 .cardEx .info h1 {
   color: #000000;
