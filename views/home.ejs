@@ -2,69 +2,118 @@
 <%- include('includes/header.ejs') %>
 </head>
 <%- include('includes/navbar.ejs') %>
-  <main>
-    <section class="about">
-      <h1>Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images</h1>
-      <div class="main-content-wrapper">
+<main>
+  <section class="about">
+    <h1>Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images</h1>
+    <div class="main-content-wrapper">
       <div class="main-content">
-          <h4>
-          The <b>IMAGINE - AI</b>, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js and Express that uses
-          OpenAI's Dall-E models to generate images.</h4>
+        <h4>
+          The <b>IMAGINE - AI</b>, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js and Express that uses OpenAI's Dall-E models to generate images.
+        </h4>
 
-         <h3>The <b>IMAGINE - AI</b> offers a solution to this problem by providing users with a powerful AI tool that can generate original and visually stunning images. With just a few prompts or keywords, the AI is able to generate a wide range of
-          images that are unlike anything that has been seen before.</h3>
+        <h3>The <b>IMAGINE - AI</b> offers a solution to this problem by providing users with a powerful AI tool that can generate original and visually stunning images. With just a few prompts or keywords, the AI is able to generate a wide range of images that are unlike anything that has been seen before.</h3>
       </div>
       <img src="logo-no-background.png" class="home-logo" alt="">
     </div>
-      <!-- <a class="btn" href="#showcase"><span id="try-btn">Try it</span>
-        <div class="flow"></div></a> -->
-      <a class="try-it-cover" href="/generateImg">
-        <button class="btn">
-          <span id="try-btn">Try it</span>
-          <div class="flow"></div>
-        </button>
-      </a>
-      <div class="di">
-        <h1>Some examples of images generated through DALL-E2</h1>
-        <div class="wrapper">
-          <div class="cardEx float-in">
-              <img src="1.png" alt="">
-              <div class="info">
-                  <h1>Horse</h1>
-                  <p>Photograph of an astronaut riding a horse.</p>
-              </div>
+
+    <a class="try-it-cover" href="/generateImg">
+      <button class="btn">
+        <span id="try-btn">Try it</span>
+        <div class="flow"></div>
+      </button>
+    </a>
+
+    <div class="di">
+      <h1>Some examples of images generated through DALL-E2</h1>
+      <div class="wrapper">
+        <div class="cardEx float-in">
+          <img src="1.png" alt="">
+          <div class="info">
+            <h1>Horse</h1>
+            <p>Photograph of an astronaut riding a horse.</p>
           </div>
-          <div class="cardEx float-in">
-              <img src="2.png" alt="">
-              <div class="info">
-                  <h1>Capybara</h1>
-                  <p>An oil painting of a capybara wearing crown.</p>
-              </div>
+        </div>
+        <div class="cardEx float-in">
+          <img src="2.png" alt="">
+          <div class="info">
+            <h1>Capybara</h1>
+            <p>An oil painting of a capybara wearing a crown.</p>
           </div>
-          <div class="cardEx float-in">
-              <img src="3.png" alt="">
-              <div class="info">
-                  <h1>Sports Car</h1>
-                  <p>Synthwave sports car on a port road.</p>
-              </div>
+        </div>
+        <div class="cardEx float-in">
+          <img src="3.png" alt="">
+          <div class="info">
+            <h1>Sports Car</h1>
+            <p>Synthwave sports car on a port road.</p>
           </div>
-          <div class="cardEx float-in">
-              <img src="4.png" alt="">
-              <div class="info">
-                  <h1>Astronaut</h1>
-                  <p>An astronaut lounging in a resort in space, vaporwave.</p>
-              </div>
+        </div>
+        <div class="cardEx float-in">
+          <img src="4.png" alt="">
+          <div class="info">
+            <h1>Astronaut</h1>
+            <p>An astronaut lounging in a resort in space, vaporwave.</p>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+    
+    <!-- Dark mode toggle button -->
+    <div class="dark-mode-toggle">
+      <label for="dark-mode-checkbox">Dark Mode</label>
+      <input type="checkbox" id="dark-mode-checkbox" onchange="toggleDarkMode()" />
+    </div>
+    
+  </section>
+</main>
 
-  <%- include('includes/footer.ejs') %>
+<%- include('includes/footer.ejs') %>
+
+<style>
+  .light-mode {
+    /* Light mode styles */
+  }
+
+  .dark-mode {
+    /* Dark mode styles */
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .dark-mode #navbar {
+    /* Dark mode styles for navbar */
+    background-color: #121212;
+   
+    color: #ffffff;
+  }
+
+  .dark-mode .about {
+    /* Dark mode styles for the about section */
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  
+  .dark-mode-toggle {
+  /* Styles for the dark mode toggle button */
+  position: fixed;
+  top: 120px; /* Adjust the top value as needed */
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+</style>
+
 <script>
-  var loader = document.getElementById("bodyPRE");
+  function toggleDarkMode() {
+    const body = document.body;
+    const navbar = document.getElementById("navbar");
+    const aboutSection = document.querySelector(".about");
 
-window.addEventListener("load", function(){
-    loader.style.display="none";
-})
+    body.classList.toggle("dark-mode");
+    navbar.classList.toggle("dark-mode");
+    aboutSection.classList.toggle("dark-mode");
+  }
 </script>
