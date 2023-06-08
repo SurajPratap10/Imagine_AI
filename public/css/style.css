@@ -467,8 +467,10 @@ img {
 }
 
 footer {
+  height: 15vh;
   width: 100%;
   color: white;
+  margin-top: 5rem;
 }
 
 footer a {
