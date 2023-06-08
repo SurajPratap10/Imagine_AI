@@ -383,7 +383,7 @@ img {
   text-justify: inter-word;
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 0 300px 10px 300px;
+  padding: 0 300px 10px 100px;
   letter-spacing: 1px;
   /* line-height: 30px; */
   line-height: 26px;
@@ -396,7 +396,7 @@ img {
   text-justify: inter-word;
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 15px 300px 120px 300px;
+  padding: 15px 300px 120px 100px;
   letter-spacing: 1px;
   /* line-height: 30px; */
   line-height: 26px;
@@ -1450,12 +1450,22 @@ body {
   margin-bottom: 20px;
   padding-left: 10px;
 }
-
+.main-content-wrapper{
+  display: flex;
+}
 .main-content{
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
 }
-
+.home-logo{
+  width: 20%;
+  position: relative;
+  right: 13%;
+  bottom: 44%;
+  top: 28%;
+  padding-bottom: 15%;
+  animation: home-ani 7s ease-in forwards infinite;
+}
 @keyframes fadeIn {
 
   from{
@@ -1466,7 +1476,25 @@ body {
   }
   
 }
-
+@keyframes home-ani{
+   25%{
+    padding-bottom: 17%;
+    scale: 0.9;
+   }
+   75%{
+    padding-bottom: 12%;
+   }
+  
+}
+/* Media Query for main-content-wrapper */
+@media(max-width:600px){
+  .main-content-wrapper{
+    flex-direction: column;
+  }
+  .home-logo{
+    right: 0%;
+  }
+}
 .float-in{
   opacity: 0;
   transform: translateY(50px);
