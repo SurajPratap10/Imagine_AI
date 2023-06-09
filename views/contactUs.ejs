@@ -128,23 +128,19 @@
         </div>
       </div>
     </div>
+        <!-- Dark mode toggle button -->
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+          <span id="dark-mode-icon">&#x1F319;</span>
+        </button>
   </section>
 </main>
 
 <%- include('includes/footer.ejs') %>
 
-<script>
-  function toggleDarkMode() {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-mode');
-  }
-</script>
-
-<div class="dark-mode-toggle">
-  <label for="dark-mode-checkbox">Dark Mode</label>
-  <input type="checkbox" id="dark-mode-checkbox" onchange="toggleDarkMode()" />
-</div>
 <style>
+  .light-mode {
+    /* Light mode styles */
+  }
 
   .dark-mode {
     /* Dark mode styles */
@@ -155,20 +151,59 @@
   .dark-mode #navbar {
     /* Dark mode styles for navbar */
     background-color: #121212;
-   
+    color: #ffffff;
+  }
+
+  .dark-mode .about {
+    /* Dark mode styles for the about section */
+    background-color: #121212;
     color: #ffffff;
   }
   
   
   .dark-mode-toggle {
-  /* Styles for the dark mode toggle button */
-  position: fixed;
-  top: 120px; /* Adjust the top value as needed */
-  right: 20px;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-}
-
+    /* Styles for the dark mode toggle button */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .dark-mode-toggle span {
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.1em;
+  }
+  
+  .dark-mode .dark-mode-toggle span {
+    transform: rotate(180deg);
+  }
 </style>
+
+<script>
+  function toggleDarkMode() {
+    const body = document.body;
+    const navbar = document.getElementById("navbar");
+    const aboutSection = document.querySelector(".about");
+    const darkModeToggle = document.querySelector(".dark-mode-toggle");
+    const darkModeIcon = document.querySelector("#dark-mode-icon");
+
+    body.classList.toggle("dark-mode");
+    navbar.classList.toggle("dark-mode");
+    aboutSection.classList.toggle("dark-mode");
+    darkModeToggle.classList.toggle("dark");
+
+    if (darkModeIcon.innerHTML === "&#x1F319;") {
+      darkModeIcon.innerHTML = "&#x2600;";
+    } else {
+      darkModeIcon.innerHTML = "&#x1F319;";
+    }
+  }
+</script>
