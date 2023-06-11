@@ -96,6 +96,11 @@ body {
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
   background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -363,6 +368,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
 }
 
 .about h1 {
