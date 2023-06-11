@@ -1,31 +1,53 @@
-<%- include('includes/PRE.ejs') %>
-<%- include('includes/header.ejs') %>
+<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %>
+<head>
+  <head>
+    <style>
+      .google-button {
+        background-color: #db4437;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
 </head>
 <%- include('includes/navbar.ejs') %>
-	<section class="showcase" id="showcase">
-		<form id="image-form" action="index.html">
-			<h1 class="AI">SIGN UP</h1>
-			<div class="form-control">
-				<input type="text" id="name" placeholder="Enter Name" />
-			</div>
-			<div class="form-control">
-				<input type="email" id="email" placeholder="Enter Email address" />
-			</div>
-			<div class="form-control">
-				<input type="password" id="password" placeholder="Enter password" />
-			</div>
-
-			<div class="formBtns">
-				<button type="submit" class="btn sign-in-btn btn-signup-submit" href="index.html">
-					<span>Submit</span>
-					<div class="flow"></div>
-				</button>
-			</div>
-			<div class="get-api-text">
-				<p>Already have an account? <a href="/login">Signin</a></p>
-			</div>
-		</form>
-		<div id="successToast" class="toast success-toast"></div>
-		<div id="errorToast" class="toast error-toast"></div>
-	</section>
+<section class="showcase" id="showcase">
+  <form id="image-form" action="index.html">
+    <h1 class="AI">SIGN UP</h1>
+    <div class="form-control">
+      <input type="text" id="name" placeholder="Enter Name" />
+    </div>
+    <div class="form-control">
+      <input type="email" id="email" placeholder="Enter Email address" />
+    </div>
+    <div class="form-control">
+      <input type="password" id="password" placeholder="Enter password" />
+    </div>
+    <div class="formBtns">
+      <a href="/auth/google" class="google-button"
+        ><span class="fa fa-google"></span> SignIn with Google</a
+      >
+    </div>
+    <div class="formBtns">
+      <button
+        type="submit"
+        class="btn sign-in-btn btn-signup-submit"
+        href="index.html"
+      >
+        <span>Submit</span>
+        <div class="flow"></div>
+      </button>
+    </div>
+    <div class="get-api-text">
+      <p>Already have an account? <a href="/login">Signin</a></p>
+    </div>
+  </form>
+  <div id="successToast" class="toast success-toast"></div>
+  <div id="errorToast" class="toast error-toast"></div>
+</section>
 <%- include('includes/footer.ejs') %>
