@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+
 *,
 *:before,
 *:after {
@@ -9,6 +12,7 @@
 
 :root {
   --primary-color: rgb(32, 32, 32);
+  --navbar-color: #03045e;
 }
 
 :root {
@@ -129,10 +133,35 @@ body {
   margin-left: 1rem;
 }
 
-.navbar a {
+.hover-effect {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 1.3rem;
+}
+
+.hover-effect:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.hover-effect:hover::after{
+  /* transform: scale(1.1); */
+  transition: 300ms;
+  width: 100%;
+}
+
+.hover-effect::after{
+  content:'';
+  display:block;
+  height: 5px;
+  width:0;
+  background:#03045e;
+  transition:all .5
+}
+
+.hover-effect:hover{
+  transform: scale(1.1);
+  transition: 100ms;
 }
 
 .logo {
@@ -146,7 +175,7 @@ body {
 }
 
 .AI {
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -154,7 +183,7 @@ body {
 .navbar a:hover,
 .navbar a:active,
 .navbar a.active {
-  color: var(--primary-color);
+  color: var(--navbar-color);
 }
 
 /*login arrow*/
@@ -369,9 +398,9 @@ img {
   /* padding: 70px 20px;
   font-size: 2.1rem; */
   padding: 65px 210px;
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   color: white;
-  font-weight: bolder;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
 }
@@ -387,6 +416,7 @@ img {
   letter-spacing: 1px;
   /* line-height: 30px; */
   line-height: 26px;
+  font-family: 'mukta';
 }
 
 .about h3 {
@@ -400,6 +430,7 @@ img {
   letter-spacing: 1px;
   /* line-height: 30px; */
   line-height: 26px;
+  font-family: 'mukta';
 }
 .try-it-cover {
   padding-bottom: 130px;
