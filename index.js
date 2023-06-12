@@ -101,3 +101,14 @@ connectDb();
 app.use((_req, res, _next) => {
   res.status(404).sendFile(path.join(__dirname, "public/error.html"));
 });
+
+// Scroll to the top when the button is clicked
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if(window.pageYOffset >100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
