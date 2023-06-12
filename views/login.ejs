@@ -1,4 +1,21 @@
+<%- include('includes/PRE.ejs') %>
 <%- include('includes/header.ejs') %>
+
+<head>
+	<style>
+		.google-button {
+		  background-color: #db4437;
+		  color: white;
+		  border: none;
+		  padding: 10px 20px;
+		  text-decoration: none;
+		  font-size: 16px;
+		  border-radius: 4px;
+		  cursor: pointer;
+		}
+	  </style>
+</head>
+<%- include('includes/navbar.ejs') %>
 <section class="showcase" id="showcase">
 	<form id="image-form" action="index.html">
 		<h1 class="AI">SIGN IN</h1>
@@ -6,9 +23,13 @@
 			<input type="text" id="email" placeholder="Enter Email address" />
 		</div>
 		<div class="form-control">
-			<input type="text" id="password" placeholder="Enter password" />
+			<input type="password" id="password" placeholder="Enter password" />
 		</div>
-
+		<div class="formBtns">
+			<a href="/auth/google" class="google-button"
+			  ><span class="fa fa-google"></span> SignIn with Google</a
+			>
+		  </div>
 		<div class="formBtns">
 			<button
 				type="submit"
