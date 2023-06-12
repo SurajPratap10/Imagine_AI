@@ -14,6 +14,10 @@ router.get('/contactUs',(_req,res,_next)=>{
     res.render('contactUs',{path: '/contactUs'});
 });
 
+router.get('/aboutUs',(_req,res,_next)=>{
+    res.render('aboutUs',{path: '/aboutUs'});
+});
+
 router.get('/login',(req,res,next)=>{
     res.render('login',{path: 'login'})
 });
