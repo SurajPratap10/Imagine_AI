@@ -1,5 +1,5 @@
 # Imagine_AI
-
+<div id="top">
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
@@ -31,7 +31,8 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 # Links:
 <h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
 <h4> Live Site: https://imagine-ai-17zf.vercel.app/ </h4>
-
+<p align="right"><a href="#top">Back to Top</a></p>
+  
 # Technology Stack used:
 1. **[`Node JS`](https://nodejs.org/en/docs/guides)**
 2. **[`Express JS`](https://expressjs.com/en/guide/routing.html)**
@@ -67,6 +68,7 @@ Visit `http://localhost:5000` in your browser.
 The endpoint is at `POST http://localhost:5000/openai/generateimage`.
 
 <hr>
+  <p align="right"><a href="#top">Back to Top</a></p>
 
 # How to **contribute**?
 
@@ -149,7 +151,7 @@ git push -u origin <your_branch_name>
 -   **Please follow best code formatting and linting practices to assure good code quality. You should use tools such as Prettier or Eslint for the purpose.**
 
 <hr>
-
+<p align="right"><a href="#top">Back to Top</a></p>
 
 <h1 align=center> Project Maintainer & Admin </h1>
 <p align="center"> <a href="https://github.com/SurajPratap10"><img src="https://avatars.githubusercontent.com/u/92919173?v=4" width=100px height=100px /></a><br>
@@ -173,5 +175,7 @@ git push -u origin <your_branch_name>
 
 <h4>Thanks a lot for spending your time helping Imagine_AI grow. Thanks a lot! Keep rocking 🍻 </h4>
 
-<a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI" height="50" width="100%" align="right">
+<a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors"><img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI"></a>
+
+  <p align="right"><a href="#top">Back to Top</a></p>
+  </div>
