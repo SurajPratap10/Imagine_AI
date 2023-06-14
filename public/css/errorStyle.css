@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Fira+Mono:wght@500&display=swap");
+
 body {
   height: 95vh;
   background: #000000;
@@ -6,56 +7,145 @@ body {
   color: #e0e0e0;
   font-family: "Fira Mono", monospace;
 }
+
 h1 {
   font-size: 2.5rem;
   font-family: "Permanent Marker", cursive;
 }
+
 div {
   transform-style: preserve-3d;
 }
+
 svg {
-  width: clamp(300px, 70%, 600px);
-  height: 500px;
+  width: clamp(300px, 70%, 500px);
+  height: 400px;
 }
+
 #rocket {
   transform: translateY(750px);
 
   animation: launch 2s ease-out forwards;
 }
 
+button,
+.btn {
+  outline: none;
+  position: relative;
+  padding: 10px 30px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 60px;
+  border: none;
+  margin-top: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button span {
+  text-align: center;
+  position: relative;
+  right: 10px;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button .flow {
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 250px;
+  height: 200px;
+  background: #e31153;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+button:hover .flow {
+  top: -120px;
+}
+
+button .flow:before,
+button .flow:after {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+button .flow:before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: swing 5s linear infinite;
+}
+
+button .flow:after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: swing 10s linear infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
 @keyframes launch {
   from {
     transform: translateY(750px);
   }
+
   to {
     perspective: 500px;
     transform: translateY(0px);
   }
 }
+
 #stars {
   animation: twinkling 2s linear;
 }
+
 @keyframes twinkling {
   from {
     transform: scale(0);
   }
+
   to {
     transform: scale(1);
   }
 }
+
 .text {
   opacity: 0;
   animation: appear 1s ease-in forwards;
   animation-delay: 1.8s;
 }
+
 @keyframes appear {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 a {
   color: #f66947;
   text-decoration: none;

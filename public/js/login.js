@@ -59,4 +59,4 @@ async function loginSubmit(e) {
 }
 
 const login_submit_doc = document.querySelector('.btn-login-submit');
-login_submit_doc.addEventListener('click', loginSubmit);
+if(login_submit_doc)login_submit_doc.addEventListener('click', loginSubmit);
