@@ -211,6 +211,9 @@ body {
 
 /* Showcase */
 .showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
   background: var(--primary-color);
@@ -223,11 +226,10 @@ body {
   color: rgb(255, 255, 255);
   /* width: 100%; */
   text-align: center;
-
   line-height: 6px;
   outline: none;
   animation: animate 5s linear infinite;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding-top: 60px;
 }
 
@@ -635,13 +637,22 @@ footer a {
   width: 30px;
 }
 
+
 .formBtns {
   display: flex;
   gap: 10px;
   padding-bottom: 20px;
 }
 
-.signin-opt, .signup-opt {
+.signup-opt, .signin-opt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.signin-opt-icons, .signup-opt-icons {
   display: flex;
   justify-content: center;
   align-items: center;
