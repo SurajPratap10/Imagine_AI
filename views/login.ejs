@@ -1,50 +1,57 @@
-<%- include('includes/PRE.ejs') %>
-<%- include('includes/header.ejs') %>
+<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %>
 
 <head>
-	<style>
-		.google-button {
-		  background-color: #db4437;
-		  color: white;
-		  border: none;
-		  padding: 10px 20px;
-		  text-decoration: none;
-		  font-size: 16px;
-		  border-radius: 4px;
-		  cursor: pointer;
-		}
-	  </style>
+  <style>
+	.google-icon {
+		vertical-align: middle;
+		fill: teal;
+		display: inline-block;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.google-icon:hover {
+		fill: white;
+	}
+  </style>
 </head>
 <%- include('includes/navbar.ejs') %>
 <section class="showcase" id="showcase">
-	<form id="image-form" action="index.html">
-		<h1 class="AI">SIGN IN</h1>
-		<div class="form-control">
-			<input type="text" id="email" placeholder="Enter Email address" />
-		</div>
-		<div class="form-control">
-			<input type="password" id="password" placeholder="Enter password" />
-		</div>
-		<div class="formBtns">
-			<a href="/auth/google" class="google-button"
-			  ><span class="fa fa-google"></span> SignIn with Google</a
-			>
-		  </div>
-		<div class="formBtns">
-			<button
-				type="submit"
-				class="btn sign-in-btn btn-login-submit"
-				href="index.html"
-			>
-				<span>Submit</span>
-				<div class="flow"></div>
-			</button>
-		</div>
-		<div class="get-api-text">
-			<p>No account? <a href="/signup">Signup</a></p>
-		</div>
-	</form>
-	<div id="successToast" class="toast success-toast"></div>
-	<div id="errorToast" class="toast error-toast"></div>
+  <form id="image-form" action="index.html">
+    <h1 class="AI">SIGN IN</h1>
+    <div class="form-control">
+      <input type="text" id="email" placeholder="Enter Email address" />
+    </div>
+    <div class="form-control">
+      <input type="password" id="password" placeholder="Enter password" />
+    </div>
+    <div class="formBtns">
+      <a href="/auth/google" class="google-button"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2em"
+          viewBox="0 0 488 512"
+		  class="google-icon"
+        >
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+          /></svg
+      ></a>
+    </div>
+    <div class="formBtns">
+      <button
+        type="submit"
+        class="btn sign-in-btn btn-login-submit"
+        href="index.html"
+      >
+        <span>Submit</span>
+        <div class="flow"></div>
+      </button>
+    </div>
+    <div class="get-api-text">
+      <p>No account? <a href="/signup">Signup</a></p>
+    </div>
+  </form>
+  <div id="successToast" class="toast success-toast"></div>
+  <div id="errorToast" class="toast error-toast"></div>
 </section>
 <%- include('includes/footer.ejs') %>
