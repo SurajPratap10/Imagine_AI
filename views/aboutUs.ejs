@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="about-image">
-        <img src="banner.png" alt="imagine"/>
+        <img class="about-us-logo" src="logo-no-background.webp" alt="imagine"/>
       </div>
   </div>
 </div>
@@ -134,11 +134,11 @@
         <ul>
           <li>
             <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-                class="fab fa-twitter icon"><img class="footer-icons" src="./faviconicon/facebook.png" alt="facebook"></i></a>
+              class="fa-brands fa-facebook-f icon"></i></a>
           </li>
           <li>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/aridoshikazu_1/"><i
-                class="fab fa-youtube icon"><img class="footer-icons" src="./faviconicon/instagram.png" alt="Instagram"></i></a>
+            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+              class="fab fa-github icon"></i> </a>
           </li>
         </ul>
       </div>
@@ -153,11 +153,11 @@
         <ul>
           <li>
             <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-                class="fab fa-twitter icon"><img class="footer-icons" src="./faviconicon/facebook.png" alt="facebook"></i></a>
+              class="fa-brands fa-facebook-f icon"></i></a>
           </li>
           <li>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/aridoshikazu_1/"><i
-                class="fab fa-youtube icon"><img class="footer-icons" src="./faviconicon/instagram.png" alt="Instagram"></i></a>
+            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+              class="fab fa-github icon"></i> </a>
           </li>
         </ul>
       </div>
@@ -172,11 +172,11 @@
         <ul>
           <li>
             <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-                class="fab fa-twitter icon"><img class="footer-icons" src="./faviconicon/facebook.png" alt="facebook"></i></a>
+              class="fa-brands fa-facebook-f icon"></i></a>
           </li>
           <li>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/aridoshikazu_1/"><i
-                class="fab fa-youtube icon"><img class="footer-icons" src="./faviconicon/instagram.png" alt="Instagram"></i></a>
+            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+              class="fab fa-github icon"></i> </a>
           </li>
         </ul>
       </div>
@@ -191,11 +191,11 @@
         <ul>
           <li>
             <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-                class="fab fa-twitter icon"><img class="footer-icons" src="./faviconicon/facebook.png" alt="facebook"></i></a>
+              class="fa-brands fa-facebook-f icon"></i></a>
           </li>
           <li>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/aridoshikazu_1/"><i
-                class="fab fa-youtube icon"><img class="footer-icons" src="./faviconicon/instagram.png" alt="Instagram"></i></a>
+            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+              class="fab fa-github icon"></i> </a>
           </li>
         </ul>
       </div>
@@ -208,72 +208,58 @@
 <%- include('includes/footer.ejs') %>
 
 <style>
+  /* Light mode styles */
   .light-mode {
-    /* Light mode styles */
+
   }
 
+  /* Dark mode styles */
   .dark-mode {
-    /* Dark mode styles */
     background-color: #121212;
     color: #ffffff;
   }
 
+  /* Dark mode styles for navbar */
   .dark-mode #navbar {
-    /* Dark mode styles for navbar */
     background-color: #121212;
     color: #ffffff;
   }
 
+  /* Dark mode styles for the about section */
   .dark-mode .about {
-    /* Dark mode styles for the about section */
     background-color: #121212;
     color: #ffffff;
   }
   
-  
+  /* Styles for the dark mode toggle button */
   .dark-mode-toggle {
-    /* Styles for the dark mode toggle button */
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    background-color: transparent;
-    border: none;
     font-size: 24px;
     cursor: pointer;
   }
   
-  .dark-mode-toggle span {
+  .dark-mode-toggle i {
     transition: transform 0.3s ease-in-out;
     font-size: 1.1em;
-  }
-  
-  .dark-mode .dark-mode-toggle span {
-    transform: rotate(180deg);
   }
 </style>
 
 <script>
   function toggleDarkMode() {
     const body = document.body;
-    const navbar = document.getElementById("navbar");
+    const navbar = document.querySelector(".navbar");
     const aboutSection = document.querySelector(".about");
     const darkModeToggle = document.querySelector(".dark-mode-toggle");
-    const darkModeIcon = document.querySelector("#dark-mode-icon");
+    const darkModeIcon = document.getElementById("dark-mode-icon");
 
     body.classList.toggle("dark-mode");
     navbar.classList.toggle("dark-mode");
     aboutSection.classList.toggle("dark-mode");
     darkModeToggle.classList.toggle("dark");
-
-    if (darkModeIcon.innerHTML === "&#x1F319;") {
-      darkModeIcon.innerHTML = "&#x2600;";
+  
+    if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+      darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
     } else {
-      darkModeIcon.innerHTML = "&#x1F319;";
+      darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
   }
 </script>
