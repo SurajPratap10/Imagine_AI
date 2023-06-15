@@ -1,15 +1,10 @@
 const path = require('path');
 const express = require('express');
-const connectDb = require('./config/db.js');
 require('dotenv').config();
 const port = process.env.PORT || 5000;
 const viewRoutes = require('./routes/viewRoutes');
 const cookieParser = require('cookie-parser');
 const app = express();
-
-//EJS AS RENDER ENGINE
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views')); //look for views in views folder
 
 //ENABLING BODY PARSER:
 app.use(express.json());
