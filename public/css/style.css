@@ -637,9 +637,15 @@ footer a {
 
 .formBtns {
   display: flex;
-  flex-direction: row;
   gap: 10px;
   padding-bottom: 20px;
+}
+
+.signin-opt, .signup-opt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Applying Media Queries for Mobile Responsivness */
