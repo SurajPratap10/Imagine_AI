@@ -138,9 +138,6 @@
 <%- include('includes/footer.ejs') %>
 
 <style>
-  .light-mode {
-    /* Light mode styles */
-  }
 
   .dark-mode {
     /* Dark mode styles */
@@ -188,22 +185,39 @@
 </style>
 
 <script>
+  let theme = localStorage.getItem("darkmode");
+  let darkMode = false;
+  if(theme === "true"){
+    toggleDarkMode();
+  }
+  
   function toggleDarkMode() {
     const body = document.body;
     const navbar = document.getElementById("navbar");
-    const aboutSection = document.querySelector(".about");
-    const darkModeToggle = document.querySelector(".dark-mode-toggle");
+    const aboutSection = document.querySelector(".about");   
     const darkModeIcon = document.querySelector("#dark-mode-icon");
 
     body.classList.toggle("dark-mode");
-    navbar.classList.toggle("dark-mode");
-    aboutSection.classList.toggle("dark-mode");
-    darkModeToggle.classList.toggle("dark");
-
-    if (darkModeIcon.innerHTML === "&#x1F319;") {
+    
+    
+    if (localStorage.getItem("darkmode")==="false") {
+      
       darkModeIcon.innerHTML = "&#x2600;";
+    
+    
+      localStorage.setItem("darkmode","true");
+      darkMode=true;
+      
     } else {
+     
       darkModeIcon.innerHTML = "&#x1F319;";
+      if(darkMode===true){
+      localStorage.setItem("darkmode","false");}
+      else{
+        darkMode=true;
+        darkModeIcon.innerHTML = "&#x2600;";
+      }
+      
     }
   }
 </script>
