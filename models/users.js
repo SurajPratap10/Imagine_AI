@@ -14,11 +14,14 @@ const userSchema = new mongoose.Schema({
 		required: [true, 'Email is required!!!'],
 		unique: true,
 	},
-	password: {
-		type: String,
-		required: [true, 'password is required!!!'],
-		minlength: [6, 'Password length should be 6 character long'],
-	},
+	googleId: String, // Add a field to store the googleId
+  password: {
+    type: String,
+    required: function () {
+      return !this.googleId; // Password is required if googleId is not present and isGoogleUser is false
+    },
+    minlength: [6, 'Password length should be 6 characters long'],
+  },
 });
 
 userSchema.pre('save', async function (next) {
