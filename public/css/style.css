@@ -192,9 +192,15 @@ body {
   transition: all 0.5;
 }
 
+.logo_size{
+  width: 50px;
+height: 50px;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
+  
 }
 
 
