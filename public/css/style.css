@@ -100,7 +100,6 @@ body {
 
 /* Navbar */
 .navbar {
-<<<<<<< HEAD
 	background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
 	background-color: #fff;
 	background-size: 100% 100%;
@@ -110,21 +109,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-=======
-  position: fixed;
-  top: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 100;
-  background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
->>>>>>> 198b41469b2f9e6bf6b536a744dcb52d7c5b049d
 }
 
 @keyframes gradient {
@@ -185,7 +169,6 @@ body {
   display: flex;
   flex-direction: row;
 }
-<<<<<<< HEAD
 
 .logo_size{
     width: 50px;
@@ -195,12 +178,6 @@ body {
 	position: absolute;
 	right: 12px;
 	top: 15px;
-=======
-.nav-links {
-  position: absolute;
-  right: 12px;
-  top: 15px;
->>>>>>> 198b41469b2f9e6bf6b536a744dcb52d7c5b049d
 }
 
 .AI {
@@ -361,12 +338,7 @@ button .flow {
 }
 
 button:hover .flow {
-<<<<<<< HEAD
-	
-	top: -120px;
-=======
   top: -120px;
->>>>>>> 198b41469b2f9e6bf6b536a744dcb52d7c5b049d
 }
 
 button .flow:before,
