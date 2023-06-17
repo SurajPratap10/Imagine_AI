@@ -1035,8 +1035,8 @@ span {
 .contact_us .input {
   height: 2.813rem;
   width: 90%;
-  border-width: 0.156rem;
-  border-color: #a2a2a2;
+  border-width: 0.123rem;
+  border-color: #CCCCCC;
   border-style: solid;
   border-image-source: initial;
   border-image-slice: initial;
@@ -1047,13 +1047,32 @@ span {
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
 }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    rgba(237,242,244,0.6)
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    rgba(237,242,244,0.6)
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    rgba(237,242,244,0.6)
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    rgba(237,242,244,0.6)
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    rgba(237,242,244,0.6)
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color:    rgba(237,242,244,0.6)
+}
 
 .contact_us .textinput {
   height: 4rem;
   width: 95%;
   border-width: 0.125rem;
   border-style: solid;
-  border-color: #a2a2a2;
+  border-color: #CCCCCC;
   border-image-source: initial;
   border-image-slice: initial;
   border-image-width: initial;
@@ -1080,7 +1099,9 @@ span {
   font-weight: 600;
   line-height: 1.75rem;
   margin-bottom: 0.938rem;
+  color: rgba(0, 0, 0, 0.6)
 }
+
 
 .container {
   display: flex;
