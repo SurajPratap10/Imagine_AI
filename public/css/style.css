@@ -1083,6 +1083,7 @@ span {
   padding: 1.25rem 1.875rem 1.25rem 1.25rem;
   margin-bottom: 1.25rem;
   resize: none;
+  color:rgba(0,0,0,0.6)
 }
 
 .contact_us .btn-pos {
