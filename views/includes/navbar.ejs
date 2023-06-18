@@ -1,25 +1,94 @@
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <a class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
-                <a class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>" href="/generateImg">IMAGINE -
-                    AI</a>
-                <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/aboutUs">ABOUT -
-                    US</a>
-                <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT -
-                    US</a>                    
-            </div>
-            <div class="nav-links">
-                <ul>
-                    <li>
-                        <a class="AI hover-effect" id="header-btn1" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
-                            OpenAI API</a>
-                    </li>
-                    <li>
-                        <a class="login AI white-color" id="header-btn2" href="/login">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+  <!-- Dark mode toggle button -->
+  <div id="dark-mode-icon" class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i class="fa-sharp fa-solid fa-sun"></i>
+  </div>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
+        <a class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+          href="/generateImg">IMAGINE -
+          AI</a>
+        <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/aboutUs">ABOUT -
+          US</a>
+        <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT -
+          US</a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a class="AI hover-effect" id="header-btn1" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
+              OpenAI API</a>
+          </li>
+          <li>
+            <a class="login AI white-color" id="header-btn2" href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <style>
+    /* Light mode styles */
+    .light-mode {}
+
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Dark mode styles for navbar */
+    .dark-mode #navbar {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Dark mode styles for the about section */
+    .dark-mode .about {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Styles for the dark mode toggle button */
+    .dark-mode-toggle {
+      width: 50px;
+      background-color: rgba(197, 197, 197, 0.4);
+      backdrop-filter: blur(4px);
+      position: fixed;
+      bottom: 30px;
+      padding: 10px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .dark-mode-toggle i {
+      transition: transform 0.3s ease-in-out;
+      font-size: 1.1em;
+    }
+  </style>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const navbar = document.querySelector(".navbar");
+      const aboutSection = document.querySelector(".about");
+      const darkModeToggle = document.querySelector(".dark-mode-toggle");
+      const darkModeIcon = document.getElementById("dark-mode-icon");
+
+      body.classList.toggle("dark-mode");
+      navbar.classList.toggle("dark-mode");
+      aboutSection.classList.toggle("dark-mode");
+      darkModeToggle.classList.toggle("dark");
+
+      if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+        darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+      } else {
+        darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      }
+    }
+  </script>

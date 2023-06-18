@@ -50,10 +50,84 @@
         </div>
       </form>
     </section>
+    <section style="padding: 4rem 0;">
+      <h3 style="text-align:center; padding-top: 1rem ; font-size: xx-large;color:white;">Frequently Asked Questions</h3>
+      <h3 style="text-align:center; padding-bottom: 2rem ;font-weight: 300; color:white;">Learn More About Imagine-AI and Get Started Today!</h3>
+      <div class="container2"> 
+        <div class="accordion">
+          <div class="accordion-item">What is Imagine-AI</div> 
+            <div class="answer">
+              <p>
+                Imagine-ai is startup that uses AI, including DALL·E2, to convert text into stunning images. We empower users to effortlessly transform their ideas into visually captivating content, revolutionizing communication and storytelling. With Imagine-AI, bridge the gap between text and visuals with our cutting-edge AI technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="accordion">
+          <div class="accordion-item">What does DALL-E 2 Open AI refer to</div> 
+            <div class="answer">
+              <p>
+                DALL·E 2 is OpenAI's advanced AI model that generates high-quality images from textual descriptions, surpassing the capabilities of its predecessor, DALL·E. It utilizes deep learning techniques to push the boundaries of AI-generated imagery.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="accordion">
+          <div class="accordion-item">How to obtain your API Key to genertae Image</div> 
+            <div class="answer">
+              <p>
+                To get your DALL-E 2 API key, follow these steps :<br>
+                (1) Go to the OpenAI website and sign up for an account. <br> 
+                (2) Once you have signed up, navigate to your account settings by clicking on your account name and selecting "API Keys" from the drop-down menu.<br> 
+                (3) On the "API Keys" page, you will find your API key. Copy and save it for future use.<br> 
+                (4) It is recommended to save your API key as an environment variable or in a secure location              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="accordion">
+          <div class="accordion-item">How to generate Images using Imagine-AI</div> 
+            <div class="answer">
+              <p>
+                To Generate Images using Imagine-AI, follow these steps :<br>
+                (1) Go To Imagine-AI Page.<br>
+                (2) Enter the Text, corresponding to the Image.<br>
+                (3) Enter your API Key.<br>
+                (4) Select the size of the Image you want, and click on Generate.
+                (4) Click on Generate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="accordion">
+          <div class="accordion-item">What is the Suprise Me Button for</div> 
+            <div class="answer">
+              <p>
+                Suprise Me! , an option which generates text for you and after you've entered your API Key and size, amazing visuals are seen, Try it to unlock the suprise there for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const container2 = document.getElementsByClassName('accordion');
+      for (i=0; i<container2.length;i++) {
+        container2[i].addEventListener('click',function(){
+          this.classList.toggle('active')
+        })
+      }
+    </script>
     <section>
       <div class="popup-container" id="popup">
         <img src="./faviconicon/erroricon.webp" alt="error">
-          <h2 id="text"></h2>
+          <h4 id="text"></h4>
           <button class="popup-btn" onclick="closePopUp()"><span>OK</span></span>
           <div class="flow"></div>
           </button>
