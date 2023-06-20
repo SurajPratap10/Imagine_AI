@@ -2260,7 +2260,7 @@ section .container2 {
 
 @media only screen and (max-width: 500px) {
 	.container2{
-		width: 90% !important; 
+		width: 90% !important;
 	}
 }
 
@@ -2305,4 +2305,7 @@ section .container2 {
 	height: fit-content;
 	padding: 1rem;
 
+}
+::placeholder{
+  color: white;
 }
