@@ -86,3 +86,7 @@ exports.loginController = async (req, res) => {
 		}
 	}
 };
+
+exports.logoutController = async (req, res) =>{
+	res.clearCookie('refreshToken').status(200).json('user logged out');
+}
