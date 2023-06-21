@@ -2348,6 +2348,49 @@ section .container2 {
 	transition: 0.5s ;
 }
 
+.hww{
+  padding-top: 30px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hww h2{
+  padding: 65px 210px;
+  font-size: 1.9rem;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hww p{
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0 300px 10px 300px;
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+@media (max-width: 500px){
+  .hww p{
+      font-size: 1rem;
+      padding-left: 60px;
+      padding-right: 60px;
+  }
+  .hww h2{
+    font-size: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 750px){
+  .about h4 {
+      font-size: 1rem;
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+}
 .container2 .accordion.active .answer {
 	height: fit-content;
 	padding: 1rem;
