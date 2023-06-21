@@ -1,4 +1,4 @@
-# Imagine_AI
+<h1 align="center" >Imagine_AI</h1>
 <div id="top">
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
@@ -24,7 +24,9 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 <br>The IMAGINE - AI offers a solution to this problem by providing users with a powerful AI tool that can generate original and visually stunning images. With just a few prompts or keywords, the AI is able to generate a wide range of images that are unlike anything that has been seen before.
 
 <p align="center">
-  <img src="cover.webp" />
+  <kbd>
+  <img src="cover.webp" alt="website preview" width="500" />
+  </kbd>
 </p>
 
 
