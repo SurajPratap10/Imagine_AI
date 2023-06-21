@@ -533,6 +533,27 @@ button,
   cursor: pointer;
 }
 
+.show-password{
+  display: flex;
+  width: 150px;
+  align-items: center;
+}
+
+.checkbox,
+.show-password input .checkbox{
+  width: 20px;
+  height: 20px;
+}
+
+.show-password h4{
+
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: center;
+ 
+}
+
 .showcase form input,
 form select {
   font-weight: 700;
@@ -550,10 +571,20 @@ form select {
   border-radius: 60px;
 }
 
+.form-control input{
+  height: 60px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+
 .showcase form input,
 form select:hover {
   background: #ffffff;
-  transform: translateY(5px);
+  transform: translateY(0px);
 }
 
 .get-api-text {
@@ -1917,10 +1948,16 @@ form {
   gap: 20px;
 }
 
+.signin-opt{
+  margin-bottom: 12px;
+}
+
 .signin-opt h2,
 .signup-opt h2 {
-  font-size: 30px;
+  font-size: 20px;
   color: gray;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .signin-opt-icons,
