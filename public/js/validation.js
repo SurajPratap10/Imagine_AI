@@ -4,7 +4,7 @@ const emailRegex =
 
 const validate = {
   name: (value) => {
-    return value.length < 6 ? true : false;
+    return value.length < 5 ? true : false;
   },
   email: (value) => {
     return emailRegex.test(value) ? false : true;
@@ -26,23 +26,3 @@ function handleChange(e) {
     errorMessage.classList.add("hidden");
   }
 }
-
-// const form = document.getElementById("image-form");
-
-// form.addEventListener("submit", (e)=>{
-//     e.preventDefault();
-//     let submitable = true;
-//     const error = [...document.getElementsByClassName("error")];
-//     error.forEach(elem=>{
-//       if(!elem.classList.contains("hidden")){
-//         submitable = false;
-//         return;
-//       }
-//     })
-
-//     if(submitable){
-//     form.submit()
-//     }else{
-//         alert("Please enter valid values")
-//     }
-// })
