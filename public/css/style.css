@@ -1,7 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap');
 *,
 *:before,
 *:after {
@@ -167,19 +167,20 @@ body {
 
 .navbar ul li {
   margin-left: 1rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+
 }
 
 .hover-effect {
-  color: rgb(255, 255, 255);
+  color: rgb(34, 5, 44);
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .hover-effect:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(147, 145, 147);
   text-decoration: none;
-  transform: scale(1.1);
-  transition: 100ms;
 }
 
 .hover-effect:hover::after {
@@ -187,24 +188,26 @@ body {
   width: 100%;
 }
 
-.hover-effect::after {
+.navbar a{
+  margin: 10px 20px;
+}
+
+/* .hover-effect::after {
   content: "";
   display: block;
   height: 5px;
   width: 0;
-  background: #03045e;
+  background:rgb(252, 161, 255);
   transition: all 0.5;
-}
+} */
 
 .logo {
   display: flex;
   flex-direction: row;
 }
 
-.nav-links {
-  position: absolute;
-  right: 12px;
-  top: 15px;
+.nav-links li{
+  font-family: 'League Spartan', sans-serif;;
 }
 
 .AI {
@@ -216,7 +219,7 @@ body {
 .navbar a:hover,
 .navbar a:active,
 .navbar a.active {
-  color: var(--navbar-color);
+  color: rgb(247, 242, 247);
 }
 
 /* --------------- Login Arrow --------------- */
@@ -232,10 +235,17 @@ body {
   margin-left: 5px;
 }
 
-.navbar .login:hover:after {
-  border-top: black;
-  border-right: black;
-  transform: hidden;
+#header-btn2{
+  font-family: 'League Spartan', sans-serif;
+  text-decoration: none;
+  font-size: 18x;
+  padding: 6px 14px;
+  background-color: rgb(78, 7, 78);
+  border-radius: 2px;
+}
+
+#header-btn2:hover{
+  background-color: rgb(130, 8, 130);
 }
 
 /* --------------- About CSS --------------- */
@@ -533,6 +543,27 @@ button,
   cursor: pointer;
 }
 
+.show-password{
+  display: flex;
+  width: 150px;
+  align-items: center;
+}
+
+.checkbox,
+.show-password input .checkbox{
+  width: 20px;
+  height: 20px;
+}
+
+.show-password h4{
+
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: center;
+ 
+}
+
 .showcase form input,
 form select {
   font-weight: 700;
@@ -550,10 +581,20 @@ form select {
   border-radius: 60px;
 }
 
+.form-control input{
+  height: 60px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+
 .showcase form input,
 form select:hover {
   background: #ffffff;
-  transform: translateY(5px);
+  transform: translateY(0px);
 }
 
 .get-api-text {
@@ -1912,10 +1953,16 @@ form {
   gap: 20px;
 }
 
+.signin-opt{
+  margin-bottom: 12px;
+}
+
 .signin-opt h2,
 .signup-opt h2 {
-  font-size: 30px;
+  font-size: 20px;
   color: gray;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .signin-opt-icons,
@@ -2253,9 +2300,11 @@ section .container2 {
 }
 
 @media only screen and (max-width: 500px) {
+
   .container2 {
     width: 90% !important;
   }
+
 }
 
 .accordion {
@@ -2298,4 +2347,7 @@ section .container2 {
 .container2 .accordion.active .answer {
   height: fit-content;
   padding: 1rem;
+}
+::placeholder{
+  color: white;
 }
