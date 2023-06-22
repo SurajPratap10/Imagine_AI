@@ -1,7 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap');
 *,
 *:before,
 *:after {
@@ -163,19 +163,20 @@ body {
 
 .navbar ul li {
   margin-left: 1rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+
 }
 
 .hover-effect {
-  color: rgb(255, 255, 255);
+  color: rgb(34, 5, 44);
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .hover-effect:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(147, 145, 147);
   text-decoration: none;
-  transform: scale(1.1);
-  transition: 100ms;
 }
 
 .hover-effect:hover::after {
@@ -183,14 +184,18 @@ body {
   width: 100%;
 }
 
-.hover-effect::after {
+.navbar a{
+  margin: 10px 20px;
+}
+
+/* .hover-effect::after {
   content: "";
   display: block;
   height: 5px;
   width: 0;
-  background: #03045e;
+  background:rgb(252, 161, 255);
   transition: all 0.5;
-}
+} */
 
 .logo_size{
   width: 50px;
@@ -204,12 +209,14 @@ height: 50px;
 }
 
 
+
 .nav-links {
   position: absolute;
   right: 12px;
   top: 15px;
 
-}
+
+
 
 .AI {
   padding: 0rem 2rem;
@@ -220,7 +227,7 @@ height: 50px;
 .navbar a:hover,
 .navbar a:active,
 .navbar a.active {
-  color: var(--navbar-color);
+  color: rgb(247, 242, 247);
 }
 
 /* --------------- Login Arrow --------------- */
@@ -236,10 +243,17 @@ height: 50px;
   margin-left: 5px;
 }
 
-.navbar .login:hover:after {
-  border-top: black;
-  border-right: black;
-  transform: hidden;
+#header-btn2{
+  font-family: 'League Spartan', sans-serif;
+  text-decoration: none;
+  font-size: 18x;
+  padding: 6px 14px;
+  background-color: rgb(78, 7, 78);
+  border-radius: 2px;
+}
+
+#header-btn2:hover{
+  background-color: rgb(130, 8, 130);
 }
 
 /* --------------- About CSS --------------- */
@@ -537,6 +551,27 @@ button,
   cursor: pointer;
 }
 
+.show-password{
+  display: flex;
+  width: 150px;
+  align-items: center;
+}
+
+.checkbox,
+.show-password input .checkbox{
+  width: 20px;
+  height: 20px;
+}
+
+.show-password h4{
+
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: center;
+ 
+}
+
 .showcase form input,
 form select {
   font-weight: 700;
@@ -554,10 +589,20 @@ form select {
   border-radius: 60px;
 }
 
+.form-control input{
+  height: 60px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+
 .showcase form input,
 form select:hover {
   background: #ffffff;
-  transform: translateY(5px);
+  transform: translateY(0px);
 }
 
 .get-api-text {
@@ -935,6 +980,167 @@ span {
 }
 
 /* --------------- Contact US CSS ---------------- */
+
+.contact-top {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-box{
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 70px;
+}
+
+.contact-top h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding-top:120px ;
+	padding-bottom: 20px;
+}
+
+.contact-top h3{
+	padding-bottom: 20px;
+}
+
+.contact-top p{
+	justify-content: center;
+    width: 90%;
+    color: #fff;
+    font-size: medium;
+    display: flex;
+}
+
+.contact-top-text {
+	width: 60% !important;
+}
+
+.wrapping {
+	display: flex;
+	flex-direction: row;
+}
+input, textarea {
+	justify-content: start;
+    display: flex;
+    width: 100%;
+    height: 101.6px;
+    border-left-width: 0px;
+}
+
+form .responsive-cell-block input{
+	line-height: 48px;
+    background: transparent;
+    width: 79%;
+    color: #cfcccc;
+    border: 0;
+    outline: none;
+    font-family: cursive;
+    height: 2.813rem;
+    width: 90%;
+    border-width: 0.156rem;
+    border-color: #a2a2a2;
+    border-style: solid;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 3.75rem;
+    font-size: 1rem;
+    padding: 0.313rem 0.938rem;
+}
+
+.contact-middle {
+    padding-top: 80px;
+	padding-bottom: 50px;
+    /* padding: 0 80px; */
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.content-top {
+	width: 60%;
+    text-align: start;
+    color: #fff;
+    /* padding-bottom: 80px; */
+    font-size: medium;
+}
+
+
+.context {
+	width: 33%;
+	max-width: 400px;
+	height: 120px;
+	color: #fff;
+	text-align: center;
+	position: 50px 35px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(209, 190, 190, 0.3);
+	border-radius: 16px;
+	box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
+
+
+.cards img{
+	width: 50px;
+	height: 60px;
+	display: flex;
+	padding-top: 15px;
+}
+
+form {
+	display: inline;
+}
+
+.form-box {
+	padding: 20px 20px;
+    display: flex;
+    /* width: 100%; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    flex-direction: column;
+	align-items: start;
+}
+
+.top-section {
+	text-align: center;
+	padding-top: 120px;
+}
+
+.top-section1 {
+	text-align: center;
+}
+
+.responsive-container-block form input {
+    line-height: 48px;
+    background: transparent;
+    width: 79%;
+    color: #cfcccc;
+    border: 0;
+    outline: none;
+    font-family: cursive;
+    height: 2.813rem;
+    width: 90%;
+    border-width: 0.156rem;
+    border-color: #a2a2a2;
+    border-style: solid;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 3.75rem;
+    font-size: 1rem;
+    padding: 0.313rem 0.938rem;
+}
 
 .contact_us .responsive-container-block {
   min-height: 75px;
@@ -1335,11 +1541,12 @@ span {
 }
 
 .wk-desk-6 {
-  width: 50%;
+  width: 106%;
+  padding-bottom: 70px;
 }
 
 .wk-desk-7 {
-  width: 58.333333%;
+	width: 600px;
 }
 
 .wk-desk-8 {
@@ -1361,6 +1568,7 @@ span {
 .wk-desk-12 {
   width: 100%;
 }
+
 
 /* ----- signin & signup page submit button ----- */
 
@@ -1758,10 +1966,16 @@ span {
   gap: 20px;
 }
 
+.signin-opt{
+  margin-bottom: 12px;
+}
+
 .signin-opt h2,
 .signup-opt h2 {
-  font-size: 30px;
+  font-size: 20px;
   color: gray;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .signin-opt-icons,
@@ -2101,7 +2315,7 @@ section .container2 {
 
 @media only screen and (max-width: 500px) {
 	.container2{
-		width: 90% !important; 
+		width: 90% !important;
 	}
 }
 
@@ -2146,4 +2360,7 @@ section .container2 {
 	height: fit-content;
 	padding: 1rem;
 
+}
+::placeholder{
+  color: white;
 }
