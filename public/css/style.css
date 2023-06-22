@@ -2356,3 +2356,15 @@ section .container2 {
 ::placeholder{
   color: white;
 }
+
+.hidden{
+  display: none;
+}
+
+.error{
+  color: red;
+  font-size: 18px;
+  width: 27rem;
+  margin: auto;
+  text-align: center;
+}
