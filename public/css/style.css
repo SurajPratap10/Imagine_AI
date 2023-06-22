@@ -247,10 +247,10 @@ body {
   .nav-links{
     display: block;
     position: fixed;
-    top: 70px;
+    top: 100px;
     left:0;
     width: 100vw;
-    padding: 4rem 2rem;
+    padding: 2rem;
     background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
