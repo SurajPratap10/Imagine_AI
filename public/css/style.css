@@ -567,18 +567,17 @@ button,
 .showcase form input,
 form select {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 20px;
   width: 500px;
   max-width: 500px;
   padding: 1rem;
-  border: none;
-  border-radius: 8px;
+  border: 2px solid aqua;
+  border-radius: 5px;
   margin-bottom: 1rem;
-  color: rgb(17, 17, 17);
+  color: aqua;
   text-decoration: none;
   transition: transform 0.5s;
   cursor: text;
-  border-radius: 60px;
 }
 
 .form-control input{
@@ -593,7 +592,7 @@ form select {
 
 .showcase form input,
 form select:hover {
-  background: #ffffff;
+  background-color: transparent;
   transform: translateY(0px);
 }
 
@@ -2354,5 +2353,10 @@ section .container2 {
 
 }
 ::placeholder{
-  color: white;
+  color: aqua;
+  font-size: 17px;
+}
+
+#email::placeholder{
+  color: aqua;
 }
