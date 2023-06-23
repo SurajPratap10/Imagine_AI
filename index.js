@@ -4,6 +4,7 @@ require('dotenv').config();
 const port = process.env.PORT || 5000;
 const viewRoutes = require('./routes/viewRoutes');
 const cookieParser = require('cookie-parser');
+const connectDb = require('./config/db.js');
 const app = express();
 
 //ENABLING BODY PARSER:
