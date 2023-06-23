@@ -947,6 +947,7 @@ footer a {
 
 .icons {
   margin: 30px 0 30px 0;
+  display: inline-block;
 }
 
 .footer-icons {
