@@ -2363,3 +2363,7 @@ section .container2 {
   margin: auto;
   text-align: center;
 }
+::placeholder { 
+  color: rgb(120, 120, 120);
+  opacity: 1; 
+}
