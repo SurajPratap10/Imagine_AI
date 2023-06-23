@@ -2361,7 +2361,7 @@ section .container2 {
 }
 
 .error{
-  color: red;
+  color: cyan;
   font-size: 18px;
   width: 27rem;
   margin: auto;
