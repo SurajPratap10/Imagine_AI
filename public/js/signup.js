@@ -1,6 +1,5 @@
 async function signup_submit(e) {
 	e.preventDefault();
-	// console.log('hello: ');
 	const name_user = document.getElementById('name').value;
 	const email = document.getElementById('email').value;
 	const password = document.getElementById('password').value;
@@ -54,16 +53,14 @@ async function signup_submit(e) {
 		}
 	} catch (error) {
 		if (error) {
-			console.log('error: ', error);
+			return error
 		}
 	}
 
-	// console.log(name_user);
 }
 if(window.location.pathname != "/contactUs"){
 
 	const signup_submit_doc = document.querySelector('.btn-signup-submit');
-	console.log('Hi Authjs ', signup_submit_doc);
 
 	if(signup_submit_doc)signup_submit_doc.addEventListener('click', signup_submit);
 }
