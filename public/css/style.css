@@ -1885,13 +1885,41 @@ form {
 
 }
 
-@media (max-width: 845px) {
+@media (max-width: 915px) {
   #header-btn1 {
     display: none;
   }
 
   .navbar {
     justify-content: space-between;
+  }
+
+  #newsletter {
+    height: 22vh;
+  }
+
+  #newsletter .news-text h4 {
+    font-size: 22px;
+  }
+
+  #newsletter .news-text p {
+    font-size: 18px;
+  }
+
+  #newsletter .news-form {
+    width: 45%;
+  }
+
+  #newsletter .news-form input {
+    height: 2rem;
+    font-size: 14px;
+  }
+
+  #newsletter .news-form button {
+    width: 30%;
+    text-align: center;
+    font-size: 10px;
+    padding: 2px 6px;
   }
 }
 
@@ -2344,6 +2372,37 @@ form {
 
   .wk-mobile-12 {
     width: 100%;
+  }
+
+  #newsletter {
+    padding: 10px;
+  }
+
+  #newsletter .news-text {
+    width: 50%;
+  }
+
+  #newsletter .news-text h4 {
+    font-size: 18px;
+  }
+
+  #newsletter .news-text p {
+    font-size: 16px;
+  }
+
+  #newsletter .news-form {
+    width: 48%;
+  }
+
+  #newsletter .news-form input {
+    padding: 0px 2px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  #newsletter .news-form button {
+    font-size: 8px;
+    padding: 0px 6px;
   }
 }
 
