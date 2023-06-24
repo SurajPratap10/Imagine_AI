@@ -277,7 +277,9 @@ body {
 
 .dashboard h1 {
   padding: 50px 50px 20px;
+  margin-top: 20px;
   text-align: left;
+  font-size: 32px;
 }
 
 .dashboard h3,
@@ -298,6 +300,13 @@ body {
 
 .main-content-wrapper {
   display: flex;
+  margin: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.main-content-wrapper h2{
+  font-size: 18px;
 }
 
 .main-content {
@@ -371,11 +380,14 @@ button,
   height: 200px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
+  
 }
+
 
 .btn:hover {
   background-color: #7152ee;
 }
+
 
 .dashboard .right {
   width: 50%;
@@ -1686,7 +1698,7 @@ form {
   }
 
   .try-it-cover {
-    padding-bottom: 75px;
+    padding: 75px;
   }
 
   .contact_us .responsive-container-block.container {
@@ -1936,7 +1948,7 @@ form {
   }
 
   .try-it-cover {
-    padding-bottom: 60px;
+    padding: 60px;
   }
 
   .formBtns {
