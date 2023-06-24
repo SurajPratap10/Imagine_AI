@@ -1,0 +1,54 @@
+:root {
+  --primary-color: rgb(32, 32, 32);
+}
+
+.input-wrapper {
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+
+.input-wrapper .input-row {
+  width: 100%;
+  min-height: 77vh;
+  overflow: inherit;
+}
+
+.input-wrapper .input-row .input-col {
+  min-height: auto;
+  overflow: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.input-wrapper .input-row .input-col .input__box {
+  overflow: hidden;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2em;
+}
+
+.input-wrapper .input-row .input-col .input__box .input-text {
+  background-color: #fff;
+  border: none;
+  color: #000;
+}
+.input-wrapper .input-row .input-col .input__box .select-text {
+  border: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .input-wrapper .input-row {
+    min-height: 85vh;
+  }
+
+  .input-wrapper .input-row .input-col .input__box {
+    width: 80%;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+}

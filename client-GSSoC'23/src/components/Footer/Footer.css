@@ -1,0 +1,14 @@
+.footer-wrapper {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 476px) {
+  .footer-wrapper .footer-wrapper-child-one .footer-wrapper-child-two {
+    padding: 2.2em !important;
+  }
+}

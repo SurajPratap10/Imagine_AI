@@ -1,0 +1,25 @@
+.nav-wrapper {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: #fff;
+}
+
+.nav-wrapper .nav-wrapper-child-one .nav-wrapper-child-two {
+  padding-left: 6em !important;
+  padding-right: 6em !important;
+}
+
+.nav-wrapper .nav-wrapper-child-one .nav-wrapper-child-two h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 476px) {
+  .nav-wrapper .nav-wrapper-child-one .nav-wrapper-child-two {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
+
+  .nav-wrapper .nav-wrapper-child-one .nav-wrapper-child-two h3 {
+    font-size: 1.5em;
+  }
+}
