@@ -1,8 +1,7 @@
-
 var loader = document.getElementById("PRE");
-window.addEventListener("load", function(){
-    loader.style.display="none";
-})
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
 
 const popup = document.getElementById("popup");
 
@@ -166,9 +165,8 @@ function surpriseMe() {
 const surpriseMeBtn = document.getElementById("surpriseMeBtn");
 if (surpriseMeBtn != null) surpriseMeBtn.addEventListener("click", surpriseMe);
 
-
 //Display Floating In Image cards on Homepage
-const cards = document.querySelectorAll('.float-in')
+const cards = document.querySelectorAll(".float-in");
 const options = {
   threshold: 0.5,
 };
@@ -176,11 +174,10 @@ const options = {
 const animateCards = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-    }else {
-      entry.target.classList.remove('animate');
+      entry.target.classList.add("animate");
+    } else {
+      entry.target.classList.remove("animate");
     }
-    
   });
 };
 
@@ -193,5 +190,5 @@ cards.forEach((card) => {
 // toggle navbar
 const nav = document.querySelector("#mainNav");
 const toggleNavbar = () => {
-    nav.classList.toggle('hide-sm');
-}
+  nav.classList.toggle("hide-sm");
+};

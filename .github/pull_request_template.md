@@ -13,6 +13,7 @@ Replace `issue_no` with the issue number which is fixed in this PR
 ## Checklist
 
 <!-- Mark the completed tasks with [x] -->
+
 - [ ] Tests have been added or updated to cover the changes
 - [ ] Documentation has been updated to reflect the changes
 - [ ] Code follows the established coding style guidelines

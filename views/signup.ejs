@@ -40,13 +40,16 @@
   <form id="image-form" action="index.html">
     <h1 class="AI">SIGN UP</h1>
     <div class="form-control">
-      <input type="text" id="name" placeholder="Enter Name" />
+      <input type="text" id="name" name="name" placeholder="Enter Name" onkeyup="handleChange(event)"/>
+      <p class="error hidden" id="nameError">Name should be atleast 5 characters long</p>
     </div>
     <div class="form-control">
-      <input type="email" id="email" placeholder="Enter Email address" />
+      <input type="email" id="email" email="email" name="email" placeholder="Enter Email address" onkeyup="handleChange(event)"/>
+      <p class="error hidden" id="emailError">Enter Valid Email</p>
     </div>
     <div class="form-control">
-      <input type="password" id="password" placeholder="Enter password" />
+      <input type="password" id="password" name="password" placeholder="Enter password" onkeyup="handleChange(event)"/>
+      <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)</p>
     </div>
     <div class="signup-opt">
       <h2>Sign Up using</h2>
@@ -100,7 +103,7 @@
       <button
         type="submit"
         class="btn sign-in-btn btn-signup-submit"
-        href="index.html"
+        href="index.html" aria-label="submit"
       >
         <span>Submit</span>
         <div class="flow"></div>

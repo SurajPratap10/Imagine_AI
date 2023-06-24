@@ -35,7 +35,7 @@ exports.googleAuthLogin = async (id) => {
 exports.authRegister = async (req, res) => {
   passport.authenticate("google", { scope: ["profile", "email"] });
 };
-exports.successRegister=async(req,res)=>{
+exports.successRegister = async (req, res) => {
   const user = await googleAuthRegister(userProfile);
   if (user) return res.redirect("/generateImg");
   return res.redirect("/signup");
