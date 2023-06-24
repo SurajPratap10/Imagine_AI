@@ -915,6 +915,7 @@ footer a {
   position: relative;
   transition: all 0.3s ease;
   z-index: 3;
+  height: 1.7rem;
 }
 
 .icons ul li:nth-child(1) a {
