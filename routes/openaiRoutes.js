@@ -1,5 +1,8 @@
 const express = require("express");
-const { generateImage,generateImages } = require("../controllers/openaiController");
+const {
+  generateImage,
+  generateImages,
+} = require("../controllers/openaiController");
 const router = express.Router();
 
 // generate only one images

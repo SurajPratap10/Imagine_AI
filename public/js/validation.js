@@ -1,6 +1,6 @@
 const emailRegex =
   /^\w+([\.-]?\w+)*@(gmail\.com|yahoo\.com|hotmail\.com|aol\.com|outlook\.com)$/;
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$%#^&*])(?=.*[0-9]).{8,}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$%#^&*])(?=.*[0-9]).{8,}$/;
 
 const validate = {
   name: (value) => {
@@ -13,11 +13,10 @@ const validate = {
   password: (value) => {
     return passwordRegex.test(value) ? false : true;
   },
-
 };
 
 function handleChange(e) {
-    console.log(e.target.name)
+  console.log(e.target.name);
   const error = validate[e.target.name](e.target.value);
   const errorMessage = document.getElementById(`${e.target.name}Error`);
   if (error) {
