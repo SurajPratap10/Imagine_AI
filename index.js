@@ -7,7 +7,10 @@ const session = require("express-session");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const port = process.env.PORT || 5000;
 const viewRoutes = require("./routes/viewRoutes");
-const {googleAuthRegister, googleAuthLogin,} = require("./controllers/googleAuthContoller.js");
+const {
+  googleAuthRegister,
+  googleAuthLogin,
+} = require("./controllers/googleAuthContoller.js");
 const app = express();
 app.use(
   session({
@@ -31,7 +34,7 @@ app.use((err, _req, res, _next) => {
   console.log(err);
   res.status(500).json({ error: "Internal Server Error" });
 });
-//OAUTH 
+//OAUTH
 var userProfile;
 
 app.use(passport.initialize());
@@ -41,8 +44,8 @@ app.set("view engine", "ejs");
 
 app.get("/success", async (req, res) => {
   const user = await googleAuthRegister(userProfile);
-  const loggedUser=await googleAuthLogin(userProfile.id);
-  if (user||loggedUser) return res.redirect("/generateImg");
+  const loggedUser = await googleAuthLogin(userProfile.id);
+  if (user || loggedUser) return res.redirect("/generateImg");
   return res.redirect("/signup");
 });
 app.get("/error", (req, res) => res.send("error logging in"));
