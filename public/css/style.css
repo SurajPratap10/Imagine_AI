@@ -903,6 +903,7 @@ footer a {
   position: relative;
   transition: all 0.3s ease;
   z-index: 3;
+  height: 1.7rem;
 }
 
 .icons ul li:nth-child(1) a {
@@ -947,6 +948,7 @@ footer a {
 
 .icons {
   margin: 30px 0 30px 0;
+  display: inline-block;
 }
 
 .footer-icons {
@@ -2362,4 +2364,8 @@ section .container2 {
   width: 27rem;
   margin: auto;
   text-align: center;
+}
+::placeholder { 
+  color: rgb(120, 120, 120);
+  opacity: 1; 
 }
