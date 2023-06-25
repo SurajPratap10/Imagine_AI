@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../public/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <footer>
   <div class="content">
@@ -56,33 +56,60 @@
       <form name="submit-to-google-sheet" style="width: 100%;">
         <i class="fas fa-envelope fa-solid"></i>
         <input type="email" name="Email" placeholder="Enter email address" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
-        <button type="submit" style="padding: 0 !important; margin: 0 !important; width:11% !important; display: inline;"><i class="fas fa-paper-plane" style="color:#fff;"></i></button>
+        <button type="submit" style="padding: 0 !important; margin: 0 !important; width:11% !important; display: inline; background-color: transparent;" aria-label="send mail"><i class="fas fa-paper-plane" style="color:#fff;"></i></button>
       </form>
       </div>
       <div class="tyfs" id="msg"></div>
-      <div class="icons" style="margin-top: 48px;">
-        <ul>
-          <li>
-            <a title="linkedin" target="_blank" href="https://www.linkedin.com/in/suraj-pratap-948a92225/"><i
-                class="fab fa-linkedin-in icon"></i></a>
-          </li>
-          <li>
-            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
-                class="fab fa-github icon"></i> </a>
-          </li>
-          <li>
-            <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-                class="fab fa-twitter icon"></i></a>
-          </li>
-          <li>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/aridoshikazu_1/"><i
-                class="fab fa-instagram icon"></i></a>
-          </li>
-        </ul>
-      </div>
-      </div>
+        <div class="icons" style="margin-top: 48px;">
+
+          <ul>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Linkedin"
+                title="Linkedin (External Link)"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/suraj-pratap-948a92225/"
+	             >
+		             <i class="fab fa-linkedin-in icon"><img class="footer-icons" src="./faviconicon/linkedin.webp" alt=""></i>
+	            </a>
+            </li>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Github"
+                title="Github (External Link)"
+                rel="noopener noreferrer"
+                  href="https://github.com/SurajPratap10"
+	            > 
+	             <i class="fab fa-github icon"><img class="footer-icons" src="./faviconicon/github.webp" alt=""></i> 
+	           </a>
+            </li>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Facebook"
+                title="Facebook (External Link)"
+                rel="noopener noreferrer"
+		            href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"
+	            >
+	               <i class="fab fa-twitter icon"><img class="footer-icons" src="./faviconicon/facebook.webp" alt=""></i>
+	            </a>
+            </li>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Instagram"
+                title="Instagram (External Link)"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/aridoshikazu_1/"
+               >
+	              <i class="fab fa-youtube icon"><img class="footer-icons" src="./faviconicon/instagram.webp" alt=""></i>
+	           </a>
+            </li>
+          </ul>
+        </div>
     </div>
-  </div>
   <hr style="margin-top: 40px;">
   <div class="bottom" style="padding: 40px 0 40px 0">
     <p class="bot-l">Copyright © 2020 <a href="#">Imagine-AI</a> | All rights reserved</p>
@@ -159,7 +186,10 @@ footer .content .middle2 .topic{
 
 }
 .fot-log{
-  font-size: 30px;
+
+    font-size: 30px;
+    font-weight: bolder;
+
 	color: #fefefe;
   padding-bottom: 2rem;
 }
@@ -229,33 +259,33 @@ footer .content .right input[type="email"]{
   height: 45px;
   width: 100%;
   outline: none;
-  color: black;
   background: white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 10px;
   font-size: 17px;
-  border-radius: 18px;
-  /* border: 2px solid #222222; */
+  border: none;
+  font-weight: bold;
 }
-footer .content .right input[type="submit"] {
-    height: 42px;
-    width: 50%;
-    font-size: 18px;
-    color: #d9d9d9;
-    background: #141414d9;
-    outline: none;
-    border-radius: 44px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-top: 12px;
-    margin-left: 7rem;
-    border: 2px solid #182930;
-    transition: 0.4s;
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background: #222222;
+  outline: none;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: none;
+  font-weight: bolder;
+  transition: all 0.5s ease;
 }
 .content .right input[type="submit"]:hover{
-  background: #141414c7;
-  color:  #ffffff;
-  font-weight: 400;
+
+  background: white;
+  color:  #222222;
+
 }
 footer .content .media-icons a{
   font-size: 16px;
@@ -287,9 +317,7 @@ footer a{
 footer a:hover{
     color: black;
 }
-.boxx a:hover{
-	padding-left: 8px;
-}
+
 
 .email a:hover{
   border-bottom: 1px solid black !important;
@@ -358,22 +386,10 @@ footer a:hover{
 	color: #fefefe;
 }
 
-/* footer {
-	height: 15vh;
-	width: 100%;
-	color: white;
-} */
-
 footer a {
 	text-decoration: none;
 	color: white;
 }
-
-/* .footer-wrapper {
-	text-align: center;
-	padding: 1rem;
-	color: white;
-} */
 
 .icons ul {
 	display: flex;
@@ -488,7 +504,39 @@ form input{
     flex-direction: column;
 }
 }
+
+input[type="email"]::placeholder {
+  color: #ffffff;
+}
 </style>
+
+
+<!-- SEO SETTINGS -->
+<script type="application/ld+json">
+  {
+    "@context": "https://imagine-ai-17zf.vercel.app/",
+    "@type": "WebSite",
+    "name": "IMAGINE - AI",
+    "description": "Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images",
+    "url": "https://imagine-ai-17zf.vercel.app/",
+    "image": "https://imagine-ai-17zf.vercel.app/logo-no-background.webp,
+    "author": {
+      "@type": "Person",
+      "name": "SurajPratap10"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IMAGINE-AI",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imagine-ai-17zf.vercel.app/logo-no-background.webp"
+      }
+    },
+    "datePublished": "2023-06-08"
+  }
+  </script>
+
+
 </body>
 
 </html>

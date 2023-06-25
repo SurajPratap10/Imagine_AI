@@ -1,268 +1,277 @@
 <%- include('includes/PRE.ejs') %>
-<%- include('includes/header.ejs') %>
-<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-<style>
-  /* Add your styles here */
-  body {
-    background-color: #fff;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+  <%- include('includes/header.ejs') %>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
-  input,
-  textarea {
-    background-color: #f5f5f5;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+    <style>
+      /* Add your styles here */
+      body {
+        background-color: #fff;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
 
-  .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
+      input,
+      textarea {
+        background-color: #f5f5f5;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
 
-  .dark-mode input,
-  .dark-mode textarea {
-    background-color: #555;
-    color: #fff;
-  }
-</style>
-</head>
-<%- include('includes/navbar.ejs') %>
-<div class="about">
-  <div class="container">
-      <div class="about-text">
-        <h1 class="title">Generate New World Parallel Universe Images</h1>
-        <p class="about-description" style="text-align:center;">
-          Explore our AI, and generate multiverse Images, share it and get a new perspective of the future World.
-          Imagine AI generates Images beyond and above the imagination, 
-        </p>
-        <div class="button" style="justify-content:center;">
-            <div class="btn-wrapper">
-              <a href="/generateImg">
-              <button class="btn12 ">
-                <span class="btn-pos Span">Generate AI</span> 
-                <div class="flow"></div>
-              </button> 
+      .dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .dark-mode input,
+      .dark-mode textarea {
+        background-color: #555;
+        color: #fff;
+      }
+    </style>
+
+    </head>
+    <%- include('includes/navbar.ejs') %>
+      <div class="about">
+        <div class="container">
+          <div class="about-text">
+            <h1 class="title">Generate New World Parallel Universe Images</h1>
+            <p class="about-description" style="text-align:center;">
+              Explore our AI, and generate multiverse Images, share it and get a new perspective of the future World.
+              Imagine AI generates Images beyond and above the imagination,
+            </p>
+            <div class="button" style="justify-content:center;">
+              <div class="btn-wrapper">
+                <a href="/generateImg">
+                  <button class="btn12" aria-label="generate ai">
+                    <span class="btn-pos Span">Generate AI</span>
+                    <div class="flow"></div>
+                  </button>
+                </a>
+              </div>
+              <a href="/login">
+                <div class="btn-wrapper">
+                  <button class="btn12" aria-label="learn more">
+                    <span class="btn-pos Span">Learn More</span>
+                    <div class="flow"></div>
+                  </button>
+                </div>
               </a>
-            </div> 
-            <a href="/login">
-            <div class="btn-wrapper">
-              <button class="btn12">
-                <span class="btn-pos Span">Learn More</span> 
-                <div class="flow"></div>
-              </button>
-            </div> 
-            </a>
+            </div>
+          </div>
+          <div class="about-image">
+            <img class="about-us-logo" src="banner.webp" alt="imagine" />
+          </div>
         </div>
       </div>
-      <div class="about-image">
-        <img class="about-us-logo" src="banner.png" alt="imagine"/>
+      <div class="feature">
+        <h1 class="headline">Exceptional Advancement of our Images</h1>
+        <h2 style="padding-top: 20px; padding-bottom: 50px;">These Features Make our Images, super advanced with
+          exceptional quality</h2>
+        <div class="quality">
+          <div class="quantity">
+            <div class="bg"></div>
+            <div class="glass">
+              <img src="conditioning1.webp" alt="icon" />
+            </div>
+            <h4 class="txt">Conditioning</h4>
+          </div>
+
+          <div class="quantity">
+            <div class="bg"></div>
+            <div class="glass">
+              <img src="style.webp" alt="icon" />
+            </div>
+            <h4 class="txt">Style Transfer</h4>
+          </div>
+
+          <div class="quantity">
+            <div class="bg"></div>
+            <div class="glass">
+              <img src="generation.webp" alt="icon" />
+            </div>
+            <h4 class="txt">Controlled Generation</h4>
+          </div>
+          <div class="quantity">
+            <div class="bg"></div>
+            <div class="glass">
+              <img src="modal.webp" alt="icon" />
+            </div>
+            <h4 class="txt">Multi Modal Embedding</h4>
+          </div>
+        </div>
       </div>
-  </div>
-</div>
-<div class="feature">
-  <h1 class="headline">Exceptional Advancement of our Images</h1>
-  <h2 style="padding-top: 20px; padding-bottom: 50px;">These Features Make our Images, super advanced with exceptional quality</h2>
-  <div class="quality">
-    <div class="quantity">
-      <div class="bg"></div>
-      <div class="glass">
-        <img src="conditioning1.png" alt="icon"/>
+      <div class="distance"></div>
+
+      <div class="about">
+        <div class="container1">
+          <div class="about-image">
+            <img src="1.webp" alt="imagine" />
+          </div>
+          <div class="about-text">
+            <h1 class="title">Words transformed. Imagination unleashed.</h1>
+            <p class="about-description">
+              Unlock your imagination with our revolutionary text-to-image AI.
+              Experience stunning visuals that bring your words to life.
+              Our user-friendly solution delivers quality,
+              speed, and limitless creativity
+            </p>
+            <a href="https://openai.com/dall-e-2/">
+              <div class="btn-wrapper">
+                <button class="btn12" aria-label="try imagine">
+                  <span class="btn-pos Span" style="padding-right:20px;">Try Imagine</span>
+                  <div class="flow"></div>
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <h4 class="txt">Conditioning</h4>
-    </div>
-    <div class="quantity">
-      <div class="bg"></div>
-      <div class="glass">
-        <img src="style.png" alt="icon"/>
+
+      <h1 class="headline" style="text-align: center;">Why People Love Imagine-AI</h1>
+
+      <div class="feature" style="display:flex; margin: 20px 0 120px 0;">
+        <div class="container2">
+          <div class="card data-tilt">
+            <div class="card-icon">
+              <img src="chris1.webp" alt="icon" />
+              <h2>Chris</h2>
+              <p style="padding: 0 10px 0 10px;">Their text-to-image AI amazed me with its stunningly lifelike creations
+              </p>
+              <div class="icons">
+                <ul>
+                  <li>
+                    <a title="facebook" target="_blank"
+                      href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
+                        class="fa-brands fa-facebook-f icon"></i></a>
+                  </li>
+                  <li>
+                    <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+                        class="fab fa-github icon"></i> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card data-tilt">
+            <div class="card-icon">
+              <img src="sarah2.webp" alt="icon" />
+              <h2>Sarah</h2>
+              <p style="padding: 0 10px 0 10px;">The level of customization and control over the generated visuals is
+                truly remarkable</p>
+              <div class="icons">
+                <ul>
+                  <li>
+                    <a title="facebook" target="_blank"
+                      href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
+                        class="fa-brands fa-facebook-f icon"></i></a>
+                  </li>
+                  <li>
+                    <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+                        class="fab fa-github icon"></i> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card data-tilt">
+            <div class="card-icon">
+              <img src="brian1.webp" alt="icon" />
+              <h2>Brian</h2>
+              <p style="padding: 0 10px 0 10px;">I found myself immersed in a world where words effortlessly transformed
+                into captivating artworks.</p>
+              <div class="icons">
+                <ul>
+                  <li>
+                    <a title="facebook" target="_blank"
+                      href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
+                        class="fa-brands fa-facebook-f icon"></i></a>
+                  </li>
+                  <li>
+                    <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+                        class="fab fa-github icon"></i> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card data-tilt">
+            <div class="card-icon">
+              <img src="chloe1.webp" alt="icon" />
+              <h2>Chloe</h2>
+              <p style="padding: 0 10px 0 10px;">I never thought my words could come alive so vividly until I used their
+                AI-powered solution</p>
+              <div class="icons">
+                <ul>
+                  <li>
+                    <a title="facebook" target="_blank"
+                      href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
+                        class="fa-brands fa-facebook-f icon"></i></a>
+                  </li>
+                  <li>
+                    <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
+                        class="fab fa-github icon"></i> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h4 class="txt">Style Transfer</h4>
-    </div>
-    <div class="quantity">
-      <div class="bg"></div>
-      <div class="glass">
-        <img src="generation.png" alt="icon"/>
-      </div>
-      <h4 class="txt">Controlled Generation</h4>
-    </div>
-    <div class="quantity">
-      <div class="bg"></div>
-      <div class="glass">
-        <img src="modal.png" alt="icon"/>
-      </div>
-      <h4 class="txt">Multi Modal Embedding</h4>
-    </div>
-  </div>
-</div>
-<div class="distance"></div>
-
-<div class="about">
-  <div class="container1">
-      <div class="about-image">
-        <img src="1.webp" alt="imagine"/>
-      </div>  
-      <div class="about-text">
-        <h1 class="title">Words transformed. Imagination unleashed.</h1>
-        <p class="about-description">
-          Unlock your imagination with our revolutionary text-to-image AI. 
-          Experience stunning visuals that bring your words to life. 
-          Our user-friendly solution delivers quality, 
-          speed, and limitless creativity 
-        </p>
-        <a href="https://openai.com/dall-e-2/">
-        <div class="btn-wrapper">
-          <button class="btn12">
-           <span class="btn-pos Span" style="padding-right:20px;">Try Imagine</span> 
-           <div class="flow"></div>
-          </button>
-        </div> 
-        </a>
-      </div>
-  </div>
-</div>
-
-<h1 class="headline" style="text-align: center;">Why People Love Imagine-AI</h1>
-
-<div class="feature" style="display:flex; margin: 20px 0 120px 0;">
-  <div class="container2">
-  <div class="card data-tilt">
-    <div class="card-icon">
-      <img src="chris1.png" alt="icon"/>
-      <h2>Chris</h2>
-      <p style="padding: 0 10px 0 10px;">Their text-to-image AI amazed me with its stunningly lifelike creations</p>
-      <div class="icons">
-        <ul>
-          <li>
-            <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-              class="fa-brands fa-facebook-f icon"></i></a>
-          </li>
-          <li>
-            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
-              class="fab fa-github icon"></i> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card data-tilt">
-    <div class="card-icon">
-      <img src="sarah2.png" alt="icon"/>
-      <h2>Sarah</h2>
-      <p style="padding: 0 10px 0 10px;">The level of customization and control over the generated visuals is truly remarkable</p>
-      <div class="icons">
-        <ul>
-          <li>
-            <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-              class="fa-brands fa-facebook-f icon"></i></a>
-          </li>
-          <li>
-            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
-              class="fab fa-github icon"></i> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card data-tilt">
-    <div class="card-icon">
-      <img src="brian1.png" alt="icon"/>
-      <h2>Brian</h2>
-      <p style="padding: 0 10px 0 10px;">I found myself immersed in a world where words effortlessly transformed into captivating artworks.</p>
-      <div class="icons">
-        <ul>
-          <li>
-            <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-              class="fa-brands fa-facebook-f icon"></i></a>
-          </li>
-          <li>
-            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
-              class="fab fa-github icon"></i> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card data-tilt">
-    <div class="card-icon">
-      <img src="chloe1.png" alt="icon"/>
-      <h2>Chloe</h2>
-      <p style="padding: 0 10px 0 10px;">I never thought my words could come alive so vividly until I used their AI-powered solution</p>
-      <div class="icons">
-        <ul>
-          <li>
-            <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-              class="fa-brands fa-facebook-f icon"></i></a>
-          </li>
-          <li>
-            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
-              class="fab fa-github icon"></i> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
 
 
-<%- include('includes/footer.ejs') %>
+      <%- include('includes/footer.ejs') %>
 
-<style>
-  /* Light mode styles */
-  .light-mode {
+        <style>
+          /* Light mode styles */
+          .light-mode {}
 
-  }
+          /* Dark mode styles */
+          .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+          }
 
-  /* Dark mode styles */
-  .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
+          /* Dark mode styles for navbar */
+          .dark-mode #navbar {
+            background-color: #121212;
+            color: #ffffff;
+          }
 
-  /* Dark mode styles for navbar */
-  .dark-mode #navbar {
-    background-color: #121212;
-    color: #ffffff;
-  }
+          /* Dark mode styles for the about section */
+          .dark-mode .about {
+            background-color: #121212;
+            color: #ffffff;
+          }
 
-  /* Dark mode styles for the about section */
-  .dark-mode .about {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  /* Styles for the dark mode toggle button */
-  .dark-mode-toggle {
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .dark-mode-toggle i {
-    transition: transform 0.3s ease-in-out;
-    font-size: 1.1em;
-  }
-</style>
+          /* Styles for the dark mode toggle button */
+          .dark-mode-toggle {
+            font-size: 24px;
+            cursor: pointer;
+          }
 
-<script>
-  function toggleDarkMode() {
-    const body = document.body;
-    const navbar = document.querySelector(".navbar");
-    const aboutSection = document.querySelector(".about");
-    const darkModeToggle = document.querySelector(".dark-mode-toggle");
-    const darkModeIcon = document.getElementById("dark-mode-icon");
+          .dark-mode-toggle i {
+            transition: transform 0.3s ease-in-out;
+            font-size: 1.1em;
+          }
+        </style>
 
-    body.classList.toggle("dark-mode");
-    navbar.classList.toggle("dark-mode");
-    aboutSection.classList.toggle("dark-mode");
-    darkModeToggle.classList.toggle("dark");
-  
-    if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-      darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-    } else {
-      darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    }
-  }
-</script>
+        <script>
+          function toggleDarkMode() {
+            const body = document.body;
+            const navbar = document.querySelector(".navbar");
+            const aboutSection = document.querySelector(".about");
+            const darkModeToggle = document.querySelector(".dark-mode-toggle");
+            const darkModeIcon = document.getElementById("dark-mode-icon");
 
+            body.classList.toggle("dark-mode");
+            navbar.classList.toggle("dark-mode");
+            aboutSection.classList.toggle("dark-mode");
+            darkModeToggle.classList.toggle("dark");
 
+            if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+              darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+            } else {
+              darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            }
+          }
+        </script>
