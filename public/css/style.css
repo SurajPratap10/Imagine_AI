@@ -2511,7 +2511,7 @@ section .container2 {
 }
 
 .error{
-  color: cyan;
+  color: aqua;
   font-size: 18px;
   width: 27rem;
   margin: auto;
@@ -2519,6 +2519,10 @@ section .container2 {
 }
 
 ::placeholder {
-  color: rgb(120, 120, 120);
-  opacity: 1;
+  color: aqua;
+  font-size: 17px;
+}
+
+#email::placeholder{
+  color: aqua;
 }
