@@ -1,6 +1,7 @@
 const emailValidator = require("email-validator");
 const passwordValidator = require("password-validator");
 const userModel = require("../models/users");
+const sendRegistrationEmail = require("../mailer/sendMail");
 
 exports.sendToken = async (user, res) => {
   const token = user.getSignedToken(res);
@@ -52,7 +53,13 @@ exports.signupController = async (req, res) => {
       res.status(409).json({ error: "Email already exists" });
     } else {
       const user = await userModel.create({ name, email, password });
-      this.sendToken(user, res);
+      if (user) {
+        await sendRegistrationEmail({ name, email })
+          .then(() => this.sendToken(user, res))
+          .catch(() =>
+            res.status(500).json({ error: "An unknown error occured" })
+          );
+      }
     }
   } catch (error) {
     console.log("Error: " + error);
