@@ -1,4 +1,5 @@
 <%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %>
+<%- include('includes/sidebar.ejs') %>
 
 <head>
   <style>
@@ -77,7 +78,7 @@
     <h1 class="AI">SIGN IN</h1>
     <div class="form-control">
       <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter Email address" onkeyup="handleChange(event)" style="color: black;"/>
+      <input type="email" id="email" name="email" placeholder="Enter Email address" onkeyup="handleChange(event)"/>
       <p class="error hidden" id="emailError">Enter Valid Email</p>
     </div>
     <div class="form-control">

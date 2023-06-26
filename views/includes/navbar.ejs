@@ -6,6 +6,7 @@
   <header>
     <div class="navbar">
       <div class="logo">
+
         <a class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
       </div>
       <div  class="nav-links hide-sm" id="mainNav">
@@ -41,7 +42,8 @@
 
   <style>
     /* Light mode styles */
-    .light-mode {}
+    .light-mode {
+    }
 
     /* Dark mode styles */
     .dark-mode {
@@ -63,17 +65,15 @@
 
     /* Styles for the dark mode toggle button */
     .dark-mode-toggle {
-      width: 50px;
-      background-color: rgba(197, 197, 197, 0.4);
+      width: fit-content;
       backdrop-filter: blur(4px);
       position: fixed;
-      bottom: 30px;
-      padding: 10px;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      font-size: 24px;
+      top: 15px;
+      right: 335px;
+      padding: 5px;
+      border-radius: 50%;
       cursor: pointer;
-      z-index: 2;
+      z-index: 999;
     }
 
     .dark-mode-toggle i {
@@ -102,3 +102,4 @@
       }
     }
   </script>
+</body>
