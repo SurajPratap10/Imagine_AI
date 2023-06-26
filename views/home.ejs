@@ -86,6 +86,16 @@
 
         </section>
       </main>
+      <div class="scrollToTopContainer">
+        <button
+          id="scrollToButton"
+          class="HideElement scrollToTopButton"
+          title="Click to scroll top"
+        >
+          <img src="https://github.com/GameSphere-MultiPlayer/GameSphere/assets/56786344/f2be77e8-60c9-4209-8f31-bcea8646f45d" alt="Scroll-To-Top" />
+        </button>
+      </div>
+
 
       <%- include('includes/footer.ejs') %>
 
@@ -121,6 +131,9 @@
             transition: transform 0.3s ease-in-out;
             font-size: 1.1em;
           }
+
+
+         
         </style>
 
         <script>
@@ -142,4 +155,23 @@
               darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
             }
           }
+
+
+          const scrollToTopHandler = () => {
+  let btn = document.getElementById("scrollToButton");
+  if (window.scrollY > 500) {
+    btn.className = "scrollToTopButton";
+  } else {
+    btn.className = "HideElement scrollToTopButton";
+  }
+};
+window.addEventListener("scroll", scrollToTopHandler);
+document.getElementById("scrollToButton").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+
         </script>
