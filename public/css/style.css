@@ -313,6 +313,7 @@ body {
   margin-bottom: 50px;
 }
 
+
 .main-content-wrapper h2 {
   font-size: 18px;
 }
@@ -1418,6 +1419,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   align-items: center;
   transition: 0.5s ease-in-out;
 }
