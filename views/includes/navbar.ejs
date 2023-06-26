@@ -1,94 +1,168 @@
 <body>
   <!-- Dark mode toggle button -->
-  <div id="dark-mode-icon" class="dark-mode-toggle" onclick="toggleDarkMode()">
+  <!-- <div id="dark-mode-icon" class="dark-mode-toggle" onclick="toggleDarkMode()">
     <i class="fa-sharp fa-solid fa-sun"></i>
-  </div>
+  </div> -->
+
   <header>
-    <div class="navbar">
-      <div class="logo">
-        <a class="white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
-        <a class="white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
-          href="/generateImg">IMAGINE -
-          AI</a>
-        <a class="white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>" href="/aboutUs">ABOUT -
-          US</a>
-        <a class="white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT -
-          US</a>
-      </div>
-      <div class="nav-links">
-        <ul>
-          <li>
-            <a class="hover-effect" id="header-btn1" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
-              OpenAI API</a>
-          </li>
-          <li>
-            <a class="white-color" id="header-btn2" href="/login">Login</a>
-          </li>
-        </ul>
+    <div class="container">
+      <div class="subcontainer">
+        <nav class="navbar">
+          <a class="logo" href="/">HOME</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/generateImg">IMAGINE -
+                AI</a>
+            </li>
+            <li class="nav-item">
+              <a href="/aboutUs">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contactUs">CONTACT -
+                US</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
+                OpenAI API</a>
+            </li>
+            <li class="nav-item">
+              <a href="/login" >Login</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
 
   <style>
-    /* Light mode styles */
-    .light-mode {}
-
-    /* Dark mode styles */
-    .dark-mode {
-      background-color: #121212;
-      color: #ffffff;
-    }
-
-    /* Dark mode styles for navbar */
-    .dark-mode #navbar {
-      background-color: #121212;
-      color: #ffffff;
-    }
-
-    /* Dark mode styles for the about section */
-    .dark-mode .about {
-      background-color: #121212;
-      color: #ffffff;
-    }
-
-    /* Styles for the dark mode toggle button */
-    .dark-mode-toggle {
-      width: 50px;
-      background-color: rgba(197, 197, 197, 0.4);
-      backdrop-filter: blur(4px);
+    header {
       position: fixed;
-      bottom: 30px;
-      padding: 10px;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 2;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      z-index: 100;
+      background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: #fff;
+    }
+    li {
+      list-style: none;
+    }
+    ul li a {
+      color: rgb(249, 245, 245);
+      text-decoration: none;
+    }
+    .container {
+      width: 1600px;
+      margin: auto;
+      z-index: 50px;
+    }
+    .subcontainer {
+      width: 85%;
+      margin: auto;
     }
 
-    .dark-mode-toggle i {
-      transition: transform 0.3s ease-in-out;
-      font-size: 1.1em;
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 2rem;
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+      background-color: rgb(251, 245, 245);
+    }
+
+    @media (max-width: 1600px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hamburger {
+        display: block;
+      }
+
+      .hamburger.active.bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active.bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active.bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .nav-item {
+        margin: 16px 0;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
     }
   </style>
 
   <script>
-    function toggleDarkMode() {
-      const body = document.body;
-      const navbar = document.querySelector(".navbar");
-      const aboutSection = document.querySelector(".about");
-      const darkModeToggle = document.querySelector(".dark-mode-toggle");
-      const darkModeIcon = document.getElementById("dark-mode-icon");
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
 
-      body.classList.toggle("dark-mode");
-      navbar.classList.toggle("dark-mode");
-      aboutSection.classList.toggle("dark-mode");
-      darkModeToggle.classList.toggle("dark");
-
-      if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-        darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-      } else {
-        darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      }
-    }
+    document.querySelector(".nav-link").forEach((element) => {
+      element.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      });
+    });
   </script>
+

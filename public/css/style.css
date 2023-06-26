@@ -132,7 +132,7 @@ body {
 
 /* --------------- Navbar CSS --------------- */
 
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -146,7 +146,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 @keyframes gradient {
   0% {
@@ -160,7 +160,7 @@ body {
   }
 }
 
-.navbar ul {
+/* .navbar ul {
   list-style: none;
   display: flex;
 }
@@ -170,7 +170,7 @@ body {
   font-family: 'League Spartan', sans-serif;
   font-weight: bold;
 
-}
+} */
 
 .hover-effect {
   color: rgb(34, 5, 44);
@@ -188,9 +188,9 @@ body {
   width: 100%;
 }
 
-.navbar a{
+/* .navbar a{
   margin: 10px 20px;
-}
+} */
 
 /* .hover-effect::after {
   content: "";
@@ -201,10 +201,10 @@ body {
   transition: all 0.5;
 } */
 
-.logo {
+/* .logo {
   display: flex;
   flex-direction: row;
-}
+} */
 
 .nav-links li{
   font-family: 'League Spartan', sans-serif;;
@@ -537,6 +537,7 @@ button,
   height: 100%;
   width: 100%;
   gap: 1rem;
+  margin-top: 70px;
 }
 
 .form-control select {
@@ -1282,7 +1283,7 @@ form {
   margin-bottom: 0.938rem;
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1291,7 +1292,7 @@ form {
   margin: 20px auto;
   padding: 0 20px;
   gap: 10rem;
-}
+} */
 
 .container1 {
   display: flex;
@@ -1422,12 +1423,12 @@ form {
   margin-top: 100px;
 }
 
-.header {
+/* .header {
   color: #fff;
   text-align: center;
   font-weight: bold;
   margin-top: 140px;
-}
+} */
 
 .container1 .about-image img {
   width: 60%;
@@ -2260,7 +2261,7 @@ form {
   }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .logo {
     margin-left: -20px;
   }
@@ -2269,9 +2270,9 @@ form {
     right: 2px;
     top: 15px;
   }
-}
+} */
 
-@media (max-width: 338px) {
+/* @media (max-width: 338px) {
   .nav-links {
     position: relative;
     top: 55%;
@@ -2288,7 +2289,7 @@ form {
     justify-content: space-between;
     flex-direction: column;
   }
-}
+} */
 
 /* FAQ Section */
 section .container2 {
