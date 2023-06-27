@@ -315,6 +315,7 @@ body {
   background-color: rgb(130, 8, 130);
 }
 
+
 /* --------------- About CSS --------------- */
 
 .about {
@@ -2607,4 +2608,10 @@ section .container2 {
 
 #email::placeholder{
   color: aqua;
+}
+@media screen and (max-width: 560px) {
+  .icons {
+    display: grid;
+    justify-content: center;
+  }
 }
