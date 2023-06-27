@@ -186,3 +186,9 @@ const observer = new IntersectionObserver(animateCards, options);
 cards.forEach((card) => {
   observer.observe(card);
 });
+
+// toggle navbar
+const nav = document.querySelector("#mainNav");
+const toggleNavbar = () => {
+  nav.classList.toggle("hide-sm");
+};
