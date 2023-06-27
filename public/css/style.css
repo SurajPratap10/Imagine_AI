@@ -137,6 +137,8 @@ body {
 
 /* --------------- Navbar CSS --------------- */
 
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -152,7 +154,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
+@media(max-width:900px){
+  .navbar{
+    display: none;
+  }
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
