@@ -1152,7 +1152,7 @@ span {
   width: 90%;
   color: #fff;
   font-size: medium;
-  display: flex;
+  margin-top: 10px;
 }
 
 .contact-top-text {
@@ -1162,6 +1162,11 @@ span {
 .wrapping {
   display: flex;
   flex-direction: row;
+}
+
+.contact_us .feedback{
+  height: 150px;
+  width: 500px;
 }
 
 input,
@@ -1823,6 +1828,22 @@ form {
 .question {
   margin-top: 2rem;
   font-weight: 700;
+}
+
+#slide {
+  position: relative;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
 }
 
 /* ----- Applying Media Queries for Responsivness ----- */
