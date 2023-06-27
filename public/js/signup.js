@@ -9,13 +9,13 @@ async function signup_submit(e) {
     const toast = document.getElementById("errorToast");
     toast.textContent = "All fields are mandatory";
     toast.style.display = "block";
-  
+
     // Hide the toast after 3 seconds
     return setTimeout(function () {
       toast.style.display = "none";
     }, 3000);
   }
-  if(password != confirmPassword){
+  if (password != confirmPassword) {
     const toast = document.getElementById("errorToast");
     toast.textContent = "Password and Confirm password didn't match";
     toast.style.display = "block";
