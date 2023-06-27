@@ -6,43 +6,37 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <a
-          class="white-color hover-effect <%= path === '/' ? 'active' : '' %>"
-          href="/"
-          >HOME</a
-        >
-        <a
-          class="white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
-          href="/generateImg"
-          >IMAGINE - AI</a
-        >
-        <a
-          class="white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
-          href="/aboutUs"
-          >ABOUT - US</a
-        >
-        <a
-          class="white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
-          href="/contactUs"
-          >CONTACT - US</a
-        >
+
+        <a class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
       </div>
-      <div class="nav-links">
-        <ul>
-          <li>
-            <a
-              class="hover-effect"
-              id="header-btn1"
-              href="https://openai.com/dall-e-2/"
-              target="_blank"
-              >DALL.E 2 - OpenAI API</a
-            >
-          </li>
-          <li>
-            <a class="white-color" id="header-btn2" href="/login">Login</a>
-          </li>
-        </ul>
+      <div  class="nav-links hide-sm" id="mainNav">
+        <div class="left-nav-links">
+          <div class="logo hide-lg">
+            <a class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
+          </div>
+          <div>
+            <a class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+              href="/generateImg">IMAGINE -
+              AI</a>
+          </div>
+          <div>
+            <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/aboutUs">ABOUT -
+            US</a>
+          </div>
+          <div>
+            <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT -
+              US</a>
+          </div>
+        </div>
+        <div class="right-nav-links">
+          <a class="AI white-color hover-effect" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
+            OpenAI API</a>
+        </div>
       </div>
+      <div>
+        <a class="login AI white-color" id="header-btn2" href="/login">Login</a>
+      </div>
+      <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect"><i class="fa-solid fa-bars"></i></div>
     </div>
   </header>
 
@@ -85,6 +79,14 @@
     .dark-mode-toggle i {
       transition: transform 0.3s ease-in-out;
       font-size: 1.1em;
+    }
+
+
+    @media(max-width:900px){
+      .navbar{
+        display: none;
+      }
+      
     }
   </style>
 

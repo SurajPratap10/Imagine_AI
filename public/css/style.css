@@ -137,6 +137,8 @@ body {
 
 /* --------------- Navbar CSS --------------- */
 
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -152,7 +154,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
+@media(max-width:900px){
+  .navbar{
+    display: none;
+  }
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -165,18 +171,6 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-}
-
-.navbar ul li {
-  margin-left: 1rem;
-  font-family: 'League Spartan', sans-serif;
-  font-weight: bold;
-
 }
 
 .hover-effect {
@@ -211,17 +205,36 @@ body {
 .logo {
   display: flex;
   flex-direction: row;
+  flex: 0;
 }
 
+.nav-links {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex: 1;
+ margin: auto;
+ gap:2rem;
+ background-color: none;
+ animation: none;
+ border-radius: 10px;
+ box-shadow: none;
+}
+.left-nav-links{
+  flex:1;
+  display: flex;
+}
+.right-nav-links{
+  display: flex;
+}
 .nav-links li {
   font-family: 'League Spartan', sans-serif;
-  ;
 }
-
 .AI {
   padding: 0rem 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  display: inline-block;
 }
 
 .navbar a:hover,
@@ -229,6 +242,52 @@ body {
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
+.barIcon{
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.barIcon:hover i{
+  color: #03045e;
+}
+
+.hide-sm{
+  display: inherit;
+}
+.hide-lg{
+  display: none !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-links{
+    display: block;
+    position: fixed;
+    top: 100px;
+    left:0;
+    width: 100vw;
+    padding: 2rem;
+    background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    box-shadow: 0 0.5px 5px #d9d9d9;
+  }
+  .left-nav-links, .right-nav-links{
+    display: block;
+  }
+  .AI{
+    padding: 0;
+    line-height: 2rem;
+  }
+  .hide-sm{
+    display: none !important;
+  }
+  .hide-lg{
+    display: inherit !important;
+  }
+  .logo{
+    flex: 1;
+  }
+} 
 
 /* --------------- Login Arrow --------------- */
 
@@ -1120,7 +1179,7 @@ span {
   width: 90%;
   color: #fff;
   font-size: medium;
-  display: flex;
+  margin-top: 10px;
 }
 
 .contact-top-text {
@@ -1130,6 +1189,11 @@ span {
 .wrapping {
   display: flex;
   flex-direction: row;
+}
+
+.contact_us .feedback{
+  height: 150px;
+  width: 500px;
 }
 
 input,
@@ -1793,6 +1857,22 @@ form {
   font-weight: 700;
 }
 
+#slide {
+  position: relative;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
 /* ----- Applying Media Queries for Responsivness ----- */
 
 @media (max-width: 1024px) {
@@ -2034,10 +2114,10 @@ form {
     line-height: 50px;
   }
 
-  .navbar a {
+  /* .navbar a {
     font-size: 14px;
     line-height: 20px;
-  }
+  } */
 
   .navbar {
     font-size: 14px;
