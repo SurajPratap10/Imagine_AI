@@ -12,7 +12,6 @@
   margin: 0;
   padding: 0;
 }
-
 :root {
   --primary-color: rgb(32, 32, 32);
   --navbar-color: #03045e;
@@ -21,23 +20,16 @@
 
 /* ---------- Enhancing the Scroll-Bar ---------- */
 
-body::-webkit-scrollbar {
-  width: 8px;
+::-webkit-scrollbar {
+  width: .8rem !important;
+  background-color: rgb(24, 16, 16);
 }
 
-body::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  height: 5px;
-  /* Adjust the height as needed */
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, transparent);
+  border-radius: 20px;
+height: 2px;
+ 
 }
 
 /* --------------- Body CSS --------------- */
@@ -154,11 +146,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-@media(max-width:900px){
-  .navbar{
+
+@media(max-width:900px) {
+  .navbar {
     display: none;
   }
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -209,27 +203,31 @@ body {
 }
 
 .nav-links {
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex: 1;
- margin: auto;
- gap:2rem;
- background-color: none;
- animation: none;
- border-radius: 10px;
- box-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: auto;
+  gap: 2rem;
+  background-color: none;
+  animation: none;
+  border-radius: 10px;
+  box-shadow: none;
 }
-.left-nav-links{
-  flex:1;
+
+.left-nav-links {
+  flex: 1;
   display: flex;
 }
-.right-nav-links{
+
+.right-nav-links {
   display: flex;
 }
+
 .nav-links li {
   font-family: 'League Spartan', sans-serif;
 }
+
 .AI {
   padding: 0rem 2rem;
   font-family: "Roboto", sans-serif;
@@ -242,28 +240,31 @@ body {
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
-.barIcon{
+
+.barIcon {
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 1rem;
 }
-.barIcon:hover i{
+
+.barIcon:hover i {
   color: #03045e;
 }
 
-.hide-sm{
+.hide-sm {
   display: inherit;
 }
-.hide-lg{
+
+.hide-lg {
   display: none !important;
 }
 
 @media only screen and (max-width: 992px) {
-  .nav-links{
+  .nav-links {
     display: block;
     position: fixed;
     top: 100px;
-    left:0;
+    left: 0;
     width: 100vw;
     padding: 2rem;
     background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
@@ -271,23 +272,29 @@ body {
     animation: gradient 15s ease infinite;
     box-shadow: 0 0.5px 5px #d9d9d9;
   }
-  .left-nav-links, .right-nav-links{
+
+  .left-nav-links,
+  .right-nav-links {
     display: block;
   }
-  .AI{
+
+  .AI {
     padding: 0;
     line-height: 2rem;
   }
-  .hide-sm{
+
+  .hide-sm {
     display: none !important;
   }
-  .hide-lg{
+
+  .hide-lg {
     display: inherit !important;
   }
-  .logo{
+
+  .logo {
     flex: 1;
   }
-} 
+}
 
 /* --------------- Login Arrow --------------- */
 
@@ -1164,7 +1171,7 @@ span {
   flex-direction: row;
 }
 
-.contact_us .feedback{
+.contact_us .feedback {
   height: 150px;
   width: 500px;
 }
@@ -1488,7 +1495,7 @@ form {
   transition: 0.5s ease-in-out;
 }
 
-.card-icon:hover{
+.card-icon:hover {
   transform: scale(1.1);
 }
 
@@ -1839,11 +1846,15 @@ form {
 }
 
 @-webkit-keyframes slide {
-  100% { left: 0; }
+  100% {
+    left: 0;
+  }
 }
 
 @keyframes slide {
-  100% { left: 0; }
+  100% {
+    left: 0;
+  }
 }
 
 /* ----- Applying Media Queries for Responsivness ----- */
@@ -2592,7 +2603,7 @@ section .container2 {
   display: none;
 }
 
-.error{
+.error {
   color: aqua;
   font-size: 18px;
   width: 27rem;
@@ -2605,6 +2616,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder{
+#email::placeholder {
   color: aqua;
 }
