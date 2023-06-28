@@ -172,6 +172,9 @@ body {
     background-position: 0% 50%;
   }
 }
+.logo-image{
+  width: 100px;
+}
 
 .hover-effect {
   color: rgb(34, 5, 44);
