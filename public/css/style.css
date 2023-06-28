@@ -172,6 +172,9 @@ body {
     background-position: 0% 50%;
   }
 }
+.logo-image{
+  width: 100px;
+}
 
 .hover-effect {
   color: rgb(34, 5, 44);
@@ -463,11 +466,14 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: #0072b1; */
 }
 
 .home-logo {
-  width: 50%;
-  animation: home-ani 7s ease-in forwards infinite;
+
+  width: 100%;
+  height: 100%;
+  /* animation: home-ani 7s ease-in forwards infinite; */
 }
 
 @keyframes home-ani {
@@ -595,6 +601,32 @@ button,
   background: var(--primary-color);
 }
 
+/* Media queries for responsiveness */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .showcase {
+    height: 100%;
+  }
+  .showcase h1 {
+    line-height: 4px !important;
+    margin-bottom: 0 !important;
+    padding-top: 50px !important;
+  }
+  .showcase form {
+    gap: 0.5rem !important;
+  }
+  .form-control input {
+    height: 45px !important;
+    border-radius: 6px;
+  }
+  .signin-opt h2 {
+  margin-bottom: 10px !important;
+  }
+  .sign-in-btn {
+    padding: 15px 55px !important;
+  }
+}
+
 .showcase h1 {
   display: flex;
   font-size: 2rem;
@@ -623,25 +655,26 @@ button,
   cursor: pointer;
 }
 
-.show-password {
+.show-password-div{
   display: flex;
-  width: 150px;
-  align-items: center;
 }
 
-.checkbox,
-.show-password input .checkbox {
+.checkbox-div{
+  width: 45% !important;
+}
+
+
+.checkbox-input{
   width: 20px;
   height: 20px;
+  cursor: pointer !important;
 }
 
-.show-password h4 {
-
+.show-password-typo {
   font-size: 15px;
   font-weight: 500;
   color: rgb(255, 255, 255);
   text-align: center;
-
 }
 
 .showcase form input,
@@ -1147,12 +1180,12 @@ span {
   padding-bottom: 20px;
 }
 
-.contact-top p {
+.input-title{
   /* justify-content: center; */
   width: 90%;
   color: #fff;
   font-size: medium;
-  display: flex;
+  margin: 10px auto 5px;
 }
 
 .contact-top-text {
@@ -1162,6 +1195,11 @@ span {
 .wrapping {
   display: flex;
   flex-direction: row;
+}
+
+.contact_us .feedback{
+  height: 150px;
+  width: 500px;
 }
 
 input,
@@ -1195,7 +1233,6 @@ form .responsive-cell-block input {
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
   margin-top: 15px;
-  margin-bottom: 40px;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
@@ -1823,6 +1860,22 @@ form {
 .question {
   margin-top: 2rem;
   font-weight: 700;
+}
+
+#slide {
+  position: relative;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
 }
 
 /* ----- Applying Media Queries for Responsivness ----- */
@@ -2586,4 +2639,9 @@ section .container2 {
 
 #email::placeholder{
   color: aqua;
+}
+
+.upper img{
+  width: 100px;
+  margin-bottom: 20px;
 }
