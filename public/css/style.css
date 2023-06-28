@@ -1147,12 +1147,12 @@ span {
   padding-bottom: 20px;
 }
 
-.contact-top p {
+.input-title{
   /* justify-content: center; */
   width: 90%;
   color: #fff;
   font-size: medium;
-  margin-top: 10px;
+  margin: 10px auto 5px;
 }
 
 .contact-top-text {
@@ -1200,7 +1200,6 @@ form .responsive-cell-block input {
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
   margin-top: 15px;
-  margin-bottom: 40px;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
