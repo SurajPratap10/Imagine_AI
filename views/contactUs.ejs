@@ -32,6 +32,8 @@
         height: 150px;
         width: 500px;
       }
+
+     .contactError{color: aqua; font-size: 14px;}
     </style>
     </head>
     <%- include('includes/navbar.ejs') %>
@@ -88,7 +90,7 @@
               </div>
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2"
                 style="display: flex;">
-                <form class="form-box">
+                <form class="form-box" id="contactform" method="post">
                   <div class="container-block form-wrapper" style="padding-bottom:40px;">
                     <div class="responsive-container-block">
                       <div class="wrapping">
@@ -97,41 +99,50 @@
                             FIRST NAME
                           </p>
                           <input style="width: 95%;" class="input" id="ijowk-6" name="FirstName" placeholder="john"
-                            type="text" pattern="[A-Za-z]{3,}"
-                            oninvalid="setCustomValidity('Please enter at least three letters')"
-                            oninput="setCustomValidity('')" required>
+                            type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
+                            <p class="hidden contactError" id="FirstNameError">
+                             First Name must be atleast 3 characters long.
+                            </p>
                         </div>
                         <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                           <p class="text-blk input-title">
                             LAST NAME
                           </p>
-                          <input class="input" id="indfi-4" name="Last Name" placeholder="Moshe" type="text"
-                            pattern="[A-Za-z]{3,}" oninvalid="setCustomValidity('Please enter at least three letters')"
-                            oninput="setCustomValidity('')" required>
+                          <input class="input" id="indfi-4" name="LastName" placeholder="Moshe" type="text"
+                            pattern="[A-Za-z]{3,}"  required onkeyup="handleChange(event)">
+                            <p class="hidden contactError" id="LastNameError">
+                              Last Name must be atleast 3 characters long.
+                             </p>
                         </div>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           EMAIL
                         </p>
-                        <input class="input" id="ipmgh-6" name="Email" placeholder="johnMosh2@gmail.com" type="text"
-                          pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                        <input class="input" id="ipmgh-6" name="email" placeholder="johnMosh2@gmail.com" type="text" onkeyup="handleChange(event)"
                           required>
+                          <p class="hidden contactError" id="emailError">
+                            Please enter Valid Email.
+                           </p>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           PHONE NUMBER
                         </p>
-                        <input class="input" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
-                          pattern="[789][0-9]{9}" oninvalid="setCustomValidity('Please enter a valid phone number')"
-                          oninput="setCustomValidity('')" required>
+                        <input class="input" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text" onkeyup="handleChange(event)" required>
+                        <p class="hidden contactError" id="PhoneNumberError">
+                          Please enter Valid Phone Number.
+                         </p>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
                         <p class="text-blk input-title" style="padding-bottom: 10px;">
                           Give your Valuable Feedback
                         </p>
                         <input class="textinput feedback" id="i5vyy-6" type="text"
-                          placeholder="You can contact us here..." type="text" required>
+                          placeholder="You can contact us here..." name="feedback" onkeyup="handleChange(event)" required>
+                          <p class="hidden contactError" id="feedbackError">
+                            Describe your message within 10 to 50 words.
+                           </p>
                       </div>
                     </div>
                   </div>
