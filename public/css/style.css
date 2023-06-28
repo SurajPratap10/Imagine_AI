@@ -1538,7 +1538,7 @@ form {
 
 .distance {
   margin: 90px 0 0 0;
-  height: 3vh;
+  /* height: 3vh; */
 }
 
 .about .container {
@@ -1603,13 +1603,12 @@ form {
 .feature {
   text-align: center;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  /* margin-top: 40px; */
+  /* margin-bottom: 40px; */
 }
 
 .headline {
   color: #ffffff;
-  margin-top: 100px;
 }
 
 .header {
