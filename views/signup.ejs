@@ -34,6 +34,19 @@
         fill: #1da1f2;
         transform: scale3d(1.1, 1.1, 1.1);
       }
+      .icon-boundry{
+    position: relative;
+   }
+
+    #eye{
+      color: aqua;
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      left:auto;
+      transform: none;
+      cursor: pointer;
+    }
     </style>
   </head>
 </head>
@@ -53,7 +66,12 @@
     </div>
     <div class="form-control">
       <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter password" onkeyup="handleChange(event)"/>
+      <div class="icon-boundry">
+        <input type="password" id="password" name="password" placeholder="Enter password" onkeyup="handleChange(event)"/>
+        <span onclick="showPassword()" id="eye" class="material-symbols-outlined">
+          visibility_off
+          </span>
+      </div>
       <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)</p>
     </div>
     <div class="form-control">
@@ -127,3 +145,15 @@
 </section>
 <%- include('includes/footer.ejs') %>
 <%- include('includes/topToBottomScrollButton.ejs') %>
+<script>
+  function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    document.getElementById("eye").innerText = "visibility";
+    } else {
+      x.type = "password";
+    document.getElementById("eye").innerText = "visibility_off";
+    }
+  }
+</script>
