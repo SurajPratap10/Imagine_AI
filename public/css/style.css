@@ -463,11 +463,14 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: #0072b1; */
 }
 
 .home-logo {
-  width: 50%;
-  animation: home-ani 7s ease-in forwards infinite;
+
+  width: 100%;
+  height: 100%;
+  /* animation: home-ani 7s ease-in forwards infinite; */
 }
 
 @keyframes home-ani {
@@ -2607,4 +2610,9 @@ section .container2 {
 
 #email::placeholder{
   color: aqua;
+}
+
+.upper img{
+  width: 100px;
+  margin-bottom: 20px;
 }
