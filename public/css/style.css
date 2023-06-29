@@ -149,7 +149,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #fff;
-  padding: 1rem;
+  padding: 0.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
