@@ -126,12 +126,25 @@
             border-color: black transparent transparent transparent;
           }
 
-          .tooltip:hover .tooltiptext {
-            visibility: visible;
-          }
-        </style>
-      </head>
-      <%- include('includes/navbar.ejs') %>
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+   .icon-boundry{
+    position: relative;
+   }
+
+    #eye{
+      color: aqua;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      left:auto;
+      transform: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<%- include('includes/navbar.ejs') %>
         <section class="showcase" id="showcase">
           <form id="image-form" action="index.html" style="margin-top:50px ;">
             <h1 class="AI">SIGN IN</h1>
@@ -143,21 +156,20 @@
             </div>
             <div class="form-control">
               <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter password"
+              <div class="icon-boundry">
+                <input type="password" id="password" name="password" placeholder="Enter password"
                 onkeyup="handleChange(event)" />
+                <span class="material-symbols-outlined" id="eye" onclick="myFunction()">
+                  visibility_off
+                </span>
+              </div>
               <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
                 (@$%#^&*), 1 number (0-9)</p>
             </div>
-            <div class="show-password-div">
-              <div class="checkbox-div">  
-                <input type="checkbox" id="showPassword" class="checkbox-input">
-              </div>
-              <label for="showPassword" class="show-password-typo" >Show password</label>
-            </div>
-            <div class="signin-opt">
-              <h2>Sign In using</h2>
-              <div class="signin-opt-icons">
-                <!-- signin using google -->
+    <div class="signin-opt">
+      <h2>Sign In using</h2>
+      <div class="signin-opt-icons">
+        <!-- signin using google -->
         <a href="/auth/google" class="google-button tooltip"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -225,8 +237,10 @@
               var x = document.getElementById("password");
               if (x.type === "password") {
                 x.type = "text";
+                document.getElementById("eye").innerText = "visibility"
               } else {
                 x.type = "password";
+                document.getElementById("eye").innerText = "visibility_off"
               }
             }
 
