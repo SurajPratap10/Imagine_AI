@@ -2561,9 +2561,11 @@ form {
 section .container2 {
   width: 50%;
   max-width: 40rem;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -2577,7 +2579,7 @@ section .container2 {
 }
 
 .accordion {
-  background: transparent;
+  background: white;
   border-radius: 0.5rem;
   box-shadow: 0.5rem px 0.5rem rgba(0, 0, 0, 0.1);
 }
@@ -2607,7 +2609,7 @@ section .container2 {
 .container2 .accordion .answer {
   color: white;
   position: relative;
-  background: black;
+  background: rgb(54, 54, 54);
   height: 0;
   overflow: hidden;
   transition: 0.5s;
