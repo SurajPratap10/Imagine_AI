@@ -43,6 +43,62 @@
             border-bottom: 1px dotted black;
           }
 
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  </style>
+</head>
+<%- include('includes/navbar.ejs') %>
+<section class="showcase" id="showcase" style="height: 120vh;">
+  <form
+    id="image-form"
+    action="index.html"
+    style="margin-top: 30px; margin-bottom: 60px"
+  >
+    <h1 class="AI">SIGN IN</h1>
+    <div class="form-control">
+      <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
+      <input type="email" id="email" name="email" placeholder="" onkeyup="handleChange(event)"/>
+      <label
+        for="email"
+        style="color: white; margin-left: 20px; margin-bottom: 40px"
+        >Email</label
+      >
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter Email address"
+        onkeyup="handleChange(event)"
+      />
+      <p class="error hidden" id="emailError">Enter Valid Email</p>
+    </div>
+
+    <div class="form-control">
+      <label
+        for="password"
+        style="color: white; margin-left: 20px; margin-bottom: 40px"
+        >Password
+      </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        onkeyup="handleChange(event)"
+      />
+
+      <p
+        style="display: flex; gap: 10px; color: white; justify-content: center"
+      >
+        <input
+          type="checkbox"
+          class="checkbox"
+          style="width: 20px; height: 20px"
+          onclick="showPassword()"
+        />
+        Show Password
+      </p>
           .tooltip .tooltiptext {
             visibility: hidden;
             width: 100px;
