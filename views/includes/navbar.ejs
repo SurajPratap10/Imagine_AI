@@ -1,46 +1,93 @@
 <body>
-  <!-- Dark mode toggle button -->
-  <div id="dark-mode-icon" class="dark-mode-toggle" onclick="toggleDarkMode()">
-    <i class="fa-sharp fa-solid fa-sun"></i>
-  </div>
   <header>
     <div class="navbar">
-      <div class="logo-image">
-
-        <img src="imagine-ai-low-resolution-logo-color-on-transparent-background.png" class="home-logo" alt="">
-      </div>
-      <div  class="nav-links hide-sm" id="mainNav">
-        <div class="left-nav-links">
-          <div class="logo ">
-            <a class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
+      <div class="nav-container">
+        <!-- Dark mode toggle button -->
+        <div
+          id="dark-mode-icon-mobile"
+          class="dark-mode-toggle dark-mode-icon"
+          onclick="toggleDarkMode()"
+        >
+          <i class="fa-sharp fa-solid fa-sun"></i>
+        </div>
+        <div class="logo-image">
+          <img
+            src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
+            class="home-logo"
+            alt=""
+          />
+        </div>
+        <div class="nav-links hide-sm" id="mainNav">
+          <div class="left-nav-links">
+            <div class="logo">
+              <a
+                class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>"
+                href="/"
+                >HOME</a
+              >
+            </div>
+            <div>
+              <a
+                class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+                href="/generateImg"
+                >IMAGINE - AI</a
+              >
+            </div>
+            <div>
+              <a
+                class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                href="/aboutUs"
+                >ABOUT - US</a
+              >
+            </div>
+            <div>
+              <a
+                class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                href="/contactUs"
+                >CONTACT - US</a
+              >
+            </div>
           </div>
-          <div>
-            <a class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
-              href="/generateImg">IMAGINE -
-              AI</a>
-          </div>
-          <div>
-            <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/aboutUs">ABOUT -
-            US</a>
-          </div>
-          <div>
-            <a class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT -
-              US</a>
+          <div class="right-nav-links">
+            <!-- Dark mode toggle button -->
+            <div
+              id="dark-mode-icon-desktop"
+              class="dark-mode-toggle dark-mode-icon"
+              onclick="toggleDarkMode()"
+            >
+              <i class="fa-sharp fa-solid fa-sun"></i>
+            </div>
+            <div>
+              <a
+                class="AI white-color hover-effect"
+                href="https://openai.com/dall-e-2/"
+                target="_blank"
+                >DALL.E 2 - OpenAI API</a
+              >
+            </div>
           </div>
         </div>
-        <div class="right-nav-links">
-          <a class="AI white-color hover-effect" href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
-            OpenAI API</a>
+        <div>
+          <a class="login AI white-color" id="header-btn2" href="/login"
+            >Login</a
+          >
+        </div>
+        <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect">
+          <i class="fa-solid fa-bars"></i>
         </div>
       </div>
-      <div>
-        <a class="login AI white-color" id="header-btn2" href="/login">Login</a>
-      </div>
-      <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect"><i class="fa-solid fa-bars"></i></div>
     </div>
   </header>
 
   <style>
+    .nav-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
     /* Light mode styles */
     .light-mode {
     }
@@ -67,9 +114,6 @@
     .dark-mode-toggle {
       width: fit-content;
       backdrop-filter: blur(4px);
-      position: fixed;
-      top: 15px;
-      right: 335px;
       padding: 5px;
       border-radius: 50%;
       cursor: pointer;
@@ -81,19 +125,33 @@
       font-size: 1.1em;
     }
 
-
-    #dark-mode-icon{
-      position: fixed;
-      top: 21px;
-      right: 400px;
+    #dark-mode-icon-mobile {
+      position: absolute;
+      right: 20%;
+      display: none;
     }
 
+    #dark-mode-icon-desktop {
+      display: block;
+    }
 
-    @media(max-width:900px){
-      .navbar{
+    @media (max-width: 989px) {
+      #dark-mode-icon-mobile {
+        display: block;
+      }
+      #dark-mode-icon-desktop {
         display: none;
       }
-      
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        display: none;
+      }
+
+      #dark-mode-icon-mobile {
+        display: block;
+      }
     }
   </style>
 
@@ -103,18 +161,22 @@
       const navbar = document.querySelector(".navbar");
       const aboutSection = document.querySelector(".about");
       const darkModeToggle = document.querySelector(".dark-mode-toggle");
-      const darkModeIcon = document.getElementById("dark-mode-icon");
+
+      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+      var darkModeIconCollection = Array.from(darkModeIcon);
 
       body.classList.toggle("dark-mode");
       navbar.classList.toggle("dark-mode");
       aboutSection.classList.toggle("dark-mode");
-      darkModeToggle.classList.toggle("dark");
+      // darkModeToggle.classList.toggle("dark");
 
-      if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-        darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-      } else {
-        darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      }
+      darkModeIconCollection.map((darkIcon) => {
+        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+        } else {
+          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+      });
     }
   </script>
 </body>
