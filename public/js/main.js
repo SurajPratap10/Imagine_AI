@@ -2,7 +2,7 @@ var loader = document.getElementById("PRE");
 window.addEventListener("load", function () {
   setTimeout(() => {
     loader.style.display = "none";
-  }, 2000); 
+  }, 2000);
 });
 
 const popup = document.getElementById("popup");
