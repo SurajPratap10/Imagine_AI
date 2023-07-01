@@ -3,8 +3,9 @@ async function signup_submit(e) {
   const name_user = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
-  if (!name_user || !email || !password) {
+  if (!name_user || !email || !password || !confirmPassword) {
     const toast = document.getElementById("errorToast");
     toast.textContent = "All fields are mandatory";
     toast.style.display = "block";
@@ -14,6 +15,16 @@ async function signup_submit(e) {
       toast.style.display = "none";
     }, 3000);
   }
+  if (password != confirmPassword) {
+    const toast = document.getElementById("errorToast");
+    toast.textContent = "Password and Confirm password didn't match";
+    toast.style.display = "block";
+
+    return setTimeout(function () {
+      toast.style.display = "none";
+    }, 3000);
+  }
+
   try {
     let response = await fetch("/auth/signup", {
       method: "POST",
