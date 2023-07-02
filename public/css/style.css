@@ -54,6 +54,8 @@ body {
   margin: 0;
 }
 
+/* -----------------------------LOADER CSS--------------------------- */
+
 .bodyPRE {
   z-index: 5;
   margin: 0;
@@ -61,77 +63,58 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   background: white;
+  
 }
-
-.contPRE {
-  z-index: 5;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loadingPRE {
-  color: black;
-}
-
-.ringPRE {
+.loader {
   width: 250px;
-  height: 250px;
-  border: 0.5px solid #011015;
-  border-radius: 50%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #e73c7e;
+  letter-spacing: 0.2em;
+}
+
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #e73c7e;
   position: absolute;
+  animation: load 0.7s infinite alternate ease-in-out;
 }
 
-.ringPRE:nth-child(1) {
-  border-bottom-width: 8px;
-  border-color: rgb(137, 36, 137);
-  animation: rotate1 2s linear infinite;
+.loader::before {
+  top: 0;
 }
 
-@keyframes rotate1 {
+.loader::after {
+  bottom: 0;
+}
+
+@keyframes load {
   0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotatez(0deg);
+    left: 0;
+    height: 30px;
+    width: 15px;
   }
-
+  50% {
+    height: 8px;
+    width: 40px;
+  }
   100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotatez(360deg);
-  }
-}
-
-.ringPRE:nth-child(2) {
-  border-bottom-width: 8px;
-  border-color: rgb(213, 16, 88);
-  animation: rotate2 2s linear infinite;
-}
-
-@keyframes rotate2 {
-  0% {
-    transform: rotateX(50deg) rotateY(10deg) rotatez(0deg);
-  }
-
-  100% {
-    transform: rotateX(50deg) rotateY(10deg) rotatez(360deg);
-  }
-}
-
-.ringPRE:nth-child(3) {
-  border-top-width: 8px;
-  border-color: rgb(66, 216, 227);
-  animation: rotate3 2s linear infinite;
-}
-
-@keyframes rotate3 {
-  0% {
-    transform: rotateX(35deg) rotateY(55deg) rotatez(0deg);
-  }
-
-  100% {
-    transform: rotateX(35deg) rotateY(55deg) rotatez(360deg);
+    left: 235px;
+    height: 30px;
+    width: 15px;
   }
 }
 
@@ -866,7 +849,7 @@ img {
 
 #newsletter .news-form button {
   border-radius: 0px 4px 4px 0px;
-  background-color: #088178;
+  background-color: #041e42;
   color: white;
   border: 0;
   width: 20%;
