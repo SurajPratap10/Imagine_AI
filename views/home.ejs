@@ -80,7 +80,7 @@
                 </p>
               </div>
               <div class="news-form">
-                <input type="email" name="email" id="email" placeholder="enter your email id">
+                <input type="email" name="email" id="email" placeholder="Enter your Email Id..">
                 <button>Sign Up</button>
               </div>
             </section>
@@ -125,27 +125,35 @@
                 transition: transform 0.3s ease-in-out;
                 font-size: 1.1em;
               }
+
+              #email::placeholder {
+                color: #041e42;
+              }
             </style>
 
             <script>
-              function toggleDarkMode() {
-                const body = document.body;
-                const navbar = document.querySelector(".navbar");
-                const aboutSection = document.querySelector(".about");
-                const darkModeToggle = document.querySelector(".dark-mode-toggle");
-                const darkModeIcon = document.getElementById("dark-mode-icon");
+         function toggleDarkMode() {
+      const body = document.body;
+      const navbar = document.querySelector(".navbar");
+      const aboutSection = document.querySelector(".about");
+      const darkModeToggle = document.querySelector(".dark-mode-toggle");
 
-                body.classList.toggle("dark-mode");
-                navbar.classList.toggle("dark-mode");
-                aboutSection.classList.toggle("dark-mode");
-                darkModeToggle.classList.toggle("dark");
+      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+      var darkModeIconCollection = Array.from(darkModeIcon);
 
-                if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-                  darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-                } else {
-                  darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                }
-              }
+      body.classList.toggle("dark-mode");
+      navbar.classList.toggle("dark-mode");
+      aboutSection.classList.toggle("dark-mode");
+      // darkModeToggle.classList.toggle("dark");
+
+      darkModeIconCollection.map((darkIcon) => {
+        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+        } else {
+          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+      });
+    }
 
 
 

@@ -1,7 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap");
 
 *,
 *:before,
@@ -44,6 +44,8 @@ body {
   margin: 0;
 }
 
+/* -----------------------------LOADER CSS--------------------------- */
+
 .bodyPRE {
   z-index: 5;
   margin: 0;
@@ -51,83 +53,62 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   background: white;
+  
 }
-
-.contPRE {
-  z-index: 5;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loadingPRE {
-  color: black;
-}
-
-.ringPRE {
+.loader {
   width: 250px;
-  height: 250px;
-  border: 0.5px solid #011015;
-  border-radius: 50%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #e73c7e;
+  letter-spacing: 0.2em;
+}
+
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #e73c7e;
   position: absolute;
+  animation: load 0.7s infinite alternate ease-in-out;
 }
 
-.ringPRE:nth-child(1) {
-  border-bottom-width: 8px;
-  border-color: rgb(137, 36, 137);
-  animation: rotate1 2s linear infinite;
+.loader::before {
+  top: 0;
 }
 
-@keyframes rotate1 {
+.loader::after {
+  bottom: 0;
+}
+
+@keyframes load {
   0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotatez(0deg);
+    left: 0;
+    height: 30px;
+    width: 15px;
   }
-
+  50% {
+    height: 8px;
+    width: 40px;
+  }
   100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotatez(360deg);
-  }
-}
-
-.ringPRE:nth-child(2) {
-  border-bottom-width: 8px;
-  border-color: rgb(213, 16, 88);
-  animation: rotate2 2s linear infinite;
-}
-
-@keyframes rotate2 {
-  0% {
-    transform: rotateX(50deg) rotateY(10deg) rotatez(0deg);
-  }
-
-  100% {
-    transform: rotateX(50deg) rotateY(10deg) rotatez(360deg);
-  }
-}
-
-.ringPRE:nth-child(3) {
-  border-top-width: 8px;
-  border-color: rgb(66, 216, 227);
-  animation: rotate3 2s linear infinite;
-}
-
-@keyframes rotate3 {
-  0% {
-    transform: rotateX(35deg) rotateY(55deg) rotatez(0deg);
-  }
-
-  100% {
-    transform: rotateX(35deg) rotateY(55deg) rotatez(360deg);
+    left: 235px;
+    height: 30px;
+    width: 15px;
   }
 }
 
 /* --------------- Navbar CSS --------------- */
-
-
 
 .navbar {
   position: fixed;
@@ -146,6 +127,8 @@ body {
 }
 
 @media(max-width:900px) {
+@media (max-width: 900px) {
+
   .navbar {
     display: none;
   }
@@ -164,7 +147,7 @@ body {
     background-position: 0% 50%;
   }
 }
-.logo-image{
+.logo-image {
   width: 100px;
 }
 
@@ -182,10 +165,6 @@ body {
 .hover-effect:hover::after {
   transition: 300ms;
   width: 100%;
-}
-
-.navbar a {
-  margin: 10px 20px;
 }
 
 /* .hover-effect::after {
@@ -219,14 +198,34 @@ body {
 .left-nav-links {
   flex: 1;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: auto;
+  gap: 2rem;
+  background-color: none;
+  animation: none;
+  border-radius: 10px;
+  box-shadow: none;
 }
+
 
 .right-nav-links {
   display: flex;
 }
 
+
+.left-nav-links {
+  flex: 1;
+  display: flex;
+}
+.right-nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links li {
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 .AI {
@@ -241,13 +240,11 @@ body {
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
-
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 1rem;
 }
-
 .barIcon:hover i {
   color: #03045e;
 }
@@ -291,6 +288,12 @@ body {
   .hide-lg {
     display: inherit !important;
   }
+  .hide-sm {
+    display: none !important;
+  }
+  .hide-lg {
+    display: inherit !important;
+  }
 
   .logo {
     flex: 1;
@@ -311,7 +314,7 @@ body {
 }
 
 #header-btn2 {
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
   text-decoration: none;
   font-size: 18x;
   padding: 6px 14px;
@@ -379,7 +382,6 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-
 
 .main-content-wrapper h2 {
   font-size: 18px;
@@ -457,14 +459,11 @@ button,
   height: 200px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
-
 }
-
 
 .btn:hover {
   background-color: #7152ee;
 }
-
 
 .dashboard .right {
   width: 50%;
@@ -475,7 +474,6 @@ button,
 }
 
 .home-logo {
-
   width: 100%;
   height: 100%;
   /* animation: home-ani 7s ease-in forwards infinite; */
@@ -532,9 +530,11 @@ button,
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom,
-      rgba(136, 134, 137, 0.5),
-      rgb(240, 237, 240));
+  background: linear-gradient(
+    to bottom,
+    rgba(136, 134, 137, 0.5),
+    rgb(240, 237, 240)
+  );
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
@@ -625,7 +625,7 @@ button,
     border-radius: 6px;
   }
   .signin-opt h2 {
-  margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
   }
   .sign-in-btn {
     padding: 15px 55px !important;
@@ -660,16 +660,15 @@ button,
   cursor: pointer;
 }
 
-.show-password-div{
+.show-password-div {
   display: flex;
 }
 
-.checkbox-div{
+.checkbox-div {
   width: 45% !important;
 }
 
-
-.checkbox-input{
+.checkbox-input {
   width: 20px;
   height: 20px;
   cursor: pointer !important;
@@ -706,7 +705,6 @@ form select {
   margin-bottom: 1rem;
   text-decoration: none;
 }
-
 
 .showcase form input,
 form select:hover {
@@ -870,7 +868,7 @@ img {
 
 #newsletter .news-form button {
   border-radius: 0px 4px 4px 0px;
-  background-color: #088178;
+  background-color: #041e42;
   color: white;
   border: 0;
   width: 20%;
@@ -1185,7 +1183,7 @@ span {
   padding-bottom: 20px;
 }
 
-.input-title{
+.input-title {
   /* justify-content: center; */
   width: 90%;
   color: #fff;
@@ -1238,7 +1236,8 @@ form .responsive-cell-block input {
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
   margin-top: 15px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .contact-middle {
@@ -1267,6 +1266,51 @@ form .responsive-cell-block input {
   border: 1px solid rgba(209, 190, 190, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive css */
+@media(max-width:700px){
+  .contact-top{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-middle {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 50px;
+}
+
+.contact-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  padding-top: 70px;
+  padding-left: 168px;
+}
+
+.context {
+  width: 100%;
+  max-width: 400px;
+  height: 120px;
+  color: #fff;
+  text-align: center;
+  position: 50px 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(209, 190, 190, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+}
+  
 }
 
 .cards img {
@@ -1659,7 +1703,8 @@ form {
   margin-left: 0px;
 }
 
-.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+.contact_us
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -1679,7 +1724,8 @@ form {
   border-right-color: #a2a2a2;
 }
 
-.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+.contact_us
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
   padding-top: 0px;
   padding-right: 20px;
   padding-bottom: 0px;
@@ -1912,7 +1958,8 @@ form {
     max-width: 90%;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
     padding-top: 0px;
     padding-right: 20px;
     padding-bottom: 60px;
@@ -1928,7 +1975,8 @@ form {
     border-bottom-color: #a2a2a2;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     margin-top: 60px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -1940,7 +1988,8 @@ form {
     margin-top: 10px;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -2010,7 +2059,6 @@ form {
   .content .right {
     margin-top: 40px;
   }
-
 }
 
 @media (max-width: 915px) {
@@ -2446,7 +2494,8 @@ form {
     line-height: 23px;
   }
 
-  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+  .contact_us
+    .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
     margin: 0 0 25px 0;
   }
 
@@ -2568,23 +2617,23 @@ form {
 section .container2 {
   width: 50%;
   max-width: 40rem;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media only screen and (max-width: 500px) {
-
   .container2 {
     width: 90% !important;
   }
-
 }
 
 .accordion {
-  background: transparent;
+  background: white;
   border-radius: 0.5rem;
   box-shadow: 0.5rem px 0.5rem rgba(0, 0, 0, 0.1);
 }
@@ -2614,7 +2663,7 @@ section .container2 {
 .container2 .accordion .answer {
   color: white;
   position: relative;
-  background: black;
+  background: rgb(54, 54, 54);
   height: 0;
   overflow: hidden;
   transition: 0.5s;
@@ -2650,7 +2699,7 @@ section .container2 {
   color: aqua;
 }
 
-.upper img{
+.upper img {
   width: 100px;
   margin-bottom: 20px;
 }
