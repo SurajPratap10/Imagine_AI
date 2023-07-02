@@ -1155,6 +1155,21 @@ form .responsive-cell-block input {
   font-size: medium;
 }
 
+.context {
+  width: 33%;
+  max-width: 400px;
+  height: 120px;
+  color: #fff;
+  text-align: center;
+  position: 50px 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(209, 190, 190, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+}
+
+
+
 /* Responsive css */
 @media(max-width:700px){
   .contact-top{
@@ -1175,20 +1190,16 @@ form .responsive-cell-block input {
 .contact-box {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 7px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
   padding-top: 70px;
-  padding-left: 100px;
-  align-content: space-between;
-  flex-direction: row-reverse;
+  padding-left: 168px;
 }
-  
-}
-
 
 .context {
-  width: 33%;
+  width: 100%;
   max-width: 400px;
   height: 120px;
   color: #fff;
@@ -1198,6 +1209,8 @@ form .responsive-cell-block input {
   border: 1px solid rgba(209, 190, 190, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+}
+  
 }
 
 .cards img {
