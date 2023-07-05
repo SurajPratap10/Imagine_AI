@@ -66,6 +66,7 @@ body {
 
   background: white;
 }
+
 .loader {
   width: 250px;
   height: 50px;
@@ -107,10 +108,12 @@ body {
     height: 30px;
     width: 15px;
   }
+
   50% {
     height: 8px;
     width: 40px;
   }
+
   100% {
     left: 235px;
     height: 30px;
@@ -135,11 +138,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 @media (max-width: 900px) {
   .navbar {
     display: none;
   }
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -153,6 +158,7 @@ body {
     background-position: 0% 50%;
   }
 }
+
 .logo-image {
   width: 100px;
 }
@@ -200,17 +206,21 @@ body {
   border-radius: 10px;
   box-shadow: none;
 }
+
 .left-nav-links {
   flex: 1;
   display: flex;
 }
+
 .right-nav-links {
   display: flex;
   align-items: center;
 }
+
 .nav-links li {
   font-family: "League Spartan", sans-serif;
 }
+
 .AI {
   padding: 0rem 2rem;
   font-family: "Roboto", sans-serif;
@@ -223,11 +233,13 @@ body {
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
+
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 1rem;
 }
+
 .barIcon:hover i {
   color: #03045e;
 }
@@ -235,6 +247,7 @@ body {
 .hide-sm {
   display: inherit;
 }
+
 .hide-lg {
   display: none !important;
 }
@@ -252,20 +265,25 @@ body {
     animation: gradient 15s ease infinite;
     box-shadow: 0 0.5px 5px #d9d9d9;
   }
+
   .left-nav-links,
   .right-nav-links {
     display: block;
   }
+
   .AI {
     padding: 0;
     line-height: 2rem;
   }
+
   .hide-sm {
     display: none !important;
   }
+
   .hide-lg {
     display: inherit !important;
   }
+
   .logo {
     flex: 1;
   }
@@ -522,11 +540,9 @@ button,
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(136, 134, 137, 0.5),
-    rgb(240, 237, 240)
-  );
+  background: linear-gradient(to bottom,
+      rgba(136, 134, 137, 0.5),
+      rgb(240, 237, 240));
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
@@ -604,21 +620,26 @@ button,
   .showcase {
     height: 100%;
   }
+
   .showcase h1 {
     line-height: 4px !important;
     margin-bottom: 0 !important;
     padding-top: 50px !important;
   }
+
   .showcase form {
     gap: 0.5rem !important;
   }
+
   .form-control input {
     height: 45px !important;
     border-radius: 6px;
   }
+
   .signin-opt h2 {
     margin-bottom: 10px !important;
   }
+
   .sign-in-btn {
     padding: 15px 55px !important;
   }
@@ -1269,6 +1290,7 @@ form .responsive-cell-block input {
     justify-content: center;
     align-items: center;
   }
+
   .contact-middle {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
@@ -1692,8 +1714,7 @@ form {
   margin-left: 0px;
 }
 
-.contact_us
-  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -1713,8 +1734,7 @@ form {
   border-right-color: #a2a2a2;
 }
 
-.contact_us
-  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
   padding-top: 0px;
   padding-right: 20px;
   padding-bottom: 0px;
@@ -1947,8 +1967,7 @@ form {
     max-width: 90%;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
     padding-top: 0px;
     padding-right: 20px;
     padding-bottom: 60px;
@@ -1964,8 +1983,7 @@ form {
     border-bottom-color: #a2a2a2;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     margin-top: 60px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -1977,8 +1995,7 @@ form {
     margin-top: 10px;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -2483,8 +2500,7 @@ form {
     line-height: 23px;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
     margin: 0 0 25px 0;
   }
 
@@ -2622,9 +2638,10 @@ section .container2 {
 }
 
 .accordion {
-  background: white;
   border-radius: 0.5rem;
   box-shadow: 0.5rem px 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: #222;
+  color: #fff;
 }
 
 .accordion-item {
