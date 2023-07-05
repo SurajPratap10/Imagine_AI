@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../public/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <footer>
   <div class="content">
@@ -9,7 +9,8 @@
             <span></span>
           </div>
         </div>
-        <p>Join us on our mission is to empower creativity, <br>bridging the gap between words and visuals, <br>as we seamlessly translate text <br>into stunning visual realities</p>
+        <img loading="lazy" src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"  alt="">
+        <p>Join us on our mission is to empower creativity, bridging the gap between words and visuals,as we seamlessly translate text into stunning visual realities</p>
       </div>
     </div>
     <div class="middle1 box boxx">
@@ -26,11 +27,13 @@
         </a>
       </div>
       <div class="email">
-        <a href="javascript:;">abcxyz@gmail.com</a> 
+        <a href="javascript:;" id="email-link" value="mrprayag77@gmailcom"
+          data-email="surajpratap20002003@gmail.com">✉️surajpratap20002003@gmail.com</a>
+ 
         <!-- @suraj kindly add your email id above -->
       </div>
       <div class="phone">
-        <a href="javascript:;">+91 1234567890</a>
+         <a href="javascript:;" id="phone-link" value="8070590099">📞+91 1234567890</a>
         <!-- @suraj please add your phone number above -->
       </div>
     </div>
@@ -55,36 +58,228 @@
       <div class="border1">
       <form name="submit-to-google-sheet" style="width: 100%;">
         <i class="fas fa-envelope fa-solid"></i>
-        <input type="email" name="Email" placeholder="Enter email address" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
-        <button type="submit" style="padding: 0 !important; margin: 0 !important; width:11% !important; display: inline; background-color: transparent;"><i class="fas fa-paper-plane" style="color:#fff;"></i></button>
+        <input type="email" id="email_input" name="Email" placeholder="Enter email address" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+        <button type="submit" id="subscribe_button" style="padding: 0 !important; margin: 0 !important; width:11% !important; display: inline; background-color: transparent;" aria-label="send mail"><i class="fas fa-paper-plane" style="color:#fff;"></i></button>
       </form>
+
+
+
+
+        <!-- STYLE & SCRIPT FOR PHONE, EMAIL OPERATIONS board (mrprayag077)  START -->
+
+        <style>
+          .thank-you-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .alert1 {
+            display: flex;
+            align-items: center;
+            padding: 0.55rem 0.65rem 0.55rem 0.75rem;
+            border-radius: 1rem;
+            min-width: 100px;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            box-shadow:
+              0px 3.2px 13.8px rgba(0, 0, 0, 0.02),
+              0px 7.6px 33.3px rgba(0, 0, 0, 0.028),
+              0px 14.4px 62.6px rgba(0, 0, 0, 0.035),
+              0px 25.7px 111.7px rgba(0, 0, 0, 0.042),
+              0px 48px 208.9px rgba(0, 0, 0, 0.05),
+              0px 115px 500px rgba(0, 0, 0, 0.07)
+          }
+
+          .content1 {
+            display: flex;
+            align-items: center;
+          }
+
+          .icon1 {
+            font-size: 10px;
+            padding: 0.5rem;
+            margin-right: 1rem;
+            border-radius: 39% 61% 42% 58% / 50% 51% 49% 50%;
+            box-shadow:
+              0px 3.2px 13.8px rgba(0, 0, 0, 0.02),
+              0px 7.6px 33.3px rgba(0, 0, 0, 0.028),
+              0px 14.4px 62.6px rgba(0, 0, 0, 0.035),
+              0px 25.7px 111.7px rgba(0, 0, 0, 0.042),
+              0px 48px 208.9px rgba(0, 0, 0, 0.05),
+              0px 115px 500px rgba(0, 0, 0, 0.07)
+          }
+
+
+
+          .success1 {
+            background-color: #d7f1de;
+            border: 2px solid #3ebd61;
+          }
+
+          .success1 .icon1 {
+            background-color: #3ebd61;
+          }
+
+
+
+
+          .info1 {
+            background-color: #c2dfe8;
+            border: 2px solid #006CE3;
+          }
+
+          .info1 .icon1 {
+            background-color: #006CE3;
+
+          }
+
+
+
+          #text-box {
+            font-size: 15px;
+            font-weight: 700;
+            color: #222222;
+
+          }
+
+
+
+          .cont {
+
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: red;
+          }
+        </style>
+
+
+        <script>
+
+          var emailLink = document.getElementById('email-link');
+          var email = emailLink.getAttribute('data-email');
+          var emoji = '✉️';
+
+          if (email.length > 15) {
+            var truncatedEmail = email.slice(0, 15) + '...';
+            emailLink.textContent = emoji + truncatedEmail;
+          }
+
+
+
+
+          document.addEventListener('DOMContentLoaded', function () {
+            var subscribeButton = document.getElementById('subscribe_button');
+
+            subscribeButton.addEventListener('click', function (event) {
+              event.preventDefault();
+
+              var emailInput = document.getElementById('email_input');
+              var email = emailInput.value.trim();
+
+              if (validateEmail(email)) {
+
+                showMessage('Thank you for subscribing!');
+              } else {
+                console.log('Please enter a valid Gmail address.');
+                alert('Please enter a valid email address');
+              }
+            });
+
+            function validateEmail(email) {
+              var emailRegex = /^[^\s@]+@gmail\.com$/i;
+              return emailRegex.test(email);
+            }
+
+            function showMessage(msg) {
+              var messageBox = document.createElement('div');
+              messageBox.innerHTML = `
+                <div class="success1 alert1">
+                  <div class="content1">
+                    <div class="icon1">
+                      <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                          <circle fill="#fff" cx="64" cy="64" r="64"/>
+                        </g>
+                        <g>
+                          <path fill="#3EBD61" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <p id="text-box"> ${msg}</p>
+                  </div>
+                </div>`;
+              messageBox.classList.add('thank-you-message');
+
+              document.body.appendChild(messageBox);
+              setTimeout(function () {
+                document.body.removeChild(messageBox);
+              }, 2000);
+            }
+          });
+        </script>
+
+
       </div>
       <div class="tyfs" id="msg"></div>
-      <div class="icons" style="margin-top: 48px;">
-        <ul>
-          <li>
-            <a title="linkedin" target="_blank" href="https://www.linkedin.com/in/suraj-pratap-948a92225/"><i
-                class="fab fa-linkedin-in icon"></i></a>
-          </li>
-          <li>
-            <a title="github" target="_blank" href="https://github.com/SurajPratap10"> <i
-                class="fab fa-github icon"></i> </a>
-          </li>
-          <li>
-            <a title="facebook" target="_blank" href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"><i
-                class="fab fa-twitter icon"></i></a>
-          </li>
-          <li>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/aridoshikazu_1/"><i
-                class="fab fa-instagram icon"></i></a>
-          </li>
-        </ul>
-      </div>
-      </div>
+        <div class="icons" style="margin-top: 48px;">
+
+          <ul>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Linkedin"
+                title="Linkedin (External Link)"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/suraj-pratap-948a92225/"
+	             >
+		             <i class="fab fa-linkedin-in icon"><img loading="lazy" class="footer-icons" src="./faviconicon/linkedin.webp" alt=""></i>
+	            </a>
+            </li>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Github"
+                title="Github (External Link)"
+                rel="noopener noreferrer"
+                  href="https://github.com/SurajPratap10"
+	            > 
+	             <i class="fab fa-github icon"><img loading="lazy" class="footer-icons" src="./faviconicon/github.webp" alt=""></i> 
+	           </a>
+            </li>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Facebook"
+                title="Facebook (External Link)"
+                rel="noopener noreferrer"
+		            href="https://www.facebook.com/people/Suraj-Pratap/pfbid033hsRtGKKKTEkrnAax86WoEASLtfYEuzSijZQr9aPemr4X2DjM1zwXFnrWtfBiDHNl/"
+	            >
+
+	               <i class="fab fa-facebook icon"><img class="footer-icons" src="./faviconicon/facebook.webp" alt=""></i>
+	            </a>
+            </li>
+            <li>
+              <a 
+                target="_blank" 
+                aria-label="Visit us on Instagram"
+                title="Instagram (External Link)"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/aridoshikazu_1/"
+               >
+
+	              <i class="fab fa-instagram icon"><img class="footer-icons" src="./faviconicon/instagram.webp" alt=""></i>
+
+	           </a>
+            </li>
+          </ul>
+        </div>
     </div>
-  </div>
   <hr style="margin-top: 40px;">
-  <div class="bottom" style="padding: 40px 0 40px 0">
+  <div class="bottom">
     <p class="bot-l">Copyright © 2020 <a href="#">Imagine-AI</a> | All rights reserved</p>
   </div>
   
@@ -97,17 +292,179 @@
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response =>{
-        msg.innerHTML= "Thank You For Subscribing"
-        setTimeout(function(){
-          msg.innerHTML= ""
-        },5000)
+     console.log("Thank You For Subscribing");
+
+        //  msg.innerHTML = "Thank You For Subscribing"
+        // setTimeout(function () {
+        //  msg.innerHTML = ""
+        // }, 5000)
         form.reset()
       })
       .catch(error => console.error('Error!', error.message))
   })
+
+
+  // Copy phone number to clip board (mrprayag077)  START 
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+
+
+    var phoneLink = document.getElementById('phone-link');
+
+    phoneLink.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      var phoneNumber = phoneLink.getAttribute('value');
+      copyToClipboard(phoneNumber);
+      showMessage('Copied to clipboard');
+
+      var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+      if (isMobileDevice) {
+        window.location.href = 'tel:' + phoneNumber;
+      } else {
+        console.log('Not a mobile device. Opening dial pad is not supported.');
+        // Handle opening the dial pad on non-mobile devices (optional)
+      }
+
+
+    });
+
+    function copyToClipboard(text) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+
+    function showMessage(message) {
+      var messageBox = document.createElement('div');
+      //  messageBox.textContent = message;
+
+      messageBox.innerHTML = `     <div class="info1 alert1">
+      <div class="content1">
+         <div class="icon1">
+                  <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle fill="#fff" cx="64" cy="64" r="64"/></g><g><path fill="#006CE3" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/></g></svg>
+              </div>
+        <p id="text-box ">Copied to Clipboard!!</p>
+      </div>
+      
+    </div>
+    
+
+    `;
+      messageBox.classList.add('clipboard-message');
+      document.body.appendChild(messageBox);
+      setTimeout(function () {
+        document.body.removeChild(messageBox);
+      }, 2000);
+    }
+
+
+
+    var emailLink = document.getElementById('email-link');
+
+    emailLink.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      var emailLink2 = emailLink.getAttribute('value');
+      copyToClipboard(emailLink2);
+
+      console.log('lllllllllllllllllllllllllllllll');
+      console.log(emailLink2);
+
+      var recipientEmail = emailLink.getAttribute('data-email');
+      var subject = 'Hello';
+      var body = 'I wanted to reach out to you...';
+
+      sendEmail(recipientEmail, subject, body);
+
+
+      var emailid = emailLink.getAttribute('value');
+
+
+      var emailInput = document.getElementById('email-link');
+      var email = emailInput.value;
+
+      copyToClipboard1(emailid);
+      showMessage1('Copied to clipboard');
+
+
+
+
+    });
+
+
+    function copyToClipboard1(text) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+
+    function showMessage1(message) {
+      var messageBox = document.createElement('div');
+      //  messageBox.textContent = message;
+
+      messageBox.innerHTML = `     <div class="info1 alert1">
+        <div class="content1">
+           <div class="icon1">
+                    <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle fill="#fff" cx="64" cy="64" r="64"/></g><g><path fill="#006CE3" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/></g></svg>
+                </div>
+        <p id="text-box ">Copied to Clipboard!!</p>
+
+        </div>
+        
+      </div>
+    
+
+    `;
+
+      messageBox.classList.add('clipboard-message');
+      document.body.appendChild(messageBox);
+      setTimeout(function () {
+        document.body.removeChild(messageBox);
+      }, 2000);
+    }
+
+
+    function sendEmail(recipientEmail, subject, body) {
+      var emailUrl = 'mailto:' + recipientEmail;
+
+      if (subject) {
+        emailUrl += '?subject=' + encodeURIComponent(subject);
+      }
+
+      if (body) {
+        emailUrl += '&body=' + encodeURIComponent(body);
+      }
+
+      window.location.href = emailUrl;
+    }
+
+  });
+
 </script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ .clipboard-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
 footer{
 	
 	width: 100%;
@@ -277,9 +634,10 @@ footer .content .media-icons a{
 }
 footer .bottom{
   width: 100%;
-  text-align: center;
   color: #d9d9d9;
-  padding: 0 40px 5px 0;
+  padding: 40px 0 40px 0;
+  display: grid;
+  place-items: center;
 }
 footer .bottom a{
   color: #134D58;
@@ -290,9 +648,7 @@ footer a{
 footer a:hover{
     color: black;
 }
-.boxx a:hover{
-	padding-left: 8px;
-}
+
 
 .email a:hover{
   border-bottom: 1px solid black !important;
@@ -484,6 +840,34 @@ input[type="email"]::placeholder {
   color: #ffffff;
 }
 </style>
+
+
+<!-- SEO SETTINGS -->
+<script type="application/ld+json">
+  {
+    "@context": "https://imagine-ai-17zf.vercel.app/",
+    "@type": "WebSite",
+    "name": "IMAGINE - AI",
+    "description": "Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images",
+    "url": "https://imagine-ai-17zf.vercel.app/",
+    "image": "https://imagine-ai-17zf.vercel.app/logo-no-background.webp,
+    "author": {
+      "@type": "Person",
+      "name": "SurajPratap10"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IMAGINE-AI",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imagine-ai-17zf.vercel.app/logo-no-background.webp"
+      }
+    },
+    "datePublished": "2023-06-08"
+  }
+  </script>
+
+
 </body>
 
 </html>

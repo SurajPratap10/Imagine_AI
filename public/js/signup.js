@@ -1,11 +1,11 @@
 async function signup_submit(e) {
   e.preventDefault();
-  // console.log('hello: ');
   const name_user = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
-  if (!name_user || !email || !password) {
+  if (!name_user || !email || !password || !confirmPassword) {
     const toast = document.getElementById("errorToast");
     toast.textContent = "All fields are mandatory";
     toast.style.display = "block";
@@ -15,6 +15,16 @@ async function signup_submit(e) {
       toast.style.display = "none";
     }, 3000);
   }
+  if (password != confirmPassword) {
+    const toast = document.getElementById("errorToast");
+    toast.textContent = "Password and Confirm password didn't match";
+    toast.style.display = "block";
+
+    return setTimeout(function () {
+      toast.style.display = "none";
+    }, 3000);
+  }
+
   try {
     let response = await fetch("/auth/signup", {
       method: "POST",
@@ -54,15 +64,12 @@ async function signup_submit(e) {
     }
   } catch (error) {
     if (error) {
-      console.log("error: ", error);
+      return error;
     }
   }
-
-  // console.log(name_user);
 }
 if (window.location.pathname != "/contactUs") {
   const signup_submit_doc = document.querySelector(".btn-signup-submit");
-  console.log("Hi Authjs ", signup_submit_doc);
 
   if (signup_submit_doc)
     signup_submit_doc.addEventListener("click", signup_submit);

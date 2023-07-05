@@ -87,7 +87,100 @@ async function generateImageRequest(prompt, API_KEY, size) {
 
     //Displaying Image in the Frontend:
     const imageUrl = data.data;
+
+    const sharebtn = document.querySelector(".twitter-share-button");
+    sharebtn.style.display = "block";
+    sharebtn.addEventListener("click", () => {
+      // Replace [ImageURL] with the actual image URL
+      handleShare(imageUrl);
+    });
     document.querySelector("#image").src = imageUrl;
+    const handleShare = async (url) => {
+      try {
+        // Check if the navigator.share API is available
+        if (window.navigator.share) {
+          await window.navigator.share({
+            title: "Share GIF",
+            url: url,
+          });
+        } else {
+          // If the API is not available, show a share menu
+          const options = [
+            {
+              label: "Instagram",
+              url: `https://www.instagram.com/create/collection/?source_url=${encodeURIComponent(
+                url,
+              )}&media_type=gif`,
+            },
+            {
+              label: "Facebook",
+              url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                url,
+              )}`,
+            },
+            {
+              label: "Twitter",
+              url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                "Check out this GIF!",
+              )}&url=${encodeURIComponent(url)}`,
+            },
+            {
+              label: "Snapchat",
+              url: `snapchat://share?url=${encodeURIComponent(url)}`,
+            },
+            {
+              label: "Telegram",
+              url: `https://telegram.me/share/url?url=${encodeURIComponent(
+                url,
+              )}`,
+            },
+          ];
+
+          const chosenOption = await showShareMenu(options);
+
+          // Handle the share action for the chosen option
+          if (chosenOption) {
+            window.open(chosenOption.url, "_blank");
+          }
+        }
+      } catch (error) {
+        console.error("Error sharing:", error);
+      }
+    };
+
+    // Helper function to show a share menu with custom options
+    const showShareMenu = async (options) => {
+      const buttons = options.map((option) => {
+        return {
+          label: option.label,
+          onClick: () => {
+            closeMenu(option);
+          },
+        };
+      });
+
+      const closeMenu = (option) => {
+        menu.destroy();
+        resolve(option);
+      };
+
+      const menu = new window.Menus({
+        buttons: buttons,
+      });
+
+      const result = await new Promise((resolve) => {
+        menu.showAtCursor();
+        menu.on("cancel", () => {
+          resolve(null);
+        });
+      });
+
+      return result;
+    };
+
+    // Call the handleShare function with the desired image URL
+    // Replace [ImageURL] with the actual image URL
+
     // hideLoading();
     removeSpinner();
   } catch (error) {

@@ -1,116 +1,151 @@
-<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %>
-<head>
-  <head>
-    <style>
-      .google-icon {
-        vertical-align: middle;
-        fill: teal;
-        display: inline-block;
-        transition: all 0.3s ease-in-out;
-      }
-      .facebook-icon {
-        vertical-align: middle;
-        fill: teal;
-        display: inline-block;
-        transition: all 0.3s ease-in-out;
-      }
-      .twitter-icon {
-        vertical-align: middle;
-        fill: teal;
-        display: inline-block;
-        transition: all 0.3s ease-in-out;
-      }
-      .google-icon:hover {
-        fill: white;
-        transform: scale3d(1.1, 1.1, 1.1);
-      }
-      .facebook-icon:hover {
-        fill: #3b5998;
-        transform: scale3d(1.1, 1.1, 1.1);
-      }
-      .twitter-icon:hover {
-        fill: #1da1f2;
-        transform: scale3d(1.1, 1.1, 1.1);
-      }
-    </style>
-  </head>
-</head>
-<%- include('includes/navbar.ejs') %>
-<section class="showcase" id="showcase">
-  <form id="image-form" action="index.html">
-    <h1 class="AI">SIGN UP</h1>
-    <div class="form-control">
-      <input type="text" id="name" placeholder="Enter Name" />
-    </div>
-    <div class="form-control">
-      <input type="email" id="email" placeholder="Enter Email address" />
-    </div>
-    <div class="form-control">
-      <input type="password" id="password" placeholder="Enter password" />
-    </div>
-    <div class="signup-opt">
-      <h2>Sign Up using</h2>
-      <div class="signup-opt-icons">
-        <!-- signup using google -->
-        <a href="/auth/google" class="google-button"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="2em"
-            viewBox="0 0 488 512"
-            class="google-icon"
-          >
-            <path
-              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
-            /></svg
-        ></a>
+<%- include('includes/PRE.ejs') %>
+  <%- include('includes/header.ejs') %>
+    <%- include('includes/sidebar.ejs') %>
 
-        <!-- signup using facebook -->
-        <a href="#">
-          <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="2em"
-            viewBox="0 0 512 512"
-            class="facebook-icon"
-          >
-            <path
-              d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-            />
-          </svg>
-        </a>
+      <head>
 
-        <!-- signup using twitter -->
+        <head>
+          <style>
+            .google-icon {
+              vertical-align: middle;
+              fill: teal;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
 
-        <a href="#">
-          <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="2em"
-            viewBox="0 0 512 512"
-            class="twitter-icon"
-          >
-            <path
-              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="formBtns">
-      <button
-        type="submit"
-        class="btn sign-in-btn btn-signup-submit"
-        href="index.html"
-      >
-        <span>Submit</span>
-        <div class="flow"></div>
-      </button>
-    </div>
-    <div class="get-api-text">
-      <p>Already have an account? <a href="/login">Signin</a></p>
-    </div>
-  </form>
-  <div id="successToast" class="toast success-toast"></div>
-  <div id="errorToast" class="toast error-toast"></div>
-</section>
-<%- include('includes/footer.ejs') %>
+            .facebook-icon {
+              vertical-align: middle;
+              fill: teal;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .twitter-icon {
+              vertical-align: middle;
+              fill: teal;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .google-icon:hover {
+              fill: white;
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            .facebook-icon:hover {
+              fill: #3b5998;
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            .twitter-icon:hover {
+              fill: #1da1f2;
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            .icon-boundry {
+              position: relative;
+            }
+
+            #eye {
+              color: aqua;
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              left: auto;
+              transform: none;
+              cursor: pointer;
+            }
+          </style>
+        </head>
+      </head>
+      <%- include('includes/navbar.ejs') %>
+        <section class="showcase" id="showcase" style="margin-bottom: 90px; height: 900px;">
+          <form id="image-form" action="index.html" style="margin-top: 30px;">
+            <h1 class="AI">SIGN UP</h1>
+            <div class="form-control">
+              <label for="name" style="color: white; margin-left: 20px; margin-bottom: 60px;">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter Name" onkeyup="handleChange(event)" />
+              <p class="error hidden" id="nameError">Name should be atleast 5 characters long</p>
+            </div>
+            <div class="form-control">
+              <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
+              <input type="email" id="email" email="email" name="email" placeholder="Enter Email address"
+                onkeyup="handleChange(event)" />
+              <p class="error hidden" id="emailError">Enter Valid Email</p>
+            </div>
+            <div class="form-control">
+              <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
+              <div class="icon-boundry">
+                <input type="password" id="password" name="password" placeholder="Enter password"
+                onkeyup="handleChange(event)" />
+                <span class="material-symbols-outlined" id="eye" onclick="showPassword()">
+                  visibility_off
+                </span>
+              </div>
+          
+              <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
+                (@$%#^&*), 1 number (0-9)</p>
+            </div>
+            <div class="form-control">
+              <label for="confirmPassword" style="color: white; margin-left: 20px; margin-bottom: 40px;">Confirm
+                Password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Confirm password"
+                onkeyup="showPassword(event)" />
+            </div>
+            <div class="signup-opt">
+              <h2>Sign Up using</h2>
+              <div class="signup-opt-icons">
+                <!-- signup using google -->
+                <a href="/auth/google" class="google-button"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                    viewBox="0 0 488 512" class="google-icon">
+                    <path
+                      d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                  </svg></a>
+
+                <!-- signup using facebook -->
+                <a href="#">
+                  <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="facebook-icon">
+                    <path
+                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                  </svg>
+                </a>
+
+                <!-- signup using twitter -->
+
+                <a href="#">
+                  <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="twitter-icon">
+                    <path
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="formBtns">
+              <button type="submit" class="btn sign-in-btn btn-signup-submit" href="index.html" aria-label="submit">
+                <span>Submit</span>
+                <div class="flow"></div>
+              </button>
+            </div>
+            <div class="get-api-text">
+              <p>Already have an account? <a href="/login">Signin</a></p>
+            </div>
+          </form>
+          <div id="successToast" class="toast success-toast"></div>
+          <div id="errorToast" class="toast error-toast"></div>
+        </section>
+        <%- include('includes/footer.ejs') %>
+          <%- include('includes/topToBottomScrollButton.ejs') %>
+<script>
+  function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    document.getElementById("eye").innerText = "visibility";
+    } else {
+      x.type = "password";
+    document.getElementById("eye").innerText = "visibility_off";
+    }
+  }
+</script>
