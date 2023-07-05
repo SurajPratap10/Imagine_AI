@@ -53,10 +53,10 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  
+
   background: white;
-  
 }
+
 .loader {
   width: 250px;
   height: 50px;
@@ -73,7 +73,8 @@ body {
   letter-spacing: 0.2em;
 }
 
-.loader::before, .loader::after {
+.loader::before,
+.loader::after {
   content: "";
   display: block;
   width: 15px;
@@ -97,10 +98,12 @@ body {
     height: 30px;
     width: 15px;
   }
+
   50% {
     height: 8px;
     width: 40px;
   }
+
   100% {
     left: 235px;
     height: 30px;
@@ -126,7 +129,9 @@ body {
   align-items: center;
 }
 
+
 @media(max-width:900px) {
+
 @media (max-width: 900px) {
 
   .navbar {
@@ -147,6 +152,7 @@ body {
     background-position: 0% 50%;
   }
 }
+
 .logo-image {
   width: 100px;
 }
@@ -195,6 +201,7 @@ body {
   box-shadow: none;
 }
 
+
 .left-nav-links {
   flex: 1;
   display: flex;
@@ -219,6 +226,7 @@ body {
   flex: 1;
   display: flex;
 }
+
 .right-nav-links {
   display: flex;
   align-items: center;
@@ -240,11 +248,13 @@ body {
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
+
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 1rem;
 }
+
 .barIcon:hover i {
   color: #03045e;
 }
@@ -288,12 +298,14 @@ body {
   .hide-lg {
     display: inherit !important;
   }
+
   .hide-sm {
     display: none !important;
   }
   .hide-lg {
     display: inherit !important;
   }
+
 
   .logo {
     flex: 1;
@@ -327,6 +339,27 @@ body {
 }
 
 /* --------------- About CSS --------------- */
+
+.twitter-share-button {
+  display: none;
+  margin-top: 10px;
+  /* align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  background-color: #171819;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; */
+}
+
+.twitter-share-button i {
+  margin-right: 8px;
+}
 
 .about {
   width: 100%;
@@ -530,11 +563,9 @@ button,
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(136, 134, 137, 0.5),
-    rgb(240, 237, 240)
-  );
+  background: linear-gradient(to bottom,
+      rgba(136, 134, 137, 0.5),
+      rgb(240, 237, 240));
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
@@ -612,21 +643,26 @@ button,
   .showcase {
     height: 100%;
   }
+
   .showcase h1 {
     line-height: 4px !important;
     margin-bottom: 0 !important;
     padding-top: 50px !important;
   }
+
   .showcase form {
     gap: 0.5rem !important;
   }
+
   .form-control input {
     height: 45px !important;
     border-radius: 6px;
   }
+
   .signin-opt h2 {
     margin-bottom: 10px !important;
   }
+
   .sign-in-btn {
     padding: 15px 55px !important;
   }
@@ -1268,49 +1304,47 @@ form .responsive-cell-block input {
   box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* Responsive css */
-@media(max-width:700px){
-  .contact-top{
+@media (max-width: 700px) {
+  .contact-top {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.contact-middle {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 50px;
-}
+  }
 
-.contact-box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 26px;
-  padding-top: 70px;
-  padding-left: 168px;
-}
+  .contact-middle {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 50px;
+  }
 
-.context {
-  width: 100%;
-  max-width: 400px;
-  height: 120px;
-  color: #fff;
-  text-align: center;
-  position: 50px 35px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(209, 190, 190, 0.3);
-  border-radius: 16px;
-  box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
-}
-  
+  .contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding-top: 70px;
+    padding-left: 168px;
+  }
+
+  .context {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    position: 50px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(209, 190, 190, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
 }
 
 .cards img {
@@ -1703,8 +1737,7 @@ form {
   margin-left: 0px;
 }
 
-.contact_us
-  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -1724,8 +1757,7 @@ form {
   border-right-color: #a2a2a2;
 }
 
-.contact_us
-  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
   padding-top: 0px;
   padding-right: 20px;
   padding-bottom: 0px;
@@ -1958,8 +1990,7 @@ form {
     max-width: 90%;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
     padding-top: 0px;
     padding-right: 20px;
     padding-bottom: 60px;
@@ -1975,8 +2006,7 @@ form {
     border-bottom-color: #a2a2a2;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     margin-top: 60px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -1988,8 +2018,7 @@ form {
     margin-top: 10px;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -2494,8 +2523,7 @@ form {
     line-height: 23px;
   }
 
-  .contact_us
-    .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
     margin: 0 0 25px 0;
   }
 
@@ -2633,9 +2661,10 @@ section .container2 {
 }
 
 .accordion {
-  background: white;
   border-radius: 0.5rem;
   box-shadow: 0.5rem px 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: #222;
+  color: #fff;
 }
 
 .accordion-item {
