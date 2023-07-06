@@ -20,13 +20,13 @@ function onSubmit(e) {
   }
   e.preventDefault();
 
-  //clearing the message from box after submission:
-  document.querySelector(".msg").textContent = "";
-  document.querySelector("#image").src = "";
+  // //clearing the message from box after submission:
+  // document.querySelector(".msg").textContent = "";
+  // document.querySelector("#image").src = "";
 
   const prompt = document.querySelector("#prompt").value;
   const size = document.querySelector("#size").value;
-
+  const numImages = parseInt(document.querySelector("#num-images").value);
   const API_KEY = document.querySelector("#api-key").value; //API Key, this value can be passed as paramerter in the function as well...
 
   const apiRegex = /^sk-.+$/;
@@ -50,17 +50,17 @@ function onSubmit(e) {
       return;
   }
 
-  const response = generateImageRequest(prompt, API_KEY, size);
+  const response = generateImageRequest(prompt, API_KEY, size, numImages);
 
   //   console.log(response);
 }
 
-async function generateImageRequest(prompt, API_KEY, size) {
+async function generateImageRequest(prompt, API_KEY, size, numImages) {
   try {
     // showLoading()
     showSpinner();
 
-    const response = await fetch("/openai/generateimage", {
+    const response = await fetch(`/openai/generateimages`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,6 +69,7 @@ async function generateImageRequest(prompt, API_KEY, size) {
         prompt,
         API_KEY,
         size,
+        numImages,
       }),
     });
 
@@ -86,21 +87,40 @@ async function generateImageRequest(prompt, API_KEY, size) {
     }
 
     //Displaying Image in the Frontend:
-    const imageUrl = data.data;
+
+    // const imageUrl = data.data;
+
+    const imageContainer = document.querySelector("#image-container");
+    imageContainer.innerHTML = ""; // Clear existing images
+
+    const imageUrls = data.data;
+    console.log(imageUrls);
+    imageUrls.forEach((imageUrl) => {
+      console.log(imageUrl);
+      console.log(imageUrl.url);
+      const img = document.createElement("img");
+      img.src = imageUrl.url;
+      img.classList.add("h-auto", "max-w-full", "rounded-lg");
+      imageContainer.appendChild(img);
+    });
+
+    // document.querySelector("#image").src = imageUrl;
+
+    // -----------------------Share Button---------------------------
 
     const sharebtn = document.querySelector(".twitter-share-button");
     sharebtn.style.display = "block";
     sharebtn.addEventListener("click", () => {
       // Replace [ImageURL] with the actual image URL
-      handleShare(imageUrl);
+      handleShare(imageUrls[0].url);
     });
-    document.querySelector("#image").src = imageUrl;
+
     const handleShare = async (url) => {
       try {
         // Check if the navigator.share API is available
         if (window.navigator.share) {
           await window.navigator.share({
-            title: "Share GIF",
+            title: "Share Image",
             url: url,
           });
         } else {
@@ -109,19 +129,19 @@ async function generateImageRequest(prompt, API_KEY, size) {
             {
               label: "Instagram",
               url: `https://www.instagram.com/create/collection/?source_url=${encodeURIComponent(
-                url,
+                url
               )}&media_type=gif`,
             },
             {
               label: "Facebook",
               url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                url,
+                url
               )}`,
             },
             {
               label: "Twitter",
               url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                "Check out this GIF!",
+                "Check out this GIF!"
               )}&url=${encodeURIComponent(url)}`,
             },
             {
@@ -131,7 +151,7 @@ async function generateImageRequest(prompt, API_KEY, size) {
             {
               label: "Telegram",
               url: `https://telegram.me/share/url?url=${encodeURIComponent(
-                url,
+                url
               )}`,
             },
           ];
@@ -177,7 +197,7 @@ async function generateImageRequest(prompt, API_KEY, size) {
 
       return result;
     };
-
+    // -----------------------Share Button---------------------------
     // Call the handleShare function with the desired image URL
     // Replace [ImageURL] with the actual image URL
 
