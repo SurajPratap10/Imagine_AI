@@ -129,19 +129,19 @@ async function generateImageRequest(prompt, API_KEY, size, numImages) {
             {
               label: "Instagram",
               url: `https://www.instagram.com/create/collection/?source_url=${encodeURIComponent(
-                url
+                url,
               )}&media_type=gif`,
             },
             {
               label: "Facebook",
               url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                url
+                url,
               )}`,
             },
             {
               label: "Twitter",
               url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                "Check out this GIF!"
+                "Check out this GIF!",
               )}&url=${encodeURIComponent(url)}`,
             },
             {
@@ -151,7 +151,7 @@ async function generateImageRequest(prompt, API_KEY, size, numImages) {
             {
               label: "Telegram",
               url: `https://telegram.me/share/url?url=${encodeURIComponent(
-                url
+                url,
               )}`,
             },
           ];
