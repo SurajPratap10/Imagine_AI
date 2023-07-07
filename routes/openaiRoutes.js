@@ -8,6 +8,6 @@ const router = express.Router();
 // generate only one images
 router.post("/generateimage", generateImage);
 // generate N number of images
-router.post("/generateimages/:numImages", generateImages);
+router.post("/generateimages", generateImages);
 
 module.exports = router;

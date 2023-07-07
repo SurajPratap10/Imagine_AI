@@ -540,9 +540,11 @@ button,
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom,
-      rgba(136, 134, 137, 0.5),
-      rgb(240, 237, 240));
+  background: linear-gradient(
+    to bottom,
+    rgba(136, 134, 137, 0.5),
+    rgb(240, 237, 240)
+  );
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
@@ -1660,6 +1662,16 @@ form {
   padding-right: 45px;
 }
 
+#num-images {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 10px;
+  background-image: url("./assets/angle-down-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: right 15px center;
+}
 .feature {
   text-align: center;
   font-weight: bold;
@@ -1714,7 +1726,8 @@ form {
   margin-left: 0px;
 }
 
-.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+.contact_us
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -1734,7 +1747,8 @@ form {
   border-right-color: #a2a2a2;
 }
 
-.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+.contact_us
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
   padding-top: 0px;
   padding-right: 20px;
   padding-bottom: 0px;
@@ -1967,7 +1981,8 @@ form {
     max-width: 90%;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
     padding-top: 0px;
     padding-right: 20px;
     padding-bottom: 60px;
@@ -1983,7 +1998,8 @@ form {
     border-bottom-color: #a2a2a2;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     margin-top: 60px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -1995,7 +2011,8 @@ form {
     margin-top: 10px;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -2500,7 +2517,8 @@ form {
     line-height: 23px;
   }
 
-  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+  .contact_us
+    .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
     margin: 0 0 25px 0;
   }
 
