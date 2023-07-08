@@ -40,8 +40,12 @@ const generateImage = async (req, res) => {
 };
 
 const generateImages = async (req, res) => {
-  const numImages = req.params.numImages;
-  const { prompt, API_KEY, size } = req.body;
+  // console.log(req.params);
+  // // const numImages = req.params.numImages;
+  // console.log(numImages);
+  console.log(req.body);
+  const { prompt, API_KEY, size, numImages } = req.body;
+  console.log(numImages);
   process.env.OPENAI_API_KEY = API_KEY;
   const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -54,10 +58,10 @@ const generateImages = async (req, res) => {
   try {
     const response = await openai.createImage({
       prompt,
-      n: numImages,
+      n: parseInt(numImages),
       size: imageSize,
     });
-
+    console.log(response.data);
     const imageUrls = response.data.data;
 
     res.status(200).json({

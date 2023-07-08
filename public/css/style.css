@@ -12,6 +12,24 @@
   margin: 0;
   padding: 0;
 }
+
+.hvr-eff{
+  position: relative;
+}
+.hvr-eff::after{
+content: " ";
+position: absolute;
+bottom: -2px;
+left: 0;
+width: 0;
+transition: .5s;
+background-color: #fff;
+height: 2px;
+}
+.hvr-eff:hover::after{
+  width: 100%;
+}
+
 :root {
   --primary-color: rgb(32, 32, 32);
   --navbar-color: #03045e;
@@ -563,9 +581,11 @@ button,
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom,
-      rgba(136, 134, 137, 0.5),
-      rgb(240, 237, 240));
+  background: linear-gradient(
+    to bottom,
+    rgba(136, 134, 137, 0.5),
+    rgb(240, 237, 240)
+  );
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
@@ -1096,8 +1116,8 @@ footer a {
 .icons ul li a {
   display: flex;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: #fff;
   text-align: center;
   line-height: 20px;
@@ -1683,6 +1703,16 @@ form {
   padding-right: 45px;
 }
 
+#num-images {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 10px;
+  background-image: url("./assets/angle-down-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: right 15px center;
+}
 .feature {
   text-align: center;
   font-weight: bold;
@@ -1737,7 +1767,8 @@ form {
   margin-left: 0px;
 }
 
-.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+.contact_us
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -1757,7 +1788,8 @@ form {
   border-right-color: #a2a2a2;
 }
 
-.contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+.contact_us
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
   padding-top: 0px;
   padding-right: 20px;
   padding-bottom: 0px;
@@ -1990,7 +2022,8 @@ form {
     max-width: 90%;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-10.line {
     padding-top: 0px;
     padding-right: 20px;
     padding-bottom: 60px;
@@ -2006,7 +2039,8 @@ form {
     border-bottom-color: #a2a2a2;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     margin-top: 60px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -2018,7 +2052,8 @@ form {
     margin-top: 10px;
   }
 
-  .contact_us .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
+  .contact_us
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -2523,7 +2558,8 @@ form {
     line-height: 23px;
   }
 
-  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+  .contact_us
+    .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
     margin: 0 0 25px 0;
   }
 
