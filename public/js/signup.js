@@ -1,35 +1,36 @@
-async function generateCaptcha(){
-  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+async function generateCaptcha() {
+  const charset =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   let captcha = "";
 
   for (var i = 0; i < 6; i++) {
     var randomIndex = Math.floor(Math.random() * charset.length);
     captcha += charset.charAt(randomIndex);
   }
- document.getElementById("captcha").innerText = captcha;
+  document.getElementById("captcha").innerText = captcha;
 }
 
 generateCaptcha();
 
-async function checkCaptcha (){
+async function checkCaptcha() {
   const captch = document.getElementById("captcha").innerText;
   const userCaptcha = document.querySelector("input[name='captcha']");
   const captchaBtn = document.getElementById("captchabtn");
-  if(captch === userCaptcha.value){
+  if (captch === userCaptcha.value) {
     captchaBtn.innerText = "Captcha Verified";
     captchaBtn.style.backgroundColor = "green";
     document.getElementById("submit").disabled = false;
     document.querySelector("#submit span").style.cursor = "pointer";
-  }else{
+  } else {
     captchaBtn.innerText = " Invalid Captcha";
     captchaBtn.style.backgroundColor = "red";
 
-    setTimeout(()=>{
-    generateCaptcha();
-    captchaBtn.style.backgroundColor = "black";
-    captchaBtn.innerText = "Verify Captcha"
-    userCaptcha.value = ""
-    }, 2000)
+    setTimeout(() => {
+      generateCaptcha();
+      captchaBtn.style.backgroundColor = "black";
+      captchaBtn.innerText = "Verify Captcha";
+      userCaptcha.value = "";
+    }, 2000);
   }
 }
 
