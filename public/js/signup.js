@@ -13,10 +13,8 @@ generateCaptcha();
 
 async function checkCaptcha (){
   const captch = document.getElementById("captcha").innerText;
-  const userCaptcha = document.querySelector("input[name='captcha']").value;
-  console.log(captch + " " + userCaptcha)
-  console.log(userCaptcha);
-  if(captch === userCaptcha){
+  const userCaptcha = document.querySelector("input[name='captcha']");
+  if(captch === userCaptcha.value){
     document.getElementById("captchabtn").innerText = "Captcha Verified";
     document.getElementById("captchabtn").style.backgroundColor = "green";
     document.getElementById("submit").disabled = false;
@@ -26,6 +24,8 @@ async function checkCaptcha (){
     document.getElementById("captchabtn").style.backgroundColor = "red";
     setTimeout(()=>{
     generateCaptcha();
+    document.getElementById("captchabtn").style.backgroundColor = "black";
+    userCaptcha.value = ""
     }, 2000)
   }
 }
