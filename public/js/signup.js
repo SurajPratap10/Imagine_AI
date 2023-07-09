@@ -1,3 +1,35 @@
+async function generateCaptcha(){
+  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let captcha = "";
+
+  for (var i = 0; i < 6; i++) {
+    var randomIndex = Math.floor(Math.random() * charset.length);
+    captcha += charset.charAt(randomIndex);
+  }
+ document.getElementById("captcha").innerText = captcha;
+}
+
+generateCaptcha();
+
+async function checkCaptcha (){
+  const captch = document.getElementById("captcha").innerText;
+  const userCaptcha = document.querySelector("input[name='captcha']").value;
+  console.log(captch + " " + userCaptcha)
+  console.log(userCaptcha);
+  if(captch === userCaptcha){
+    document.getElementById("captchabtn").innerText = "Captcha Verified";
+    document.getElementById("captchabtn").style.backgroundColor = "green";
+    document.getElementById("submit").disabled = false;
+    document.querySelector("#submit span").style.cursor = "pointer";
+  }else{
+    document.getElementById("captchabtn").innerText = " Invalid Captcha";
+    document.getElementById("captchabtn").style.backgroundColor = "red";
+    setTimeout(()=>{
+    generateCaptcha();
+    }, 2000)
+  }
+}
+
 async function signup_submit(e) {
   e.preventDefault();
   const name_user = document.getElementById("name").value;

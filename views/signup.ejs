@@ -92,6 +92,17 @@
               <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Confirm password"
                 onkeyup="showPassword(event)" />
             </div>
+            <div class="form-control">
+              <label for="captcha" style="color: white; display: block;">Captcha</label>
+              <div id="captchaContainer">
+                <div id="captcha"></div>
+                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()">
+                  autorenew
+                  </span>
+                <input type="text" name="captcha" required placeholder="Enter Captcha">
+              </div>
+              <button onclick="checkCaptcha()" id="captchabtn">Verify Captch</button>
+            </div>
             <div class="signup-opt">
               <h2>Sign Up using</h2>
               <div class="signup-opt-icons">
@@ -123,8 +134,8 @@
               </div>
             </div>
             <div class="formBtns">
-              <button type="submit" class="btn sign-in-btn btn-signup-submit" href="index.html" aria-label="submit">
-                <span>Submit</span>
+              <button type="submit" class="btn sign-in-btn btn-signup-submit" href="index.html" id="submit" aria-label="submit" disabled>
+                <span >Submit</span>
                 <div class="flow"></div>
               </button>
             </div>

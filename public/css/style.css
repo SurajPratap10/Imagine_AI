@@ -420,7 +420,7 @@ button,
 }
 
 .btn span {
-  cursor: pointer;
+  cursor: disabled;
   display: inline-block;
   position: relative;
   transition: 0.5s;
@@ -1754,6 +1754,15 @@ form {
   padding: 20px 70px;
 }
 
+button:disabled{
+  cursor: not-allowed;
+}
+
+#captchaicon{
+  position: unset;
+  color: aqua;
+}
+
 /* ------------ Popup CSS ------------- */
 
 .popup-container {
@@ -2207,9 +2216,59 @@ form {
   gap: 20px;
 }
 
+#captcha{
+  display: inline-block;
+  width: 100px;
+  color: grey;
+  background-image: url("https://artlogic-res.cloudinary.com/w_1200,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/gazelli/images/view/006fb757e68812eda0429108860bfc07p/gazell.io-gibson-martelli-captcha-background.png");
+  font-weight: bolder;
+  opacity: .3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#captchabtn{
+  width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#captcha + input{
+  display: inline-block;
+  width: 300px;
+}
+
+#captchaicon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: aqua;
+  transform: none;
+  position: unset;
+  margin: 13px 8px auto;
+}
+
+#captchaContainer{
+  display: flex;
+  width: 500px;
+  justify-content: center;
+   align-items: baseline;
+  margin: auto;
+}
 @media (max-width: 648px) {
   .wrapper {
     justify-content: center;
+  }
+
+  #captchaContainer{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #captchaicon{
+    margin:  13px 8px;
   }
 }
 
