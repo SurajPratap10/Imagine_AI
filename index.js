@@ -17,7 +17,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     secret: "SECRET",
-  })
+  }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -69,13 +69,13 @@ passport.use(
     function (accessToken, refreshToken, profile, done) {
       userProfile = profile;
       return done(null, userProfile);
-    }
-  )
+    },
+  ),
 );
 
 app.get(
   "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
+  passport.authenticate("google", { scope: ["profile", "email"] }),
 );
 
 app.get(
@@ -84,7 +84,7 @@ app.get(
   function (req, res) {
     // Successful authentication, redirect success.
     res.redirect("/success");
-  }
+  },
 );
 //STATIC FOLDER:
 app.use(express.static(path.join(__dirname, "public")));
@@ -95,7 +95,7 @@ app.use("/auth", require("./routes/auth.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>
-  console.log(`Server started on port ${port}`)
+  console.log(`Server started on port ${port}`),
 );
 // Connecting to DB
 
