@@ -19,7 +19,7 @@
 
 /* Transparent Overlay */
 .spinner:before {
-  content: '';
+  content: "";
   display: block;
   position: fixed;
   top: 0;
@@ -36,7 +36,6 @@
 
 /* :not(:required) hides these rules from IE9 and below */
 .spinner:not(:required) {
-  /* hide "loading..." text */
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -45,7 +44,7 @@
 }
 
 .spinner:not(:required):after {
-  content: 'Please wait,while we load image for you.';
+  content: "Please wait,while we load image for you.";
   display: block;
   font-size: 10px;
   width: 1em;
