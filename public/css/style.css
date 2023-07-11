@@ -1183,6 +1183,11 @@ span {
 
 /* --------------- Contact US CSS ---------------- */
 
+/* .Contact-Us {
+  margin-top: 5%;
+  display: grid;
+} */
+
 .contact-top {
   text-align: center;
   display: flex;
@@ -1205,7 +1210,7 @@ span {
   font-size: 3rem;
   color: white;
   text-transform: uppercase;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 20px;
 }
 
@@ -1275,6 +1280,7 @@ form .responsive-cell-block input {
   display: flex;
   flex-direction: row;
   gap: 80px;
+  width: 100vw;
   padding: 50px;
 }
 
@@ -1299,8 +1305,15 @@ form .responsive-cell-block input {
 }
 
 /* Responsive css */
-@media (max-width: 700px) {
-  .contact-top {
+@media screen and (max-width: 900px) {
+  /* Contact-US page */
+  .Contact-Us {
+    display: grid;
+    padding: 50px 0px;
+  }
+
+    .contact-top {
+      z-index: -1;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1308,12 +1321,73 @@ form .responsive-cell-block input {
     align-items: center;
   }
 
+
+  .contact-top h1 {
+    padding-top: 50px;
+  }
+
   .contact-middle {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 80px;
-    padding: 50px;
+    padding: 50px 50px;
+    width: 50vw;
+    overflow: hidden;
+  }
+  .image-section {
+    display: none;
+  }
+  .contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding-top: 50px;
+  }
+
+  .context {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    position: 50px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(209, 190, 190, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-top {
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-top h1 {
+    padding-top: 50px;
+  }
+
+  .contact-middle {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 20px;
+    width: 100vw;
+    overflow: hidden;
   }
 
   .contact-box {
@@ -1323,8 +1397,7 @@ form .responsive-cell-block input {
     justify-content: center;
     align-items: center;
     gap: 26px;
-    padding-top: 70px;
-    padding-left: 168px;
+    padding-top: 50px;
   }
 
   .context {
