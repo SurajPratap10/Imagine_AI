@@ -58,5 +58,10 @@ async function loginSubmit(e) {
   }
 }
 
+function handleForgotPassword() {
+  window.location.href = "/forgot-password";
+}
 const login_submit_doc = document.querySelector(".btn-login-submit");
+const forgotPasswordLink = document.querySelector("#forgotPasswordLink");
 if (login_submit_doc) login_submit_doc.addEventListener("click", loginSubmit);
+if (forgotPasswordLink) forgotPasswordLink.addEventListener("click", handleForgotPassword);

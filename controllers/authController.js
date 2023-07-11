@@ -1,6 +1,7 @@
 const emailValidator = require("email-validator");
 const passwordValidator = require("password-validator");
 const userModel = require("../models/users");
+const jwt = require("jsonwebtoken");
 
 exports.sendToken = async (user, res) => {
   const token = user.getSignedToken(res);
@@ -44,7 +45,7 @@ exports.signupController = async (req, res) => {
       return;
     }
 
-    const emailExists = await userModel.find({ email });
+    const emailExists = await userModel.findOne({ email });
 
     if (emailExists.length > 0) {
       console.log(emailExists);
@@ -66,7 +67,7 @@ exports.loginController = async (req, res) => {
     res.status(400).json({ error: "invalid email!!!!" });
     return;
   }
-  const user_list = await userModel.find({ email });
+  const user_list = await userModel.findOne({ email });
 
   if (user_list.length === 0) {
     res.status(400).json({ error: "No such Email Exists!!!!" });
@@ -85,4 +86,97 @@ exports.loginController = async (req, res) => {
       this.sendToken(user, res);
     }
   }
+};
+exports.forgotPasswordController = async (req, res) => {
+  const { email } = req.body;
+
+  if (!emailValidator.validate(email)) {
+    return res.status(400).json({ error: "Invalid email!!!!" });
+  }
+
+  try {
+    const user = await userModel.findOne({ email });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const resetToken = jwt.sign({ userId: user._id }, process.env.JWT_RESET_PASSWORD_SECRET, { expiresIn: "1h" });
+
+    user.resetPasswordToken = resetToken;
+    user.resetPasswordExpires = Date.now() + 3600000;
+    await user.save();
+
+    sendPasswordResetEmail(user.email, resetToken);
+
+    res.status(200).json({ message: "Password reset email sent" });
+  } catch (error) {
+    console.log("Error: " + error);
+    res.status(500).json({ error: "Something went wrong!!! Try again" });
+  }
+};
+
+exports.resetPasswordController = async (req, res) => {
+  const { email, token, newPassword } = req.body;
+
+  if (!emailValidator.validate(email)) {
+    return res.status(400).json({ error: "Invalid email!!!!" });
+  }
+
+  try {
+    const user = await userModel.findOne({ email });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    if (user.resetPasswordToken !== token || user.resetPasswordExpires < Date.now()) {
+      return res.status(400).json({ error: "Invalid or expired reset token" });
+    }
+
+    user.password = newPassword;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpires = undefined;
+    await user.save();
+
+    res.status(200).json({ message: "Password reset successful" });
+  } catch (error) {
+    console.log("Error: " + error);
+    res.status(500).json({ error: "Something went wrong!!! Try again" });
+  }
+};
+
+const nodemailer = require("nodemailer");
+
+const sendPasswordResetEmail = (email, resetToken) => {
+  // Create a Nodemailer transporter
+  const transporter = nodemailer.createTransport({
+    // Configure the email provider details (e.g., SMTP settings)
+    // Refer to the Nodemailer documentation for your specific email provider configuration
+    // For example, for Gmail:
+    service: "Gmail",
+    auth: {
+      user: "your-email@gmail.com",
+      pass: "your-email-password",
+    },
+  });
+
+  // Define the email options
+  const mailOptions = {
+    from: "your-email@gmail.com",
+    to: email,
+    subject: "Password Reset",
+    text: `You have requested a password reset. Please click the following link to reset your password: ${resetToken}`,
+  };
+
+  // Send the email using the defined transporter and mail options
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log("Error sending email:", error);
+      // Handle the error accordingly
+    } else {
+      console.log("Email sent:", info.response);
+      // Handle the success accordingly
+    }
+  });
 };

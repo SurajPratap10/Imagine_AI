@@ -19,6 +19,8 @@ const userSchema = new mongoose.Schema({
     required: [true, "password is required!!!"],
     minlength: [6, "Password length should be 6 character long"],
   },
+  resetPasswordToken: String, // Field to store the reset token
+  resetPasswordExpires: Date, // Field to store the expiration time of the reset token
 });
 
 userSchema.pre("save", async function (next) {

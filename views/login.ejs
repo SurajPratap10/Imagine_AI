@@ -95,6 +95,11 @@
               </div>
               <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
             </div>
+            <div class="form-control">
+              <label for="forgotPasswordLink" style="color: white; margin-left: 20px; margin-bottom: 40px;">
+                <a href="/forgot-password">Forgot Password?</a>
+              </label>
+            </div>
     <div class="signin-opt">
       <h2>Sign In using</h2>
       <div class="signin-opt-icons">
@@ -173,6 +178,16 @@
                 x.type = "password";
                 document.getElementById("eye").innerText = "visibility_off"
               }
+                // Function to handle forgot password link click
+  function handleForgotPassword() {
+    window.location.href = "/forgot-password";
+  }
+
+  // Add event listener to forgot password link
+  const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+  if (forgotPasswordLink) {
+    forgotPasswordLink.addEventListener("click", handleForgotPassword);
+  }
             }
 
           </script>

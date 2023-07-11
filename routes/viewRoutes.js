@@ -29,4 +29,7 @@ router.get("/signup", (_req, res, _next) => {
 router.get("/privacypolicy", (req, res, next) => {
   res.render("privacypolicy", { path: "privacypolicy" });
 });
+router.get("/forgot-password", (_req, res, _next) => {
+  res.render("forgotPassword", { path: "/forgot-password" });
+});
 module.exports = router;

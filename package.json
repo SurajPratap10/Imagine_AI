@@ -24,6 +24,7 @@
     "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.3.2",
+    "nodemailer": "^6.9.3",
     "openai": "^3.3.0",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
