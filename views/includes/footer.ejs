@@ -185,7 +185,7 @@
                 showMessage('Thank you for subscribing!');
               } else {
                 console.log('Please enter a valid Gmail address.');
-                alert('Please enter a valid email address');
+                toastr["warning"]("Please provide valid Email Id.", "Validation")
               }
             });
 
@@ -195,31 +195,9 @@
             }
 
             function showMessage(msg) {
-              var messageBox = document.createElement('div');
-              messageBox.innerHTML = `
-                <div class="success1 alert1">
-                  <div class="content1">
-                    <div class="icon1">
-                      <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g>
-                          <circle fill="#fff" cx="64" cy="64" r="64"/>
-                        </g>
-                        <g>
-                          <path fill="#3EBD61" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/>
-                        </g>
-                      </svg>
-                    </div>
-                    <p id="text-box"> ${msg}</p>
-                  </div>
-                </div>`;
-              messageBox.classList.add('thank-you-message');
-
-              document.body.appendChild(messageBox);
-              setTimeout(function () {
-                document.body.removeChild(messageBox);
-              }, 2000);
+              toastr.success(msg, "Success");
             }
-          });
+
         </script>
 
 
@@ -410,29 +388,11 @@
     }
 
     function showMessage1(message) {
-      var messageBox = document.createElement('div');
-      //  messageBox.textContent = message;
 
-      messageBox.innerHTML = `     <div class="info1 alert1">
-        <div class="content1">
-           <div class="icon1">
-                    <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle fill="#fff" cx="64" cy="64" r="64"/></g><g><path fill="#006CE3" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/></g></svg>
-                </div>
-        <p id="text-box ">Copied to Clipboard!!</p>
 
-        </div>
-        
-      </div>
-    
+  toastr.success("Copied to Clipboard!", message);
+}
 
-    `;
-
-      messageBox.classList.add('clipboard-message');
-      document.body.appendChild(messageBox);
-      setTimeout(function () {
-        document.body.removeChild(messageBox);
-      }, 2000);
-    }
 
 
     function sendEmail(recipientEmail, subject, body) {
@@ -841,6 +801,27 @@ input[type="email"]::placeholder {
 }
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/toastr.min.js"></script>
+<script>
+    toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+</script>
 
 <!-- SEO SETTINGS -->
 <script type="application/ld+json">

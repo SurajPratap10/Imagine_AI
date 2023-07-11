@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
     });
 
     if (!submitable) {
-      alert("Please enter valid values");
+      toastr["warning"]("Please provide valid input.", "Validation");
     } else {
       // Uncomment below line after implementaion of form submit handling
       // contactform.submit()
