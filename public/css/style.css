@@ -2415,6 +2415,7 @@ button:disabled{
   transform: none;
   position: unset;
   margin: 13px 8px auto;
+  cursor: pointer; /* Set the cursor to a hand symbol */
 }
 
 #captchaContainer{
