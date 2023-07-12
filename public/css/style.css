@@ -742,6 +742,7 @@ form select:hover {
 
 .get-api-text {
   color: white;
+  
 }
 
 .get-api-text a {
@@ -757,6 +758,8 @@ form select:hover {
 
 .get-api-text {
   color: white;
+  position: relative;
+  top: -85px !important;
 }
 
 #size {
@@ -1169,7 +1172,7 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 80px!important;
 }
 
 span {
