@@ -238,6 +238,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   display: inline-block;
+  padding: 0;
+  line-height: 2rem;
 }
 
 .navbar a:hover,
@@ -281,11 +283,6 @@ body {
   .left-nav-links,
   .right-nav-links {
     display: block;
-  }
-
-  .AI {
-    padding: 0;
-    line-height: 2rem;
   }
 
   .hide-sm {
@@ -624,7 +621,6 @@ button,
 /* --------------- Showcase CSS --------------- */
 
 .showcase {
-  height: 100vh;
   width: 100%;
   background: var(--primary-color);
 }
@@ -666,12 +662,10 @@ button,
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   text-align: center;
-
-  line-height: 6px;
   outline: none;
   animation: animate 5s linear infinite;
   margin-bottom: 60px;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .showcase form {
