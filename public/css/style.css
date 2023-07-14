@@ -624,9 +624,10 @@ button,
 /* --------------- Showcase CSS --------------- */
 
 .showcase {
-  height: 100vh;
   width: 100%;
   background: var(--primary-color);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
 /* Media queries for responsiveness */
@@ -638,8 +639,6 @@ button,
 
   .showcase h1 {
     line-height: 4px !important;
-    margin-bottom: 0 !important;
-    padding-top: 50px !important;
   }
 
   .showcase form {
@@ -656,7 +655,7 @@ button,
   }
 
   .sign-in-btn {
-    padding: 15px 55px !important;
+    /* padding: 15px 55px !important; */
   }
 }
 
@@ -670,8 +669,7 @@ button,
   line-height: 6px;
   outline: none;
   animation: animate 5s linear infinite;
-  margin-bottom: 60px;
-  padding-top: 60px;
+  margin-bottom: 40px;
 }
 
 .showcase form {
@@ -682,6 +680,7 @@ button,
   height: 100%;
   width: 100%;
   gap: 1rem;
+  margin-top: 50px;
 }
 
 .form-control select {
@@ -758,8 +757,6 @@ form select:hover {
 
 .get-api-text {
   color: white;
-  position: relative;
-  top: -85px !important;
 }
 
 #size {
@@ -1172,7 +1169,6 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-bottom: 80px!important;
 }
 
 span {
