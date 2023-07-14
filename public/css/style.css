@@ -1056,7 +1056,6 @@ footer a:hover {
 }
 
 footer {
-  height: 15vh;
   width: 100%;
   color: white;
   margin-top: 5rem;
@@ -1647,7 +1646,6 @@ form {
 }
 
 .card {
-  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1714,7 +1712,7 @@ form {
 }
 
 .about-text {
-  width: 40%;
+  width: 50%;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
@@ -1741,7 +1739,7 @@ form {
 }
 
 .about .about-us-logo {
-  width: 400px;
+  width: 80%;
 }
 
 .about-content .about-image {
@@ -1766,6 +1764,10 @@ form {
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.feature .headline{
+  padding: 20px;
 }
 
 .headline {
@@ -2297,18 +2299,9 @@ button:disabled{
     line-height: 50px;
   }
 
-  /* .navbar a {
-    font-size: 14px;
-    line-height: 20px;
-  } */
-
   .navbar {
     font-size: 14px;
     line-height: 20px;
-  }
-
-  body {
-    width: auto;
   }
 
   .showcase form input,
@@ -2353,6 +2346,10 @@ button:disabled{
   .formBtns {
     display: flex;
     flex-direction: column;
+  }
+
+  .about-text{
+    width: 90%;
   }
 }
 
@@ -2476,6 +2473,10 @@ button:disabled{
     padding: 10px;
     width: 95%;
     /* height: 100%; */
+  }
+
+  .button{
+    flex-direction: column;
   }
 }
 
@@ -2766,6 +2767,17 @@ button:disabled{
 }
 
 @media (max-width: 338px) {
+.btn-pos{
+  font-size: 10px;
+}
+
+.btn12{
+  width: 90%;
+}
+
+.headline{
+  padding: 0 20px;
+}
   .nav-links {
     position: relative;
     top: 55%;
