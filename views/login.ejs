@@ -3,6 +3,10 @@
 
       <head>
         <style>
+          #captchaicon{
+            cursor: pointer;
+          }
+
           .google-icon {
             vertical-align: middle;
             fill: teal;
@@ -64,34 +68,34 @@
 </head>
 <%- include('includes/navbar.ejs') %>
         <section class="showcase" id="showcase">
-          <form id="image-form" action="index.html" style="margin-top:50px ;">
+          <form id="image-form" action="index.html" style="margin-top:50px ;" aria-label="Login Form">
             <h1 class="AI">SIGN IN</h1>
             <div class="form-control">
               <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
               <input type="email" id="email" name="email" placeholder="Enter Email address"
-                onkeyup="handleChange(event)" style="color: black;" />
-              <p class="error hidden" id="emailError">Enter Valid Email</p>
+                onkeyup="handleChange(event)" style="color: black;" aria-describedby="emailError"/>
+              <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
             </div>
             <div class="form-control">
               <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
               <div class="icon-boundry">
                 <input type="password" id="password" name="password" placeholder="Enter password"
-                onkeyup="handleChange(event)" />
+                onkeyup="handleChange(event)" aria-describedby="passwordError"/>
                 <span class="material-symbols-outlined" id="eye" onclick="myFunction()">
                   visibility_off
                 </span>
               </div>
-              <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
+              <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
                 (@$%#^&*), 1 number (0-9)</p>
             </div>
             <div class="form-control">
-              <label for="captcha" style="color: white; display: block;">Captcha</label>
+              <label for="captcha-input" style="color: white; display: block;">Captcha</label>
               <div id="captchaContainer">
                 <div id="captcha"></div>
-                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()">
+                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
                   autorenew
                   </span>
-                <input type="text" name="captcha" required placeholder="Enter Captcha">
+                <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
               </div>
               <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
             </div>
@@ -99,7 +103,7 @@
       <h2>Sign In using</h2>
       <div class="signin-opt-icons">
         <!-- signin using google -->
-        <a href="/auth/google" class="google-button tooltip"
+        <a href="/auth/google" class="google-button tooltip" aria-label="sign in with google"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             height="2em"
@@ -113,7 +117,7 @@
                 </a>
 
                 <!-- signin using facebook -->
-                <a href="#" class="tooltip">
+                <a href="#" class="tooltip" aria-label="sign in with facebook">
                   <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +133,7 @@
 
                 <!-- signin using twitter -->
 
-                <a href="#" class="tooltip">
+                <a href="#" class="tooltip" aria-label="sign in with twitter">
                   <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,11 +160,11 @@
               </button>
             </div>
             <div class="get-api-text">
-              <p>No account? <a href="/signup">Signup</a></p>
+              <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
             </div>
           </form>
-          <div id="successToast" class="toast success-toast"></div>
-          <div id="errorToast" class="toast error-toast"></div>
+          <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+          <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
         </section>
         <%- include('includes/footer.ejs') %>
           <script>
