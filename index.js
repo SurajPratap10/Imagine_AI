@@ -62,9 +62,7 @@ passport.deserializeUser(function (obj, cb) {
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
-
 //The callback function in the Google Strategy configuration is missing error handling. It's recommended to handle any potential errors that may occur during the authentication process. I add error handling logic within the callback function to properly handle any errors that may arise.
-
 
 passport.use(
   new GoogleStrategy(
@@ -82,10 +80,9 @@ passport.use(
         // Handle authentication errors
         return done(error, false);
       }
-    }
-  )
+    },
+  ),
 );
-
 
 app.get(
   "/auth/google",
