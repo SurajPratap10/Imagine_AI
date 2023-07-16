@@ -2856,11 +2856,16 @@ section .container2 {
 
 ::placeholder {
   color: aqua;
-  font-size: 17px;
+  font-family: Mukta;
+  font-weight: 100;
+  font-size: medium;
 }
 
 #email::placeholder {
   color: aqua;
+  font-family: Mukta;
+  font-weight: 100;
+  font-size: medium;
 }
 
 .upper img {
