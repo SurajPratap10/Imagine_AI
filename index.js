@@ -69,7 +69,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/auth/google/callback",
+      callbackURL: "https://imageine-ai.onrender.com/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       try {
