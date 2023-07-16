@@ -69,7 +69,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "https://imageine-ai.onrender.com/auth/google/callback",
+      callbackURL: "https://imagine-ai-17zf.vercel.app/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       try {
