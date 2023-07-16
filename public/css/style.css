@@ -239,7 +239,6 @@ body {
   font-weight: bold;
   display: inline-block;
   padding: 0;
-  line-height: 2rem;
 }
 
 .navbar a:hover,
@@ -623,6 +622,8 @@ button,
 .showcase {
   width: 100%;
   background: var(--primary-color);
+  padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
 /* Media queries for responsiveness */
@@ -630,12 +631,6 @@ button,
 @media (min-width: 1024px) and (max-width: 1440px) {
   .showcase {
     height: 100%;
-  }
-
-  .showcase h1 {
-    line-height: 4px !important;
-    margin-bottom: 0 !important;
-    padding-top: 50px !important;
   }
 
   .showcase form {
@@ -650,10 +645,6 @@ button,
   .signin-opt h2 {
     margin-bottom: 10px !important;
   }
-
-  .sign-in-btn {
-    padding: 15px 55px !important;
-  }
 }
 
 .showcase h1 {
@@ -664,7 +655,6 @@ button,
   text-align: center;
   outline: none;
   animation: animate 5s linear infinite;
-  margin-bottom: 60px;
   padding-top: 90px;
 }
 
@@ -752,8 +742,6 @@ form select:hover {
 
 .get-api-text {
   color: white;
-  position: relative;
-  top: -85px !important;
 }
 
 #size {
@@ -1166,7 +1154,6 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-bottom: 80px!important;
 }
 
 span {
@@ -2288,7 +2275,6 @@ button:disabled{
 @media screen and (max-width: 750px) {
   .showcase h1 {
     font-size: 32px;
-    line-height: 50px;
   }
 
   /* .navbar a {
