@@ -238,6 +238,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   display: inline-block;
+  padding: 0;
 }
 
 .navbar a:hover,
@@ -281,11 +282,6 @@ body {
   .left-nav-links,
   .right-nav-links {
     display: block;
-  }
-
-  .AI {
-    padding: 0;
-    line-height: 2rem;
   }
 
   .hide-sm {
@@ -626,8 +622,8 @@ button,
 .showcase {
   width: 100%;
   background: var(--primary-color);
-  padding-top: 6rem;
   padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
 /* Media queries for responsiveness */
@@ -635,10 +631,6 @@ button,
 @media (min-width: 1024px) and (max-width: 1440px) {
   .showcase {
     height: 100%;
-  }
-
-  .showcase h1 {
-    line-height: 4px !important;
   }
 
   .showcase form {
@@ -661,11 +653,9 @@ button,
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   text-align: center;
-
-  line-height: 6px;
   outline: none;
   animation: animate 5s linear infinite;
-  margin-bottom: 40px;
+  padding-top: 90px;
 }
 
 .showcase form {
@@ -676,7 +666,6 @@ button,
   height: 100%;
   width: 100%;
   gap: 1rem;
-  margin-top: 50px;
 }
 
 .form-control select {
@@ -2286,7 +2275,6 @@ button:disabled{
 @media screen and (max-width: 750px) {
   .showcase h1 {
     font-size: 32px;
-    line-height: 50px;
   }
 
   /* .navbar a {
@@ -2804,9 +2792,8 @@ section .container2 {
 
 .accordion-item {
   position: relative;
-  padding: 0.6rem;
+  padding: 1rem;
   cursor: pointer;
-  margin-top: 0.8rem;
   border-radius: 8px;
   font-size: large;
 }
