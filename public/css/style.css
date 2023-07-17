@@ -2792,9 +2792,8 @@ section .container2 {
 
 .accordion-item {
   position: relative;
-  padding: 0.6rem;
+  padding: 1rem;
   cursor: pointer;
-  margin-top: 0.8rem;
   border-radius: 8px;
   font-size: large;
 }
