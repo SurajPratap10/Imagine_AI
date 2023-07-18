@@ -621,7 +621,7 @@ button,
 
 .showcase {
   width: 100%;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
   padding-bottom: 4rem;
   padding-top: 2rem;
 }
