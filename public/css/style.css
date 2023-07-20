@@ -240,13 +240,28 @@ body {
   display: inline-block;
   padding: 0;
 }
+.undln{
+  position: relative;
+margin-inline: 10px;
+}
+.undln::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 0;
+  height: 2px;
+}
 
 .navbar a:hover,
 .navbar a:active,
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
-
+.undln:hover::after{
+  width: 100%;
+}
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
