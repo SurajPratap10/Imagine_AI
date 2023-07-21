@@ -880,7 +880,10 @@ img {
 
 #newsletter .news-form {
   display: flex;
-  width: 40%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 50%;
 }
 
 #newsletter .news-form input {
@@ -2176,6 +2179,9 @@ button:disabled{
   .content .right {
     margin-top: 40px;
   }
+  #newsletter{
+    padding: 20px 10px;
+  }
 }
 
 @media (max-width: 915px) {
@@ -2187,8 +2193,14 @@ button:disabled{
     justify-content: space-between;
   }
 
+
+}
+
+@media (max-width: 768px) {
   #newsletter {
-    height: 22vh;
+    height: fit-content;
+    padding: 10px 0;
+    flex-direction: column;
   }
 
   #newsletter .news-text h4 {
@@ -2200,7 +2212,10 @@ button:disabled{
   }
 
   #newsletter .news-form {
-    width: 45%;
+    text-align: center;
+    min-width: 50%;
+    width: 90%;
+    max-width: none;
   }
 
   #newsletter .news-form input {
@@ -2212,11 +2227,8 @@ button:disabled{
     width: 30%;
     text-align: center;
     font-size: 10px;
-    padding: 2px 6px;
+    margin: auto 0;
   }
-}
-
-@media (max-width: 768px) {
   .contact_us .text-content {
     display: none;
   }
@@ -2419,6 +2431,7 @@ button:disabled{
    align-items: baseline;
   margin: auto;
 }
+
 @media (max-width: 648px) {
   .wrapper {
     justify-content: center;
@@ -2718,11 +2731,11 @@ button:disabled{
   }
 
   #newsletter {
-    padding: 10px;
+    padding: 15px;
   }
 
   #newsletter .news-text {
-    width: 50%;
+    width: 100%;
   }
 
   #newsletter .news-text h4 {
@@ -2733,16 +2746,18 @@ button:disabled{
     font-size: 16px;
   }
 
-  #newsletter .news-form {
-    width: 48%;
-  }
-
   #newsletter .news-form input {
-    padding: 0px 2px;
-    height: 20px;
+    width: 50%;
+    padding: 0px 8px;
     font-size: 12px;
   }
-
+  
+  #news-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #newsletter .news-form button {
     font-size: 8px;
     padding: 0px 6px;
