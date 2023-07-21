@@ -1030,12 +1030,12 @@ footer .bottom {
 }
 
 footer .bottom a {
-  color: yellow;
+  color: yellow !important;
   transition: all 0.3s ease;
 }
 
 footer a:hover {
-  color: #2cceff;
+  color: #2cceff !important;
 }
 
 /* .boxx a:hover {
