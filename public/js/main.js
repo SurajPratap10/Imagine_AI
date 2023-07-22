@@ -3,16 +3,8 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
-const popup = document.getElementById("popup");
 
-function closePopUp() {
-  popup.classList.remove("open-popup");
-}
 
-function openPopUp(text) {
-  document.getElementById("text").innerHTML = text;
-  popup.classList.add("open-popup");
-}
 
 function onSubmit(e) {
   if (window.location.href == "/signup" || window.location.href == "/login") {
@@ -36,17 +28,18 @@ function onSubmit(e) {
   switch (true) {
     case prompt === "":
       text = "Please add some text";
-      openPopUp(text);
+      // alert(text);
+      toastr["warning"](text, "Validation")
       return;
 
     case API_KEY === "":
       text = "Please add your API Key";
-      openPopUp(text); //if API Key is not added
+      toastr["warning"](text, "Validation")
       return;
 
     case !apiRegex.test(API_KEY):
       text = "Please add correct API Key";
-      openPopUp(text); //if API Key is not added
+      toastr["warning"](text, "Validation")
       return;
   }
 
@@ -204,7 +197,7 @@ async function generateImageRequest(prompt, API_KEY, size, numImages) {
     // hideLoading();
     removeSpinner();
   } catch (error) {
-    openPopUp(error);
+    console.log(error);
     return error;
   }
 }
