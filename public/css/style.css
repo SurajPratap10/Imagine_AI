@@ -40,9 +40,6 @@ height: 2px;
   width: .6rem !important;
   background-color: rgb(24, 16, 16);
 }
-
-
-
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(-45deg,rgb(10, 127, 177), transparent);
   /* Adjust the height as needed */
@@ -78,7 +75,6 @@ body {
 
   background: white;
 }
-
 .loader {
   width: 250px;
   height: 50px;
@@ -94,7 +90,6 @@ body {
   color: #e73c7e;
   letter-spacing: 0.2em;
 }
-
 .loader::before,
 .loader::after {
   content: "";
