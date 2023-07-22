@@ -37,8 +37,10 @@ app.use((err, _req, res, _next) => {
 //OAUTH
 var userProfile;
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+//Duplicate app.use(passport.initialize()) and app.use(passport.session()): The code includes duplicate calls to app.use(passport.initialize()) and app.use(passport.session()). You only need to call them once in your application. You can remove the duplicate lines to avoid unnecessary redundancy.
 
 app.set("view engine", "ejs");
 
@@ -59,16 +61,25 @@ passport.deserializeUser(function (obj, cb) {
 });
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+
+//The callback function in the Google Strategy configuration is missing error handling. It's recommended to handle any potential errors that may occur during the authentication process. I add error handling logic within the callback function to properly handle any errors that may arise.
+
 passport.use(
   new GoogleStrategy(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/auth/google/callback",
+      callbackURL: "https://imagine-ai-17zf.vercel.app/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      userProfile = profile;
-      return done(null, userProfile);
+      try {
+        // Your authentication logic here
+        userProfile = profile;
+        return done(null, userProfile);
+      } catch (error) {
+        // Handle authentication errors
+        return done(error, false);
+      }
     },
   ),
 );

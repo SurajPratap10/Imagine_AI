@@ -238,6 +238,20 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   display: inline-block;
+  padding: 0;
+}
+.undln{
+  position: relative;
+margin-inline: 10px;
+}
+.undln::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 0;
+  height: 2px;
 }
 
 .navbar a:hover,
@@ -245,7 +259,9 @@ body {
 .navbar a.active {
   color: rgb(247, 242, 247);
 }
-
+.undln:hover::after{
+  width: 100%;
+}
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
@@ -281,11 +297,6 @@ body {
   .left-nav-links,
   .right-nav-links {
     display: block;
-  }
-
-  .AI {
-    padding: 0;
-    line-height: 2rem;
   }
 
   .hide-sm {
@@ -624,9 +635,10 @@ button,
 /* --------------- Showcase CSS --------------- */
 
 .showcase {
-  height: 100vh;
   width: 100%;
   background: var(--primary-color);
+  padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
 /* Media queries for responsiveness */
@@ -634,12 +646,6 @@ button,
 @media (min-width: 1024px) and (max-width: 1440px) {
   .showcase {
     height: 100%;
-  }
-
-  .showcase h1 {
-    line-height: 4px !important;
-    margin-bottom: 0 !important;
-    padding-top: 50px !important;
   }
 
   .showcase form {
@@ -654,10 +660,6 @@ button,
   .signin-opt h2 {
     margin-bottom: 10px !important;
   }
-
-  .sign-in-btn {
-    padding: 15px 55px !important;
-  }
 }
 
 .showcase h1 {
@@ -666,12 +668,9 @@ button,
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   text-align: center;
-
-  line-height: 6px;
   outline: none;
   animation: animate 5s linear infinite;
-  margin-bottom: 60px;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .showcase form {
@@ -758,8 +757,6 @@ form select:hover {
 
 .get-api-text {
   color: white;
-  position: relative;
-  top: -85px !important;
 }
 
 #size {
@@ -883,7 +880,10 @@ img {
 
 #newsletter .news-form {
   display: flex;
-  width: 40%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 50%;
 }
 
 #newsletter .news-form input {
@@ -1171,7 +1171,6 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-bottom: 80px!important;
 }
 
 span {
@@ -2182,6 +2181,9 @@ button:disabled{
   .content .right {
     margin-top: 40px;
   }
+  #newsletter{
+    padding: 20px 10px;
+  }
 }
 
 @media (max-width: 915px) {
@@ -2193,8 +2195,14 @@ button:disabled{
     justify-content: space-between;
   }
 
+
+}
+
+@media (max-width: 768px) {
   #newsletter {
-    height: 22vh;
+    height: fit-content;
+    padding: 10px 0;
+    flex-direction: column;
   }
 
   #newsletter .news-text h4 {
@@ -2206,7 +2214,10 @@ button:disabled{
   }
 
   #newsletter .news-form {
-    width: 45%;
+    text-align: center;
+    min-width: 50%;
+    width: 90%;
+    max-width: none;
   }
 
   #newsletter .news-form input {
@@ -2218,11 +2229,8 @@ button:disabled{
     width: 30%;
     text-align: center;
     font-size: 10px;
-    padding: 2px 6px;
+    margin: auto 0;
   }
-}
-
-@media (max-width: 768px) {
   .contact_us .text-content {
     display: none;
   }
@@ -2296,7 +2304,6 @@ button:disabled{
 @media screen and (max-width: 750px) {
   .showcase h1 {
     font-size: 32px;
-    line-height: 50px;
   }
 
   .navbar {
@@ -2421,6 +2428,7 @@ button:disabled{
    align-items: baseline;
   margin: auto;
 }
+
 @media (max-width: 648px) {
   .wrapper {
     justify-content: center;
@@ -2724,11 +2732,11 @@ button:disabled{
   }
 
   #newsletter {
-    padding: 10px;
+    padding: 15px;
   }
 
   #newsletter .news-text {
-    width: 50%;
+    width: 100%;
   }
 
   #newsletter .news-text h4 {
@@ -2739,16 +2747,18 @@ button:disabled{
     font-size: 16px;
   }
 
-  #newsletter .news-form {
-    width: 48%;
-  }
-
   #newsletter .news-form input {
-    padding: 0px 2px;
-    height: 20px;
+    width: 50%;
+    padding: 0px 8px;
     font-size: 12px;
   }
-
+  
+  #news-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #newsletter .news-form button {
     font-size: 8px;
     padding: 0px 6px;
@@ -2824,9 +2834,8 @@ section .container2 {
 
 .accordion-item {
   position: relative;
-  padding: 0.6rem;
+  padding: 1rem;
   cursor: pointer;
-  margin-top: 0.8rem;
   border-radius: 8px;
   font-size: large;
 }
