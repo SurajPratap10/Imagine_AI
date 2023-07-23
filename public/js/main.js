@@ -3,9 +3,6 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
-
-
-
 function onSubmit(e) {
   if (window.location.href == "/signup" || window.location.href == "/login") {
     return false;
@@ -29,17 +26,17 @@ function onSubmit(e) {
     case prompt === "":
       text = "Please add some text";
       // alert(text);
-      toastr["warning"](text, "Validation")
+      toastr["warning"](text, "Validation");
       return;
 
     case API_KEY === "":
       text = "Please add your API Key";
-      toastr["warning"](text, "Validation")
+      toastr["warning"](text, "Validation");
       return;
 
     case !apiRegex.test(API_KEY):
       text = "Please add correct API Key";
-      toastr["warning"](text, "Validation")
+      toastr["warning"](text, "Validation");
       return;
   }
 
