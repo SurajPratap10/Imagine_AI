@@ -5,6 +5,9 @@ require("dotenv").config();
 const passport = require("passport");
 const session = require("express-session");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
 const port = process.env.PORT || 5000;
 const viewRoutes = require("./routes/viewRoutes");
 const {
@@ -17,7 +20,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     secret: "SECRET",
-  }),
+  })
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -36,6 +39,36 @@ app.use((err, _req, res, _next) => {
 });
 //OAUTH
 var userProfile;
+
+// swagger
+const swaggerOptions = {
+  swaggerDefinition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Imagine_AI APIs",
+      version: "1.0.1",
+      description: "Imagine_AI APIs information",
+      contact: {
+        name: "Suraj Pratap",
+      },
+      servers: ["http://localhost:5000"],
+    },
+
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+        },
+      },
+    },
+  },
+  apis: ["./routes/*.js"],
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // app.use(passport.initialize());
 // app.use(passport.session());
@@ -80,13 +113,13 @@ passport.use(
         // Handle authentication errors
         return done(error, false);
       }
-    },
-  ),
+    }
+  )
 );
 
 app.get(
   "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] }),
+  passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
 app.get(
@@ -95,7 +128,7 @@ app.get(
   function (req, res) {
     // Successful authentication, redirect success.
     res.redirect("/success");
-  },
+  }
 );
 //STATIC FOLDER:
 app.use(express.static(path.join(__dirname, "public")));
@@ -106,7 +139,7 @@ app.use("/auth", require("./routes/auth.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>
-  console.log(`Server started on port ${port}`),
+  console.log(`Server started on port ${port}`)
 );
 // Connecting to DB
 
