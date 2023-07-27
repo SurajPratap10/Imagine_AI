@@ -68,7 +68,7 @@ exports.loginController = async (req, res) => {
       return;
     }
     const user_list = await userModel.find({ email });
-  
+
     if (user_list.length === 0) {
       res.status(400).json({ error: "No such Email Exists!!!!" });
       return;
@@ -76,7 +76,7 @@ exports.loginController = async (req, res) => {
       //email is in our DB..let's check for matching password
       const user = user_list[0];
       const matched = await user.matchPassword(password);
-  
+
       if (!matched) {
         //invalid-password
         res.status(400).json({ error: "Invalid Password" });
@@ -88,6 +88,6 @@ exports.loginController = async (req, res) => {
     }
   } catch (error) {
     console.log("Error: " + error);
-    res.status(500).json({ error: "Someting Went Wrong!!! Try Again" });    
+    res.status(500).json({ error: "Someting Went Wrong!!! Try Again" });
   }
 };
