@@ -2,7 +2,7 @@
 
 <div class="scrollToTopContainer HideElement">
   <div id="scrollToButton" class="scrollToTopButton" title="Click to scroll top">
-    <i class="bi bi-arrow-up arrow" style="font-size: 42px;"></i>
+    <i class="bi bi-arrow-up arrow" style="font-size: 30px;"></i>
   </div>
   <span class="pulse"></span>
 </div>
@@ -37,20 +37,6 @@
     position: absolute;
     bottom: 0;
     z-index: 1;
-    animation-name: circle;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-play-state: running;
-    -webkit-animation-name: circle;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: normal;
-    -webkit-animation-play-state: running;
   }
 
   .scrollToTopButton:hover {
@@ -58,13 +44,13 @@
   }
 
   .arrow {
-    font-size: 40px;
+    /* font-size: 30px; */
     color: lightyellow;
     background-color: transparent;
-    bottom: 8px;
+    bottom: -5px;
     position: relative;
     left: 50%;
-    margin-left: -21px;
+    margin-left: -16px;
     animation-name: arrow;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -105,81 +91,29 @@
 
   @keyframes arrow {
     0% {
-      bottom: 0;
+      bottom: -5px;
     }
 
     75% {
-      bottom: 45px;
+      bottom: 5px;
     }
 
     100% {
-      bottom: 0;
+      bottom: -5px;
     }
   }
 
   @-webkit-keyframes arrow {
     0% {
-      bottom: 0;
+      bottom: -5px;
     }
 
     75% {
-      bottom: 45px;
+      bottom: 5px;
     }
 
     100% {
-      bottom: 0;
-    }
-  }
-
-  @keyframes circle {
-    0% {
-      height: 60px;
-    }
-
-    10% {
-      height: 60px;
-    }
-
-    50% {
-      height: 65px;
-    }
-
-    75% {
-      height: 75px;
-    }
-
-    90% {
-      height: 65px;
-    }
-
-    100% {
-      height: 60px;
-    }
-  }
-
-  @-webkit-keyframes circle {
-    0% {
-      height: 60px;
-    }
-
-    10% {
-      height: 60px;
-    }
-
-    50% {
-      height: 65px;
-    }
-
-    75% {
-      height: 75px;
-    }
-
-    90% {
-      height: 65px;
-    }
-
-    100% {
-      height: 60px;
+      bottom: -5px;
     }
   }
 

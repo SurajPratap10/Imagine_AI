@@ -1,12 +1,14 @@
 <%- include('includes/PRE.ejs') %>
+<%- include('includes/sidebar.ejs') %>
 <%- include('includes/header.ejs') %>
 </head>
 <%- include('includes/navbar.ejs') %>
+<%- include('includes/sidebar.ejs') %>
 <%- include('alan.ejs') %>
 <main>
     <section class="showcase" id="showcase">
         <form id="image-form">
-          <h1 class="AI">IMAGE DESCRIPTION</h1>
+          <h1 class="AI" style="margin-top: 8px;">IMAGE DESCRIPTION</h1>
           <div class="form-control">
             <input type="text" id="prompt" placeholder="Enter Text or speak in assistant" />
           </div>
@@ -39,6 +41,16 @@
             <option value="large">Large</option>
           </select>
         </div>
+        <div class="form-control">
+          <select name="num-images" id="num-images">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+      
+          </select>
+        </div>
         <div class="formBtns">
           <button type="submit" id="submit" class="btn" aria-label="generate">
             <span>Generate</span>
@@ -52,7 +64,7 @@
       </form>
     </section>
     <section class="image">
-      <div class="image-container">
+      <div id="image-container" class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <h2 class="msg"></h2>
         <img src="" alt="" id="image"/>
       </div>
