@@ -1,9 +1,11 @@
 <%- include('includes/PRE.ejs') %>
+<%- include('includes/sidebar.ejs') %>
 <%- include('includes/header.ejs') %>
 </head>
 <body>
   <div class="navbar"></div>
   <%- include('includes/navbar.ejs') %>
+  <%- include('includes/sidebar.ejs') %>
   <%- include('alan.ejs') %>
   <main style="padding-top: 60px;">
     <section class="showcase" id="showcase">
@@ -44,7 +46,7 @@
       </form>
     </section>
     <section class="image">
-      <div class="image-container">
+      <div id="image-container" class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <h2 class="msg"></h2>
         <img src="" alt="" id="image"/>
       </div>
