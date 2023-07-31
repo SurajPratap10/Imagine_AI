@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="about-image">
-            <img class="about-us-logo" src="banner.webp" alt="imagine" />
+            <img loading="lazy" class="about-us-logo" src="banner.webp" alt="imagine" />
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
           <div class="quantity">
             <div class="bg"></div>
             <div class="glass">
-              <img src="conditioning1.webp" alt="icon" />
+              <img loading="lazy" src="conditioning1.webp" alt="icon" />
             </div>
             <h4 class="txt">Conditioning</h4>
           </div>
@@ -82,7 +82,7 @@
           <div class="quantity">
             <div class="bg"></div>
             <div class="glass">
-              <img src="style.webp" alt="icon" />
+              <img loading="lazy" src="style.webp" alt="icon" />
             </div>
             <h4 class="txt">Style Transfer</h4>
           </div>
@@ -90,14 +90,14 @@
           <div class="quantity">
             <div class="bg"></div>
             <div class="glass">
-              <img src="generation.webp" alt="icon" />
+              <img loading="lazy" src="generation.webp" alt="icon" />
             </div>
             <h4 class="txt">Controlled Generation</h4>
           </div>
           <div class="quantity">
             <div class="bg"></div>
             <div class="glass">
-              <img src="modal.webp" alt="icon" />
+              <img loading="lazy" src="modal.webp" alt="icon" />
             </div>
             <h4 class="txt">Multi Modal Embedding</h4>
           </div>
@@ -108,7 +108,7 @@
       <div class="about">
         <div class="container1">
           <div class="about-image">
-            <img src="1.webp" alt="imagine" />
+            <img loading="lazy" src="1.webp" alt="imagine" />
           </div>
           <div class="about-text">
             <h1 class="title">Words transformed. Imagination unleashed.</h1>
@@ -136,7 +136,7 @@
         <div class="container2">
           <div class="card data-tilt">
             <div class="card-icon">
-              <img src="chris1.webp" alt="icon" />
+              <img loading="lazy" src="chris1.webp" alt="icon" />
               <h2>Chris</h2>
               <p style="padding: 0 10px 0 10px;">Their text-to-image AI amazed me with its stunningly lifelike creations
               </p>
@@ -157,7 +157,7 @@
           </div>
           <div class="card data-tilt">
             <div class="card-icon">
-              <img src="sarah2.webp" alt="icon" />
+              <img loading="lazy" src="sarah2.webp" alt="icon" />
               <h2>Sarah</h2>
               <p style="padding: 0 10px 0 10px;">The level of customization and control over the generated visuals is
                 truly remarkable</p>
@@ -178,7 +178,7 @@
           </div>
           <div class="card data-tilt">
             <div class="card-icon">
-              <img src="brian1.webp" alt="icon" />
+              <img loading="lazy" src="brian1.webp" alt="icon" />
               <h2>Brian</h2>
               <p style="padding: 0 10px 0 10px;">I found myself immersed in a world where words effortlessly transformed
                 into captivating artworks.</p>
@@ -199,7 +199,7 @@
           </div>
           <div class="card data-tilt">
             <div class="card-icon">
-              <img src="chloe1.webp" alt="icon" />
+              <img loading="lazy" src="chloe1.webp" alt="icon" />
               <h2>Chloe</h2>
               <p style="padding: 0 10px 0 10px;">I never thought my words could come alive so vividly until I used their
                 AI-powered solution</p>
@@ -259,22 +259,26 @@
         </style>
 
         <script>
-          function toggleDarkMode() {
-            const body = document.body;
-            const navbar = document.querySelector(".navbar");
-            const aboutSection = document.querySelector(".about");
-            const darkModeToggle = document.querySelector(".dark-mode-toggle");
-            const darkModeIcon = document.getElementById("dark-mode-icon");
+    function toggleDarkMode() {
+      const body = document.body;
+      const navbar = document.querySelector(".navbar");
+      const aboutSection = document.querySelector(".about");
+      const darkModeToggle = document.querySelector(".dark-mode-toggle");
 
-            body.classList.toggle("dark-mode");
-            navbar.classList.toggle("dark-mode");
-            aboutSection.classList.toggle("dark-mode");
-            darkModeToggle.classList.toggle("dark");
+      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+      var darkModeIconCollection = Array.from(darkModeIcon);
 
-            if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-              darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-            } else {
-              darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-            }
-          }
+      body.classList.toggle("dark-mode");
+      navbar.classList.toggle("dark-mode");
+      aboutSection.classList.toggle("dark-mode");
+      // darkModeToggle.classList.toggle("dark");
+
+      darkModeIconCollection.map((darkIcon) => {
+        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+        } else {
+          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+      });
+    }
         </script>

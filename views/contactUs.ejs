@@ -1,5 +1,5 @@
-<%- include('includes/PRE.ejs') %>
-  <%- include('includes/header.ejs') %>
+<%- include('includes/header.ejs') %>
+  <%- include('includes/sidebar.ejs') %>
     <link rel="stylesheet" href="../public/css/style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
     <style>
@@ -33,7 +33,10 @@
         width: 500px;
       }
 
-     .contactError{color: aqua; font-size: 14px;}
+      .contactError {
+        color: aqua;
+        font-size: 14px;
+      }
     </style>
     </head>
     <%- include('includes/navbar.ejs') %>
@@ -50,13 +53,13 @@
             <div class="contact-middle" id="slide">
               <div class="content-top">
                 <div class="image-section">
-                  <img src="contactus.webp" alt="contact-us" style="width:500px;">
+                  <img loading="lazy" src="contactus.webp" alt="contact-us" style="width:500px;">
                 </div>
                 <div class="contact-box">
                   <div class="context" id="slide">
                     <div class="cards">
                       <a href="">
-                        <img class="contact-svg"
+                        <img loading="lazy" class="contact-svg"
                           src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET21.jpg">
                       </a>
                       <p class="contact-text" id="slide">
@@ -67,7 +70,7 @@
                   <div class="context" id="slide">
                     <div class="cards">
                       <a href="">
-                        <img class="contact-svg"
+                        <img loading="lazy" class="contact-svg"
                           src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET22.jpg">
                       </a>
                       <p class="contact-text" id="slide">
@@ -78,7 +81,7 @@
                   <div class="context" id="slide">
                     <div class="cards">
                       <a href="">
-                        <img class="contact-svg"
+                        <img loading="lazy" class="contact-svg"
                           src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET23.jpg">
                       </a>
                       <p class="contact-text" id="slide">
@@ -100,49 +103,51 @@
                           </p>
                           <input style="width: 95%;" class="input" id="ijowk-6" name="FirstName" placeholder="john"
                             type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
-                            <p class="hidden contactError" id="FirstNameError">
-                             First Name must be atleast 3 characters long.
-                            </p>
+                          <p class="hidden contactError" id="FirstNameError">
+                            First Name must be atleast 3 characters long.
+                          </p>
                         </div>
                         <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                           <p class="text-blk input-title">
                             LAST NAME
                           </p>
                           <input class="input" id="indfi-4" name="LastName" placeholder="Moshe" type="text"
-                            pattern="[A-Za-z]{3,}"  required onkeyup="handleChange(event)">
-                            <p class="hidden contactError" id="LastNameError">
-                              Last Name must be atleast 3 characters long.
-                             </p>
+                            pattern="[A-Za-z]{3,}" required onkeyup="handleChange(event)">
+                          <p class="hidden contactError" id="LastNameError">
+                            Last Name must be atleast 3 characters long.
+                          </p>
                         </div>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           EMAIL
                         </p>
-                        <input class="input" id="ipmgh-6" name="email" placeholder="johnMosh2@gmail.com" type="text" onkeyup="handleChange(event)"
-                          required>
-                          <p class="hidden contactError" id="emailError">
-                            Please enter Valid Email.
-                           </p>
+                        <input class="input" id="ipmgh-6" name="email" placeholder="johnMosh2@gmail.com" type="text"
+                          onkeyup="handleChange(event)" required>
+                        <p class="hidden contactError" id="emailError">
+                          Please enter Valid Email.
+                        </p>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           PHONE NUMBER
                         </p>
-                        <input class="input" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text" onkeyup="handleChange(event)" required>
+                        <input class="input" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
+                          onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="PhoneNumberError">
                           Please enter Valid Phone Number.
-                         </p>
+                        </p>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
                         <p class="text-blk input-title" style="padding-bottom: 10px;">
                           Give your Valuable Feedback
                         </p>
                         <input class="textinput feedback" id="i5vyy-6" type="text"
-                          placeholder="You can contact us here..." name="feedback" onkeyup="handleChange(event)" required>
-                          <p class="hidden contactError" id="feedbackError">
-                            Describe your message within 10 to 50 words.
-                           </p>
+                          placeholder="You can contact us here..." name="feedback" onkeyup="handleChange(event)"
+                          required>
+                        <p class="hidden contactError" id="feedbackError">
+                          Describe your message within 10 to 50 words.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -158,8 +163,12 @@
           </div>
 
           <%- include('includes/footer.ejs') %>
-
+            <!-- Over riding footer style -->
             <style>
+              footer {
+                z-index: -1;
+              }
+
               /* Light mode styles */
               .light-mode {}
 
@@ -199,17 +208,21 @@
                 const navbar = document.querySelector(".navbar");
                 const aboutSection = document.querySelector(".about");
                 const darkModeToggle = document.querySelector(".dark-mode-toggle");
-                const darkModeIcon = document.getElementById("dark-mode-icon");
+
+                const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+                var darkModeIconCollection = Array.from(darkModeIcon);
 
                 body.classList.toggle("dark-mode");
                 navbar.classList.toggle("dark-mode");
                 aboutSection.classList.toggle("dark-mode");
-                darkModeToggle.classList.toggle("dark");
+                // darkModeToggle.classList.toggle("dark");
 
-                if (darkModeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-                  darkModeIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-                } else {
-                  darkModeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                }
+                darkModeIconCollection.map((darkIcon) => {
+                  if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+                    darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+                  } else {
+                    darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                  }
+                });
               }
             </script>

@@ -3,30 +3,19 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
-const popup = document.getElementById("popup");
-
-function closePopUp() {
-  popup.classList.remove("open-popup");
-}
-
-function openPopUp(text) {
-  document.getElementById("text").innerHTML = text;
-  popup.classList.add("open-popup");
-}
-
 function onSubmit(e) {
   if (window.location.href == "/signup" || window.location.href == "/login") {
     return false;
   }
   e.preventDefault();
 
-  //clearing the message from box after submission:
-  document.querySelector(".msg").textContent = "";
-  document.querySelector("#image").src = "";
+  // //clearing the message from box after submission:
+  // document.querySelector(".msg").textContent = "";
+  // document.querySelector("#image").src = "";
 
   const prompt = document.querySelector("#prompt").value;
   const size = document.querySelector("#size").value;
-
+  const numImages = parseInt(document.querySelector("#num-images").value);
   const API_KEY = document.querySelector("#api-key").value; //API Key, this value can be passed as paramerter in the function as well...
 
   const apiRegex = /^sk-.+$/;
@@ -36,31 +25,32 @@ function onSubmit(e) {
   switch (true) {
     case prompt === "":
       text = "Please add some text";
-      openPopUp(text);
+      // alert(text);
+      toastr["warning"](text, "Validation");
       return;
 
     case API_KEY === "":
       text = "Please add your API Key";
-      openPopUp(text); //if API Key is not added
+      toastr["warning"](text, "Validation");
       return;
 
     case !apiRegex.test(API_KEY):
       text = "Please add correct API Key";
-      openPopUp(text); //if API Key is not added
+      toastr["warning"](text, "Validation");
       return;
   }
 
-  const response = generateImageRequest(prompt, API_KEY, size);
+  const response = generateImageRequest(prompt, API_KEY, size, numImages);
 
   //   console.log(response);
 }
 
-async function generateImageRequest(prompt, API_KEY, size) {
+async function generateImageRequest(prompt, API_KEY, size, numImages) {
   try {
     // showLoading()
     showSpinner();
 
-    const response = await fetch("/openai/generateimage", {
+    const response = await fetch(`/openai/generateimages`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,6 +59,7 @@ async function generateImageRequest(prompt, API_KEY, size) {
         prompt,
         API_KEY,
         size,
+        numImages,
       }),
     });
 
@@ -86,12 +77,124 @@ async function generateImageRequest(prompt, API_KEY, size) {
     }
 
     //Displaying Image in the Frontend:
-    const imageUrl = data.data;
-    document.querySelector("#image").src = imageUrl;
+
+    // const imageUrl = data.data;
+
+    const imageContainer = document.querySelector("#image-container");
+    imageContainer.innerHTML = ""; // Clear existing images
+
+    const imageUrls = data.data;
+    console.log(imageUrls);
+    imageUrls.forEach((imageUrl) => {
+      console.log(imageUrl);
+      console.log(imageUrl.url);
+      const img = document.createElement("img");
+      img.src = imageUrl.url;
+      img.classList.add("h-auto", "max-w-full", "rounded-lg");
+      imageContainer.appendChild(img);
+    });
+
+    // document.querySelector("#image").src = imageUrl;
+
+    // -----------------------Share Button---------------------------
+
+    const sharebtn = document.querySelector(".twitter-share-button");
+    sharebtn.style.display = "block";
+    sharebtn.addEventListener("click", () => {
+      // Replace [ImageURL] with the actual image URL
+      handleShare(imageUrls[0].url);
+    });
+
+    const handleShare = async (url) => {
+      try {
+        // Check if the navigator.share API is available
+        if (window.navigator.share) {
+          await window.navigator.share({
+            title: "Share Image",
+            url: url,
+          });
+        } else {
+          // If the API is not available, show a share menu
+          const options = [
+            {
+              label: "Instagram",
+              url: `https://www.instagram.com/create/collection/?source_url=${encodeURIComponent(
+                url,
+              )}&media_type=gif`,
+            },
+            {
+              label: "Facebook",
+              url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                url,
+              )}`,
+            },
+            {
+              label: "Twitter",
+              url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                "Check out this GIF!",
+              )}&url=${encodeURIComponent(url)}`,
+            },
+            {
+              label: "Snapchat",
+              url: `snapchat://share?url=${encodeURIComponent(url)}`,
+            },
+            {
+              label: "Telegram",
+              url: `https://telegram.me/share/url?url=${encodeURIComponent(
+                url,
+              )}`,
+            },
+          ];
+
+          const chosenOption = await showShareMenu(options);
+
+          // Handle the share action for the chosen option
+          if (chosenOption) {
+            window.open(chosenOption.url, "_blank");
+          }
+        }
+      } catch (error) {
+        console.error("Error sharing:", error);
+      }
+    };
+
+    // Helper function to show a share menu with custom options
+    const showShareMenu = async (options) => {
+      const buttons = options.map((option) => {
+        return {
+          label: option.label,
+          onClick: () => {
+            closeMenu(option);
+          },
+        };
+      });
+
+      const closeMenu = (option) => {
+        menu.destroy();
+        resolve(option);
+      };
+
+      const menu = new window.Menus({
+        buttons: buttons,
+      });
+
+      const result = await new Promise((resolve) => {
+        menu.showAtCursor();
+        menu.on("cancel", () => {
+          resolve(null);
+        });
+      });
+
+      return result;
+    };
+    // -----------------------Share Button---------------------------
+    // Call the handleShare function with the desired image URL
+    // Replace [ImageURL] with the actual image URL
+
     // hideLoading();
     removeSpinner();
   } catch (error) {
-    openPopUp(error);
+    console.log(error);
     return error;
   }
 }
@@ -186,9 +289,3 @@ const observer = new IntersectionObserver(animateCards, options);
 cards.forEach((card) => {
   observer.observe(card);
 });
-
-// toggle navbar
-const nav = document.querySelector("#mainNav");
-const toggleNavbar = () => {
-  nav.classList.toggle("hide-sm");
-};

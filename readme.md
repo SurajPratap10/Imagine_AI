@@ -31,7 +31,7 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 # Links:
 
 <h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
-<h4> Live Site: https://imagine-ai-17zf.vercel.app/ </h4>
+<h4> Live Site: https://imagine-ai-30mq.onrender.com/ </h4>
 <p align="right"><a href="#top">Back to Top</a></p>
   
 # Technology Stack used:
@@ -44,6 +44,12 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 7. **[`OpenAI API`](https://platform.openai.com/docs/introduction)**
 8. **[`Postman`](https://learning.postman.com/docs/introduction/overview/)**
 9. **[`Git & GitHub`](https://docs.github.com/en/get-started/using-git/about-git)**
+
+# Licenses
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
 
 # How to **use**?
 

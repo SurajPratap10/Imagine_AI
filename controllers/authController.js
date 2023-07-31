@@ -61,28 +61,33 @@ exports.signupController = async (req, res) => {
 };
 
 exports.loginController = async (req, res) => {
-  const { email, password } = req.body;
-  if (!emailValidator.validate(email)) {
-    res.status(400).json({ error: "invalid email!!!!" });
-    return;
-  }
-  const user_list = await userModel.find({ email });
+  try {
+    const { email, password } = req.body;
+    if (!emailValidator.validate(email)) {
+      res.status(400).json({ error: "invalid email!!!!" });
+      return;
+    }
+    const user_list = await userModel.find({ email });
 
-  if (user_list.length === 0) {
-    res.status(400).json({ error: "No such Email Exists!!!!" });
-    return;
-  } else {
-    //email is in our DB..let's check for matching password
-    const user = user_list[0];
-    const matched = await user.matchPassword(password);
-
-    if (!matched) {
-      //invalid-password
-      res.status(400).json({ error: "Invalid Password" });
+    if (user_list.length === 0) {
+      res.status(400).json({ error: "No such Email Exists!!!!" });
       return;
     } else {
-      //if matched..get the tokens
-      this.sendToken(user, res);
+      //email is in our DB..let's check for matching password
+      const user = user_list[0];
+      const matched = await user.matchPassword(password);
+
+      if (!matched) {
+        //invalid-password
+        res.status(400).json({ error: "Invalid Password" });
+        return;
+      } else {
+        //if matched..get the tokens
+        this.sendToken(user, res);
+      }
     }
+  } catch (error) {
+    console.log("Error: " + error);
+    res.status(500).json({ error: "Someting Went Wrong!!! Try Again" });
   }
 };
