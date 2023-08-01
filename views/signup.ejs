@@ -59,6 +59,15 @@
               transform: none;
               cursor: pointer;
             }
+            #confirmPasswordEye{
+              color: aqua;
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              left: auto;
+              transform: none;
+              cursor: pointer;
+            }
           </style>
         </head>
       </head>
@@ -81,7 +90,7 @@
               <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
               <div class="icon-boundry">
                 <input type="password" id="password" name="password" placeholder="Enter password"
-                onkeyup="handleChange(event)" aria-describedby="passwordError"/>
+                onkeyup="handleChange(event)" aria-describedby="passwordError" required/>
                 <span class="material-symbols-outlined" id="eye" onclick="showPassword()">
                   visibility_off
                 </span>
@@ -91,10 +100,14 @@
                 (@$%#^&*), 1 number (0-9)</p>
             </div>
             <div class="form-control">
-              <label for="confirmPassword" style="color: white; margin-left: 20px; margin-bottom: 40px;">Confirm
-                Password</label>
+              <label for="confirmPassword" style="color: white; margin-left: 20px; margin-bottom: 40px;">Confirm Password</label>
+              <div class="icon-boundry">
               <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Confirm password"
-                onkeyup="showPassword(event)"/>
+                onkeyup="handleChange(event)" required/>
+                <span class="material-symbols-outlined" id="confirmPasswordEye" onclick="showConfirmPassword()">
+                  visibility_off
+                </span>
+              </div>
             </div>
             <div class="form-control">
               <label for="captcha-input" style="color: white; display: block;">Captcha</label>
@@ -161,6 +174,16 @@
     } else {
       x.type = "password";
     document.getElementById("eye").innerText = "visibility_off";
+    }
+  }
+  function showConfirmPassword() {
+    var x = document.getElementById("confirmPassword");
+    if (x.type === "password") {
+      x.type = "text";
+    document.getElementById("confirmPasswordEye").innerText = "visibility";
+    } else {
+      x.type = "password";
+    document.getElementById("confirmPasswordEye").innerText = "visibility_off";
     }
   }
 </script>
