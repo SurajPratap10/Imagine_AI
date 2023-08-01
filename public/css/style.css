@@ -2850,7 +2850,6 @@ section .container2 {
   width: 100px;
   margin-bottom: 20px;
 }
-=======
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -3887,6 +3886,7 @@ footer .bottom {
 
 footer .bottom a {
   color: #134d58;
+  color: yellow !important;
 }
 
 footer a {
@@ -3900,7 +3900,8 @@ footer a:hover {
 /* .boxx a:hover {
   padding-left: 8px;
 } */
-
+  color: #2cceff !important;
+}
 .tyfs {
   display: block;
   margin: 10px 0;
@@ -4033,14 +4034,12 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 /* --------------- Contact US CSS ---------------- */
 
 /* .Contact-Us {
   margin-top: 5%;
   display: grid;
 } */
-
 .contact-top {
   text-align: center;
   display: flex;
@@ -5737,4 +5736,4 @@ section .container2 {
   width: 100px;
   margin-bottom: 20px;
 }
-
+}
