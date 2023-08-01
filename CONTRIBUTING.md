@@ -3,9 +3,10 @@
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
-*The easiest way to help ImagineAI and contribute to the project would be to star the repo*
+_The easiest way to help ImagineAI and contribute to the project would be to star the repo_
 
 ## Pull Request Process
+
 Ensure any install or build dependencies are removed before the end of the layer when doing a build.
 Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
 Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent. The versioning scheme we use is SemVer.
@@ -13,8 +14,8 @@ You may merge the Pull Request in once you have the sign-off of two other develo
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free 
-experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, 
+In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free
+experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion,
 or sexual identity and orientation.
 
 ## Our Standards for contributions
@@ -26,7 +27,7 @@ Examples of behavior that contributes to creating a positive environment include
 - Gracefully accepting constructive criticism
 - Focusing on what is best for the community
 - Showing empathy towards other community members
-  
+
 Examples of unacceptable behavior by participants include:
 
 - The use of sexualized language or imagery and unwelcome sexual attention or advances
@@ -35,7 +36,6 @@ Examples of unacceptable behavior by participants include:
 - Publishing others' private information, such as a physical or electronic address, without explicit permission
 - Other conduct which could reasonably be considered inappropriate in a professional setting
 
-  
 # How to **contribute**?
 
 _If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
@@ -113,5 +113,5 @@ git push -u origin <your_branch_name>
 
 ## Thank you for contributing to Imagine AI
 
-Imagine AI would have not been this big if it was not for our beloved contributors. We really appriciated your contributions - from a small documentation PR to a major backend change, we love 
-every contribution for the zeal and love people show. Our contributors make it possible for us to sustain this amazing project. 
+Imagine AI would have not been this big if it was not for our beloved contributors. We really appriciated your contributions - from a small documentation PR to a major backend change, we love
+every contribution for the zeal and love people show. Our contributors make it possible for us to sustain this amazing project.
