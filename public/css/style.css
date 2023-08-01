@@ -1033,7 +1033,7 @@ footer .bottom {
 }
 
 footer .bottom a {
-  color: #134d58;
+  color: yellow !important;
 }
 
 footer a {
@@ -1041,12 +1041,8 @@ footer a {
 }
 
 footer a:hover {
-  color: black;
+  color: #2cceff !important;
 }
-
-/* .boxx a:hover {
-  padding-left: 8px;
-} */
 
 .tyfs {
   display: block;
@@ -1180,13 +1176,6 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* --------------- Contact US CSS ---------------- */
-
-/* .Contact-Us {
-  margin-top: 5%;
-  display: grid;
-} */
 
 .contact-top {
   text-align: center;
