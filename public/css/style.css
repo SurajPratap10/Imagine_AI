@@ -668,9 +668,11 @@ button,
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   text-align: center;
+  line-height: 6px;
   outline: none;
   animation: animate 5s linear infinite;
-  padding-top: 90px;
+  margin-bottom: 60px;
+  padding: 16px;
 }
 
 .showcase form {
