@@ -637,7 +637,8 @@ button,
 
 .showcase {
   width: 100%;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
+  background-color: transparent;
   padding-bottom: 4rem;
   padding-top: 2rem;
 }
@@ -736,8 +737,7 @@ form select {
 
 .showcase form input,
 form select:hover {
-  background-color: transparent;
-  transform: translateY(0px);
+transform: translateY(0px);
 }
 
 .get-api-text {
@@ -764,12 +764,15 @@ form select:hover {
   -moz-appearance: none;
   appearance: none;
   padding-right: 10px;
+  background-color: transparent;
   background-image: url("./assets/angle-down-solid.svg");
   background-repeat: no-repeat;
   background-size: 15px;
   background-position: right 15px center;
 }
-
+select option{
+  background-color: var(--primary-color)!important;
+}
 button span {
   position: relative;
   right: 10px;
@@ -1697,6 +1700,7 @@ form {
   background-repeat: no-repeat;
   background-size: 15px;
   background-position: right 15px center;
+  background-color: transparent;
 }
 .feature {
   text-align: center;
@@ -2257,6 +2261,7 @@ button:disabled {
   .showcase form input,
   form select {
     width: 300px;
+      background-color: transparent;
   }
 
   img {
