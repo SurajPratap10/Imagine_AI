@@ -14,7 +14,7 @@
   "author": "Suraj Pratap",
   "license": "VIT",
   "dependencies": {
-    "@mui/styles": "^5.14.1",
+    "@mui/styles": "^5.14.3",
     "bcryptjs": "^2.4.3",
     "build": "^0.1.4",
     "dotenv": "^16.3.1",
