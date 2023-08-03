@@ -1,39 +1,37 @@
 <%- include('includes/PRE.ejs') %>
   <%- include('includes/header.ejs') %>
-  <%- include('includes/sidebar.ejs') %>
+  <style>
+    /* Add your styles here */
+    body {
+      background-color: #fff;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+    input,
+    textarea {
+      background-color: #f5f5f5;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode input,
+    .dark-mode textarea {
+      background-color: #555;
+      color: #fff;
+    }
+  </style>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-
-
-    <style>
-      /* Add your styles here */
-      body {
-        background-color: #fff;
-        color: #333;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-
-      input,
-      textarea {
-        background-color: #f5f5f5;
-        color: #333;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      .dark-mode {
-        background-color: #121212;
-        color: #ffffff;
-      }
-
-      .dark-mode input,
-      .dark-mode textarea {
-        background-color: #555;
-        color: #fff;
-      }
-    </style>
-
-    </head>
+</head>
+<body>
     <%- include('includes/navbar.ejs') %>
+    <%- include('includes/sidebar.ejs') %>
       <div class="about">
         <div class="container">
           <div class="about-text">
@@ -68,7 +66,7 @@
       </div>
       <div class="feature">
         <h1 class="headline">Exceptional Advancement of our Images</h1>
-        <h2 style="padding-top: 20px; padding-bottom: 50px;">These Features Make our Images, super advanced with
+        <h2 style="padding: 20px; padding-bottom: 50px;">These Features Make our Images, super advanced with
           exceptional quality</h2>
         <div class="quality">
           <div class="quantity">
