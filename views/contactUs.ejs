@@ -45,50 +45,24 @@
           <div class="contact-top" id="slide">
             <h1>Contact Us</h1>
             <h3>Let's Get in Touch to solve your Queries</h3>
-            <p class="contact-top-text">
-              The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of
-              limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js
-              and Express that uses OpenAI's Dall-E models to generate images.
-            </p>
+            <div class="contact-box" id="slide">
+              <p class="contact-text" id="slide">
+                <i class="fa-solid fa-phone"></i>
+                +91-9304764921
+              </p>
+              <p class="contact-text" id="slide" style="word-wrap: break-word;">
+                <i class="fa-solid fa-envelope"></i>
+                surajpratap20002003@gmail.com 
+              </p>
+              <p class="contact-text" id="slide">
+                <i class="fa-solid fa-location-dot"></i>
+                Patna, Bihar, India
+              </p>
+            </div>
             <div class="contact-middle" id="slide">
               <div class="content-top">
                 <div class="image-section">
-                  <img loading="lazy" src="contactus.webp" alt="contact-us" style="width:500px;">
-                </div>
-                <div class="contact-box">
-                  <div class="context" id="slide">
-                    <div class="cards">
-                      <a href="">
-                        <img loading="lazy" class="contact-svg"
-                          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET21.jpg">
-                      </a>
-                      <p class="contact-text" id="slide">
-                        +91 9304******
-                      </p>
-                    </div>
-                  </div>
-                  <div class="context" id="slide">
-                    <div class="cards">
-                      <a href="">
-                        <img loading="lazy" class="contact-svg"
-                          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET22.jpg">
-                      </a>
-                      <p class="contact-text" id="slide">
-                        abcxyz@gmail.com
-                      </p>
-                    </div>
-                  </div>
-                  <div class="context" id="slide">
-                    <div class="cards">
-                      <a href="">
-                        <img loading="lazy" class="contact-svg"
-                          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET23.jpg">
-                      </a>
-                      <p class="contact-text" id="slide">
-                        State, India
-                      </p>
-                    </div>
-                  </div>
+                  <img loading="lazy" src="contact.png" alt="contact-us" style="width:500px;">
                 </div>
               </div>
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2"
@@ -101,7 +75,7 @@
                           <p class="text-blk input-title">
                             FIRST NAME
                           </p>
-                          <input style="width: 95%;" class="input" id="ijowk-6" name="FirstName" placeholder="john"
+                          <input style="width: 95%;" class="input" id="ijowk-6" name="FirstName" placeholder="John"
                             type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
                           <p class="hidden contactError" id="FirstNameError">
                             First Name must be atleast 3 characters long.
@@ -111,24 +85,24 @@
                           <p class="text-blk input-title">
                             LAST NAME
                           </p>
-                          <input class="input" id="indfi-4" name="LastName" placeholder="Moshe" type="text"
+                          <input class="input" id="indfi-4" name="LastName" placeholder="Doe" type="text"
                             pattern="[A-Za-z]{3,}" required onkeyup="handleChange(event)">
                           <p class="hidden contactError" id="LastNameError">
                             Last Name must be atleast 3 characters long.
                           </p>
                         </div>
                       </div>
-                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                      <div class="responsive-cell-block  wk-ipadp-12 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           EMAIL
                         </p>
-                        <input class="input" id="ipmgh-6" name="email" placeholder="johnMosh2@gmail.com" type="text"
+                        <input class="input" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
                           onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="emailError">
                           Please enter Valid Email.
                         </p>
                       </div>
-                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                      <div class="responsive-cell-block  wk-ipadp-12 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           PHONE NUMBER
                         </p>
@@ -139,11 +113,11 @@
                         </p>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
-                        <p class="text-blk input-title" style="padding-bottom: 10px;">
+                        <p class="text-blk input-title">
                           Give your Valuable Feedback
                         </p>
                         <input class="textinput feedback" id="i5vyy-6" type="text"
-                          placeholder="You can contact us here..." name="feedback" onkeyup="handleChange(event)"
+                          placeholder="Type your Feedback" name="feedback" onkeyup="handleChange(event)"
                           required>
                         <p class="hidden contactError" id="feedbackError">
                           Describe your message within 10 to 50 words.
@@ -161,6 +135,7 @@
               </form>
             </div>
           </div>
+        </section>
 
           <%- include('includes/footer.ejs') %>
             <!-- Over riding footer style -->
