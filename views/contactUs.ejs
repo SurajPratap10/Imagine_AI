@@ -40,7 +40,7 @@
     </style>
     </head>
     <%- include('includes/navbar.ejs') %>
-      <main>
+      <main class="contact">
         <section class="Contact-Us">
           <div class="contact-top" id="slide">
             <h1>Contact Us</h1>
@@ -138,6 +138,7 @@
         </section>
 
           <%- include('includes/footer.ejs') %>
+          <%- include('includes/topToBottomScrollButton.ejs') %>
             <!-- Over riding footer style -->
             <style>
               footer {
@@ -145,7 +146,7 @@
               }
 
               /* Light mode styles */
-              .light-mode {}
+              /* .light-mode {} */
 
               /* Dark mode styles */
               .dark-mode {
@@ -159,13 +160,7 @@
                 color: #ffffff;
               }
 
-              /* Dark mode styles for the about section */
-              .dark-mode .about {
-                background-color: #121212;
-                color: #ffffff;
-              }
-
-              /* Styles for the dark mode toggle button */
+               /* Styles for the dark mode toggle button */
               .dark-mode-toggle {
                 font-size: 24px;
                 cursor: pointer;
@@ -176,12 +171,11 @@
                 font-size: 1.1em;
               }
             </style>
-
             <script>
               function toggleDarkMode() {
                 const body = document.body;
                 const navbar = document.querySelector(".navbar");
-                const aboutSection = document.querySelector(".about");
+                const contactSection = document.querySelector(".contact");
                 const darkModeToggle = document.querySelector(".dark-mode-toggle");
 
                 const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
@@ -189,7 +183,7 @@
 
                 body.classList.toggle("dark-mode");
                 navbar.classList.toggle("dark-mode");
-                aboutSection.classList.toggle("dark-mode");
+                contactSection.classList.toggle("dark-mode");
                 // darkModeToggle.classList.toggle("dark");
 
                 darkModeIconCollection.map((darkIcon) => {
