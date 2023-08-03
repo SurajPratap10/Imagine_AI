@@ -171,15 +171,20 @@ body {
   width: 100px;
 }
 
-.hover-effect {
+/*.hover-effect {
   color: rgb(34, 5, 44);
   text-decoration: none;
   font-size: 1rem;
-}
+  border: none;
 
-.hover-effect:hover {
-  color: rgb(147, 145, 147);
+}*/
+a{
   text-decoration: none;
+}
+.hover-effect:hover {
+  color: white;
+  text-decoration: none;
+  border: none;
 }
 
 .hover-effect:hover::after {
@@ -237,11 +242,7 @@ body {
   padding: 0;
 }
 
-.navbar a:hover,
-.navbar a:active,
-.navbar a.active {
-  color: rgb(247, 242, 247);
-}
+
 
 .barIcon {
   font-size: 1.5rem;
@@ -3035,14 +3036,15 @@ body {
 }
 
 .hover-effect:hover {
-  color: rgb(147, 145, 147);
+  color: white;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-.hover-effect:hover::after {
+/*.hover-effect:hover::after{
   transition: 300ms;
   width: 100%;
-}
+}*/
 
 /* .hover-effect::after {
   content: "";
@@ -3107,14 +3109,18 @@ body {
   height: 2px;
 }
 
-.navbar a:hover,
-.navbar a:active,
-.navbar a.active {
-  color: rgb(247, 242, 247);
+/*new hover effect*/
+a:hover{
+  color: white;
+  text-decoration: none;
 }
-.undln:hover::after {
+/*removeing hover underline*/
+.undln{
+  text-decoration: none;
+}
+/*.undln:hover::after {
   width: 100%;
-}
+}*/
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
@@ -3900,9 +3906,8 @@ footer a:hover {
   color: black;
 }
 
-/* .boxx a:hover {
+.boxx a:hover {
   padding-left: 8px;
-} */
   color: #2cceff !important;
 }
 .tyfs {
@@ -5688,4 +5693,4 @@ section .container2 {
   width: 100px;
   margin-bottom: 20px;
 }
-}
+
