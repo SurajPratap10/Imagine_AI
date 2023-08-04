@@ -3908,9 +3908,16 @@ footer a:hover {
 }
 
 .boxx a:hover {
-  padding-left: 8px;
-  color: #2cceff !important;
+  padding: unset;
+  color: #2cceff;
+  transform: scale(1.1);
 }
+
+.icons ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
 .tyfs {
   display: block;
   margin: 10px 0;
