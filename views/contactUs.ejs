@@ -37,32 +37,62 @@
         color: aqua;
         font-size: 14px;
       }
+
+      .inputText::placeholder{
+        color: #fff;
+      }
     </style>
     </head>
     <%- include('includes/navbar.ejs') %>
-      <main class="contact">
+      <main>
         <section class="Contact-Us">
           <div class="contact-top" id="slide">
             <h1>Contact Us</h1>
             <h3>Let's Get in Touch to solve your Queries</h3>
-            <div class="contact-box" id="slide">
-              <p class="contact-text" id="slide">
-                <i class="fa-solid fa-phone"></i>
-                +91-9304764921
-              </p>
-              <p class="contact-text" id="slide" style="word-wrap: break-word;">
-                <i class="fa-solid fa-envelope"></i>
-                surajpratap20002003@gmail.com 
-              </p>
-              <p class="contact-text" id="slide">
-                <i class="fa-solid fa-location-dot"></i>
-                Patna, Bihar, India
-              </p>
-            </div>
+            <p class="contact-top-text">
+              The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of
+              limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js
+              and Express that uses OpenAI's Dall-E models to generate images.
+            </p>
             <div class="contact-middle" id="slide">
               <div class="content-top">
                 <div class="image-section">
-                  <img loading="lazy" src="contact.png" alt="contact-us" style="width:500px;">
+                  <img loading="lazy" src="contactus.webp" alt="contact-us" style="width:500px;">
+                </div>
+                <div class="contact-box">
+                  <div class="context" id="slide">
+                    <div class="cards">
+                      <a href="">
+                        <img loading="lazy" class="contact-svg"
+                          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET21.jpg">
+                      </a>
+                      <p class="contact-text" id="slide">
+                        +91-93047*****
+                      </p>
+                    </div>
+                  </div>
+                  <div class="context" id="slide">
+                    <div class="cards">
+                      <a href="">
+                        <img loading="lazy" class="contact-svg"
+                          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET22.jpg">
+                      </a>
+                      <p class="contact-text" id="slide">
+                        surajpratap20002003@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                  <div class="context" id="slide">
+                    <div class="cards">
+                      <a href="">
+                        <img loading="lazy" class="contact-svg"
+                          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET23.jpg">
+                      </a>
+                      <p class="contact-text" id="slide">
+                        Patna, Bihar, India
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2"
@@ -75,7 +105,9 @@
                           <p class="text-blk input-title">
                             FIRST NAME
                           </p>
-                          <input style="width: 95%;" class="input" id="ijowk-6" name="FirstName" placeholder="John"
+
+                          <input style="width: 95%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
+
                             type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
                           <p class="hidden contactError" id="FirstNameError">
                             First Name must be atleast 3 characters long.
@@ -85,38 +117,42 @@
                           <p class="text-blk input-title">
                             LAST NAME
                           </p>
-                          <input class="input" id="indfi-4" name="LastName" placeholder="Doe" type="text"
+
+                          <input class="input inputText" id="indfi-4" name="LastName" placeholder="Doe" type="text"
+
                             pattern="[A-Za-z]{3,}" required onkeyup="handleChange(event)">
                           <p class="hidden contactError" id="LastNameError">
                             Last Name must be atleast 3 characters long.
                           </p>
                         </div>
                       </div>
-                      <div class="responsive-cell-block  wk-ipadp-12 wk-tab-12 wk-mobile-12">
+                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           EMAIL
                         </p>
-                        <input class="input" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
+
+                        <input class="input inputText" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
+
                           onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="emailError">
                           Please enter Valid Email.
                         </p>
                       </div>
-                      <div class="responsive-cell-block  wk-ipadp-12 wk-tab-12 wk-mobile-12">
+                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title">
                           PHONE NUMBER
                         </p>
-                        <input class="input" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
+                        <input class="input inputText" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
                           onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="PhoneNumberError">
                           Please enter Valid Phone Number.
                         </p>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
-                        <p class="text-blk input-title">
+                        <p class="text-blk input-title" style="padding-bottom: 10px;">
                           Give your Valuable Feedback
                         </p>
-                        <input class="textinput feedback" id="i5vyy-6" type="text"
+                        <input class="textinput feedback inputText" id="i5vyy-6" type="text"
                           placeholder="Type your Feedback" name="feedback" onkeyup="handleChange(event)"
                           required>
                         <p class="hidden contactError" id="feedbackError">
@@ -135,10 +171,8 @@
               </form>
             </div>
           </div>
-        </section>
 
           <%- include('includes/footer.ejs') %>
-          <%- include('includes/topToBottomScrollButton.ejs') %>
             <!-- Over riding footer style -->
             <style>
               footer {
@@ -146,7 +180,7 @@
               }
 
               /* Light mode styles */
-              /* .light-mode {} */
+              .light-mode {}
 
               /* Dark mode styles */
               .dark-mode {
@@ -160,7 +194,13 @@
                 color: #ffffff;
               }
 
-               /* Styles for the dark mode toggle button */
+              /* Dark mode styles for the about section */
+              .dark-mode .about {
+                background-color: #121212;
+                color: #ffffff;
+              }
+
+              /* Styles for the dark mode toggle button */
               .dark-mode-toggle {
                 font-size: 24px;
                 cursor: pointer;
@@ -171,11 +211,12 @@
                 font-size: 1.1em;
               }
             </style>
+
             <script>
               function toggleDarkMode() {
                 const body = document.body;
                 const navbar = document.querySelector(".navbar");
-                const contactSection = document.querySelector(".contact");
+                const aboutSection = document.querySelector(".about");
                 const darkModeToggle = document.querySelector(".dark-mode-toggle");
 
                 const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
@@ -183,7 +224,7 @@
 
                 body.classList.toggle("dark-mode");
                 navbar.classList.toggle("dark-mode");
-                contactSection.classList.toggle("dark-mode");
+                aboutSection.classList.toggle("dark-mode");
                 // darkModeToggle.classList.toggle("dark");
 
                 darkModeIconCollection.map((darkIcon) => {
