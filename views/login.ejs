@@ -1,196 +1,107 @@
-<!-- @format -->
+<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %>
+    <%- include('includes/sidebar.ejs') %>
 
-<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %> <%-
-include('includes/sidebar.ejs') %>
+      <head>
+        <style>
+            .signin-opt-icons a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
 
-<head>
-  <style>
-    .google-icon {
-      vertical-align: middle;
-      fill: teal;
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
-    }
+          .google-icon {
+            vertical-align: middle;
+            fill: teal;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+          }
 
-    .facebook-icon {
-      vertical-align: middle;
-      fill: teal;
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
-    }
+          .facebook-icon {
+            vertical-align: middle;
+            fill: teal;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+          }
+          .twitter-icon {
+            vertical-align: middle;
+            fill: teal;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+          }
+          .google-icon:hover {
+            fill: white;
+            transform: scale3d(1.1, 1.1, 1.1);
+          }
+          
+          .facebook-icon:hover {
+            fill: #427bf7;
+            transform: scale3d(1.1, 1.1, 1.1);
+          }
 
-    .twitter-icon {
-      vertical-align: middle;
-      fill: teal;
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
-    }
+          .twitter-icon:hover {
+            fill: #1da1f2;
+            transform: scale3d(1.1, 1.1, 1.1);
+          }
 
-    .google-icon:hover {
-      fill: white;
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    .facebook-icon:hover {
-      fill: #427bf7;
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    .twitter-icon:hover {
-      fill: #1da1f2;
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black;
-    }
+          .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+          }
 
     .tooltip:hover .tooltiptext {
       visibility: visible;
     }
-
-    .icon-boundary {
-      position: relative;
-    }
-
+    
+    .icon-boundry {
+              position: relative;
+            }
+    
     #eye {
-      color: aqua;
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      left: auto;
-      transform: none;
-      cursor: pointer;
-    }
+              color: aqua;
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              left: auto;
+              transform: none;
+              cursor: pointer;
+            }
   </style>
 </head>
 <%- include('includes/navbar.ejs') %>
-<section class="showcase" id="showcase">
-  <form id="image-form" action="index.html">
-    <h1 class="AI">SIGN IN</h1>
-    <div
-      style="display: flex; justify-content: center; gap: 25px"
-      class="form-control"
-    >
-      <label
-        for="email"
-        style="
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-          font-size: 1.5rem;
-          line-height: 1.25rem;
-          font-weight: 500;
-          color: #fff;
-        "
-        >Email</label
-      >
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter Email address"
-        onkeyup="handleChange(event)"
-        style="
-          display: block;
-          padding: 0.625rem;
-          border-radius: 0.5rem;
-          border-width: 1px;
-          border-color: #d1d5db;
-          width: 100%;
-          font-size: 0.875rem;
-          line-height: 1.25rem;
-          color: #fff;
-        "
-      />
-      <p class="error hidden" id="emailError">Enter Valid Email</p>
-    </div>
-    <div
-      class="form-control"
-      style="display: flex; justify-content: center; gap: 5px"
-    >
-      <label
-        for="password"
-        style="
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-          font-size: 1.5rem;
-          line-height: 1.25rem;
-          font-weight: 500;
-          color: #fff;
-        "
-        >Password</label
-      >
-      <div class="icon-boundary">
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter password"
-          onkeyup="handleChange(event)"
-          style="
-            display: block;
-            padding: 0.625rem;
-            border-radius: 0.5rem;
-            border-width: 1px;
-            border-color: #d1d5db;
-            width: 100%;
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-            color: #fff;
-          "
-        />
-        <span class="material-symbols-outlined" id="eye" onclick="myFunction()">
-          visibility_off
-        </span>
-      </div>
-      <p class="error hidden" id="passwordError">
-        Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1
-        number (0-9)
-      </p>
-    </div>
-    <div class="form-control">
-      <label for="captcha" style="color: white; display: block">Captcha</label>
-      <div id="captchaContainer">
-        <div id="captcha"></div>
-        <span
-          id="captchaicon"
-          class="material-symbols-outlined"
-          onclick="generateCaptcha()"
-        >
-          autorenew
-        </span>
-        <input
-          type="text"
-          name="captcha"
-          required
-          placeholder="Enter Captcha"
-        />
-      </div>
-      <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
-    </div>
+        <section class="showcase" id="showcase">
+          <form id="image-form" action="index.html">
+            <h1 class="AI">SIGN IN</h1>
+            <div class="form-control">
+              <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter Email address"
+                onkeyup="handleChange(event)" style="color: black;" />
+              <p class="error hidden" id="emailError">Enter Valid Email</p>
+            </div>
+            <div class="form-control">
+              <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
+              <div class="icon-boundry">
+                <input type="password" id="password" name="password" placeholder="Enter password"
+                onkeyup="handleChange(event)" />
+                <span class="material-symbols-outlined" id="eye" onclick="myFunction()">
+                  visibility_off
+                </span>
+              </div>
+              <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
+                (@$%#^&*), 1 number (0-9)</p>
+            </div>
+            <div class="form-control">
+              <label for="captcha" style="color: white; display: block;">Captcha</label>
+              <div id="captchaContainer">
+                <div id="captcha"></div>
+                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()">
+                  autorenew
+                  </span>
+                <input type="text" name="captcha" required placeholder="Enter Captcha">
+              </div>
+              <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
+            </div>
     <div class="signin-opt">
-      <h2
-        style="padding-top: 0.625rem;
-padding-bottom: 0.625rem; 
-padding-left: 1.25rem;
-padding-right: 1.25rem; 
-margin-right: 0.5rem; 
-border-radius: 0.5rem; 
-font-size: 0.875rem;
-line-height: 1.25rem; 
-font-weight: 500; 
-text-align: center; 
-background-image: background-image: linear-gradient(to right, var(--tw-gradient-stops)); 
-background-color: #F472B6; 
-background-color: #EC4899; 
-background-color: #DB2777; 
-color:white;
-"
-      >
-        Sign In using
-      </h2>
+      <h2>Sign In using</h2>
       <div class="signin-opt-icons">
         <!-- signin using google -->
         <a href="/auth/google" class="google-button tooltip">
@@ -221,54 +132,36 @@ color:white;
       </div>
     </div>
     <div class="formBtns">
+
       <button
-        id="submit"
+      id="submit"
         type="submit"
         class="btn sign-in-btn btn-login-submit"
         href="index.html"
         aria-label="submit"
         disabled
-      >
-        <span>Submit</span>
-        <div class="flow"></div>
-      </button>
-    </div>
-    <div class="get-api-text">
-      <p
-        style="padding-top: 0.625rem;
-padding-bottom: 0.625rem; 
-padding-left: 1.25rem;
-padding-right: 1.25rem; 
-margin-right: 0.5rem; 
-border-radius: 0.5rem; 
-font-size: 0.875rem;
-line-height: 1.25rem; 
-font-weight: 500; 
-text-align: center; 
-background-image: background-image: linear-gradient(to right, var(--tw-gradient-stops)); 
-background-color: #F472B6; 
-background-color: #EC4899; 
-background-color: #DB2777; 
-color:white;
-"
-      >
-        No account? <a href="/signup">Signup</a>
-      </p>
-    </div>
-  </form>
-  <div id="successToast" class="toast success-toast"></div>
-  <div id="errorToast" class="toast error-toast"></div>
-</section>
-<%- include('includes/footer.ejs') %>
-<script>
-  function myFunction() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-      document.getElementById("eye").innerText = "visibility";
-    } else {
-      x.type = "password";
-      document.getElementById("eye").innerText = "visibility_off";
-    }
-  }
-</script>
+      ><span>Submit</span>
+                <div class="flow"></div>
+              </button>
+            </div>
+            <div class="get-api-text">
+              <p>No account? <a href="/signup">Signup</a></p>
+            </div>
+          </form>
+          <div id="successToast" class="toast success-toast"></div>
+          <div id="errorToast" class="toast error-toast"></div>
+        </section>
+        <%- include('includes/footer.ejs') %>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("password");
+              if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("eye").innerText = "visibility"
+              } else {
+                x.type = "password";
+                document.getElementById("eye").innerText = "visibility_off"
+              }
+            }
+
+          </script>
