@@ -15,20 +15,19 @@ const {
 const app = express();
 const corsOptions = {
   origin: (origin, callback) => {
-    
     // Add allowed origins here in this array
     const allowedOrigins = [];
 
     if (allowedOrigins.includes(origin) || !origin) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error("Not allowed by CORS"));
     }
   },
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 204,
 };
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
 app.use(
   session({
     resave: false,
