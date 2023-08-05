@@ -6,12 +6,29 @@ const passport = require("passport");
 const session = require("express-session");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const port = process.env.PORT || 5000;
+const cors = require("cors");
 const viewRoutes = require("./routes/viewRoutes");
 const {
   googleAuthRegister,
   googleAuthLogin,
 } = require("./controllers/googleAuthContoller.js");
 const app = express();
+const corsOptions = {
+  origin: (origin, callback) => {
+    
+    // Add allowed origins here in this array
+    const allowedOrigins = [];
+
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204,
+};
+app.use(cors(corsOptions))
 app.use(
   session({
     resave: false,
