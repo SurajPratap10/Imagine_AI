@@ -11264,6 +11264,9 @@ button:disabled {
     min-width: 50%;
     width: 90%;
     max-width: none;
+  }
+
+  #newsletter form {
     flex-direction: column;
     gap: 0.5rem;
   }
