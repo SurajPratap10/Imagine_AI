@@ -1283,6 +1283,62 @@ form .responsive-cell-block input {
 }
 
 /* Responsive css */
+@media screen and (max-width: 1400px) {
+  /* Contact-US page */
+  .Contact-Us {
+    display: grid;
+    padding: 50px 0px;
+  }
+
+  .contact-top {
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-top h1 {
+    padding-top: 50px;
+  }
+
+  .contact-middle {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 50px;
+    width: 50vw;
+    overflow: hidden;
+  }
+  
+  .contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding-top: 50px;
+  }
+
+  .context {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    position: 50px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(209, 190, 190, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
+}
+/* Responsive css */
 @media screen and (max-width: 900px) {
   /* Contact-US page */
   .Contact-Us {
@@ -6992,7 +7048,61 @@ form .responsive-cell-block input {
   border-radius: 16px;
   box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 1400px) {
+  /* Contact-US page */
+  .Contact-Us {
+    display: grid;
+    padding: 50px 0px;
+  }
 
+  .contact-top {
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-top h1 {
+    padding-top: 50px;
+  }
+
+  .contact-middle {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 50px;
+    width: 50vw;
+    overflow: hidden;
+  }
+  
+  .contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding-top: 50px;
+  }
+
+  .context {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    position: 50px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(209, 190, 190, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
+}
 /* Responsive css */
 @media screen and (max-width: 900px) {
   /* Contact-US page */
