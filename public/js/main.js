@@ -1,6 +1,6 @@
 var loader = document.getElementById("PRE");
 window.addEventListener("load", function () {
-  loader.style.display = "none";
+  // loader.style.display = "none";
 });
 
 function onSubmit(e) {

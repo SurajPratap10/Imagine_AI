@@ -4,12 +4,11 @@
             </head>
             <%- include('includes/navbar.ejs') %>
                 <section class="privacypolicy">
-                    <div class="about">
+                    <div class="about header">
                         <h1>Privacy Policy</h1>
                     </div>
                     <section>
-                        <b>Last updated May 25, 2023</b>
-
+                        <b class="header">Last updated May 25, 2023</b>
                         <div class="about">
                             <div>
                                 <p>This privacy notice for <b>Imagine AI</b>(' Company ', 'we', 'us', or 'our' ),
@@ -418,6 +417,9 @@
                     <%- include('includes/topToBottomScrollButton.ejs') %>
 
                         <style>
+                            .header{
+                                padding-top: 1rem;
+                            }
                             .left-it {
                                 text-align: left;
                                 padding-left: -10rem;
