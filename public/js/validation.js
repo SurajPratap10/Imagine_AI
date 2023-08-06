@@ -97,7 +97,7 @@ window.addEventListener("load", () => {
             <!--==================== Social Share ====================-->
             <div class="share__box">
               <header>
-                <h2>Thank you for vaulable feedback</h2>
+                <h2>Thank you for valuable feedback</h2>
               </header>
               <div class="content" >
                 <p>Follow us on socials</p>
