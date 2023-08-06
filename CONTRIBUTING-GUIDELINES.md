@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-Thank you for considering contributing to the Imagine AI repository! Before making any changes, we kindly request that you discuss your proposed changes with the repository owners. 
+Thank you for considering contributing to the Imagine AI repository! Before making any changes, we kindly request that you discuss your proposed changes with the repository owners.
 
 This can be done through an issue, email, or any other method of communication. It helps us align your contributions with the project's goals.
 
@@ -53,36 +53,42 @@ Begin by clicking the "Fork" button in the top right corner to create a copy of 
 
 **2. Clone your forked copy of the project:**
 Use the following command to clone the repository onto your local machine:
+
 ```
 git clone https://github.com/<your_github_username>/Imagine_AI
 ```
 
 **3. Navigate to the project directory:**
 Move into the `imagine_ai` directory:
+
 ```
 cd imagine_ai
 ```
 
 **4. Add a reference (remote) to the original repository:**
 This allows you to keep your fork in sync with the main repository:
+
 ```
 git remote add upstream https://github.com/SurajPratap10/Imagine_AI
 ```
 
 **5. Check the remotes for this repository:**
 Confirm the remotes are set correctly with the following command:
+
 ```
 git remote -v
 ```
 
 **6. Keep your master branch up-to-date:**
 Before you start working, take a pull from the upstream repository to ensure your master branch is in sync:
+
 ```
 git pull upstream main
 ```
 
 **7. Create a new branch:**
 Create a new branch to work on your changes:
+
 ```
 git checkout -b <your_branch_name>
 ```
@@ -92,18 +98,21 @@ Now you can make your changes and updates.
 
 **9. Track your changes:**
 Once you have made your desired changes, track them using:
+
 ```
 git add .
 ```
 
 **10. Commit your changes:**
 Commit your changes with a meaningful message:
+
 ```
 git commit -m "Your message"
 ```
 
 **11. Push the committed changes to your remote repository:**
 Push the changes to the branch you created on your fork:
+
 ```
 git push -u origin <your_branch_name>
 ```
@@ -125,5 +134,6 @@ Now, please patiently wait while your pull request is being reviewed.
 
 <br>
 
-## Thank you for contributing to Imagine AI! 
+## Thank you for contributing to Imagine AI!
+
 - We genuinely appreciate all your contributions, whether big or small, Our contributors play a significant role in sustaining and expanding this amazing project.
