@@ -11252,7 +11252,6 @@ button:disabled {
 @media (max-width: 768px) {
   #newsletter {
     height: fit-content;
-    padding: 10px 0;
     flex-direction: column;
   }
 
@@ -11269,6 +11268,11 @@ button:disabled {
     min-width: 50%;
     width: 90%;
     max-width: none;
+  }
+
+  #newsletter form {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   #newsletter .news-form input {
@@ -11949,4 +11953,27 @@ section .container2 {
 .upper img {
   width: 100px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #newsletter {
+    padding: 2.5rem 3rem !important;
+  }
+  
+  #newsletter .news-text h4 {
+    font-size: 2.2rem !important
+  }
+  
+  #newsletter .news-form input {
+    border-radius: unset !important;
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+  }
+  
+  #newsletter .news-form button {
+    border-radius: unset !important;
+    width: 15rem !important;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+  }
 }
