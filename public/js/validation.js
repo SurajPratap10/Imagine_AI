@@ -67,22 +67,7 @@ window.addEventListener("load", () => {
       // alert('all ok');
 
 
-
-
-      //  document.addEventListener('DOMContentLoaded', function () {
-
-
-      //  var phoneLink = document.getElementById('phone-link1');
-
-      // phoneLink.addEventListener('click', function (event) {
-      // event.preventDefault();
-
-      // var phoneNumber = phoneLink.getAttribute('value');
       showMessage('Your vaulable feedback is successfully submited.');
-
-
-
-
 
 
       function showMessage(message) {
@@ -142,7 +127,7 @@ window.addEventListener("load", () => {
         document.body.appendChild(messageBox);
         setTimeout(function () {
           document.body.removeChild(messageBox);
-        }, 90000);
+        }, 5000);
       }
 
 
