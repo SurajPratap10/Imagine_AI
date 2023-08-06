@@ -10387,6 +10387,10 @@ form .responsive-cell-block input {
   font-size: medium;
 }
 
+#email_input {
+  background: unset !important;
+}
+
 /* Responsive css */
 @media screen and (max-width: 900px) {
   /* Contact-US page */
