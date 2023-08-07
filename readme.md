@@ -43,6 +43,7 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 [![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
 [![EJS](https://img.shields.io/badge/EJS-A91E50?style=for-the-badge&logo=javascript&logoColor=white)](https://ejs.co)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![OpenAI API](https://img.shields.io/badge/OpenAI%20API-75A99C?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/introduction)
 [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)](https://learning.postman.com/docs/introduction/overview/)
