@@ -2845,10 +2845,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
@@ -5698,10 +5694,6 @@ section .container2 {
 ::placeholder {
   color: aqua;
   font-size: 17px;
-}
-
-#email::placeholder {
-  color: aqua;
 }
 
 .upper img {
@@ -9088,10 +9080,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
@@ -11946,10 +11934,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
@@ -11976,4 +11960,18 @@ section .container2 {
     border-top-right-radius: 0.5rem !important;
     border-bottom-right-radius: 0.5rem !important;
   }
+}
+
+#image-form input {
+  background: #0006;
+  color: white !important;
+}
+
+.showcase form input, form select:hover {
+  border: unset;
+  outline: 2px solid #fffb;
+}
+
+.signin-opt h2, .signup-opt h2 {
+  color: white;
 }
