@@ -22,7 +22,7 @@ jobs:
             const { issue } = context.payload;
             const author = issue.user.login;
             const issueNumber = issue.number;
-            const comment = `Hello @${author}! \n Thank you for raising this issue. \nPlease make sure to follow our [Contributing Guidelines.](https://github.com/anmode/grabtern-frontend/blob/develop/CONTRIBUTING.md) \nDon't forget to ⭐ our [Grabtern-Frontend.](https://github.com/anmode/grabtern-frontend)\n\nOur review team will carefully assess the issue and reach out to you soon!\n We appreciate your patience!`;
+            const comment = `Hello @${author}! \n Thank you for raising this issue. \nPlease make sure to follow our [Contributing Guidelines.](https://github.com/SurajPratap10/Imagine_AI/blob/main/CONTRIBUTING-GUIDELINES.md) \nDon't forget to ⭐ our [Imagine AI.](https://github.com/SurajPratap10/Imagine_AI) \n\nOur review team will carefully assess the issue and reach out to you soon!\n We appreciate your patience!`;
             const { owner, repo } = context.repo;
 
             await github.issues.createComment({
@@ -31,5 +31,3 @@ jobs:
               issue_number: issueNumber,
               body: comment
             });
-
-            console.log(`Comment added to the Issue #${issueNumber}.`);
