@@ -22,12 +22,12 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 
 <br>The IMAGINE - AI offers a solution to this problem by providing users with a powerful AI tool that can generate original and visually stunning images. With just a few prompts or keywords, the AI is able to generate a wide range of images that are unlike anything that has been seen before.
 
-<p align="center">
-  <kbd>
-  <img src="cover.webp" alt="website preview" width="500" />
-  </kbd>
-</p>
 
+ 
+  ![Screenshot 2023-08-07 200156](https://github.com/SurajPratap10/Imagine_AI/assets/92919173/760f582b-4de5-44ea-a82c-096fc16dce52)
+
+
+ 
 # Links:
 
 <h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
