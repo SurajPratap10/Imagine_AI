@@ -61,17 +61,15 @@ window.addEventListener("load", () => {
       // Uncomment below line after implementaion of form submit handling
       // contactform.submit()
 
-            // correctkk();
+      // correctkk();
       toastr["success"]("Your Response Submitted.", "Thank you");
 
       // alert('all ok');
 
-
-      showMessage('Your vaulable feedback is successfully submited.');
-
+      showMessage("Your vaulable feedback is successfully submited.");
 
       function showMessage(message) {
-        var messageBox = document.createElement('div');
+        var messageBox = document.createElement("div");
         //  messageBox.textContent = message;
 
         messageBox.innerHTML = `
@@ -123,15 +121,12 @@ window.addEventListener("load", () => {
           </section>
 
         </section>`;
-        messageBox.classList.add('clipboard-message');
+        messageBox.classList.add("clipboard-message");
         document.body.appendChild(messageBox);
         setTimeout(function () {
           document.body.removeChild(messageBox);
         }, 5000);
       }
-
-
-      
     }
   });
 });
