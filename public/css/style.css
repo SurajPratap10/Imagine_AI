@@ -11962,8 +11962,12 @@ section .container2 {
   }
 }
 
+input::placeholder {
+  color: white;
+}
+
 #image-form input {
-  background: #0006;
+  background: #0006 !important;
   color: white !important;
 }
 
@@ -11974,4 +11978,16 @@ section .container2 {
 
 .signin-opt h2, .signup-opt h2 {
   color: white;
+}
+
+form select {
+  background: #0005 !important;
+  color: white !important;
+  border: unset;
+  outline: 2px solid #fffb
+}
+
+.get-api-text a {
+  color: white;
+  border-bottom: 1px solid #0002;
 }
