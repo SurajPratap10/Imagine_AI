@@ -14,6 +14,10 @@ router.get("/contactUs", (_req, res, _next) => {
   res.render("contactUs", { path: "/contactUs" });
 });
 
+router.get("/team", (_req, res, _next) => {
+  res.render("team", { path: "/team" });
+});
+
 router.get("/aboutUs", (_req, res, _next) => {
   res.render("aboutUs", { path: "/aboutUs" });
 });
