@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/github/repo-size/SurajPratap10/Imagine_AI?style=for-the-badge" />
   <img src="https://img.shields.io/github/issues/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-closed-raw/SurajPratap10/Imagine_AI?style=for-the-badge" />
-  <img src="https://img.shields.io/github/last-commit/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-pr/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-pr-closed-raw/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/forks/SurajPratap10/Imagine_AI?style=for-the-badge" />
@@ -31,19 +31,25 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 <p align="right"><a href="#top">Back to Top</a></p>
   
 # Technology Stack used:
-1. **[`Node JS`](https://nodejs.org/en/docs/guides)**
-2. **[`Express JS`](https://expressjs.com/en/guide/routing.html)**
-3. **[`Javascript`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)**
-4. **[`EJS`](https://ejs.co)**
-5. **[`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML)**
-6. **[`CSS`](https://developer.mozilla.org/en-US/docs/Web/CSS)**
-7. **[`OpenAI API`](https://platform.openai.com/docs/introduction)**
-8. **[`Postman`](https://learning.postman.com/docs/introduction/overview/)**
-9. **[`Git & GitHub`](https://docs.github.com/en/get-started/using-git/about-git)**
+
+<div align=center>
+
+[![Node Js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en/docs/guides)
+[![Express JS](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/en/guide/routing.html)
+[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+[![EJS](https://img.shields.io/badge/EJS-A91E50?style=for-the-badge&logo=javascript&logoColor=white)](https://ejs.co)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![OpenAI API](https://img.shields.io/badge/OpenAI%20API-75A99C?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/introduction)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)](https://learning.postman.com/docs/introduction/overview/)
+[![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://docs.github.com/en/get-started/using-git/about-git)
+
+</div>
 
 # Licenses
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
 
