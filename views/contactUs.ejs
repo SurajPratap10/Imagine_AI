@@ -41,6 +41,33 @@
       .inputText::placeholder{
         color: #fff;
       }
+
+      .form-box {
+        width: 100%;
+      }
+
+      .input-title {
+        font-weight: 600 !important;
+        letter-spacing: .1rem !important;
+        word-spacing: .25rem !important;
+      }
+
+      input {
+        box-shadow: 16px 14px 20px #0003 !important;
+        background: #0008 !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+      }
+
+      @media (min-width: 800px) {
+        .input-title {
+          font-size: 1.1rem !important;
+        }
+      }
+
+      .input::placeholder {
+        color: #fffd !important;
+      }
     </style>
     </head>
     <%- include('includes/navbar.ejs') %>
@@ -98,15 +125,15 @@
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2"
                 style="display: flex;">
                 <form class="form-box" id="contactform" method="post">
-                  <div class="container-block form-wrapper" style="padding-bottom:40px;">
-                    <div class="responsive-container-block">
-                      <div class="wrapping">
+                  <div class="container-block form-wrapper" style="padding-bottom:40px; width: 100%;">
+                    <div class="responsive-container-block" style="display: grid; gap: 1.25rem;">
+                      <div class="wrapping" style="flex-direction: column; gap: 1.25rem;">
                         <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 " id="i10mt-6">
-                          <p class="text-blk input-title">
-                            FIRST NAME
+                          <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                            First Name
                           </p>
 
-                          <input style="width: 95%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
+                          <input style="width: 100%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
 
                             type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
                           <p class="hidden contactError" id="FirstNameError">
@@ -114,8 +141,8 @@
                           </p>
                         </div>
                         <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                          <p class="text-blk input-title">
-                            LAST NAME
+                          <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                            Last Name
                           </p>
 
                           <input class="input inputText" id="indfi-4" name="LastName" placeholder="Doe" type="text"
@@ -127,8 +154,8 @@
                         </div>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">
-                          EMAIL
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Email
                         </p>
 
                         <input class="input inputText" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
@@ -139,8 +166,8 @@
                         </p>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">
-                          PHONE NUMBER
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Phone Number
                         </p>
                         <input class="input inputText" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
                           onkeyup="handleChange(event)" required>
@@ -149,7 +176,7 @@
                         </p>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
-                        <p class="text-blk input-title" style="padding-bottom: 10px;">
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                           Give your Valuable Feedback
                         </p>
                         <input class="textinput feedback inputText" id="i5vyy-6" type="text"
