@@ -11,6 +11,7 @@
     font-size: 26px;
     font-weight: bold;
     margin-top: 20px;
+    border: 3px solid gray;
   }
 
   .team-members {
@@ -22,6 +23,7 @@
 
   .team-member {
     text-align: center;
+ 
   }
 
   .team-member img {
@@ -31,16 +33,38 @@
     object-fit: cover;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
+    border: 2px solid black;
   }
 
   .team-member p {
     font-size: 16px;
     font-weight: bold;
     color: #333;
+    position: relative;
+   
+  }
+  .team-member p:nth-child(1){
+    z-index: 999;
+  }
+  .team-member p:nth-child(2){
+    border: 2px solid #333;
+    background-color: #ffffff4a;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .team-member p:nth-child(3){
+    margin-left: 55px;
+  }
+  .team-member p:nth-child(3):after{
+    content: "Commit";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    color: #333;
   }
 
   .team-member img:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
 
   main {
@@ -90,7 +114,7 @@
         contributorName.textContent = contributor.login;
 
         const contributorRole = document.createElement("p");
-        contributorRole.textContent = contributor.login === "SurajPratap10" ? "Project Admin" : "Contributor";
+        contributorRole.textContent = contributor.contributions ;
 
         contributorLink.appendChild(contributorImage);
         contributorDiv.appendChild(contributorLink);
