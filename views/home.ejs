@@ -231,7 +231,7 @@
 
     function downloadImage(imgId){
    const image = $(`#${imgId}`).attr("src");
-   const url = "https://imagine-ai-17zf.vercel.app/"+image;
+   const url = window.location.href+image;
    const fileName = image.substring(image.lastIndexOf("/")+1);
 
    fetch(url)
