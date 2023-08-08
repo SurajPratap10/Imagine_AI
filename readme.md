@@ -1,9 +1,12 @@
-<h1 align="center" >Imagine_AI</h1>
-<div id="top">
 <div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  
+<picture>
+    <source media="(prefers-color-scheme: light)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
+    <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
+    <img alt="Imagine AI" width=350 src="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
+</picture>
+
+<div id="top">
   <br>
   <img src="https://img.shields.io/github/repo-size/SurajPratap10/Imagine_AI?style=for-the-badge" />
   <img src="https://img.shields.io/github/issues/SurajPratap10/Imagine_AI?style=for-the-badge" />
