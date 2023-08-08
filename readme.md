@@ -17,7 +17,9 @@
     <img src="https://img.shields.io/github/forks/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/stars/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/contributors-anon/SurajPratap10/Imagine_AI?style=for-the-badge" />
-  </div>
+</div>
+</div>
+
 <br>
 
 <h3>"Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images."</h3>
