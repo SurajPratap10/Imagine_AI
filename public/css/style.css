@@ -12101,3 +12101,7 @@ form select {
   color: white;
   border-bottom: 1px solid #0002;
 }
+
+.home-logo {
+  max-width: 40rem;
+}
