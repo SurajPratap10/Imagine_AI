@@ -26,6 +26,7 @@
 - [Thanks to all Contributors 💪](#Thanks-to-all-Contributors-💪)
 
 # About Our Project
+
 Unleash the boundless potential of DALL-E 2 with IMAGINE - AI, a groundbreaking creation harnessed through the prowess of OpenAI's DALL-E 2 API library. Designed for supreme responsiveness across all devices, IMAGINE - AI stands as an ingenious solution to surmount the confines of conventional creativity and imagination. Developed using Node.js and Express, this innovative image generator harnesses the remarkable capabilities of DALL-E models to fashion an extraordinary realm of visuals.
 
 IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitations of artistic creativity. By placing at your fingertips an exceptionally potent AI tool, we offer a transformative means to forge never-before-seen images that captivate the senses and push the boundaries of visual expression. Through the simple guidance of prompts or keywords, IMAGINE - AI conjures a breathtaking array of images, each an exquisite masterpiece distinct from any preceding creation.
@@ -37,9 +38,6 @@ IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitati
 <b>ABOUT US PAGE:<b>
 ![image](https://github.com/Enhancer18/Imagine_AI/assets/102911149/fb48b85f-654f-494b-946d-d02f647017ad)
 
-
-
-  
 # Technology Stack Used:
 
 <div align=center>
@@ -56,8 +54,6 @@ IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitati
 [![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://docs.github.com/en/get-started/using-git/about-git)
 
 </div>
-
-
 
 # How to **use**?
 
@@ -165,12 +161,10 @@ git push -u origin <your_branch_name>
 
 <hr>
 
-
 # Links:
 
 <h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
 <h4> Live Site: https://imagine-ai-30mq.onrender.com/ </h4>
-
 
 <h1 align=center> Project Maintainer & Admin </h1>
 <p align="center"> <a href="https://github.com/SurajPratap10"><img src="https://avatars.githubusercontent.com/u/92919173?v=4" width=100px height=100px /></a><br>
@@ -181,17 +175,17 @@ git push -u origin <your_branch_name>
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
 
-  ## 🌐 Socials:
+## 🌐 Socials:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/suraj-pratap-948a92225/)
 [![Hashnode](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](surajpratap20002003@gmail.com)
 [![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@SurajPratap10)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
 
+# Open Source Events
 
- # Open Source Events
-  - GSSoC'23
-  
+- GSSoC'23
+
 <p align="center"> 
 <img src= https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c />
 </p>
