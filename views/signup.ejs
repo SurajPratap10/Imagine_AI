@@ -6,6 +6,10 @@
 
         <head>
           <style>
+            #captchaicon{
+            cursor: pointer;
+          }
+
             .google-icon {
               vertical-align: middle;
               fill: teal;
@@ -68,51 +72,51 @@
         </head>
       </head>
       <%- include('includes/navbar.ejs') %>
-        <section class="showcase" id="showcase">
-          <form id="image-form" action="index.html">
+        <section class="showcase" id="showcase" style="margin-bottom: 90px;">
+          <form id="image-form" action="index.html" aria-label="Signup Form">
             <h1 class="AI">SIGN UP</h1>
             <div class="form-control">
               <label for="name" style="color: white; margin-left: 20px; margin-bottom: 60px;">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter Name" onkeyup="handleChange(event)" />
-              <p class="error hidden" id="nameError">Name should be atleast 5 characters long</p>
+              <input type="text" id="name" name="name" placeholder="Enter Name" onkeyup="handleChange(event)" aria-describedby="nameError"/>
+              <p class="error hidden" id="nameError" role="alert">Name should be atleast 5 characters long</p>
             </div>
             <div class="form-control">
               <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
               <input type="email" id="email" email="email" name="email" placeholder="Enter Email address"
-                onkeyup="handleChange(event)" />
-              <p class="error hidden" id="emailError">Enter Valid Email</p>
+                onkeyup="handleChange(event)" aria-describedby="emailError"/>
+              <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
             </div>
             <div class="form-control">
               <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
               <div class="icon-boundry">
                 <input type="password" id="password" name="password" placeholder="Enter password"
-                onkeyup="handleChange(event)" />
+                onkeyup="handleChange(event)" aria-describedby="passwordError" required/>
                 <span class="material-symbols-outlined" id="eye" onclick="showPassword()">
                   visibility_off
                 </span>
               </div>
           
-              <p class="error hidden" id="passwordError">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
+              <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
                 (@$%#^&*), 1 number (0-9)</p>
             </div>
             <div class="form-control">
               <label for="confirmPassword" style="color: white; margin-left: 20px; margin-bottom: 40px;">Confirm Password</label>
               <div class="icon-boundry">
               <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Confirm password"
-                onkeyup="handleChange(event)" />
+                onkeyup="handleChange(event)" required/>
                 <span class="material-symbols-outlined" id="confirmPasswordEye" onclick="showConfirmPassword()">
                   visibility_off
                 </span>
               </div>
             </div>
             <div class="form-control">
-              <label for="captcha" style="color: white; display: block;">Captcha</label>
+              <label for="captcha-input" style="color: white; display: block;">Captcha</label>
               <div id="captchaContainer">
                 <div id="captcha"></div>
-                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()">
+                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
                   autorenew
                   </span>
-                <input type="text" name="captcha" required placeholder="Enter Captcha">
+                <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
               </div>
               <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
             </div>
@@ -120,14 +124,14 @@
               <h2>Sign Up using</h2>
               <div class="signup-opt-icons">
                 <!-- signup using google -->
-                <a href="/auth/google" class="google-button"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                <a href="/auth/google" class="google-button" aria-label="sign up with google"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
                     viewBox="0 0 488 512" class="google-icon">
                     <path
                       d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
                   </svg></a>
 
                 <!-- signup using facebook -->
-                <a href="#">
+                <a href="#" aria-label="sign up with facebook">
                   <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="facebook-icon">
                     <path
@@ -137,7 +141,7 @@
 
                 <!-- signup using twitter -->
 
-                <a href="#">
+                <a href="#" aria-label="sign up with twitter">
                   <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="twitter-icon">
                     <path
@@ -153,11 +157,11 @@
               </button>
             </div>
             <div class="get-api-text">
-              <p>Already have an account? <a href="/login">Signin</a></p>
+              <p>Already have an account? <a href="/login" aria-label="go to signin page">Signin</a></p>
             </div>
           </form>
-          <div id="successToast" class="toast success-toast"></div>
-          <div id="errorToast" class="toast error-toast"></div>
+          <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+          <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
         </section>
         <%- include('includes/footer.ejs') %>
           <%- include('includes/topToBottomScrollButton.ejs') %>

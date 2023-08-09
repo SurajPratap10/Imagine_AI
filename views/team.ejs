@@ -8,9 +8,9 @@
   }
 
   .team-top h3 {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 36px;
     margin-top: 20px;
+    border: 2.5px solid gray;
   }
 
   .team-members {
@@ -22,6 +22,7 @@
 
   .team-member {
     text-align: center;
+ 
   }
 
   .team-member img {
@@ -31,17 +32,37 @@
     object-fit: cover;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
+    border: 4px solid #fff;
   }
 
   .team-member p {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
-    color: #333;
+    color: rgb(241, 228, 228);
   }
 
   .team-member img:hover {
-    transform: scale(1.2);
+    transform: scale(1.121);
+    border: 0px;
+    position: relative;
+   
   }
+  .team-member p:nth-child(1){
+    z-index: 999;
+  }
+  .team-member p:nth-child(2){
+    border: 2px solid #333;
+    background-color: #ffffff4a;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .team-member p:nth-child(3):after{
+    position: absolute;
+    top: 0;
+    left: -10px;
+    color: #333;
+  }
+  
 
   main {
     padding-top: 80px;
@@ -52,7 +73,7 @@
 <main>
   <section class="Team">
     <div class="team-top" id="slide">
-      <h3>Meet our awesome contributors 💙</h3>
+      <h3 class="heading-contributors">Meet our awesome contributors 💙</h3>
       <div class="team-members">
         <!-- Team members' data will be dynamically populated here -->
       </div>
@@ -90,7 +111,7 @@
         contributorName.textContent = contributor.login;
 
         const contributorRole = document.createElement("p");
-        contributorRole.textContent = contributor.login === "SurajPratap10" ? "Project Admin" : "Contributor";
+        contributorRole.textContent = "Commits: " + contributor.contributions ;
 
         contributorLink.appendChild(contributorImage);
         contributorDiv.appendChild(contributorLink);
