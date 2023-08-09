@@ -1,0 +1,105 @@
+<%- include('includes/header.ejs') %>
+<%- include('includes/sidebar.ejs') %>
+<link rel="stylesheet" href="../public/css/style.css">
+<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+<style>
+  .team-top {
+    text-align: center;
+  }
+
+  .team-top h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .team-member {
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .team-member p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .team-member img:hover {
+    transform: scale(1.2);
+  }
+
+  main {
+    padding-top: 80px;
+  }
+</style>
+</head>
+<%- include('includes/navbar.ejs') %>
+<main>
+  <section class="Team">
+    <div class="team-top" id="slide">
+      <h3>Meet our awesome contributors 💙</h3>
+      <div class="team-members">
+        <!-- Team members' data will be dynamically populated here -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('includes/footer.ejs') %>
+<style>
+  /* Same overriding footer style as in contactUs.ejs */
+</style>
+
+<script>
+  const ownerName = "SurajPratap10";
+  const repoName = "Imagine_AI";
+  const apiURL = `https://api.github.com/repos/${ownerName}/${repoName}/contributors`;
+
+  fetch(apiURL)
+    .then((response) => response.json())
+    .then((contributors) => {
+      const teamMembersDiv = document.querySelector(".team-members");
+      contributors.forEach((contributor) => {
+        const contributorDiv = document.createElement("div");
+        contributorDiv.classList.add("team-member");
+
+        const contributorLink = document.createElement("a");
+        contributorLink.href = contributor.html_url;
+        contributorLink.target = "_blank";
+
+        const contributorImage = document.createElement("img");
+        contributorImage.src = contributor.avatar_url;
+        contributorImage.alt = contributor.login;
+
+        const contributorName = document.createElement("p");
+        contributorName.textContent = contributor.login;
+
+        const contributorRole = document.createElement("p");
+        contributorRole.textContent = contributor.login === "SurajPratap10" ? "Project Admin" : "Contributor";
+
+        contributorLink.appendChild(contributorImage);
+        contributorDiv.appendChild(contributorLink);
+        contributorDiv.appendChild(contributorName);
+        contributorDiv.appendChild(contributorRole);
+        teamMembersDiv.appendChild(contributorDiv);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching contributors:", error);
+    });
+</script>

@@ -1,5 +1,4 @@
-<body>
-  <header>
+ <header>
     <div class="navbar">
       <div class="nav-container">
         <!-- Dark mode toggle button -->
@@ -11,43 +10,52 @@
           <i class="fa-sharp fa-solid fa-sun"></i>
         </div>
         <div class="logo-image">
-         <a href="/"><img
-            src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
-            class="home-logo"
-            alt="" loading="lazy"
-          />
-        </a> 
+          <a href="/"
+            ><img
+              src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
+              class="home-logo"
+              alt="home-logo"
+              loading="lazy"
+            />
+          </a>
         </div>
-        <div class="nav-links hide-sm" id="mainNav">
-          <div class="left-nav-links">
+        <div class="nav-links hide-sm nav-style" id="mainNav">
+          <div class="left-nav-links navs">
             <div class="logo">
               <a
-                class="AI undln white-color hover-effect <%= path === '/' ? 'active' : '' %>"
+                class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>"
                 href="/"
                 >HOME</a
               >
             </div>
-            <div>
+            <div class="imagh">
               <a
-                class="AI  undln white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+                class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
                 href="/generateImg"
                 >IMAGINE - AI</a
               >
             </div>
-            <div>
+            <div class="abth">
               <a
-                class="AI  undln white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                class="AI white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
+                class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
                 href="/aboutUs"
                 >ABOUT - US</a
               >
             </div>
-            <div>
+            <div class="conh">
               <a
-                class="AI undln white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
                 href="/contactUs"
                 >CONTACT - US</a
               >
             </div>
+            <!-- Rest of the nav links -->
+          <div class="team">
+            <a class="AI white-color hover-effect <%= path === '/team' ? 'active' : '' %>" href="/team">COMMUNITY</a>
+          </div>
+<!-- Rest of the right-nav-links -->
+
           </div>
           <div class="right-nav-links">
             <!-- Dark mode toggle button -->
@@ -60,7 +68,7 @@
             </div>
             <div>
               <a
-                class="undln AI white-color hover-effect"
+                class="AI white-color hover-effect"
                 href="https://openai.com/dall-e-2/"
                 target="_blank"
                 >DALL.E 2 - OpenAI API</a
@@ -81,19 +89,30 @@
   </header>
 
   <style>
-    .nav-container {
-      position: relative;
+    /*adjusting nav-bar elements*/
+    .nav-style {
       display: flex;
       justify-content: space-between;
+    }
+    .navs {
+      justify-content: space-evenly;
+    }
+    /*adding hover effects to each nav elements*/
+
+    .nav-container {
+      display: flex;
+      justify-content: space-evenly;
       align-items: center;
       width: 100%;
     }
 
+    /* Light mode styles */
+    /* .light-mode {    } */
     .AI {
-        display: inline-block;
-        padding: 10px;
-        margin-left: 25px; 
-      }
+      display: inline-block;
+      padding: 10px;
+      margin-left: 25px;
+    }
     /* Light mode styles
     .light-mode {
     } */
@@ -138,6 +157,7 @@
     }
 
     #dark-mode-icon-desktop {
+      font-size: 1.1rem;
       display: block;
     }
 
@@ -178,11 +198,14 @@
 
       darkModeIconCollection.map((darkIcon) => {
         if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+          darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
         } else {
           darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
       });
     }
   </script>
+
 </body>
+
+

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/style.css">
-<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <footer>
   <div class="content">
     <div class="left box boxx">
@@ -9,7 +7,7 @@
             <span></span>
           </div>
         </div>
-        <a herf="/"><img loading="lazy" src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"  alt=""></a>
+        
         <p>Join us on our mission to empower creativity, bridging the gap between words and visuals, as we seamlessly translate text into stunning visual realities.</p>
       </div>
     </div>
@@ -197,6 +195,7 @@
             function showMessage(msg) {
               toastr.success(msg, "Success");
             }
+          })
 
         </script>
 
@@ -427,12 +426,13 @@
 footer{
 	
 	width: 100%;
-	/* position: fixed; */
+  position: relative; 
 	bottom: 0;
 	left: 0;
 }
 footer .content{
-  max-width: 1350px;
+  max-width: 100%;
+  background-color: #22052C;;
   margin: auto;
   padding: 20px;
   display: flex;
@@ -459,19 +459,19 @@ footer .content .topic{
   font-size: 22px;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom:12px;
 
 }
 footer .content .middle1 .topic{
-  padding-bottom: 22px;
+  padding-bottom: 12px;
 
 }
 footer .content .middle .topic{
-  padding-bottom: 22px;
+  padding-bottom: 12px;
 
 }
 footer .content .middle2 .topic{
-  padding-bottom: 22px;
+  padding-bottom: 12px;
 
 }
 .fot-log{
@@ -651,9 +651,6 @@ footer a:hover{
   }
 }
 @media (max-width:560px){
-  footer{
-    position: relative;
-  }
   footer .content .box{
     width: 100%;
     margin-top: 30px;
