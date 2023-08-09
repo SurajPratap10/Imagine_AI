@@ -18,10 +18,10 @@
 
 - [About Our Project](#About-Our-Project)
 - [Technology Stack Used](#Technology-Stack-Used)
-- [How to Use](## How-to-**use**?)
+- [How to Use](#How-to-**use**?)
 - [How to contribute?](#How-to-**contribute**?)
 - [Links](#Links)
-- [🌐 Socials](#🌐-Socials:)
+- [🌐 Socials](#🌐-Socials)
 - [Open Source Events](#Open-Source-Events)
 - [Thanks to all Contributors 💪](#Thanks-to-all-Contributors-💪)
 
