@@ -13,21 +13,8 @@ const {
   googleAuthLogin,
 } = require("./controllers/googleAuthContoller.js");
 const app = express();
-const corsOptions = {
-  origin: (origin, callback) => {
-    // Add allowed origins here in this array
-    const allowedOrigins = ["http://localhost:5000","https://imagine-ai-17zf.vercel.app/"];
 
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  optionsSuccessStatus: 204,
-};
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(
   session({
     resave: false,
