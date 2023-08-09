@@ -16,7 +16,7 @@ const app = express();
 const corsOptions = {
   origin: (origin, callback) => {
     // Add allowed origins here in this array
-    const allowedOrigins = ["http://localhost:5000"];
+    const allowedOrigins = ["http://localhost:5000","https://imagine-ai-17zf.vercel.app/"];
 
     if (allowedOrigins.includes(origin) || !origin) {
       callback(null, true);
