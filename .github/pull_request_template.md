@@ -1,18 +1,35 @@
+<!-- PLEASE REMOVE ALL OF THE COMMENTS BEFORE CREATING PULL REQUEST -->
+
 # Description
 
-Please include a summary of the change and which issue is fixed. List any dependencies that are required for this change.
+<!--
+  Please include a summary of the change and which issue is fixed. List any dependencies that are required for this change.
+-->
+
 
 ## Fixes #(issue_no)
 
-Replace `issue_no` with the issue number which is fixed in this PR
+<!-- 
+  Replace `issue_no` with the issue number which is fixed in this PR
+-->
 
 ## Screenshots
 
-<!-- If applicable, add screenshots or images demonstrating the changes made -->
+<!-- 
+  If applicable, add screenshots or images demonstrating the changes made 
+
+  You can drag and drop you screenshots inside the Before and After after removing the Placeholder Image.
+-->
+
+|        BEFORE        |         AFTER        |
+|:--------------------:|:--------------------:|
+| ![Image](image-link) | ![Image](image-link) |
 
 ## Checklist
 
-<!-- Mark the completed tasks with [x] -->
+<!-- 
+  Mark the completed tasks with [x]
+-->
 
 - [ ] Tests have been added or updated to cover the changes
 - [ ] Documentation has been updated to reflect the changes
