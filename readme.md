@@ -198,6 +198,7 @@ git push -u origin <your_branch_name>
 <p>
   <img src="https://api.vaunt.dev/v1/github/entities/SurajPratap10/repositories/Imagine_AI/contributors?format=svg&limit=54" width="600" height"250" />
 </p>
+
 <a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors"><img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI"></a>
 
   <p align="right"><a href="#top">Back to Top</a></p>
