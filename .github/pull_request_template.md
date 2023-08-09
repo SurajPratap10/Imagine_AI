@@ -6,28 +6,27 @@
   Please include a summary of the change and which issue is fixed. List any dependencies that are required for this change.
 -->
 
-
 ## Fixes #(issue_no)
 
-<!-- 
+<!--
   Replace `issue_no` with the issue number which is fixed in this PR
 -->
 
 ## Screenshots
 
-<!-- 
-  If applicable, add screenshots or images demonstrating the changes made 
+<!--
+  If applicable, add screenshots or images demonstrating the changes made
 
   You can drag and drop you screenshots inside the Before and After after removing the Placeholder Image.
 -->
 
-|        BEFORE        |         AFTER        |
-|:--------------------:|:--------------------:|
+|        BEFORE        |        AFTER         |
+| :------------------: | :------------------: |
 | ![Image](image-link) | ![Image](image-link) |
 
 ## Checklist
 
-<!-- 
+<!--
   Mark the completed tasks with [x]
 -->
 
