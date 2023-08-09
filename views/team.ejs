@@ -10,7 +10,7 @@
   .team-top h3 {
     font-size: 36px;
     margin-top: 20px;
-    font-weight: 900;
+    border: 3px solid gray;
   }
 
   .team-members {
@@ -22,6 +22,7 @@
 
   .team-member {
     text-align: center;
+ 
   }
 
   .team-member img {
@@ -37,12 +38,35 @@
   .team-member p {
     font-size: 13px;
     font-weight: bold;
+
     color: rgb(244, 214, 214);
   }
 
   .team-member img:hover {
     transform: scale(1.13);
     border: 0px;
+    position: relative;
+   
+  }
+  .team-member p:nth-child(1){
+    z-index: 999;
+  }
+  .team-member p:nth-child(2){
+    border: 2px solid #333;
+    background-color: #ffffff4a;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .team-member p:nth-child(3){
+    margin-left: 55px;
+  }
+  .team-member p:nth-child(3):after{
+    content: "Commits";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    color: #333;
+  }
   }
 
   main {
@@ -92,7 +116,7 @@
         contributorName.textContent = contributor.login;
 
         const contributorRole = document.createElement("p");
-        contributorRole.textContent = contributor.login === "SurajPratap10" ? "Project Admin" : "Contributor";
+        contributorRole.textContent = contributor.contributions ;
 
         contributorLink.appendChild(contributorImage);
         contributorDiv.appendChild(contributorLink);
