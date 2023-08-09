@@ -24,6 +24,19 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 
 ![Screenshot 2023-08-07 200156](https://github.com/SurajPratap10/Imagine_AI/assets/92919173/760f582b-4de5-44ea-a82c-096fc16dce52)
 
+<h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#Links">Links 📌</a></li>
+    <li><a href="#-technology-stack-used"> Technology Stack used 💻</a></li>
+    <li><a href="#Licenses">Licenses 📧</a></li>
+    <li><a href="#-Socials">🌐 Socials</a></li>
+    <li><a href="#How-to-use?">How to use❓</a></li>
+    <li><a href="#How-to-contribute?">How to contribute?</a></li>
+    <li><a href="#license">License 📰</a></li>
+    <li><a href="#Open-Source-Events">Open Source Events 💌</a></li>
+    <li><a href="#Thanks-to-all-Contributors">Thanks to all Contributors 💪</a></li>
+  </ol>
+
 # Links:
 
 <h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
@@ -53,14 +66,14 @@ The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to 
 
 Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
 
-## 🌐 Socials:
+# 🌐 Socials
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/suraj-pratap-948a92225/)
 [![Hashnode](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](surajpratap20002003@gmail.com)
 [![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@SurajPratap10)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
 
-# How to **use**?
+# How to use?
 
 Create a file named `.env`.
 
@@ -85,7 +98,7 @@ The endpoint is at `POST http://localhost:5000/openai/generateimage`.
 <hr>
   <p align="right"><a href="#top">Back to Top</a></p>
 
-# How to **contribute**?
+# How to contribute?
 
 _If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
 _If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/)._
