@@ -10,7 +10,7 @@
   .team-top h3 {
     font-size: 36px;
     margin-top: 20px;
-    border: 3px solid gray;
+    border: 2.5px solid gray;
   }
 
   .team-members {
@@ -38,12 +38,11 @@
   .team-member p {
     font-size: 13px;
     font-weight: bold;
-
-    color: rgb(244, 214, 214);
+    color: rgb(241, 228, 228);
   }
 
   .team-member img:hover {
-    transform: scale(1.13);
+    transform: scale(1.121);
     border: 0px;
     position: relative;
    
@@ -57,17 +56,13 @@
     border-radius: 20px;
     z-index: -1;
   }
-  .team-member p:nth-child(3){
-    margin-left: 55px;
-  }
   .team-member p:nth-child(3):after{
-    content: "Commits";
     position: absolute;
     top: 0;
     left: -10px;
     color: #333;
   }
-  }
+  
 
   main {
     padding-top: 80px;
@@ -116,7 +111,7 @@
         contributorName.textContent = contributor.login;
 
         const contributorRole = document.createElement("p");
-        contributorRole.textContent = contributor.contributions ;
+        contributorRole.textContent = "Commits: " + contributor.contributions ;
 
         contributorLink.appendChild(contributorImage);
         contributorDiv.appendChild(contributorLink);
