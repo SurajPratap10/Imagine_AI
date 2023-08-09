@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "prepare": "husky install"
+    "prepare": "npm i husky && husky install"
   },
   "keywords": [],
   "author": "Suraj Pratap",
