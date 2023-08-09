@@ -2,10 +2,10 @@
 <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <style>
  
-  .swiper-container {
+  /* .swiper-container {
     width: 100%;
     height: 100%;
-  }
+  } */
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -31,6 +31,11 @@
   }
   .swiper-button-prev {
     left: 10px;
+  }
+
+  .card-icon {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(5px);
   }
 </style>
 
@@ -161,14 +166,32 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper('#slider', {
-      slidesPerView: 1,
-      spaceBetween: 20,
+      effect: "coverflow",
       loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 25,
+        stretch: 25,
+			  depth: 150,
+        modifier: 1,
+        slideShadows: false,
       },
-      speed: 800, // Adjust the speed (in milliseconds) to control the transition duration
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+        },
+        // when window width is >= 680px
+        480: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 1200px
+        640: {
+          slidesPerView: 3,
+        },
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

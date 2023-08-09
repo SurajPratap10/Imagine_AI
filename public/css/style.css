@@ -864,14 +864,19 @@ img {
 }
 
 #newsletter .news-form input {
-  height: 3.125rem;
+  height: 4.125rem;
   width: 100%;
   padding: 0 1.25em;
   font-size: 16px;
-  border: 0;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   outline: none;
-  color: gray;
+  color: #111827;
+  background-color: #F9FAFB;
+  display: block;
+  align-items: center;
+  border-color: #D1D5DB;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 #newsletter .news-form button {
