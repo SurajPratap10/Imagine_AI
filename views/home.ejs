@@ -42,36 +42,49 @@
               <h1>Some examples of images generated through DALL-E2</h1>
               <div class="wrapper">
                 <div class="cardEx float-in">
-                  <img loading="lazy" src="1.webp" alt="Photograph of astronaut riding horse">
+                  <img loading="lazy" id="expImg1" src="1.webp" alt="Photograph of astronaut riding horse">
                   <div class="info">
                     <h1>Horse</h1>
                     <p>Photograph of an astronaut riding a horse.</p>
+                    <button class="btn" aria-label="Download" onclick="downloadImage('expImg1')"> Download</button>
                   </div>
                 </div>
                 <div class="cardEx float-in">
-                  <img loading="lazy" src="2.webp" alt="oil painting of capybara wearing crown">
+                  <img loading="lazy" id="expImg2" src="2.webp" alt="oil painting of capybara wearing crown">
                   <div class="info">
                     <h1>Capybara</h1>
                     <p>An oil painting of a capybara wearing a crown.</p>
+                    <button class="btn" aria-label="Download" onclick="downloadImage('expImg2')">Download</button>
                   </div>
                 </div>
                 <div class="cardEx float-in">
-                  <img loading="lazy" src="3.webp" alt="Synthwave sports car">
+                  <img loading="lazy"  id="expImg3" src="3.webp" alt="Synthwave sports car">
                   <div class="info">
                     <h1>Sports Car</h1>
                     <p>Synthwave sports car on a port road.</p>
+                    <button class="btn"  aria-label="Download" onclick="downloadImage('expImg3')"> Download </button>
                   </div>
                 </div>
                 <div class="cardEx float-in">
-                  <img loading="lazy" src="4.webp" alt="astronaut lounging in a resort">
+                  <img loading="lazy" id="expImg4" src="4.webp" alt="astronaut lounging in a resort">
                   <div class="info">
                     <h1>Astronaut</h1>
                     <p>An astronaut lounging in a resort in space, vaporwave.</p>
+                    <button class="btn" aria-label="Download" onclick="downloadImage('expImg4')"> Download</button>
                   </div>
                 </div>
               </div>
             </div>
-
+            <div style="display: flex; flex-direction: column; align-items: center; width: 100vw; height: 100vh; margin-top: 100px;">
+              <h1 style="text-align: center; color: rgb(243, 243, 243); font-size: 3rem; margin-bottom: 20px;">TUTORIAL</h1>
+              <div style="display:flex; align-items: center;   width:fit-content;height:fit-content;">
+        
+                <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/S9VfyxjttlP/embed" width="940" height="560"></iframe>
+            </div>
+                
+           
+          </div>
+            
             <section id="newsletter">
               <div class="news-text">
                 <h4 style="margin-bottom: 1rem;
@@ -157,9 +170,6 @@
                 text-align: center;
               }
 
-              /* Light mode styles */
-              .light-mode {}
-
               /* Dark mode styles */
               .dark-mode {
                 background-color: #121212;
@@ -192,6 +202,14 @@
               #email::placeholder {
                 color: #041e42;
               }
+
+              .info .btn{
+                font-size: 12px;
+    padding: 20px 20px;
+    letter-spacing: 2px;
+    width: auto;
+    border-radius: 10px
+              }
             </style>
 
             <script>
@@ -218,7 +236,33 @@
       });
     }
 
+    // Download Image logic
 
+    function downloadImage(imgId){
+   const image = $(`#${imgId}`).attr("src");
+   const url = window.location.href+image;
+   const fileName = image.substring(image.lastIndexOf("/")+1);
+
+   fetch(url)
+    .then(response => response.blob())
+    .then(blob => {
+      // Create a temporary anchor element
+      const downloadLink = document.createElement('a');
+      downloadLink.href = URL.createObjectURL(blob);
+      downloadLink.download = fileName || 'image.jpg';
+
+      // Trigger a click event on the anchor element
+      downloadLink.click();
+
+      // Clean up the temporary anchor and blob object
+      URL.revokeObjectURL(downloadLink.href);
+      downloadLink.remove();
+    })
+    .catch(error => {
+      console.error('Error downloading the image:', error);
+    });
+
+}
 
 
             </script>
