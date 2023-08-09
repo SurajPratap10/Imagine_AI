@@ -3806,6 +3806,7 @@ img {
   justify-content: center;
   width: 100%;
   max-width: 50%;
+
 }
 
 #newsletter .news-form input {
@@ -10066,9 +10067,11 @@ img {
   background-size: fill;
   height: 32vh;
   width: 100%;
-  padding: 20px 100px;
+  /* padding: 20px 100px; */
   margin: 60px 0;
-  margin-top: 120px;
+  margin-top: 40px;
+  margin-bottom: -100px;
+
 }
 
 #newsletter .news-text h4 {
