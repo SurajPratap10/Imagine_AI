@@ -1,6 +1,10 @@
-<h1 align="center" >Imagine_AI</h1>
-<div id="top">
-<div align="center">
+<div align="center" id="top">
+  
+<picture>
+    <source media="(prefers-color-scheme: light)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
+    <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
+    <img alt="Imagine AI" width=350 src="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
+</picture>
   <br>
   <img src="https://img.shields.io/github/repo-size/SurajPratap10/Imagine_AI?style=for-the-badge" />
   <img src="https://img.shields.io/github/issues/SurajPratap10/Imagine_AI?style=for-the-badge" />
@@ -11,7 +15,9 @@
     <img src="https://img.shields.io/github/forks/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/stars/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/contributors-anon/SurajPratap10/Imagine_AI?style=for-the-badge" />
-  </div>
+</div>
+</div>
+
 <br>
 
 ## TABLE OF CONTENTS
