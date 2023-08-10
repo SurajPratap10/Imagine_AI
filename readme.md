@@ -1,7 +1,7 @@
 <div align="center" id="top">
   
 <picture>
-    <source media="(prefers-color-scheme: light)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
+    <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
     <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
     <img alt="Imagine AI" width=350 src="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
 </picture>
