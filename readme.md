@@ -29,7 +29,7 @@ IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitati
 <div align=center>
 
 ![Imagine AI Preview](./public/banner.webp)
- 
+
 </div>
 
 <br>
