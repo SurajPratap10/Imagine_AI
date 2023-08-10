@@ -39,7 +39,6 @@
 
 Unleash the boundless potential of DALL-E 2 with IMAGINE - AI, a groundbreaking creation harnessed through the prowess of OpenAI's DALL-E 2 API library. Designed for supreme responsiveness across all devices, IMAGINE - AI stands as an ingenious solution to surmount the confines of conventional creativity and imagination. Developed using Node.js and Express, this innovative image generator harnesses the remarkable capabilities of DALL-E models to fashion an extraordinary realm of visuals.
 
-
 IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitations of artistic creativity. By placing at your fingertips an exceptionally potent AI tool, we offer a transformative means to forge never-before-seen images that captivate the senses and push the boundaries of visual expression. Through the simple guidance of prompts or keywords, IMAGINE - AI conjures a breathtaking array of images, each an exquisite masterpiece distinct from any preceding creation.
 
 <b>HOME PAGE:<b>
