@@ -6,6 +6,7 @@ body {
   text-align: center;
   color: #e0e0e0;
   font-family: "Fira Mono", monospace;
+  scroll-behavior: smooth;
 }
 
 h1 {

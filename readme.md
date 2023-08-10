@@ -1,64 +1,85 @@
-<h1 align="center" >Imagine_AI</h1>
-<div id="top">
-<div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+<div align="center" id="top">
+  
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
+    <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
+    <img alt="Imagine AI" width=350 src="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
+</picture>
   <br>
   <img src="https://img.shields.io/github/repo-size/SurajPratap10/Imagine_AI?style=for-the-badge" />
   <img src="https://img.shields.io/github/issues/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-closed-raw/SurajPratap10/Imagine_AI?style=for-the-badge" />
-  <img src="https://img.shields.io/github/last-commit/SurajPratap10/Imagine_AI?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-pr/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-pr-closed-raw/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/forks/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/stars/SurajPratap10/Imagine_AI?style=for-the-badge" />
     <img src="https://img.shields.io/github/contributors-anon/SurajPratap10/Imagine_AI?style=for-the-badge" />
-  </div>
+</div>
+</div>
+
 <br>
 
-<h3>"Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images."</h3>
-The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js and Express that uses OpenAI's Dall-E models to generate images.
+# About Our Project
 
-<br>The IMAGINE - AI offers a solution to this problem by providing users with a powerful AI tool that can generate original and visually stunning images. With just a few prompts or keywords, the AI is able to generate a wide range of images that are unlike anything that has been seen before.
+Unleash the boundless potential of DALL-E 2 with IMAGINE - AI, a groundbreaking creation harnessed through the prowess of OpenAI's DALL-E 2 API library. Designed for supreme responsiveness across all devices, IMAGINE - AI stands as an ingenious solution to surmount the confines of conventional creativity and imagination. Developed using Node.js and Express, this innovative image generator harnesses the remarkable capabilities of DALL-E models to fashion an extraordinary realm of visuals.
 
-<p align="center">
-  <kbd>
-  <img src="cover.webp" alt="website preview" width="500" />
-  </kbd>
-</p>
+IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitations of artistic creativity. By placing at your fingertips an exceptionally potent AI tool, we offer a transformative means to forge never-before-seen images that captivate the senses and push the boundaries of visual expression. Through the simple guidance of prompts or keywords, IMAGINE - AI conjures a breathtaking array of images, each an exquisite masterpiece distinct from any preceding creation.
+
+<div align=center>
+
+![Imagine AI Preview](./public/banner.webp)
+
+</div>
+
+<br>
 
 # Links:
 
-<h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
-<h4> Live Site: https://imagine-ai-30mq.onrender.com/ </h4>
-<p align="right"><a href="#top">Back to Top</a></p>
-  
-# Technology Stack used:
-1. **[`Node JS`](https://nodejs.org/en/docs/guides)**
-2. **[`Express JS`](https://expressjs.com/en/guide/routing.html)**
-3. **[`Javascript`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)**
-4. **[`EJS`](https://ejs.co)**
-5. **[`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML)**
-6. **[`CSS`](https://developer.mozilla.org/en-US/docs/Web/CSS)**
-7. **[`OpenAI API`](https://platform.openai.com/docs/introduction)**
-8. **[`Postman`](https://learning.postman.com/docs/introduction/overview/)**
-9. **[`Git & GitHub`](https://docs.github.com/en/get-started/using-git/about-git)**
+<h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#Links">Links 📌</a></li>
+    <li><a href="#-technology-stack-used"> Technology Stack used 💻</a></li>
+    <li><a href="#Licenses">Licenses 📧</a></li>
+    <li><a href="#-Socials">🌐 Socials</a></li>
+    <li><a href="#How-to-use?">How to use❓</a></li>
+    <li><a href="#How-to-contribute?">How to contribute?</a></li>
+    <li><a href="#license">License 📰</a></li>
+    <li><a href="#Open-Source-Events">Open Source Events 💌</a></li>
+    <li><a href="#Thanks-to-all-Contributors">Thanks to all Contributors 💪</a></li>
+  </ol>
+
+# Technology Stack Used:
+
+<div align=center>
+
+[![Node Js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en/docs/guides)
+[![Express JS](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/en/guide/routing.html)
+[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+[![EJS](https://img.shields.io/badge/EJS-A91E50?style=for-the-badge&logo=javascript&logoColor=white)](https://ejs.co)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![OpenAI API](https://img.shields.io/badge/OpenAI%20API-75A99C?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/introduction)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)](https://learning.postman.com/docs/introduction/overview/)
+[![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://docs.github.com/en/get-started/using-git/about-git)
+
+</div>
 
 # Licenses
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
 
-## 🌐 Socials:
+# 🌐 Socials
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/suraj-pratap-948a92225/)
 [![Hashnode](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](surajpratap20002003@gmail.com)
 [![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@SurajPratap10)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
 
-# How to **use**?
+# How to use?
 
 Create a file named `.env`.
 
@@ -83,7 +104,7 @@ The endpoint is at `POST http://localhost:5000/openai/generateimage`.
 <hr>
   <p align="right"><a href="#top">Back to Top</a></p>
 
-# How to **contribute**?
+# How to contribute?
 
 _If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
 _If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/)._
@@ -163,7 +184,11 @@ git push -u origin <your_branch_name>
 - **Please follow best code formatting and linting practices to assure good code quality. You should use tools such as Prettier or Eslint for the purpose.**
 
 <hr>
-<p align="right"><a href="#top">Back to Top</a></p>
+
+# Links:
+
+<h4> YouTube Demo: https://www.youtube.com/watch?v=FR3i1GmtiEA </h4>
+<h4> Live Site: https://imagine-ai-30mq.onrender.com/ </h4>
 
 <h1 align=center> Project Maintainer & Admin </h1>
 <p align="center"> <a href="https://github.com/SurajPratap10"><img src="https://avatars.githubusercontent.com/u/92919173?v=4" width=100px height=100px /></a><br>
@@ -173,21 +198,52 @@ git push -u origin <your_branch_name>
 <a href="https://www.linkedin.com/in/suraj-pratap-948a92225/" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
-  
- # Open Source Events
-  - GSSoC'23
-  
-<p align="center"> 
-<img src= https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c />
-</p>
+
+## 🌐 Socials:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/suraj-pratap-948a92225/)
+[![Hashnode](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](surajpratap20002003@gmail.com)
+[![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@SurajPratap10)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
+
+# Open Source Events
+
+<div align="center">
+
+  <picture>
+    <source 
+	    media="(prefers-color-scheme: dark)" 
+	    srcset="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+    >
+    <source 
+	    media="(prefers-color-scheme: light)" 
+	    srcset="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png"
+    >
+    <img 
+	    alt="Girlscript Summer of Code" 
+	    width=80% 
+	    src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+    >
+  </picture>
+
+</div>
 
 # Thanks to all Contributors 💪
 
 <br>
 
 <h4>Thanks a lot for spending your time helping Imagine_AI grow. Thanks a lot! Keep rocking 🍻 </h4>
+<p>
+  <img src="https://api.vaunt.dev/v1/github/entities/SurajPratap10/repositories/Imagine_AI/contributors?format=svg&limit=54" width="600" height"250" />
+</p>
 
 <a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors"><img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI"></a>
 
   <p align="right"><a href="#top">Back to Top</a></p>
   </div>
+
+# Licenses
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).

@@ -41,6 +41,33 @@
       .inputText::placeholder{
         color: #fff;
       }
+
+      .form-box {
+        width: 100%;
+      }
+
+      .input-title {
+        font-weight: 600 !important;
+        letter-spacing: .1rem !important;
+        word-spacing: .25rem !important;
+      }
+
+      input {
+        box-shadow: 16px 14px 20px #0003 !important;
+        background: #0008 !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+      }
+
+      @media (min-width: 800px) {
+        .input-title {
+          font-size: 1.1rem !important;
+        }
+      }
+
+      .input::placeholder {
+        color: #fffd !important;
+      }
     </style>
     </head>
     <%- include('includes/navbar.ejs') %>
@@ -59,8 +86,8 @@
                 <div class="image-section">
                   <img loading="lazy" src="contactus.webp" alt="contact-us" style="width:500px;">
                 </div>
-                <div class="contact-box">
-                  <div class="context" id="slide">
+                <div  class="contact-box">
+                  <div style="width: 100%;" class="context" id="slide">
                     <div class="cards">
                       <a href="">
                         <img loading="lazy" class="contact-svg"
@@ -71,8 +98,8 @@
                       </p>
                     </div>
                   </div>
-                  <div class="context" id="slide">
-                    <div class="cards">
+                  <div style="width: 100%;" class="context" id="slide">
+                    <div  class="cards">
                       <a href="">
                         <img loading="lazy" class="contact-svg"
                           src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET22.jpg">
@@ -82,7 +109,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="context" id="slide">
+                  <div style="width: 100%;" class="context" id="slide">
                     <div class="cards">
                       <a href="">
                         <img loading="lazy" class="contact-svg"
@@ -98,15 +125,15 @@
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2"
                 style="display: flex;">
                 <form class="form-box" id="contactform" method="post">
-                  <div class="container-block form-wrapper" style="padding-bottom:40px;">
-                    <div class="responsive-container-block">
-                      <div class="wrapping">
+                  <div class="container-block form-wrapper" style="padding-bottom:40px; width: 100%;">
+                    <div class="responsive-container-block" style="display: grid; gap: 1.25rem;">
+                      <div class="wrapping" style="flex-direction: column; gap: 1.25rem;">
                         <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 " id="i10mt-6">
-                          <p class="text-blk input-title">
-                            FIRST NAME
+                          <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                            First Name
                           </p>
 
-                          <input style="width: 95%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
+                          <input style="width: 100%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
 
                             type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
                           <p class="hidden contactError" id="FirstNameError">
@@ -114,8 +141,8 @@
                           </p>
                         </div>
                         <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                          <p class="text-blk input-title">
-                            LAST NAME
+                          <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                            Last Name
                           </p>
 
                           <input class="input inputText" id="indfi-4" name="LastName" placeholder="Doe" type="text"
@@ -127,8 +154,8 @@
                         </div>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">
-                          EMAIL
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Email
                         </p>
 
                         <input class="input inputText" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
@@ -139,8 +166,8 @@
                         </p>
                       </div>
                       <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                        <p class="text-blk input-title">
-                          PHONE NUMBER
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Phone Number
                         </p>
                         <input class="input inputText" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
                           onkeyup="handleChange(event)" required>
@@ -149,7 +176,7 @@
                         </p>
                       </div>
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
-                        <p class="text-blk input-title" style="padding-bottom: 10px;">
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                           Give your Valuable Feedback
                         </p>
                         <input class="textinput feedback inputText" id="i5vyy-6" type="text"
@@ -162,10 +189,474 @@
                     </div>
                   </div>
                   <div class="btn-wrapper" style="display: contents;">
-                    <button class="btn" aria-label="submit">
+                    <button class="btn" aria-label="submit" id="phone-link1">
                       <span class="btn-pos Span">Submit</span>
                       <div class="flow"></div>
                     </button>
+
+
+
+
+                    <style>
+                      /*==================== GOOGLE FONTS ====================*/
+                      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+                      /*==================== VARIABLES CSS ====================*/
+                      :root {
+                        /*========== Colors ==========*/
+                        --text-color: #000000;
+                        --bg-color: #03a9f4;
+
+                        /*========== Font and typography ==========*/
+                        --body-font: "Poppins", sans-serif;
+                        --normal-font-size: 0.938rem;
+                      }
+
+                      @media screen and (min-width: 968px) {
+                        :root {
+                          --normal-font-size: 1rem;
+                        }
+                      }
+
+                      /*==================== BASE ====================*/
+                      *,
+                      *:after,
+                      *:before {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        transition: all 0.2s ease;
+                      }
+
+
+                      /*==================== REUSABLE CSS CLASSES ====================*/
+                      .container {
+                        max-width: 1024px;
+                        margin: 0 auto;
+                        padding: 3rem 0;
+                        min-height: 100vh;
+                        display: grid;
+                        place-items: center;
+
+                      }
+
+                      .sec__container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        max-width: 90%;
+                        margin: 40px auto;
+                        justify-content: center;
+                        z-index: 1;
+                      }
+
+                      /*==================== SOCIAL SHARE ====================*/
+                      .share__box {
+                        --clr-primary: #03a9f4;
+                        --clr-accent: #060606;
+                        --clr-icon: #878787;
+                        --clr-border: #ebedf9;
+                        --clr-light: #ffffff;
+                        --clr-dark: #111111;
+                        --transition: all 0.2s ease;
+
+                        --clr-facebook: #1877f2;
+                        --clr-twitter: #46c1f6;
+                        --clr-instagram: #e1306c;
+                        --clr-whatsapp: #25d366;
+                        --clr-linkedin: #0072b1;
+
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 400px;
+                        width: 100%;
+                        border-radius: 15px;
+                        text-align: center;
+                        padding: 20px;
+                        background-color: var(--clr-light);
+                      }
+
+                      ::selection {
+                        background-color: var(--clr-primary);
+                        color: var(--clr-light);
+                      }
+
+                      .share__box header {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid var(--clr-border);
+                      }
+
+                      .share__box header h2 {
+                        font-size: 1.4rem;
+                        color: var(--clr-accent);
+                      }
+
+                      .share__box .content {
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: 15px;
+                      }
+
+                      .share__box .content p {
+                        font-size: 1rem;
+                        color: var(--clr-accent);
+                      }
+
+                      .share__box .content .social__links {
+                        display: flex;
+                        flex: 1;
+                        width: 100%;
+                        gap: 10px;
+                      }
+
+                      .share__box .content .social__links .social__link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 2rem;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 4px;
+                        text-decoration: none;
+                        border: 1px solid var(--clr-border);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .social__links [data-attr="facebook"] {
+                        color: var(--clr-facebook);
+                      }
+
+                      .share__box .content .social__links [data-attr="facebook"].active,
+                      .share__box .content .social__links [data-attr="facebook"]:hover {
+                        border-color: var(--clr-facebook);
+                      }
+
+                      .share__box .content .social__links [data-attr="twitter"] {
+                        color: var(--clr-twitter);
+                      }
+
+                      .share__box .content .social__links [data-attr="twitter"].active,
+                      .share__box .content .social__links [data-attr="twitter"]:hover {
+                        border-color: var(--clr-twitter);
+                      }
+
+                      .share__box .content .social__links [data-attr="instagram"] {
+                        color: var(--clr-instagram);
+                      }
+
+                      .share__box .content .social__links [data-attr="instagram"].active,
+                      .share__box .content .social__links [data-attr="instagram"]:hover {
+                        border-color: var(--clr-instagram);
+                      }
+
+                      .share__box .content .social__links [data-attr="whatsapp"] {
+                        color: var(--clr-whatsapp);
+                      }
+
+                      .share__box .content .social__links [data-attr="whatsapp"].active,
+                      .share__box .content .social__links [data-attr="whatsapp"]:hover {
+                        border-color: var(--clr-whatsapp);
+                      }
+
+                      .share__box .content .social__links [data-attr="linkedin"] {
+                        color: var(--clr-linkedin);
+                      }
+
+                      .share__box .content .social__links [data-attr="linkedin"].active,
+                      .share__box .content .social__links [data-attr="linkedin"]:hover {
+                        border-color: var(--clr-linkedin);
+                      }
+
+                      .share__box .content .field__wrp {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0 80px;
+                        border-radius: 4px;
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp.active {
+                        border-color: var(--clr-primary);
+                      }
+
+                      .share__box .content .field__wrp i {
+                        width: 20px;
+                        color: var(--clr-icon);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp.active i {
+                        color: var(--clr-primary);
+                      }
+
+                      .share__box .content .field__wrp #inputField {
+                        flex: 1;
+                        padding: 0 10px;
+                        height: 50px;
+                        border: none;
+                        outline: none;
+                        font-size: 1rem;
+                        max-width: calc(100% - 110px);
+                        color: var(--clr-accent);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp.active #inputField {
+                        color: var(--clr-primary);
+                      }
+
+                      .share__box .content .field__wrp #copyBtn {
+                        border-radius: 4px;
+                        padding: 8px 15px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        width: 160px;
+                        font-weight: 700;
+                        border: 2px solid var(--clr-primary);
+                        color: var(--clr-light);
+                        background: var(--clr-primary);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp #copyBtn:hover {
+                        background: var(--clr-light);
+                        color: var(--clr-primary);
+                      }
+
+                      #copyBtn:hover {
+                        background: var(--clr-light);
+                        color: var(--clr-primary);
+                      }
+
+                      /*==================== MEDIA QUERIES ====================*/
+
+                      /* For small devices */
+                      @media screen and (min-width: 500px) {}
+
+                      /* For medium devices */
+                      @media screen and (min-width: 767px) {}
+
+                      body::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 50%;
+                        border-radius: 100%;
+                        bottom: -50%;
+                        left: 25%;
+                        box-shadow: 0 50px 400px rgb(48, 51, 107);
+                        transform: rotate(-180deg);
+                      }
+
+                      body::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 50%;
+                        border-radius: 100%;
+                        top: -50%;
+                        left: 25%;
+                        box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        animation: animate_1 10s infinite;
+                      }
+
+                      /* gradient-bg-style */
+                      .gradient-bg::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 100%;
+                        top: 0%;
+                        left: -50%;
+                        box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        animation: animate_2 10s infinite;
+                      }
+
+                      .gradient-bg::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 100%;
+                        top: 0%;
+                        right: -50%;
+                        bottom: -1000px;
+                        box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        animation: animate_3 10s infinite;
+                      }
+
+                      /* animate-1 */
+                      @keyframes animate_1 {
+                        25% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 150px 300px rgb(142, 68, 173);
+                        }
+
+                        75% {
+                          box-shadow: 0 150px 300px rgba(93, 248, 240, 1);
+                        }
+
+                        100% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+                      }
+
+                      @-webkit-keyframes animate_1 {
+                        25% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 150px 300px rgb(142, 68, 173);
+                        }
+
+                        75% {
+                          box-shadow: 0 150px 300px rgba(93, 248, 240, 1);
+                        }
+
+                        100% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+                      }
+
+                      /* animate-2 */
+                      @keyframes animate_2 {
+                        25% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+                      }
+
+                      @-webkit-keyframes animate_2 {
+                        25% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+                      }
+
+                      /* animate-3 */
+                      @keyframes animate_3 {
+                        25% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+                      }
+
+                      @-webkit-keyframes animate_3 {
+                        25% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+                      }
+                    </style>
+
+                    <script>
+                      // getting all attributes
+                      const shareBox = document.querySelector(".share__box"),
+                        socialLink = document.querySelectorAll(".social__link"),
+                        shareField = document.querySelector(".field__wrp"),
+                        copyBtn = document.querySelector("#copyBtn");
+                      var shareFieldInput = document.querySelector("#inputField");
+
+                      for (let i = 0; i < socialLink.length; i++) {
+                        socialLink[i].addEventListener("click", () => {
+                          for (let j = 0; j < socialLink.length; j++) {
+                            if (socialLink[j].classList.contains("active")) {
+                              socialLink[j].classList.remove("active");
+                            }
+                          }
+
+                          var socialLinkValue = socialLink[i].dataset.link; //getting social link value from data-link attribute
+                          shareFieldInput.setAttribute("value", socialLinkValue); //setting social link value from data-link attribute to input field value
+                          socialLink[i].classList.add("active");
+                          shareField.classList.add("active");
+                          for (let k = 0; k < socialLink.length; k++) {
+                            if (document.execCommand("copy")) {
+                              //if selected value is copied
+                              copyBtn.onclick = () => {
+                                shareFieldInput.select(); //select input value
+                                document.execCommand("copy");
+                                shareField.classList.add("active");
+                                copyBtn.innerText = "Copied";
+                                var curInputVal = shareFieldInput.value;
+                                setTimeout(() => {
+                                  shareField.classList.remove("active");
+                                  copyBtn.innerText = "Copy";
+                                  shareFieldInput.setAttribute("value", "example.com/share-link");
+                                  socialLink[i].classList.remove("active");
+                                  window.getSelection().removeAllRanges();
+                                }, 5000); 
+                              };
+                            }
+                          }
+                        });
+                      }
+
+
+                    </script>
+
+
+
+
+
                   </div>
               </div>
               </form>

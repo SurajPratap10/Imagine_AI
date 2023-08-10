@@ -864,14 +864,19 @@ img {
 }
 
 #newsletter .news-form input {
-  height: 3.125rem;
+  height: 4.125rem;
   width: 100%;
   padding: 0 1.25em;
   font-size: 16px;
-  border: 0;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   outline: none;
-  color: gray;
+  color: #111827;
+  background-color: #F9FAFB;
+  display: block;
+  align-items: center;
+  border-color: #D1D5DB;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 #newsletter .news-form button {
@@ -1282,6 +1287,62 @@ form .responsive-cell-block input {
   box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive css */
+@media screen and (max-width: 1400px) {
+  /* Contact-US page */
+  .Contact-Us {
+    display: grid;
+    padding: 50px 0px;
+  }
+
+  .contact-top {
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-top h1 {
+    padding-top: 50px;
+  }
+
+  .contact-middle {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 50px;
+    width: 50vw;
+    overflow: hidden;
+  }
+  
+  .contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding-top: 50px;
+  }
+
+  .context {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    position: 50px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(209, 190, 190, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
+}
 /* Responsive css */
 @media screen and (max-width: 900px) {
   /* Contact-US page */
@@ -2845,10 +2906,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
@@ -3749,6 +3806,7 @@ img {
   justify-content: center;
   width: 100%;
   max-width: 50%;
+
 }
 
 #newsletter .news-form input {
@@ -5700,10 +5758,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
@@ -6992,7 +7046,61 @@ form .responsive-cell-block input {
   border-radius: 16px;
   box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 1400px) {
+  /* Contact-US page */
+  .Contact-Us {
+    display: grid;
+    padding: 50px 0px;
+  }
 
+  .contact-top {
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-top h1 {
+    padding-top: 50px;
+  }
+
+  .contact-middle {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 50px;
+    width: 50vw;
+    overflow: hidden;
+  }
+  
+  .contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding-top: 50px;
+  }
+
+  .context {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    position: 50px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(209, 190, 190, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 3opx rgba(0, 0, 0, 0.1);
+  }
+}
 /* Responsive css */
 @media screen and (max-width: 900px) {
   /* Contact-US page */
@@ -9088,10 +9196,6 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
@@ -9963,9 +10067,11 @@ img {
   background-size: fill;
   height: 32vh;
   width: 100%;
-  padding: 20px 100px;
+  /* padding: 20px 100px; */
   margin: 60px 0;
-  margin-top: 120px;
+  margin-top: 40px;
+  margin-bottom: -100px;
+
 }
 
 #newsletter .news-text h4 {
@@ -10385,6 +10491,10 @@ form .responsive-cell-block input {
   text-align: start;
   color: #fff;
   font-size: medium;
+}
+
+#email_input {
+  background: unset !important;
 }
 
 /* Responsive css */
@@ -11248,7 +11358,6 @@ button:disabled {
 @media (max-width: 768px) {
   #newsletter {
     height: fit-content;
-    padding: 10px 0;
     flex-direction: column;
   }
 
@@ -11265,6 +11374,11 @@ button:disabled {
     min-width: 50%;
     width: 90%;
     max-width: none;
+  }
+
+  #newsletter form {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   #newsletter .news-form input {
@@ -11938,11 +12052,64 @@ section .container2 {
   font-size: 17px;
 }
 
-#email::placeholder {
-  color: aqua;
-}
-
 .upper img {
   width: 100px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #newsletter {
+    padding: 2.5rem 3rem !important;
+  }
+  
+  #newsletter .news-text h4 {
+    font-size: 2.2rem !important
+  }
+  
+  #newsletter .news-form input {
+    border-radius: unset !important;
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+  }
+  
+  #newsletter .news-form button {
+    border-radius: unset !important;
+    width: 15rem !important;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+  }
+}
+
+input::placeholder {
+  color: white;
+}
+
+#image-form input {
+  background: #0006 !important;
+  color: white !important;
+}
+
+.showcase form input, form select:hover {
+  border: unset;
+  outline: 2px solid #fffb;
+}
+
+.signin-opt h2, .signup-opt h2 {
+  color: white;
+}
+
+form select {
+  background: #0005 !important;
+  color: white !important;
+  border: unset;
+  outline: 2px solid #fffb
+}
+
+.get-api-text a {
+  color: white;
+  border-bottom: 1px solid #0002;
+}
+
+.home-logo {
+  max-width: 40rem;
 }
