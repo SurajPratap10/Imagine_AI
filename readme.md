@@ -20,20 +20,25 @@
 
 <br>
 
-## TABLE OF CONTENTS
-
-- [About Our Project](#About-Our-Project)
-- [Technology Stack Used](#Technology-Stack-Used)
-- [How to Use](#How-to-**use**?)
-- [How to contribute?](#How-to-**contribute**?)
-- [Links](#Links)
-- [🌐 Socials](#🌐-Socials)
-- [Open Source Events](#Open-Source-Events)
-- [Thanks to all Contributors 💪](#Thanks-to-all-Contributors-💪)
-
 # About Our Project
 
+<h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#Links">Links 📌</a></li>
+    <li><a href="#-technology-stack-used"> Technology Stack used 💻</a></li>
+    <li><a href="#Licenses">Licenses 📧</a></li>
+    <li><a href="#-Socials">🌐 Socials</a></li>
+    <li><a href="#How-to-use?">How to use❓</a></li>
+    <li><a href="#How-to-contribute?">How to contribute?</a></li>
+    <li><a href="#license">License 📰</a></li>
+    <li><a href="#Open-Source-Events">Open Source Events 💌</a></li>
+    <li><a href="#Thanks-to-all-Contributors">Thanks to all Contributors 💪</a></li>
+  </ol>
+
+# Links:
+
 Unleash the boundless potential of DALL-E 2 with IMAGINE - AI, a groundbreaking creation harnessed through the prowess of OpenAI's DALL-E 2 API library. Designed for supreme responsiveness across all devices, IMAGINE - AI stands as an ingenious solution to surmount the confines of conventional creativity and imagination. Developed using Node.js and Express, this innovative image generator harnesses the remarkable capabilities of DALL-E models to fashion an extraordinary realm of visuals.
+
 
 IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitations of artistic creativity. By placing at your fingertips an exceptionally potent AI tool, we offer a transformative means to forge never-before-seen images that captivate the senses and push the boundaries of visual expression. Through the simple guidance of prompts or keywords, IMAGINE - AI conjures a breathtaking array of images, each an exquisite masterpiece distinct from any preceding creation.
 
@@ -61,7 +66,20 @@ IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitati
 
 </div>
 
-# How to **use**?
+# Licenses
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
+
+# 🌐 Socials
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/suraj-pratap-948a92225/)
+[![Hashnode](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](surajpratap20002003@gmail.com)
+[![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@SurajPratap10)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
+
+# How to use?
 
 Create a file named `.env`.
 
@@ -86,7 +104,7 @@ The endpoint is at `POST http://localhost:5000/openai/generateimage`.
 <hr>
   <p align="right"><a href="#top">Back to Top</a></p>
 
-# How to **contribute**?
+# How to contribute?
 
 _If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
 _If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/)._
