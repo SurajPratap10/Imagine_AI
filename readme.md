@@ -42,7 +42,7 @@ Unleash the boundless potential of DALL-E 2 with IMAGINE - AI, a groundbreaking 
 IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitations of artistic creativity. By placing at your fingertips an exceptionally potent AI tool, we offer a transformative means to forge never-before-seen images that captivate the senses and push the boundaries of visual expression. Through the simple guidance of prompts or keywords, IMAGINE - AI conjures a breathtaking array of images, each an exquisite masterpiece distinct from any preceding creation.
 
 <b>HOME PAGE:<b>
-![Screenshot 2023-08-07 200156](https://github.com/SurajPratap10/Imagine_AI/assets/92919173/760f582b-4de5-44ea-a82c-096fc16dce52)
+![Screenshot 2023-08-10 095831](https://github.com/SurajPratap10/Imagine_AI/assets/92919173/15b1fe2c-5b6b-4f4f-997d-131bd069c4b4)
 <b>IMAGINE_AI PAGE:<b>
 ![image](https://github.com/Enhancer18/Imagine_AI/assets/102911149/a9450669-b1ce-48c9-aae9-2a3f343bce52)
 <b>ABOUT US PAGE:<b>
