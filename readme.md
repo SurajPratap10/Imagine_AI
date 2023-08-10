@@ -1,7 +1,7 @@
 <div align="center" id="top">
   
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
+    <source media="(prefers-color-scheme: light)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background.png">
     <source media="(prefers-color-scheme: dark)" srcset="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
     <img alt="Imagine AI" width=350 src="./public/imagine-ai-low-resolution-logo-color-on-transparent-background-dark.png">
 </picture>
@@ -190,11 +190,25 @@ git push -u origin <your_branch_name>
 
 # Open Source Events
 
-- GSSoC'23
+<div align="center">
 
-<p align="center"> 
-<img src= https://github.com/SurajPratap10/Imagine_AI/assets/92919173/3f546e37-be43-4884-88c1-a87eeeaeb92c />
-</p>
+  <picture>
+    <source 
+	    media="(prefers-color-scheme: dark)" 
+	    srcset="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+    >
+    <source 
+	    media="(prefers-color-scheme: light)" 
+	    srcset="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png"
+    >
+    <img 
+	    alt="Girlscript Summer of Code" 
+	    width=80% 
+	    src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+    >
+  </picture>
+
+</div>
 
 # Thanks to all Contributors 💪
 
