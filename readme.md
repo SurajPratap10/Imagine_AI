@@ -44,7 +44,6 @@ IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitati
     <li><a href="#-Socials">🌐 Socials</a></li>
     <li><a href="#How-to-use?">How to use❓</a></li>
     <li><a href="#How-to-contribute?">How to contribute?</a></li>
-    <li><a href="#license">License 📰</a></li>
     <li><a href="#Open-Source-Events">Open Source Events 💌</a></li>
     <li><a href="#Thanks-to-all-Contributors">Thanks to all Contributors 💪</a></li>
   </ol>
