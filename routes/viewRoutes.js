@@ -29,6 +29,9 @@ router.get("/login", (req, res, next) => {
 router.get("/signup", (_req, res, _next) => {
   res.render("signup", { path: "/signup" });
 });
+router.get("/slider", (_req, res, _next) => {
+  res.render("slider", { path: "/slider" });
+});
 
 router.get("/privacypolicy", (req, res, next) => {
   res.render("privacypolicy", { path: "privacypolicy" });
