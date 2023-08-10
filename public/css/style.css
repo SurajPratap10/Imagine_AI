@@ -864,14 +864,19 @@ img {
 }
 
 #newsletter .news-form input {
-  height: 3.125rem;
+  height: 4.125rem;
   width: 100%;
   padding: 0 1.25em;
   font-size: 16px;
-  border: 0;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   outline: none;
-  color: gray;
+  color: #111827;
+  background-color: #F9FAFB;
+  display: block;
+  align-items: center;
+  border-color: #D1D5DB;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 #newsletter .news-form button {
@@ -3801,6 +3806,7 @@ img {
   justify-content: center;
   width: 100%;
   max-width: 50%;
+
 }
 
 #newsletter .news-form input {
@@ -10061,9 +10067,11 @@ img {
   background-size: fill;
   height: 32vh;
   width: 100%;
-  padding: 20px 100px;
+  /* padding: 20px 100px; */
   margin: 60px 0;
-  margin-top: 120px;
+  margin-top: 40px;
+  margin-bottom: -100px;
+
 }
 
 #newsletter .news-text h4 {
@@ -12100,4 +12108,8 @@ form select {
 .get-api-text a {
   color: white;
   border-bottom: 1px solid #0002;
+}
+
+.home-logo {
+  max-width: 40rem;
 }
