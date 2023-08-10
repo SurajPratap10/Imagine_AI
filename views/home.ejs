@@ -1,261 +1,321 @@
-<%- include('includes/header.ejs') %>
-  <%- include('includes/PRE.ejs') %>
-    <%- include('includes/sidebar.ejs') %>
-      </head>
-      <%- include('includes/navbar.ejs') %>
-        <main>
-          <section class="about">
-            <div class="dashboard">
-              <div class="left">
-                <h1 class="dashboard-h1">Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images
-                </h1>
-                <div class="main-content-wrapper">
-                  <div class="main-content">
-                    <h2>
-                      <b>The IMAGINE - AI</b>, which is built using the OpenAI API library DALL-E 2, aims to solve the
-                      problem of limited creativity and imagination. This is a fully mobile responsive image generator
-                      built with Node.js and Express that uses OpenAI's Dall-E models to generate images.
-                    </h2>
-
-                    <br>
-
-                    <h2><b>The IMAGINE - AI</b> offers a solution to this problem by providing users with a powerful AI
-                      tool that can generate original and visually stunning images. With just a few prompts or keywords,
-                      the AI is able to generate a wide range of images that are unlike anything that has been seen
-                      before.</h2>
-                  </div>
-                </div>
-
-                <a class="try-it-cover" href="/generateImg">
-                  <button class="btn" aria-label="try it">
-                    <span id="try-btn">Try it</span>
-                    <div class="flow"></div>
-                  </button>
-                </a>
-              </div>
-              <div class="right">
-                <img loading="lazy" src="hero.svg" class="home-logo" alt="">
-              </div>
-            </div>
-
-            <div class="di">
-              <h1>Some examples of images generated through DALL-E2</h1>
-              <div class="wrapper">
-                <div class="cardEx float-in">
-                  <img loading="lazy" id="expImg1" src="1.webp" alt="Photograph of astronaut riding horse">
-                  <div class="info">
-                    <h1>Horse</h1>
-                    <p>Photograph of an astronaut riding a horse.</p>
-                    <button class="btn" aria-label="Download" onclick="downloadImage('expImg1')"> Download</button>
-                  </div>
-                </div>
-                <div class="cardEx float-in">
-                  <img loading="lazy" id="expImg2" src="2.webp" alt="oil painting of capybara wearing crown">
-                  <div class="info">
-                    <h1>Capybara</h1>
-                    <p>An oil painting of a capybara wearing a crown.</p>
-                    <button class="btn" aria-label="Download" onclick="downloadImage('expImg2')">Download</button>
-                  </div>
-                </div>
-                <div class="cardEx float-in">
-                  <img loading="lazy"  id="expImg3" src="3.webp" alt="Synthwave sports car">
-                  <div class="info">
-                    <h1>Sports Car</h1>
-                    <p>Synthwave sports car on a port road.</p>
-                    <button class="btn"  aria-label="Download" onclick="downloadImage('expImg3')"> Download </button>
-                  </div>
-                </div>
-                <div class="cardEx float-in">
-                  <img loading="lazy" id="expImg4" src="4.webp" alt="astronaut lounging in a resort">
-                  <div class="info">
-                    <h1>Astronaut</h1>
-                    <p>An astronaut lounging in a resort in space, vaporwave.</p>
-                    <button class="btn" aria-label="Download" onclick="downloadImage('expImg4')"> Download</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; width: 100vw; height: 100vh; margin-top: 100px;">
-              <h1 style="text-align: center; color: rgb(243, 243, 243); font-size: 3rem; margin-bottom: 20px;">TUTORIAL</h1>
-              <div style="display:flex; align-items: center;   width:fit-content;height:fit-content;">
-        
-                <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/S9VfyxjttlP/embed" width="940" height="560"></iframe>
-            </div>
-                
-           
-          </div>
-            
-            <section id="newsletter">
-              <div class="news-text">
-                <h4 style="margin-bottom: 1rem;
-                            font-size: 1.875rem;
-                            line-height: 2.25rem;
-                            font-weight: 800;
-                            letter-spacing: -0.025em;
-                            color: #ffffff; ">
-                  Sign Up for Newsletter
-                </h4>
-                <p style="margin-bottom: 2rem;
-                            max-width: 42rem;
-                            font-weight: 300;
-                            color: #ffffff;
-                            
-                            @media (min-width: 640px) {
-                              font-size: 1.25rem;
-                              line-height: 1.75rem;
-                            }
-                            @media (min-width: 768px) {
-                              margin-bottom: 3rem;
-                            }">
-                  Get e-mail updates about the latest trends in technology
-                </p>
-              </div>
-             <div class="news-form">
-                <form action="https://getform.io/f/94db7290-a297-4170-b95f-a99d55172aa8" method="POST">
-                  <input type="email" name="email" id="email" placeholder="Enter your Email Id..." style="
-
-                            @media (min-width: 640px) {
-                              border-radius: 0;
-                              border-top-left-radius: 0.5rem;
-                              border-bottom-left-radius: 0.5rem;
-                            }">
-                            
-                  <button id="btn-new" style="
-                            padding-top: 0.625rem;
-                            width: 12rem;
-                            padding-bottom: 0.625rem;
-                            padding-left: 0.875rem;
-                            padding-right: 0.875rem;
-                            border-radius: 0.375rem;
-                            margin-left: 2rem;
-                            font-size: 0.875rem;
-                            font-weight: 600;
-                            color: #ffffff;
-                            transform: scale(0.9);
-                            background-color: #6366F1;
-                            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-                            text-align: center
-                            ">Sign Up</button>
-                </form>
-              </div>
-            </section>
-            
-            
-          </section>
-        </main>
-
-
-
-        <%- include('includes/footer.ejs') %>
-          <%- include('includes/topToBottomScrollButton.ejs') %>
-
-            <style>
-              @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-              .left .dashboard-h1, .main-content b {
-                font-family: 'Poppins', sans-serif;
-                text-align: start;
-                letter-spacing: 1.5px;
-              }
-
-              .main-content {
-                font-family: cursive, sans-serif;
-                text-align: center;
-              }
-
-              /* Dark mode styles */
-              .dark-mode {
-                background-color: #121212;
-                color: #ffffff;
-              }
-
-              /* Dark mode styles for navbar */
-              .dark-mode #navbar {
-                background-color: #121212;
-                color: #ffffff;
-              }
-
-              /* Dark mode styles for the about section */
-              .dark-mode .about {
-                background-color: #121212;
-                color: #ffffff;
-              }
-
-              /* Styles for the dark mode toggle button */
-              .dark-mode-toggle {
-                font-size: 24px;
-                cursor: pointer;
-              }
-
-              .dark-mode-toggle i {
-                transition: transform 0.3s ease-in-out;
-                font-size: 1.1em;
-              }
-
-              #email::placeholder {
-                color: #041e42;
-              }
-
-              .info .btn{
-                font-size: 12px;
-    padding: 20px 20px;
-    letter-spacing: 2px;
-    width: auto;
-    border-radius: 10px
-              }
-            </style>
-
-            <script>
-         function toggleDarkMode() {
-      const body = document.body;
-      const navbar = document.querySelector(".navbar");
-      const aboutSection = document.querySelector(".about");
-      const darkModeToggle = document.querySelector(".dark-mode-toggle");
-
-      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
-      var darkModeIconCollection = Array.from(darkModeIcon);
-
-      body.classList.toggle("dark-mode");
-      navbar.classList.toggle("dark-mode");
-      aboutSection.classList.toggle("dark-mode");
-      // darkModeToggle.classList.toggle("dark");
-
-      darkModeIconCollection.map((darkIcon) => {
-        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-        } else {
-          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        }
-      });
-    }
-
-    // Download Image logic
-
-    function downloadImage(imgId){
-   const image = $(`#${imgId}`).attr("src");
-   const url = window.location.href+image;
-   const fileName = image.substring(image.lastIndexOf("/")+1);
-
-   fetch(url)
-    .then(response => response.blob())
-    .then(blob => {
-      // Create a temporary anchor element
-      const downloadLink = document.createElement('a');
-      downloadLink.href = URL.createObjectURL(blob);
-      downloadLink.download = fileName || 'image.jpg';
-
-      // Trigger a click event on the anchor element
-      downloadLink.click();
-
-      // Clean up the temporary anchor and blob object
-      URL.revokeObjectURL(downloadLink.href);
-      downloadLink.remove();
-    })
-    .catch(error => {
-      console.error('Error downloading the image:', error);
-    });
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    
+    <!-- Preloader styles -->
+    <style>
+      body {
+  overflow: hidden;
 }
 
 
-            </script>
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+  </style>
+    
+</head>
+<body>
+    
+    <!-- Preloader -->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
+    <main>
+      <%- include('includes/header.ejs') %>
+      <%- include('includes/PRE.ejs') %>
+        <%- include('includes/sidebar.ejs') %>
+          </head>
+          <%- include('includes/navbar.ejs') %>
+            
+              <section class="about">
+                <div class="dashboard">
+                  <div class="left">
+                    <h1 class="dashboard-h1">Unleashing the power of DALL-E 2 to generate stunning, one-of-a-kind images
+                    </h1>
+                    <div class="main-content-wrapper">
+                      <div class="main-content">
+                        <h2>
+                          <b>The IMAGINE - AI</b>, which is built using the OpenAI API library DALL-E 2, aims to solve the
+                          problem of limited creativity and imagination. This is a fully mobile responsive image generator
+                          built with Node.js and Express that uses OpenAI's Dall-E models to generate images.
+                        </h2>
+    
+                        <br>
+    
+                        <h2><b>The IMAGINE - AI</b> offers a solution to this problem by providing users with a powerful AI
+                          tool that can generate original and visually stunning images. With just a few prompts or keywords,
+                          the AI is able to generate a wide range of images that are unlike anything that has been seen
+                          before.</h2>
+                      </div>
+                    </div>
+    
+                    <a class="try-it-cover" href="/generateImg">
+                      <button class="btn" aria-label="try it">
+                        <span id="try-btn">Try it</span>
+                        <div class="flow"></div>
+                      </button>
+                    </a>
+                  </div>
+                  <div class="right">
+                    <img loading="lazy" src="hero.svg" class="home-logo" alt="">
+                  </div>
+                </div>
+    
+                <div class="di">
+                  <h1>Some examples of images generated through DALL-E2</h1>
+                  <div class="wrapper">
+                    <div class="cardEx float-in">
+                      <img loading="lazy" id="expImg1" src="1.webp" alt="Photograph of astronaut riding horse">
+                      <div class="info">
+                        <h1>Horse</h1>
+                        <p>Photograph of an astronaut riding a horse.</p>
+                        <button class="btn" aria-label="Download" onclick="downloadImage('expImg1')"> Download</button>
+                      </div>
+                    </div>
+                    <div class="cardEx float-in">
+                      <img loading="lazy" id="expImg2" src="2.webp" alt="oil painting of capybara wearing crown">
+                      <div class="info">
+                        <h1>Capybara</h1>
+                        <p>An oil painting of a capybara wearing a crown.</p>
+                        <button class="btn" aria-label="Download" onclick="downloadImage('expImg2')">Download</button>
+                      </div>
+                    </div>
+                    <div class="cardEx float-in">
+                      <img loading="lazy"  id="expImg3" src="3.webp" alt="Synthwave sports car">
+                      <div class="info">
+                        <h1>Sports Car</h1>
+                        <p>Synthwave sports car on a port road.</p>
+                        <button class="btn"  aria-label="Download" onclick="downloadImage('expImg3')"> Download </button>
+                      </div>
+                    </div>
+                    <div class="cardEx float-in">
+                      <img loading="lazy" id="expImg4" src="4.webp" alt="astronaut lounging in a resort">
+                      <div class="info">
+                        <h1>Astronaut</h1>
+                        <p>An astronaut lounging in a resort in space, vaporwave.</p>
+                        <button class="btn" aria-label="Download" onclick="downloadImage('expImg4')"> Download</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 100vw; height: 100vh; margin-top: 100px;">
+                  <h1 style="text-align: center; color: rgb(243, 243, 243); font-size: 3rem; margin-bottom: 20px;">TUTORIAL</h1>
+                  <div style="display:flex; align-items: center;   width:fit-content;height:fit-content;">
+            
+                    <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/S9VfyxjttlP/embed" width="940" height="560"></iframe>
+                </div>
+                    
+               
+              </div>
+                
+                <section id="newsletter">
+                  <div class="news-text">
+                    <h4 style="margin-bottom: 1rem;
+                                font-size: 1.875rem;
+                                line-height: 2.25rem;
+                                font-weight: 800;
+                                letter-spacing: -0.025em;
+                                color: #ffffff; ">
+                      Sign Up for Newsletter
+                    </h4>
+                    <p style="margin-bottom: 2rem;
+                                max-width: 42rem;
+                                font-weight: 300;
+                                color: #ffffff;
+                                
+                                @media (min-width: 640px) {
+                                  font-size: 1.25rem;
+                                  line-height: 1.75rem;
+                                }
+                                @media (min-width: 768px) {
+                                  margin-bottom: 3rem;
+                                }">
+                      Get e-mail updates about the latest trends in technology
+                    </p>
+                  </div>
+                 <div class="news-form">
+                    <form action="https://getform.io/f/94db7290-a297-4170-b95f-a99d55172aa8" method="POST">
+                      <input type="email" name="email" id="email" placeholder="Enter your Email Id..." style="
+    
+                                @media (min-width: 640px) {
+                                  border-radius: 0;
+                                  border-top-left-radius: 0.5rem;
+                                  border-bottom-left-radius: 0.5rem;
+                                }">
+                                
+                      <button id="btn-new" style="
+                                padding-top: 0.625rem;
+                                width: 12rem;
+                                padding-bottom: 0.625rem;
+                                padding-left: 0.875rem;
+                                padding-right: 0.875rem;
+                                border-radius: 0.375rem;
+                                margin-left: 2rem;
+                                font-size: 0.875rem;
+                                font-weight: 600;
+                                color: #ffffff;
+                                transform: scale(0.9);
+                                background-color: #6366F1;
+                                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                                text-align: center
+                                ">Sign Up</button>
+                    </form>
+                  </div>
+                </section>
+                
+                
+              </section>
+            </main>
+    
+    
+    
+            <%- include('includes/footer.ejs') %>
+              <%- include('includes/topToBottomScrollButton.ejs') %>
+    
+                <style>
+                  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    
+                  .left .dashboard-h1, .main-content b {
+                    font-family: 'Poppins', sans-serif;
+                    text-align: start;
+                    letter-spacing: 1.5px;
+                  }
+    
+                  .main-content {
+                    font-family: cursive, sans-serif;
+                    text-align: center;
+                  }
+    
+                  /* Dark mode styles */
+                  .dark-mode {
+                    background-color: #121212;
+                    color: #ffffff;
+                  }
+    
+                  /* Dark mode styles for navbar */
+                  .dark-mode #navbar {
+                    background-color: #121212;
+                    color: #ffffff;
+                  }
+    
+                  /* Dark mode styles for the about section */
+                  .dark-mode .about {
+                    background-color: #121212;
+                    color: #ffffff;
+                  }
+    
+                  /* Styles for the dark mode toggle button */
+                  .dark-mode-toggle {
+                    font-size: 24px;
+                    cursor: pointer;
+                  }
+    
+                  .dark-mode-toggle i {
+                    transition: transform 0.3s ease-in-out;
+                    font-size: 1.1em;
+                  }
+    
+                  #email::placeholder {
+                    color: #041e42;
+                  }
+    
+                  .info .btn{
+                    font-size: 12px;
+        padding: 20px 20px;
+        letter-spacing: 2px;
+        width: auto;
+        border-radius: 10px
+                  }
+                </style>
+    
+                <script>
+                  $(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
+})
+
+             function toggleDarkMode() {
+          const body = document.body;
+          const navbar = document.querySelector(".navbar");
+          const aboutSection = document.querySelector(".about");
+          const darkModeToggle = document.querySelector(".dark-mode-toggle");
+    
+          const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+          var darkModeIconCollection = Array.from(darkModeIcon);
+    
+          body.classList.toggle("dark-mode");
+          navbar.classList.toggle("dark-mode");
+          aboutSection.classList.toggle("dark-mode");
+          // darkModeToggle.classList.toggle("dark");
+    
+          darkModeIconCollection.map((darkIcon) => {
+            if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+              darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+            } else {
+              darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            }
+          });
+        }
+    
+        // Download Image logic
+    
+        function downloadImage(imgId){
+       const image = $(`#${imgId}`).attr("src");
+       const url = window.location.href+image;
+       const fileName = image.substring(image.lastIndexOf("/")+1);
+    
+       fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          // Create a temporary anchor element
+          const downloadLink = document.createElement('a');
+          downloadLink.href = URL.createObjectURL(blob);
+          downloadLink.download = fileName || 'image.jpg';
+    
+          // Trigger a click event on the anchor element
+          downloadLink.click();
+    
+          // Clean up the temporary anchor and blob object
+          URL.revokeObjectURL(downloadLink.href);
+          downloadLink.remove();
+        })
+        .catch(error => {
+          console.error('Error downloading the image:', error);
+        });
+    
+    }
+    
+    
+                </script>
