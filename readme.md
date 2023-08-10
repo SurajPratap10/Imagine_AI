@@ -208,8 +208,8 @@ git push -u origin <your_branch_name>
 
 # Open Source Events
 
+- <h4> GSSoC23 </h4>
 <div align="center">
-
   <picture>
     <source 
 	    media="(prefers-color-scheme: dark)" 
