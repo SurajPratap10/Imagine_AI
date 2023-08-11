@@ -1,7 +1,11 @@
+
+
 <%- include('includes/PRE.ejs') %>
+
   <%- include('includes/header.ejs') %>
 
-  <%- include('includes/sidebar.ejs') %>
+  <!-- <%- include('includes/sidebar.ejs') %> -->
+
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
    
@@ -50,19 +54,11 @@
             <div class="button" style="justify-content:center;">
               <div class="btn-wrapper">
                 <a href="/generateImg">
-                  <button class="btn12" aria-label="generate ai">
-                    <span class="btn-pos Span">Generate AI</span>
-                    <div class="flow"></div>
-                  </button>
+                 
                 </a>
               </div>
               <a href="/login">
-                <div class="btn-wrapper">
-                  <button class="btn12" aria-label="learn more">
-                    <span class="btn-pos Span">Learn More</span>
-                    <div class="flow"></div>
-                  </button>
-                </div>
+                
               </a>
             </div>
           </div>
@@ -124,18 +120,39 @@
               speed, and limitless creativity
             </p>
             <a href="https://openai.com/dall-e-2/">
-              <div class="btn-wrapper">
-                <button class="btn12" aria-label="try imagine">
-                  <span class="btn-pos Span" style="padding-right:20px;">Try Imagine</span>
-                  <div class="flow"></div>
-                </button>
-              </div>
+             
             </a>
           </div>
         </div>
       </div>
-      <%- include('includes/sliderr.ejs') %>
+      <style>
+        /* styles.css */
+        iframe {
+    display: block;
+    margin: 0 auto; /* Center the iframe horizontally */
+    width: 100%; /* Make the iframe cover the full width */
+    height: 100vh; /* Make the iframe cover the full viewport height */
+    border: none; /* Remove iframe border */
+}
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden; /* Hide overflow from iframe */
+        }
+
+
+
+        </style>
+ <div class="iframe-container">
+  <iframe src="/slider" frameborder="0"  allowtransparency="true"></iframe>
+</div>
+
+
       <%- include('includes/footer.ejs') %>
+ 
+      
+
       <%- include('includes/topToBottomScrollButton.ejs') %>
         <style>
           /* Light mode styles */
