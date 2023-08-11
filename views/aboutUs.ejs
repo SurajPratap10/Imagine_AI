@@ -128,15 +128,12 @@
       <style>
         /* styles.css */
         iframe {
-    
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1000px;
-            border: none;
-            display:block;
-       
-        }
+    display: block;
+    margin: 0 auto; /* Center the iframe horizontally */
+    width: 100%; /* Make the iframe cover the full width */
+    height: 100vh; /* Make the iframe cover the full viewport height */
+    border: none; /* Remove iframe border */
+}
         .iframe-container {
             position: relative;
             width: 100%;
@@ -148,7 +145,7 @@
 
         </style>
  <div class="iframe-container">
-  <iframe src="/slider" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <iframe src="/slider" frameborder="0"  allowtransparency="true"></iframe>
 </div>
 
 
