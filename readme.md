@@ -208,23 +208,23 @@ git push -u origin <your_branch_name>
 # Open Source Events
 
 - <h4> GSSoC23 </h4>
-  <div align="center">
-    <picture>
-      <source 
-  	    media="(prefers-color-scheme: dark)" 
-  	    srcset="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
-      >
-      <source 
-  	    media="(prefers-color-scheme: light)" 
-  	    srcset="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png"
-      >
-      <img 
-  	    alt="Girlscript Summer of Code" 
-  	    width=80% 
-  	    src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
-      >
-    </picture>
-</div>
+    <div align="center">
+      <picture>
+        <source 
+    	    media="(prefers-color-scheme: dark)" 
+    	    srcset="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+        >
+        <source 
+    	    media="(prefers-color-scheme: light)" 
+    	    srcset="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png"
+        >
+        <img 
+    	    alt="Girlscript Summer of Code" 
+    	    width=80% 
+    	    src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+        >
+      </picture>
+  </div>
 
 # Thanks to all Contributors 💪
 
