@@ -224,7 +224,6 @@ git push -u origin <your_branch_name>
   	    src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
       >
     </picture>
-
 </div>
 
 # Thanks to all Contributors 💪
