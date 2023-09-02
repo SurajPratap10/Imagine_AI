@@ -230,7 +230,7 @@ git push -u origin <your_branch_name>
 
 <br>
 
-<h4>Thanks a lot for spending your time helping Imagine_AI grow. Thanks a lot! Keep rocking 🍻 </h4>
+<h4>Thanks a lot for contributing and helping Imagine_AI grow. Thanks a lot! Keep rocking 🍻 </h4>
 <p>
   <img src="https://api.vaunt.dev/v1/github/entities/SurajPratap10/repositories/Imagine_AI/contributors?format=svg&limit=54" width="600" height"250"/>
 </p>
