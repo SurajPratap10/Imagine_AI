@@ -36,7 +36,7 @@ IMAGINE - AI emerges as a beacon of innovation, addressing the inherent limitati
 
 # Links:
 
-- **Live Site: imagine-ai-17zf.vercel.app/**
+- **Live Site: https://imagine-ai-17zf.vercel.app/**
 - **Demo Video: https://www.youtube.com/watch?v=B_cg4MA60Fg**
 
 <h2>Table of Contents</h2>
