@@ -36,6 +36,6 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.6.7",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.3"
   }
 }
