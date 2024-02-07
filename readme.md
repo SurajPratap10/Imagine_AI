@@ -230,6 +230,7 @@ git push -u origin <your_branch_name>
   </div>
 
 # Thanks to all Contributors 💪
+
 <br>
 <h4>Thanks a lot for contributing and helping Imagine_AI grow. Thanks a lot! Keep rocking 🔥 </h4>
 <p>
