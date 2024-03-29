@@ -17,7 +17,6 @@
     <img src="https://img.shields.io/github/contributors-anon/SurajPratap10/Imagine_AI?style=for-the-badge" />
 </div>
 </div>
-
 <br>
 
 # About Our Project
