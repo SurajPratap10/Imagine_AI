@@ -25,7 +25,6 @@ svg {
 
 #rocket {
   transform: translateY(750px);
-
   animation: launch 2s ease-out forwards;
 }
 
