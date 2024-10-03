@@ -2,7 +2,7 @@
     <i class="bi bi-list"></i>
   </div>
   <div class="sidebar">
-   <div class="crossicon" onclick="sidbarinvissible()">x</div>
+   <div class="crossicon">x</div>
    <div class="content">
     <a class="white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
           <a class="white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
@@ -98,13 +98,18 @@ const hamburgere1=document.querySelector(".hamburger");
   const sidebarE1=document.querySelector(".sidebar");
   function sidebartoggle(){
     // hamburgere1.style.setProperty('display', 'none');
-    sidebarE1.style.setProperty('transform', 'translateX(0)');
+    if(sidebarE1.style.transform==='translateX(100%)'){
+      sidebarE1.style.setProperty('transform', 'translateX(0)');
+    }
+    else{
+      sidebarE1.style.setProperty('transform', 'translateX(100%)');
+    }
   }
 
-  function sidbarinvissible(){
-    // hamburgere1.style.setProperty('display', 'block');
+  // function sidbarinvissible(){
+  //   // hamburgere1.style.setProperty('display', 'block');
     
-    sidebarE1.style.setProperty('transform', 'translateX(100%)');
+  //   sidebarE1.style.setProperty('transform', 'translateX(100%)');
 
-  }
+  // }
   </script>
