@@ -1239,7 +1239,7 @@ form .responsive-cell-block input {
   color: #fffefe;
   /* border: 2px solid white; */
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 100%;
   /* box-shadow: rgba(248, 248, 250, 0.25) 0px 50px 100px -20px,
@@ -1431,7 +1431,7 @@ form {
   color: #8e8c8c;
   border: 0;
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 90%;
   border-color: #a2a2a2;
@@ -4128,7 +4128,7 @@ form .responsive-cell-block input {
   width: 79%;
   color: #fffefe;
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 100%;
   font-size: 1rem;
@@ -4251,7 +4251,7 @@ form {
   color: #8e8c8c;
   border: 0;
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 90%;
   border-color: #a2a2a2;
@@ -6932,7 +6932,7 @@ form .responsive-cell-block input {
   color: #fffefe;
   /* border: 2px solid white; */
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 100%;
   /* box-shadow: rgba(248, 248, 250, 0.25) 0px 50px 100px -20px,
@@ -7124,7 +7124,7 @@ form {
   color: #8e8c8c;
   border: 0;
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 90%;
   border-color: #a2a2a2;
@@ -10345,7 +10345,7 @@ form .responsive-cell-block input {
   width: 79%;
   color: #fffefe;
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 100%;
   font-size: 1rem;
@@ -10468,7 +10468,7 @@ form {
   color: #8e8c8c;
   border: 0;
   outline: none;
-  font-family: cursive;
+  font-family: "Montserrat", sans-serif;
   height: 2.813rem;
   width: 90%;
   border-color: #a2a2a2;
