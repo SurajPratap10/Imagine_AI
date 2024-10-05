@@ -208,7 +208,8 @@ git push -u origin <your_branch_name>
 
 # Open Source Events
 
-- <h4> GSSoC23 </h4>
+- <h4> GSSoC 2023 </h4>
+- <h4> GSSoC 2024 Extd</h4>
     <div align="center">
       <picture>
         <source 
