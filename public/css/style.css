@@ -243,7 +243,10 @@ a{
   padding: 0;
 }
 
-
+.AI:hover{
+  font-size: 1.20rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 .barIcon {
   font-size: 1.5rem;
