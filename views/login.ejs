@@ -3,6 +3,13 @@
 
       <head>
         <style>
+  .google-logo,
+  .facebook-logo,
+  .twitter-logo {
+    width: 50px; 
+    height: auto; 
+  }
+
           #captchaicon{
             cursor: pointer;
           }
@@ -108,7 +115,7 @@
       <h2>Sign In using</h2>
       <div class="signin-opt-icons">
         <!-- signin using google -->
-        <a href="/auth/google" class="google-button tooltip" aria-label="sign in with google">
+        <a href="/auth/google" class="google-button tooltip google-logo"  aria-label="sign in with google">
           <img
             src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
             
@@ -116,7 +123,7 @@
         </a>
 
         <!-- signin using facebook -->
-        <a href="#" class="tooltip" aria-label="sign in with facebook">
+        <a href="#" class="tooltip facebook-logo" aria-label="sign in with facebook">
           <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
           <img
             src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
@@ -126,7 +133,7 @@
 
         <!-- signin using twitter -->
 
-        <a href="#" class="tooltip" aria-label="sign in with twitter">
+        <a href="#" class="tooltip twitter-logo" aria-label="sign in with twitter">
           <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
           <img
             src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png"
