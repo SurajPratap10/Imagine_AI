@@ -676,14 +676,22 @@
           </div>
 
           <%- include('includes/footer.ejs') %>
-            <!-- Over riding footer style -->
+            
+          <%- include('includes/topToBottomScrollButton.ejs') %>
+
             <style>
-              footer {
-                z-index: -1;
+              @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+              .left .dashboard-h1, .main-content b {
+                font-family: 'Poppins', sans-serif;
+                text-align: start;
+                letter-spacing: 1.5px;
               }
 
-              /* Light mode styles */
-              .light-mode {}
+              .main-content {
+                font-family: cursive, sans-serif;
+                text-align: center;
+              }
 
               /* Dark mode styles */
               .dark-mode {
@@ -701,6 +709,7 @@
               .dark-mode .about {
                 background-color: #121212;
                 color: #ffffff;
+                padding-bottom: -2rem;
               }
 
               /* Styles for the dark mode toggle button */
@@ -713,29 +722,69 @@
                 transition: transform 0.3s ease-in-out;
                 font-size: 1.1em;
               }
+
+              #email::placeholder {
+                color: #041e42;
+              }
+
+              .info .btn{
+                font-size: 12px;
+    padding: 20px 20px;
+    letter-spacing: 2px;
+    width: auto;
+    border-radius: 10px
+              }
             </style>
 
             <script>
-              function toggleDarkMode() {
-                const body = document.body;
-                const navbar = document.querySelector(".navbar");
-                const aboutSection = document.querySelector(".about");
-                const darkModeToggle = document.querySelector(".dark-mode-toggle");
+         function toggleDarkMode() {
+      const body = document.body;
+      const navbar = document.querySelector(".navbar");
+      const aboutSection = document.querySelector(".about");
+      const darkModeToggle = document.querySelector(".dark-mode-toggle");
 
-                const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
-                var darkModeIconCollection = Array.from(darkModeIcon);
+      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+      var darkModeIconCollection = Array.from(darkModeIcon);
 
-                body.classList.toggle("dark-mode");
-                navbar.classList.toggle("dark-mode");
-                aboutSection.classList.toggle("dark-mode");
-                // darkModeToggle.classList.toggle("dark");
+      body.classList.toggle("dark-mode");
+      navbar.classList.toggle("dark-mode");
+      aboutSection.classList.toggle("dark-mode");
+      // darkModeToggle.classList.toggle("dark");
 
-                darkModeIconCollection.map((darkIcon) => {
-                  if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-                    darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-                  } else {
-                    darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                  }
-                });
-              }
-            </script>
+      darkModeIconCollection.map((darkIcon) => {
+        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+        } else {
+          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+      });
+    }
+
+    // Download Image logic
+
+    function downloadImage(imgId){
+   const image = $(`#${imgId}`).attr("src");
+   const url = window.location.href+image;
+   const fileName = image.substring(image.lastIndexOf("/")+1);
+
+   fetch(url)
+    .then(response => response.blob())
+    .then(blob => {
+      // Create a temporary anchor element
+      const downloadLink = document.createElement('a');
+      downloadLink.href = URL.createObjectURL(blob);
+      downloadLink.download = fileName || 'image.jpg';
+
+      // Trigger a click event on the anchor element
+      downloadLink.click();
+
+      // Clean up the temporary anchor and blob object
+      URL.revokeObjectURL(downloadLink.href);
+      downloadLink.remove();
+    })
+    .catch(error => {
+      console.error('Error downloading the image:', error);
+    });
+
+}
+</script>
