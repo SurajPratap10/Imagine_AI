@@ -2,7 +2,7 @@
     <i class="bi bi-list"></i>
   </div>
   <div class="sidebar">
-   <div class="crossicon">x</div>
+   <div class="crossicon" onclick="sidebartoggle()">&#10005;</div>
    <div class="content">
     <a class="white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
           <a class="white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
@@ -30,7 +30,7 @@
     font-size: 40px;
     width: 50px;
     display: none;
-    z-index: 9999;
+    z-index: 99;
     }
 
     .hamburger i{
@@ -65,7 +65,7 @@
     right: 0;
     transition: all 0.2s ;
     transform: translateX(100%);
-    z-index: 2;
+    z-index: 999;
   }
   .sidebar .content{
     display: flex;
@@ -82,10 +82,11 @@
     right: 20px;
     font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .content a:hover{
-              color: white;
+    color: white;
   }
 
 
