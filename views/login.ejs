@@ -1,178 +1,178 @@
-<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %>
-    <%- include('includes/sidebar.ejs') %>
+<%- include('includes/PRE.ejs') %> 
+<%- include('includes/header.ejs') %>
+<%- include('includes/sidebar.ejs') %>
 
-      <head>
-        <style>
-  .google-logo,
-  .facebook-logo,
-  .twitter-logo {
-    width: 50px; 
-    height: auto; 
+<head>
+  <style>
+    body {
+      background-color: #121212; /* Dark background */
+      color: #ffffff; /* Light text color */
+    }
+  
+    .form-control {
+      margin-bottom: 20px; /* Space between input fields */
+    }
+    .sign-in-button {
+    display: inline-block; /* Make it behave like a button */
+    padding: 15px 30px; /* Add padding for a button-like appearance */
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the text */
+    border-radius: 25px; /* Rounded corners */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
   }
 
-          #captchaicon{
-            cursor: pointer;
-          }
-            .signin-opt-icons a:hover img {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-    width: 14rem;
+  .sign-in-button:hover {
+    background-color: #333; /* Darker gray on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
 
-
-          .google-icon {
-            vertical-align: middle;
-            fill: teal;
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
-          }
-
-          .facebook-icon {
-            vertical-align: middle;
-            fill: teal;
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
-          }
-          .twitter-icon {
-            vertical-align: middle;
-            fill: teal;
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
-          }
-          .google-icon:hover {
+  .sign-in-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+  
+    .form-control label {
+      display: block; /* Ensure labels are on their own line */
+      margin-bottom: 5px; /* Space between label and input */
+      color: #ffffff; /* Light label color */
+    }
+  
+    .eye-container {
+      position: relative;
+      display: inline-block;
+      width: 100%; /* Full width */
+    }
+  
+    .eye-container input {
+      width: 100%;
+      padding-right: 40px; /* Space for the eye icon */
+      box-sizing: border-box;
+      background-color: #1e1e1e; /* Dark input background */
+      color: #ffffff; /* Light input text */
+      border: 1px solid #444; /* Input border */
+      padding-left: 10px; /* Add some padding on the left */
+    }
+  
+    #eye {
+      color: aqua;
+      cursor: pointer;
+      position: absolute; /* Make it absolute */
+      right: auto; /* Position it to the right */
+      top: 50%; /* Center it vertically */
+      transform: translateY(-50%) ;/* Adjust for centering */
+      pointer-events: auto; /* Allow clicks on the icon */
+    }
+    .google-icon {
             fill: white;
-            transform: scale3d(1.1, 1.1, 1.1);
+            width: 30px; /* Set a smaller width */
+           height: 30px; /* Set a smaller height */
+            transition: transform 0.2s;
           }
           
-          .facebook-icon:hover {
-            fill: #427bf7;
+          .facebook-icon{
+          
             transform: scale3d(1.1, 1.1, 1.1);
+            width: 30px; /* Set a smaller width */
+           height: 30px; /* Set a smaller height */
+            transition: transform 0.2s;
           }
 
-          .twitter-icon:hover {
-            fill: #1da1f2;
+          .twitter-icon {
+         
             transform: scale3d(1.1, 1.1, 1.1);
+            width: 30px; /* Set a smaller width */
+           height: 30px; /* Set a smaller height */
+            transition: transform 0.2s;
           }
 
-          .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-          }
-
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-    }
-    
-    .icon-boundry {
-              position: relative;
-            }
-    
-    #eye {
-              color: aqua;
-              position: absolute;
-              top: 10px;
-              right: 15px;
-              left: auto;
-              transform: none;
-              cursor: pointer;
-            }
   </style>
+  
 </head>
+
+
 <%- include('includes/navbar.ejs') %>
-        <section class="showcase" id="showcase">
-          <form id="image-form" action="index.html" style="margin-top:50px ;" aria-label="Login Form">
-            <h1 class="AI">SIGN IN</h1>
-            <div class="form-control">
-              <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter Email address"
-                onkeyup="handleChange(event)" style="color: black;" aria-describedby="emailError"/>
-              <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
-            </div>
-            <div class="form-control">
-              <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
-              <div class="icon-boundry">
-                <input type="password" id="password" name="password" placeholder="Enter password"
-                onkeyup="handleChange(event)" aria-describedby="passwordError"/>
-                <span class="material-symbols-outlined" id="eye" onclick="myFunction()">
-                  visibility_off
-                </span>
-              </div>
-              <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
-                (@$%#^&*), 1 number (0-9)</p>
-            </div>
-            <div class="form-control">
-              <label for="captcha-input" style="color: white; display: block;">Captcha</label>
-              <div id="captchaContainer">
-                <div id="captcha"></div>
-                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
-                  autorenew
-                  </span>
-                <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
-              </div>
-              <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
-            </div>
+<section class="showcase" id="showcase">
+  <form id="image-form" action="index.html" style="margin-top:50px;" aria-label="Login Form">
+    <h1 class="AI">SIGN IN</h1>
+
+    <div class="form-control">
+      <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email address"
+             onkeyup="handleChange(event)" style="color: black;" aria-describedby="emailError"/>
+      <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
+    </div>
+
+    <div class="form-control">
+      <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
+      <div class="eye-container">
+        <input type="password" id="password" name="password" placeholder="Enter password"
+               onkeyup="handleChange(event)" aria-describedby="passwordError" />
+        <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
+      </div>
+      <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)</p>
+    </div>
+
+    <div class="form-control">
+      <label for="captcha-input" style="color: white; display: block;">Captcha</label>
+      <div id="captchaContainer">
+        <div id="captcha"></div>
+        <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
+          autorenew
+        </span>
+        <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
+      </div>
+      <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
+    </div>
+
     <div class="signin-opt">
-      <h2>Sign In using</h2>
+      <h2 class="sign-in-button">Sign In using</h2>
       <div class="signin-opt-icons">
-        <!-- signin using google -->
-        <a href="/auth/google" class="google-button tooltip google-logo"  aria-label="sign in with google">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
-            
-          />
+        <a href="/auth/google" class="google-icon" aria-label="sign in with google">
+          <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
         </a>
-
-        <!-- signin using facebook -->
-        <a href="#" class="tooltip facebook-logo" aria-label="sign in with facebook">
-          <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-            
-          />
+        <a href="#" class="facebook-icon aria-label="sign in with facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
         </a>
-
-        <!-- signin using twitter -->
-
-        <a href="#" class="tooltip twitter-logo" aria-label="sign in with twitter">
-          <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png"
-            
-          />
+        <a href="#" class="twitter-icon" aria-label="sign in with twitter">
+          <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
         </a>
       </div>
     </div>
+
     <div class="formBtns">
+      <button id="submit" type="submit" class="btn sign-in-btn btn-login-submit" aria-label="submit" disabled>
+        <span>Submit</span>
+        <div class="flow"></div>
+      </button>
+    </div>
 
-      <button
-      id="submit"
-        type="submit"
-        class="btn sign-in-btn btn-login-submit"
-        href="index.html"
-        aria-label="submit"
-        disabled
-      ><span>Submit</span>
-                <div class="flow"></div>
-              </button>
-            </div>
-            <div class="get-api-text">
-              <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
-            </div>
-          </form>
-          <div id="successToast" class="toast success-toast" aria-label="success message"></div>
-          <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
-        </section>
-        <%- include('includes/footer.ejs') %>
-          <script>
-            function myFunction() {
-              var x = document.getElementById("password");
-              if (x.type === "password") {
-                x.type = "text";
-                document.getElementById("eye").innerText = "visibility"
-              } else {
-                x.type = "password";
-                document.getElementById("eye").innerText = "visibility_off"
-              }
-            }
+    <div class="get-api-text">
+      <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
+    </div>
+  </form>
 
-          </script>
+  <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+  <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
+</section>
+
+<%- include('includes/footer.ejs') %>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("password");
+    var eyeIcon = document.getElementById("eye");
+    if (x.type === "password") {
+      x.type = "text";
+      eyeIcon.innerText = "visibility";
+    } else {
+      x.type = "password";
+      eyeIcon.innerText = "visibility_off";
+    }
+  }
+</script>
