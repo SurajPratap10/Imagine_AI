@@ -196,7 +196,32 @@
     border-radius: 10px
               }
             </style>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+            <script>
+              // GSAP animation to slide in the 'about' section from the left
+              document.addEventListener("DOMContentLoaded", () => {
+                gsap.from(".about", {
+                  duration: 1.5,    // Animation duration
+                  x: -300,          // Slide from left (negative x)
+                  opacity: 0,       // Start invisible
+                  ease: "power3.out",  // Easing function for smooth transition
+                  delay: 0.5        // Delay to start animation
+                });
+            
+                // GSAP for other elements (optional)
+                gsap.from(".main-content", {
+                  duration: 1.5,
+                  y: 100,
+                  opacity: 0,
+                  delay: 1,
+                  ease: "power2.out"
+                });
+              });
+            </script>
+            
 
+         
             <script>
          function toggleDarkMode() {
       const body = document.body;
@@ -212,9 +237,11 @@
       aboutSection.classList.toggle("dark-mode");
       // darkModeToggle.classList.toggle("dark");
 
+  
+
       darkModeIconCollection.map((darkIcon) => {
         if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+          darkIcon.innerHTML = '<navbari class="fa-sharp fa-solid fa-sun"></i>';
         } else {
           darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
