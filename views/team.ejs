@@ -14,10 +14,14 @@
   }
 
   .team-members {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    /* display: grid; */
+    display: flex;
+    /* grid-template-columns: repeat(5, 1fr);  */
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .team-member {
@@ -67,7 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 35px 0;
+  /* padding: 35px 0; */
 }
 
 .widget-container {
@@ -145,15 +149,18 @@
   main {
     padding-top: 80px;
   }
+  .team{
+    padding-top: 3rem;
+  }
   .heading-contributors {
     margin-top: 20px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  font: 900 3vw 'Orbitron', sans-serif;
-  background: red;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font: 900 2.3rem 'Orbitron', sans-serif;
+    background: #343434;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .heading-contributors:after {
