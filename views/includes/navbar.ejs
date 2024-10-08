@@ -180,8 +180,27 @@
       }
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script>
+    // GSAP animation
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".navbar", {
+        duration: 1.5,    // Animation duration
+        y: -100,          // Slide from left (negative x)
+        opacity: 0,       // Start invisible
+        ease: "power3.out",  // Easing function for smooth transition
+        delay: 0.5        // Delay to start animation
+      });
+  
+   
+     
+    });
+  </script>
+
 
   <script>
+    
+
     function toggleDarkMode() {
       const body = document.body;
       const navbar = document.querySelector(".navbar");
