@@ -1,214 +1,748 @@
-
-
-<%- include('includes/PRE.ejs') %>
-
-  <%- include('includes/header.ejs') %>
-
-  <!-- <%- include('includes/sidebar.ejs') %> -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <%- include('includes/header.ejs') %>
+  <%- include('includes/sidebar.ejs') %>
+    <link rel="stylesheet" href="../public/css/style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-
-   
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
     <style>
-      /* Add your styles here */
-      body {
-        background-color: #fff;
-        color: #333;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
+        @import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
 
+        * {
+            box-sizing: border-box;
+        }
 
-
-    input,
-    textarea {
-      background-color: #f5f5f5;
-      color: #333;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #ffffff;
-    }
-
-    .dark-mode input,
-    .dark-mode textarea {
-      background-color: #555;
-      color: #fff;
-    }
-  </style>
-    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-</head>
-<body>
-    <%- include('includes/navbar.ejs') %>
-    <%- include('includes/sidebar.ejs') %>
-      <div class="about">
-        <div class="container">
-          <div class="about-text">
-            <h1 class="title">Generate New World Parallel Universe Images</h1>
-            <p class="about-description" style="text-align:center;">
-              Explore our AI, and generate multiverse Images, share it and get a new perspective of the future World.
-              Imagine AI generates Images beyond and above the imagination,
-            </p>
-            <div class="button" style="justify-content:center;">
-              <div class="btn-wrapper">
-                <a href="/generateImg">
-                 
-                </a>
-              </div>
-              <a href="/login">
-                
-              </a>
-            </div>
-          </div>
-          <div class="about-image">
-            <img loading="lazy" class="about-us-logo" src="banner.webp" alt="imagine" />
-          </div>
-        </div>
-      </div>
-      <div class="feature">
-        <h1 class="headline">Exceptional Advancement of our Images</h1>
-        <h2 style="padding: 20px; padding-bottom: 50px;">These Features Make our Images, super advanced with
-          exceptional quality</h2>
-        <div class="quality">
-          <div class="quantity">
-            <div class="bg"></div>
-            <div class="glass">
-              <img loading="lazy" src="conditioning1.webp" alt="icon" />
-            </div>
-            <h4 class="txt">Conditioning</h4>
-          </div>
-
-          <div class="quantity">
-            <div class="bg"></div>
-            <div class="glass">
-              <img loading="lazy" src="style.webp" alt="icon" />
-            </div>
-            <h4 class="txt">Style Transfer</h4>
-          </div>
-
-          <div class="quantity">
-            <div class="bg"></div>
-            <div class="glass">
-              <img loading="lazy" src="generation.webp" alt="icon" />
-            </div>
-            <h4 class="txt">Controlled Generation</h4>
-          </div>
-          <div class="quantity">
-            <div class="bg"></div>
-            <div class="glass">
-              <img loading="lazy" src="modal.webp" alt="icon" />
-            </div>
-            <h4 class="txt">Multi Modal Embedding</h4>
-          </div>
-        </div>
-      </div>
-      <div class="distance"></div>
-
-      <div class="about">
-        <div class="container1">
-          <div class="about-image">
-            <img loading="lazy" src="1.webp" alt="imagine" />
-          </div>
-          <div class="about-text">
-            <h1 class="title">Words transformed. Imagination unleashed.</h1>
-            <p class="about-description">
-              Unlock your imagination with our revolutionary text-to-image AI.
-              Experience stunning visuals that bring your words to life.
-              Our user-friendly solution delivers quality,
-              speed, and limitless creativity
-            </p>
-            <a href="https://openai.com/dall-e-2/">
-             
-            </a>
-          </div>
-        </div>
-      </div>
-      <style>
-        /* styles.css */
-        iframe {
-    display: block;
-    margin: 0 auto; /* Center the iframe horizontally */
-    width: 100%; /* Make the iframe cover the full width */
-    height: 100vh; /* Make the iframe cover the full viewport height */
-    border: none; /* Remove iframe border */
-}
-        .iframe-container {
+        body {
+            font-family: 'Judson', serif;
+            background: linear-gradient(to bottom,
+                rgba(99, 167, 191, 1),
+                rgba(94, 86, 179, 1),
+                rgba(72, 139, 163, 1),
+                rgba(79, 124, 179, 1),
+                rgba(52, 115, 140, 1),
+                rgba(48, 92, 145, 1),
+                rgba(39, 82, 145, 1),
+                rgba(19, 58, 110, 1),
+                rgba(10, 50, 80, 1),
+                rgba(40, 41, 100, 1),
+                rgba(14, 52, 94, 1),
+                black);
+            max-width: 100vw;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
             position: relative;
+            margin: 0;
+        }
+
+        body::after {
+            position: fixed;
+            content: '';
+            pointer-events: none;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100vh;
-            overflow: hidden; /* Hide overflow from iframe */
+            background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.5));
         }
 
-
-
-        </style>
- <div class="iframe-container">
-  <iframe src="/slider" frameborder="0"  allowtransparency="true"></iframe>
-</div>
-
-
-      <%- include('includes/footer.ejs') %>
- 
-      
-
-      <%- include('includes/topToBottomScrollButton.ejs') %>
-        <style>
-          /* Light mode styles */
-          .light-mode {}
-
-          /* Dark mode styles */
-          .dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-          }
-
-          /* Dark mode styles for navbar */
-          .dark-mode #navbar {
-            background-color: #121212;
-            color: #ffffff;
-          }
-
-          /* Dark mode styles for the about section */
-          .dark-mode .about {
-            background-color: #121212;
-            color: #ffffff;
-          }
-
-          /* Styles for the dark mode toggle button */
-          .dark-mode-toggle {
-            font-size: 24px;
-            cursor: pointer;
-          }
-
-          .dark-mode-toggle i {
-            transition: transform 0.3s ease-in-out;
-            font-size: 1.1em;
-          }
-        </style>
-
-        <script>
-    function toggleDarkMode() {
-      const body = document.body;
-      const navbar = document.querySelector(".navbar");
-      const aboutSection = document.querySelector(".about");
-      const darkModeToggle = document.querySelector(".dark-mode-toggle");
-
-      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
-      var darkModeIconCollection = Array.from(darkModeIcon);
-
-      body.classList.toggle("dark-mode");
-      navbar.classList.toggle("dark-mode");
-      aboutSection.classList.toggle("dark-mode");
-      // darkModeToggle.classList.toggle("dark");
-
-      darkModeIconCollection.map((darkIcon) => {
-        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-          darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
-        } else {
-          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        @media (min-width: 40em) {
+            body {
+                font-size: 2rem;
+            }
         }
-      });
-    }
-        </script>
+        .rays {
+	--r: 10deg;
+	--c: rgba(255, 251, 227, 0.2);
+	--size: max(60vh, 80rem);
+	--mask: radial-gradient(circle at center, black, transparent 50%);
+	position: fixed;
+	pointer-events: none;
+	top: calc(var(--size) * -0.55);
+	left: 50%;
+	width: var(--size);
+	height: var(--size);
+	pointer-events: none;
+	
+	> div {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background: repeating-conic-gradient(var(--c), var(--c) var(--r), transparent var(--r), transparent calc(var(--r) * 2));
+		-webkit-mask-image: var(--mask);
+		mask-image: var(--mask);
+	}
+}
+
+@keyframes raysRotate {
+	50% {
+		transform: rotate(180deg) scale(1.5);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+.fish-wrapper {
+	--mask: linear-gradient(180deg, rgba(0, 0, 0, 1.0), transparent);
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	perspective: 100rem;
+	perspective-origin: center center;
+	transform-style: preserve-3d;
+	pointer-events: none;
+	-webkit-mask-image: var(--mask);
+	mask-image: var(--mask);
+	z-index: 2;
+}
+
+.fish {
+	--bodyW: 2rem;
+	--o: 0.95;
+	--l: 100%;
+	--c: hsla(250deg, 50%, var(--l), var(--o, 0.6));
+	--size: 10rem;
+	position: relative;
+	width: var(--size);
+	height: var(--size);
+	transform-style: preserve-3d;
+	transform-origin: center;
+	
+	@media (min-width: 1000px) {
+		--size: 20rem;
+		--bodyW: 4rem;
+	}
+}
+
+.fish__skeleton {
+	--clip: polygon(0 var(--bodyW), 45% 0, 55% 0, 100% var(--bodyW), 50% 100%);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: 
+		repeating-linear-gradient(0deg, var(--c), var(--c) 0.1rem, transparent 0, transparent 0.5rem),
+		linear-gradient(var(--c) var(--bodyW), transparent var(--bodyW)), 
+		linear-gradient(90deg, transparent calc((var(--bodyW) / 2) - 0.1rem), var(--c) 0, var(--c) calc((var(--bodyW) / 2) + 0.1rem), transparent 0);
+	top: calc(var(--bodyW) / 4);
+	left: calc(var(--bodyW) * 0.75);
+	width: var(--bodyW);
+	height: calc(var(--bodyW) * 4);
+	-webkit-clip-path: var(--clip);
+	clip-path: var(--clip);
+	opacity: 0;
+	transform: translate3d(0, 0, calc(var(--bodyW) / -2)) rotate(90deg);
+	transform-origin: center center;
+}
+
+.fish__inner {
+	--a: 9.5deg;
+	width: calc(var(--bodyW) * 1.5);
+	height: var(--size);
+	transform-style: preserve-3d;
+	transform: rotate(90deg);
+}
+
+.fish__body {
+	--l: 75%;
+	--c: hsla(250deg, 50%, var(--l), var(--o, 0.6));
+	position: absolute;
+	top: var(--bodyW);
+	left: 0;
+	width: var(--bodyW);
+	height: calc(3 * var(--bodyW));
+	background: var(--c);
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+	transform: translateZ(calc(var(--bodyW) / -2)) rotateX(var(--a));
+	transform-origin: center top;
+	
+	&:nth-child(2) {
+		--i: 2;
+		--l: 75%;
+		transform: translateZ(calc(var(--bodyW) / 2)) rotateX(calc(var(--a) * -1));
+	}
+	
+	&:nth-child(3) {
+		--i: 3;
+		--l: 95%;
+		transform: rotateY(90deg) translate3d(calc(var(--bodyW) / -2), 0, 0) rotateX(var(--a));
+		transform-origin: left top;
+	}
+	
+	&:nth-child(4) {
+		--i: 4;
+		--l: 50%;
+		transform: rotateY(90deg) translate3d(calc(var(--bodyW) / 2), 0, 0) rotateX(calc(var(--a) * -1));
+		transform-origin: right top;
+	}
+}
+
+.fish__head {
+	--a: 23.5deg;
+	--l: 85%;
+	--c: hsla(250deg, 50%, var(--l), var(--o, 0.6));
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--bodyW);
+	height: var(--bodyW);
+	background: var(--c);
+	clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+	transform: translateZ(calc(var(--bodyW) / 2)) rotateX(var(--a));
+	transform-origin: center bottom;
+	
+	&--2 {
+		--i: 2;
+		--l: 80%;
+		transform: translateZ(calc(var(--bodyW) / -2)) rotateX(calc(var(--a) * -1));
+	}
+	
+	&--3 {
+		--i: 3;
+		--l: 90%;
+		transform: rotateY(90deg) translate3d(calc(var(--bodyW) / -2), 0, 0) rotateX(calc(var(--a) * -1));
+		transform-origin: left bottom;
+	}
+	
+	&--4 {
+		--l: 55%;
+		transform: rotateY(90deg) translate3d(calc(var(--bodyW) / 2), 0, 0) rotateX(var(--a));
+		transform-origin: right bottom;
+	}
+}
+
+.fish__tail-main {
+	--o: 0.9;
+	--l: 90%;
+	--c: hsla(250deg, 50%, var(--l), var(--o, 0.6));
+	width: var(--bodyW);
+	height: var(--bodyW);
+	background-color: var(--c);
+	position: absolute;
+	left: 0;
+	bottom: var(--bodyW);
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.fish__tail-fork {
+	--o: 0.9;
+	--l: 95%;
+	--c: hsla(250deg, 50%, var(--l), var(--o, 0.6));
+	width: var(--bodyW);
+	height: var(--bodyW);
+	background-color: var(--c);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 70% 70%, 50% 30%, 30% 70%, 10% 100%, 0 70%);
+	transform-origin: top center;
+	transform: rotateX(-45deg);
+	animation: tail 1000ms infinite alternate;
+}
+
+.fish__fin {
+	width: calc(var(--bodyW) / 8 * 3);
+	height: var(--bodyW);
+	background-color: var(--c);
+	position: absolute;
+	top: calc(var(--bodyW) * 1.5);
+	left: calc(var(--bodyW) / 8 * 3);
+	clip-path: polygon(50% 0, 100% 30%, 100% 60%, 50% 100%, 0 60%, 0 30%);
+	transform-origin: top center;
+	transform: translateZ(calc(var(--bodyW) / 2)) rotateY(0deg) rotateX(5deg) rotate(10deg);
+	animation: fin 1500ms infinite alternate linear;
+	
+	&--2 {
+		transform: translateZ(calc(var(--bodyW) / -2)) rotateY(0deg) rotateX(-5deg) rotate(10deg);
+		animation: fin2 1500ms infinite alternate linear;
+	}
+}
+
+@keyframes tail {
+	to {
+		transform: rotateX(45deg);
+	}
+}
+
+@keyframes fin {
+	100% {
+		transform: translateZ(calc(var(--bodyW) / 2)) rotateY(10deg) rotateX(20deg) rotate(-10deg);
+	}
+}
+
+@keyframes fin2 {
+	100% {
+		transform: translateZ(calc(var(--bodyW) / -2)) rotateY(-10deg) rotateX(-20deg) rotate(-10deg);
+	}
+}
+
+/* Lights */
+.lights {
+	position: fixed;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.lights__group {
+	position: relative;
+	height: 100%;
+}
+
+.lights__light {
+	--size: 0.35rem;
+	width: var(--size);
+	height: var(--size);
+	position: absolute;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 100%;
+	top: 10%;
+	left: 25%;
+	filter: blur(0.1rem);
+	animation: blink 2500ms var(--d, 0ms) infinite alternate;
+	
+	&:nth-child(2) {
+		--d: 200ms;
+		top: 40%;
+		left: 12%;
+	}
+	
+	&:nth-child(3) {
+		--d: 350ms;
+		top: 60%;
+		left: 18%;
+	}
+	
+	&:nth-child(4) {
+		--d: 600ms;
+		top: 25%;
+		left: 66%;
+	}
+	
+	&:nth-child(5) {
+		--d: 1210ms;
+		top: 43%;
+		left: 55%;
+	}
+	
+	&:nth-child(6) {
+		--d: 420ms;
+		top: 90%;
+		left: 37%;
+	}
+	
+	&:nth-child(7) {
+		--d: 1100ms;
+		top: 82%;
+		left: 91%;
+	}
+	
+	&:nth-child(8) {
+		--d: 1560ms;
+		top: 67%;
+		left: 81%;
+	}
+}
+
+@keyframes blink {
+	to {
+		opacity: 0;
+	}
+}
+
+
+.content {
+	position: relative;
+	z-index: 1;
+	padding-bottom: 100vh;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+	margin-top: 100vh;
+	
+	&:nth-child(4n),
+	&:nth-child(4n - 1) {
+		--col: 3;
+	}
+}
+
+.section__content {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	
+	@media (min-width: 50rem) {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 25rem));
+		gap: 2rem;
+		padding: 3rem;
+		
+		> * {
+			grid-column: var(--col, 1);
+			opacity: 0;
+		}
+	}
+}
+
+.bubbles {
+	position: fixed;
+	top: 0;
+	left: 5rem;
+	transform-origin: center;
+	transform: translate3d(10rem, 5rem, 0) rotateX(20deg) rotateY(0deg)
+}
+
+.bubbles__inner {
+	width: 10rem;
+	height: 10rem;
+}
+
+.bubbles__bubble {
+	--c: rgba(255, 255, 255, 0.4);
+	--size: 2.5rem;
+	position: absolute;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: radial-gradient(transparent 30%, var(--c, white)), radial-gradient(circle at 100% 0%, transparent 30%, var(--c, white));
+	transform-origin: center;
+	transform: scale(0);
+	opacity: 0;
+	
+	&:nth-child(2) {
+		--size: 1.8rem;
+		top: 3rem;
+		left: 2rem;
+	}
+	
+	&:nth-child(3) {
+		--size: 1.2rem;
+		top: 6rem;
+		left: 0;
+	}
+}
+
+.indicator {
+	text-align: center;
+	position: fixed;
+	bottom: 1rem;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	font-size: 1.2rem;
+	
+	span {
+		display: block;
+		
+		&:nth-child(2) {
+			animation: arrowMove 600ms infinite alternate;
+		}
+	}
+}
+
+@keyframes arrowMove {
+	to {
+		transform: translate3d(0, 0.5rem, 0);
+	}
+}
+
+
+    
+    </style>
+</head>
+<body>
+  <%- include('includes/navbar.ejs') %>
+
+   
+    <div class="fish-wrapper">
+        <div class="fish">
+            <div class="fish__skeleton"></div>
+            <div class="fish__inner">
+                <!--body-->
+                <div class="fish__body"></div>
+                <div class="fish__body"></div>
+                <div class="fish__body"></div>
+                <div class="fish__body"></div>
+                <!--head-->
+                <div class="fish__head"></div>
+                <div class="fish__head fish__head--2"></div>
+                <div class="fish__head fish__head--3"></div>
+                <div class="fish__head fish__head--4"></div>
+                <div class="fish__tail-main"></div>
+                <div class="fish__tail-fork"></div>
+                <div class="fish__fin"></div>
+                <div class="fish__fin fish__fin--2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bubbles">
+        <div class="bubbles__inner">
+            <div class="bubbles__bubble"></div>
+            <div class="bubbles__bubble"></div>
+            <div class="bubbles__bubble"></div>
+        </div>
+    </div>
+    <div class="rays"><div data-rays></div></div>
+    <div class="lights">
+        <div class="lights__group" data-lights="1">
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+            <div class="lights__light"></div>
+        </div>
+    </div>
+    <div class="content">
+        <section>
+            <div class="section__content">
+                <p>Generate New World Parallel Universe Images with Imagine AI</p>
+               
+            </div>
+        </section>
+        <section>
+            <div class="section__content">
+                <p>Explore our AI, and generate multiverse Images, share it and get a new perspective of the future World. Imagine AI generates Images beyond and above the imagination</p>
+            </div>
+        </section>
+        <section>
+            <div class="section__content">
+                <p>Let's take you to the world of Imagine AI...</p>
+            </div>
+        </section>
+        
+    </div>
+   
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(MotionPathPlugin)
+
+const rx = window.innerWidth < 1000 ? window.innerWidth / 1200 : 1
+const ry = window.innerHeight < 700 ? window.innerHeight / 1200 : 1
+
+const path = [
+			// 1
+			{ x: 800, y: 200 },
+			{ x: 900, y: 20 },
+			{ x: 1100, y: 100 },
+			// 2
+			{ x: 1000, y: 200 },
+			{ x: 900, y: 20 },
+			{ x: 10, y: 500 },
+			// 3
+			{ x: 100, y: 300 },
+			{ x: 500, y: 400 },
+			{ x: 1000, y: 200 },
+			// 4
+			{ x: 1100, y: 300 },
+			{ x: 400, y: 400 },
+			{ x: 200, y: 250 },
+			// 5
+			{ x: 100, y: 300 },
+			{ x: 500, y: 450 },
+			{ x: 1100, y: 500 }
+		]
+
+const scaledPath = path.map(({ x, y }) => {
+	return {
+		x: x * rx,
+		y: y * ry
+	}
+})
+
+const sections = [...document.querySelectorAll('section')]
+const fish = document.querySelector('.fish')
+const fishHeadAndBody = 
+			[
+				...document.querySelectorAll('.fish__head'),
+				...document.querySelectorAll('.fish__body')
+			]
+const lights = [...document.querySelectorAll('[data-lights]')]
+const rays = document.querySelector('[data-rays]')
+
+const bubbles = gsap.timeline()
+bubbles.set('.bubbles__bubble', {
+	y: 100,
+})
+bubbles.to('.bubbles__bubble', {
+	scale: 1.2,
+	y: -300,
+	opacity: 1,
+	duration: 2,
+	stagger: 0.2,
+})
+bubbles.to('.bubbles__bubble', {
+	scale: 1,
+	opacity: 0,
+	duration: 1,
+}, '-=1')
+
+bubbles.pause()
+
+const tl = gsap.timeline({
+	scrollTrigger: {
+		scrub: 1.5,
+	},
+})
+tl.to(fish, {
+	motionPath: {
+		path: scaledPath,
+		align: 'self',
+		alignOrigin: [0.5, 0.5],
+		autoRotate: true
+	},
+	duration: 10,
+	immediateRender: true,
+	// ease: 'power4'
+})
+tl.to('.indicator', {
+	opacity: 0
+}, 0)
+tl.to(fish, {
+	rotateX: 180
+}, 1)
+tl.to(fish, {
+	rotateX: 0
+}, 2.5)
+tl.to(fish, {
+	z: -500,
+	duration: 2,
+}, 2.5)
+tl.to(fish, {
+	rotateX: 180
+}, 4)
+tl.to(fish, {
+	rotateX: 0
+}, 5.5)
+tl.to(fish, {
+	z: -50,
+	duration: 2,
+}, 5)
+tl.to(fish, {
+	rotate: 0,
+	duration: 1,
+}, '-=1')
+tl.to('.fish__skeleton', {
+	opacity: 0.6,
+	duration: 0.1,
+	repeat: 4
+}, '-=3')
+tl.to(fishHeadAndBody, {
+	opacity: 0,
+	duration: 0.1,
+	repeat: 4
+}, '-=3')
+tl.to('.fish__inner', {
+	opacity: 0.1,
+	duration: 1
+}, '-=1')
+tl.to('.fish__skeleton', {
+	opacity: 0.1,
+	duration: 1
+}, '-=1')
+
+bubbles.play()
+tl.pause()
+
+const lightsTl = gsap.timeline({
+	scrollTrigger: {
+		scrub: 6
+	}
+})
+lightsTl.from(lights[0], {
+	x: window.innerWidth * -1,
+	y: window.innerHeight,
+	ease: 'power4.out',
+	duration: 80
+}, 0)
+lightsTl.to(lights[0], {
+	x: window.innerWidth,
+	y: window.innerHeight * -1,
+	ease: 'power4.out',
+	duration: 80
+}, '-=5')
+
+const makeBubbles = (p, i) => {
+	const { top, left } = fish.getBoundingClientRect()
+	gsap.to(p, { opacity: 1, duration: 1 })
+	gsap.set('.bubbles', {
+		x: left,
+		y: top
+	})
+	if (bubbles.paused) {
+		bubbles.restart()
+	}
+	if (i > 6) {
+		gsap.to('.bubbles', {
+			opacity: 0
+		})
+	}
+}
+
+const rotateFish = (self) => {
+	if (self.direction === -1) {
+		gsap.to(fish, { rotationY: 180, duration: 0.4 })
+	} else {
+		gsap.to(fish, { rotationY: 0, duration: 0.4 })
+	}
+}
+
+const hideText = (p) => {
+	gsap.to(p, { opacity: 0, duration: 1 })
+}
+
+sections.forEach((section, i) => {
+	const p = section.querySelector('p')
+	gsap.to(p, { opacity: 0 })
+	
+	ScrollTrigger.create({
+		trigger: section,
+		start: "top top",
+		onEnter: () => makeBubbles(p, i),
+		onEnterBack: () => {
+			if (i <= 6) {
+				gsap.to('.bubbles', {
+					opacity: 1
+				})
+			}
+		},
+		onLeave: () => {
+			hideText(p)
+			if (i == 0) {
+			gsap.to('.rays', {
+				opacity: 0,
+				y: -500,
+				duration: 8,
+				ease: 'power4.in'
+			})
+			}
+		},
+		onLeaveBack: () => hideText(p),
+		onUpdate: (self) => rotateFish(self)
+	})
+})
+
+    </script>
+        <%- include('includes/feature.ejs')%>
+
+</body>
+</html>
