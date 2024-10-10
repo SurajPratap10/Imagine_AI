@@ -169,7 +169,7 @@ body {
 }
 
 .logo-image {
-  width: 100px;
+  width: 200px;
 }
 
 /*.hover-effect {
@@ -2449,7 +2449,7 @@ button:disabled{
   }
 
   .home-logo {
-    right: 0%;
+   width: 100px;
   }
 
   .popup-container {
@@ -9255,7 +9255,7 @@ body {
 }
 
 .logo-image {
-  width: 100px;
+  width: 80px;
 }
 
 .hover-effect {
