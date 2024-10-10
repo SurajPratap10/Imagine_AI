@@ -92,6 +92,8 @@
 
 .fish-wrapper {
 	--mask: linear-gradient(180deg, rgba(0, 0, 0, 1.0), transparent);
+	-webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
 	width: 100%;
 	height: 100vh;
 	position: fixed;
@@ -103,7 +105,7 @@
 	pointer-events: none;
 	-webkit-mask-image: var(--mask);
 	mask-image: var(--mask);
-	z-index: 2;
+	z-index: -2;
 }
 
 .fish {
@@ -743,7 +745,9 @@ sections.forEach((section, i) => {
 })
 
     </script>
-        <%- include('includes/feature.ejs')%>
+        
 
 </body>
 </html>
+<%- include('includes/feature.ejs')%>
+<%- include('includes/footer2.ejs')%>
