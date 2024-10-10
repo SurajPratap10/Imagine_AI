@@ -72,7 +72,7 @@
         </head>
       </head>
       <%- include('includes/navbar.ejs') %>
-        <section class="showcase" id="showcase" style="margin-bottom: 90px;">
+        <section class="showcase about" id="showcase" style="margin-bottom: 90px;">
           <form id="image-form" action="index.html" aria-label="Signup Form">
             <h1 class="AI">SIGN UP</h1>
             <div class="form-control">
@@ -165,6 +165,47 @@
         </section>
         <%- include('includes/footer.ejs') %>
           <%- include('includes/topToBottomScrollButton.ejs') %>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+          
+            /* Dark mode styles */
+            .dark-mode {
+              background-color: #121212;
+              color: #ffffff;
+            }
+          
+            /* Dark mode styles for navbar */
+            .dark-mode #navbar {
+              background-color: #121212;
+              color: #ffffff;
+            }
+          
+            /* Dark mode styles for the about section */
+            .dark-mode .about {
+              background-color: #121212;
+              color: #ffffff;
+              padding-bottom: -2rem;
+            }
+          
+            /* Styles for the dark mode toggle button */
+            .dark-mode-toggle {
+              font-size: 24px;
+              cursor: pointer;
+            }
+          
+            .dark-mode-toggle i {
+              transition: transform 0.3s ease-in-out;
+              font-size: 1.1em;
+            }
+          
+            .btn{
+              font-size: 12px;
+              padding: 20px 20px;
+              letter-spacing: 2px;
+              width: auto;
+              border-radius: 10px
+            }
+          </style>
 <script>
   function showPassword() {
     var x = document.getElementById("password");
@@ -185,5 +226,29 @@
       x.type = "password";
     document.getElementById("confirmPasswordEye").innerText = "visibility_off";
     }
+  }
+  function toggleDarkMode() {
+    const body = document.body;
+    const navbar = document.querySelector(".navbar");
+    const aboutSection = document.querySelector(".about");
+    const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+    const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+    var darkModeIconCollection = Array.from(darkModeIcon);
+    console.log(darkModeIconCollection);
+    
+
+    body.classList.toggle("dark-mode");
+    navbar.classList.toggle("dark-mode");
+    aboutSection.classList.toggle("dark-mode");
+    // darkModeToggle.classList.toggle("dark");
+    
+    darkModeIconCollection.map((darkIcon) => {
+    if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
+      darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+      darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+    });
   }
 </script>
