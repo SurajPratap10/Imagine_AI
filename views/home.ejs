@@ -240,8 +240,8 @@
   
 
       darkModeIconCollection.map((darkIcon) => {
-        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-          darkIcon.innerHTML = '<navbari class="fa-sharp fa-solid fa-sun"></i>';
+        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
+          darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
         } else {
           darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
