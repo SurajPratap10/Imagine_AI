@@ -372,11 +372,18 @@ a{
   width: 50%;
 }
 
-.dashboard h1 {
-  padding: 50px 50px 20px;
-  margin-top: 20px;
-  text-align: left;
-  font-size: 32px;
+.dashboard {
+  padding: 20px; 
+}
+
+.dashboard-h1 {
+  color: #fff;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+}
+
+.dashboard-h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); 
 }
 
 .dashboard h3,
