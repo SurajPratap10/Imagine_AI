@@ -83,57 +83,59 @@
            
           </div>
             
-            <section id="newsletter">
-              <div class="news-text">
-                <h4 style="margin-bottom: 1rem;
-                            font-size: 1.875rem;
-                            line-height: 2.25rem;
-                            font-weight: 800;
-                            letter-spacing: -0.025em;
-                            color: #ffffff; ">
-                  Sign Up for Newsletter
-                </h4>
-                <p style="margin-bottom: 2rem;
-                            max-width: 42rem;
-                            font-weight: 300;
-                            color: #ffffff;
-                            
-                            @media (min-width: 640px) {
-                              font-size: 1.25rem;
-                              line-height: 1.75rem;
-                            }
-                            @media (min-width: 768px) {
-                              margin-bottom: 3rem;
-                            }">
-                  Get e-mail updates about the latest trends in technology
-                </p>
-              </div>
-             <div class="news-form">
-                <form action="https://getform.io/f/94db7290-a297-4170-b95f-a99d55172aa8" method="POST">
-                  <input type="email" name="email" id="email" placeholder="Enter your Email Id..." style="
-                            background-color: #fff;
-                            @media (min-width: 640px) {
-                              border-radius: 0;
-                              border-top-left-radius: 0.5rem;
-                              border-bottom-left-radius: 0.5rem;
-                            }" required>
-                            
-                  <button id="btn-new" style="
-                            width: 12rem;
-                            padding: 0.625rem 0.875rem;
-                            border-radius: 0.375rem;
-                            margin-left: 2rem;
-                            font-size: 0.875rem;
-                            font-weight: 600;
-                            color: #ffffff;
-                            transform: scale(0.9);
-                            background-color: #6366F1;
-                            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-                            text-align: center
-                            ">Sign Up</button>
-                </form>
-              </div>
-            </section>  
+  <section id="newsletter">
+    <div class="news-text">
+      <h4 style="margin-bottom: 1rem;
+                  font-size: 1.875rem;
+                  line-height: 2.25rem;
+                  font-weight: 800;
+                  letter-spacing: -0.025em;
+                  color: #ffffff;">
+        Sign Up for Newsletter
+      </h4>
+      <p style="margin-bottom: 2rem;
+                  max-width: 42rem;
+                  font-weight: 300;
+                  color: #ffffff;">
+        Get e-mail updates about the latest trends in technology
+      </p>
+    </div>
+    <div class="news-form">
+      <form action="https://getform.io/f/94db7290-a297-4170-b95f-a99d55172aa8" method="POST">
+        <input type="email" name="email" id="email" placeholder="Enter your Email Id..." style="background-color: #fff;
+                  padding: 0.5rem;
+                  border: 1px solid #ddd;
+                  border-radius: 0.375rem;
+                  transition: all 0.3s ease-in-out;" required
+                  onfocus="this.style.outline='none';
+                           this.style.boxShadow='0 0 10px rgba(99, 102, 241, 0.8)';
+                           this.style.borderColor='#6366F1';"
+                  onblur="this.style.boxShadow='none';
+                          this.style.borderColor='#ddd';"
+                  onmouseover="this.style.boxShadow='0 0 5px rgba(99, 102, 241, 0.6)';"
+                  onmouseout="this.style.boxShadow='none';">
+                  
+        <button id="btn-new" style="width: 12rem;
+                  padding: 0.625rem 0.875rem;
+                  border-radius: 0.375rem;
+                  margin-left: 2rem;
+                  font-size: 0.875rem;
+                  font-weight: 600;
+                  color: #ffffff;
+                  background-color: #6366F1;
+                  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                  text-align: center;
+                  transform: scale(0.9);
+                  transition: all 0.3s ease-in-out;"
+                  onmouseover="this.style.boxShadow='0 0 15px #6366F1'; 
+                               this.style.transform='scale(1)';"
+                  onmouseout="this.style.boxShadow='0 1px 2px 0 rgba(0, 0, 0, 0.05)'; 
+                              this.style.transform='scale(0.9)';">
+          Sign Up
+        </button>
+      </form>
+    </div>
+</section> 
           </section>
         </main>
 
