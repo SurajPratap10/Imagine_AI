@@ -97,71 +97,114 @@
 
 
 <%- include('includes/navbar.ejs') %>
-<section class="showcase" id="showcase">
-  <form id="image-form" action="index.html" style="margin-top:50px;" aria-label="Login Form">
-    <h1 class="AI">SIGN IN</h1>
+<main>
+  <section class="showcase about" id="showcase">
+    <form id="image-form" action="index.html" style="margin-top:50px;" aria-label="Login Form">
+      <h1 class="AI">SIGN IN</h1>
 
-    <div class="form-control">
-      <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter Email address"
-             onkeyup="handleChange(event)" style="color: black;" aria-describedby="emailError"/>
-      <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
-    </div>
-
-    <div class="form-control">
-      <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
-      <div class="eye-container">
-        <input type="password" id="password" name="password" placeholder="Enter password"
-               onkeyup="handleChange(event)" aria-describedby="passwordError" />
-        <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
+      <div class="form-control">
+        <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email address"
+              onkeyup="handleChange(event)" aria-describedby="emailError"/>
+        <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
       </div>
-      <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)</p>
-    </div>
 
-    <div class="form-control">
-      <label for="captcha-input" style="color: white; display: block;">Captcha</label>
-      <div id="captchaContainer">
-        <div id="captcha"></div>
-        <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
-          autorenew
-        </span>
-        <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
+      <div class="form-control">
+        <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
+        <div class="eye-container">
+          <input type="password" id="password" name="password" placeholder="Enter password"
+                onkeyup="handleChange(event)" aria-describedby="passwordError" />
+          <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
+        </div>
+        <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)</p>
       </div>
-      <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
-    </div>
 
-    <div class="signin-opt">
-      <h2 class="sign-in-button">Sign In using</h2>
-      <div class="signin-opt-icons">
-        <a href="/auth/google" class="google-icon" aria-label="sign in with google">
-          <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
-        </a>
-        <a href="#" class="facebook-icon aria-label="sign in with facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
-        </a>
-        <a href="#" class="twitter-icon" aria-label="sign in with twitter">
-          <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
-        </a>
+      <div class="form-control">
+        <label for="captcha-input" style="color: white; display: block;">Captcha</label>
+        <div id="captchaContainer">
+          <div id="captcha"></div>
+          <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
+            autorenew
+          </span>
+          <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
+        </div>
+        <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
       </div>
-    </div>
 
-    <div class="formBtns">
-      <button id="submit" type="submit" class="btn sign-in-btn btn-login-submit" aria-label="submit" disabled>
-        <span>Submit</span>
-        <div class="flow"></div>
-      </button>
-    </div>
+      <div class="signin-opt">
+        <h2 class="sign-in-button">Sign In using</h2>
+        <div class="signin-opt-icons">
+          <a href="/auth/google" class="google-icon" aria-label="sign in with google">
+            <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
+          </a>
+          <a href="#" class="facebook-icon aria-label="sign in with facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+          </a>
+          <a href="#" class="twitter-icon" aria-label="sign in with twitter">
+            <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
+          </a>
+        </div>
+      </div>
 
-    <div class="get-api-text">
-      <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
-    </div>
-  </form>
+      <div class="formBtns">
+        <button id="submit" type="submit" class="btn sign-in-btn btn-login-submit" aria-label="submit" disabled>
+          <span>Submit</span>
+          <div class="flow"></div>
+        </button>
+      </div>
 
-  <div id="successToast" class="toast success-toast" aria-label="success message"></div>
-  <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
-</section>
+      <div class="get-api-text">
+        <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
+      </div>
+    </form>
+
+    <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+    <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
+  </section>
+</main>
 
 <%- include('includes/footer.ejs') %>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  /* Dark mode styles for navbar */
+  .dark-mode #navbar {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  /* Dark mode styles for the about section */
+  .dark-mode .about {
+    background-color: #121212;
+    color: #ffffff;
+    padding-bottom: -2rem;
+  }
+
+  /* Styles for the dark mode toggle button */
+  .dark-mode-toggle {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dark-mode-toggle i {
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.1em;
+  }
+
+  .btn{
+    font-size: 12px;
+    padding: 20px 20px;
+    letter-spacing: 2px;
+    width: auto;
+    border-radius: 10px
+  }
+</style>
 
 <script>
   function myFunction() {
@@ -175,4 +218,39 @@
       eyeIcon.innerText = "visibility_off";
     }
   }
+  function toggleDarkMode() {
+    const body = document.body;
+    const navbar = document.querySelector(".navbar");
+    const aboutSection = document.querySelector(".about");
+    const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+    const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+    var darkModeIconCollection = Array.from(darkModeIcon);
+    
+
+    body.classList.toggle("dark-mode");
+    navbar.classList.toggle("dark-mode");
+    aboutSection.classList.toggle("dark-mode");
+    // darkModeToggle.classList.toggle("dark");
+    
+    darkModeIconCollection.map((darkIcon) => {
+    if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
+      darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+      darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+    });
+  }
 </script>
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "fZnpFqGqi_Ol7GFejzNXo",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="fZnpFqGqi_Ol7GFejzNXo"
+  domain="www.chatbase.co"
+  defer>
+  </script>
