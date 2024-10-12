@@ -244,9 +244,10 @@ a{
 }
 
 .AI:hover{
-  font-size: 1.20rem;
+  transform: scale(1.2);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 
 .barIcon {
   font-size: 1.5rem;
@@ -2378,7 +2379,7 @@ button:disabled{
 }
 
 #captchabtn{
-  width: 100%;
+  width: 70%;
     padding: 10px;
     border-radius: 10px;
 }
