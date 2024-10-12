@@ -361,6 +361,12 @@ a{
   color: white;
   font-weight: 700;
   text-transform: uppercase;
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.about h1:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white; 
+  transform: scale(1.05);
 }
 
 /* --------------- Dashboard CSS --------------- */
@@ -1725,7 +1731,12 @@ form {
 
 .about .about-us-logo {
   width: 400px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.about-image:hover .about-us-logo {
+      transform: scale(1.1); /* Increase size to 110% */
+    }
 
 .about-content .about-image {
   overflow: visible;
