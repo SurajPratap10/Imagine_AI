@@ -5,6 +5,7 @@ First off, thank you for taking the time to contribute! ❤️ We welcome all ki
 You can check out the [Table of Contents](#table-of-contents) below to find different ways you can help. Please make sure to read the relevant section before contributing, as it will smooth the process for both maintainers and contributors.
 
 And if you like **Imagine_AI** but don't have time to contribute, there are other easy ways to support the project:
+
 - ⭐ Star the project on GitHub
 - 🐦 Tweet about it
 - 📄 Mention it in your project's readme
@@ -46,6 +47,7 @@ We will do our best to answer your question as soon as possible.
 ## I Want To Contribute
 
 ### Legal Notice
+
 By contributing to Imagine_AI, you agree that you have authored the content yourself and that you have the necessary rights to the content. You also agree that the content can be provided under the project’s open-source license.
 
 ### Reporting Bugs
@@ -53,6 +55,7 @@ By contributing to Imagine_AI, you agree that you have authored the content your
 #### Before Submitting a Bug Report
 
 To help us fix any bugs as quickly as possible, please ensure the following before submitting a bug report:
+
 - Make sure you are using the latest version of **Imagine_AI**.
 - Check that the issue is not due to incorrect configuration or usage (please read the [Documentation](https://github.com/SurajPratap10/Imagine_AI)).
 - See if the issue has already been reported by searching the [Issue Tracker](https://github.com/SurajPratap10/Imagine_AI/issues?q=label%3Abug).
@@ -63,6 +66,7 @@ To help us fix any bugs as quickly as possible, please ensure the following befo
 #### Submitting a Bug Report
 
 To submit a bug:
+
 1. Open a [new issue](https://github.com/SurajPratap10/Imagine_AI/issues/new).
 2. Describe the expected behavior, the actual behavior, and how to reproduce the issue.
 3. Include all relevant information (OS, platform, Node.js version, etc.) and any potential workarounds.
@@ -72,6 +76,7 @@ To submit a bug:
 ### Suggesting Enhancements
 
 To suggest an enhancement for **Imagine_AI**:
+
 1. Ensure the feature is not already implemented by checking the [documentation](https://github.com/SurajPratap10/Imagine_AI) and existing [issues](https://github.com/SurajPratap10/Imagine_AI/issues).
 2. Open a [new issue](https://github.com/SurajPratap10/Imagine_AI/issues/new) with a descriptive title and detailed proposal.
 3. Explain the current limitations, and describe how the enhancement would improve the user experience.
@@ -81,6 +86,7 @@ To suggest an enhancement for **Imagine_AI**:
 ## Your First Code Contribution
 
 We recommend starting with the following steps for your first contribution:
+
 1. Fork the repository.
 2. Clone your fork locally.
 3. Create a new branch for your changes.
@@ -93,6 +99,7 @@ We recommend starting with the following steps for your first contribution:
 ## Improving the Documentation
 
 Documentation contributions are highly appreciated! You can help by:
+
 - Fixing typos or unclear explanations.
 - Adding new sections or improving existing ones.
 
@@ -103,6 +110,7 @@ Documentation contributions are highly appreciated! You can help by:
 ### Commit Messages
 
 Your commit messages should follow this structure:
+
 - **Type**: feat, fix, docs, style, refactor, test, chore
 - **Scope**: what area of the code (optional)
 - **Subject**: short summary of the changes
