@@ -5,145 +5,204 @@
 <head>
   <style>
     body {
-      background-color: #121212; /* Dark background */
-      color: #ffffff; /* Light text color */
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
     }
-  
-    .form-control {
-      margin-bottom: 20px; /* Space between input fields */
-    }
-    .sign-in-button {
-    display: inline-block; /* Make it behave like a button */
-    padding: 15px 30px; /* Add padding for a button-like appearance */
-    background-color: black; /* Black background */
-    color: white; /* White text color */
-    font-size: 1.5rem; /* Increase font size */
-    font-weight: bold; /* Bold text */
-    text-align: center; /* Center the text */
-    border-radius: 25px; /* Rounded corners */
-    border: none; /* Remove border */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    text-decoration: none; /* Remove underline */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
-  }
 
-  .sign-in-button:hover {
-    background-color: #333; /* Darker gray on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
+    form {
+      max-width: 600px;
+      max-height: fit-content; /* Increased width for more space */
+      margin: 40px auto 50px; /* Adjusted top margin to prevent touching navbar */
+       /* Reduced padding */
+      background-color: #1b1b1b;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
 
-  .sign-in-button:active {
-    transform: scale(0.95); /* Slightly shrink on click */
-  }
-  
-    .form-control label {
-      display: block; /* Ensure labels are on their own line */
-      margin-bottom: 5px; /* Space between label and input */
-      color: #ffffff; /* Light label color */
+    h1 {
+      text-align: center;
+       /* Reduced the bottom margin */
+      font-size: 10rem;
+      color: #00ffff;
     }
-  
-    .eye-container {
-      position: relative;
-      display: inline-block;
-      width: 100%; /* Full width */
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ffffff;
     }
-  
-    .eye-container input {
+
+    input[type="email"], input[type="password"], input[type="text"] {
       width: 100%;
-      padding-right: 40px; /* Space for the eye icon */
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 2px solid #333;
+      background-color: #262626;
+      color: #ffffff;
       box-sizing: border-box;
-      background-color: #1e1e1e; /* Dark input background */
-      color: #ffffff; /* Light input text */
-      border: 1px solid #444; /* Input border */
-      padding-left: 10px; /* Add some padding on the left */
+      padding-right: 40px; /* To accommodate eye icon in the password field */
     }
-  
-    #eye {
-      color: aqua;
+
+    .eye-container {
+    position: relative; /* Create a positioning context for the absolute element */
+    }
+
+
+
+    #eye{
+              color: aqua;
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              left: auto;
+              transform: none;
+              cursor: pointer;
+            }
+
+    input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
+      background-color: #333;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+    #eye{
+      align-self: right;
+    }
+
+    #captchaContainer {
+      display: flex;
+      align-items: center;
+    }
+
+    #captcha {
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #00b3b3;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 25px;
       cursor: pointer;
-      position: absolute; /* Make it absolute */
-      right: 10px; /* Position it to the right */
-      top: 50%; /* Center it vertically */
-      transform: translateY(-50%) ;/* Adjust for centering */
-      pointer-events: auto; /* Allow clicks on the icon */
+      transition: background-color 0.3s ease;
     }
-    .google-icon {
-            fill: white;
-            width: 30px; /* Set a smaller width */
-           height: 30px; /* Set a smaller height */
-            transition: transform 0.2s;
-          }
-          
-          .facebook-icon{
-          
-            transform: scale3d(1.1, 1.1, 1.1);
-            width: 30px; /* Set a smaller width */
-           height: 30px; /* Set a smaller height */
-            transition: transform 0.2s;
-          }
 
-          .twitter-icon {
-         
-            transform: scale3d(1.1, 1.1, 1.1);
-            width: 30px; /* Set a smaller width */
-           height: 30px; /* Set a smaller height */
-            transition: transform 0.2s;
-          }
+    button:hover {
+      background-color: #00cccc;
+    }
 
+    .sign-in-button {
+      display: block;
+      width: 70%;
+      padding: 15px;
+      background-color: #00b3b3;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+
+    }
+
+    .signin-opt-icons a img {
+      width: 40px;
+      transition: transform 0.2s ease;
+    }
+
+    .signin-opt-icons a img:hover {
+      transform: scale(1.1);
+    }
+
+    .get-api-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    .get-api-text a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .get-api-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Media Query for mobile responsiveness */
+    @media (max-width: 480px) {
+      form {
+        padding: 15px;
+      }
+    }
   </style>
-  
 </head>
 
-
 <%- include('includes/navbar.ejs') %>
+
 <main>
   <section class="showcase about" id="showcase">
-    <form id="image-form" action="index.html" style="margin-top:50px;" aria-label="Login Form">
+    <form id="image-form" action="index.html" aria-label="Login Form">
       <h1 class="AI">SIGN IN</h1>
 
       <div class="form-control">
-        <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter Email address"
-              onkeyup="handleChange(event)" aria-describedby="emailError"/>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email address" 
+               onkeyup="handleChange(event)" aria-describedby="emailError"/>
         <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
       </div>
 
       <div class="form-control">
-        <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
+        <label for="password">Password</label>
         <div class="eye-container">
-          <input type="password" id="password" name="password" placeholder="Enter password"
-                onkeyup="handleChange(event)" aria-describedby="passwordError" />
+          <input type="password" id="password" name="password" placeholder="Enter password" 
+                 onkeyup="handleChange(event)" aria-describedby="passwordError" />
           <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
         </div>
-        <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)</p>
+        <p class="error hidden" id="passwordError" role="alert">
+          Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)
+        </p>
       </div>
 
       <div class="form-control">
-        <label for="captcha-input" style="color: white; display: block;">Captcha</label>
+        <label for="captcha-input">Captcha</label>
         <div id="captchaContainer">
           <div id="captcha"></div>
-          <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
-            autorenew
-          </span>
+          <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">autorenew</span>
           <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
         </div>
         <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
       </div>
 
-      <div class="signin-opt">
-        <h2 class="sign-in-button">Sign In using</h2>
-        <div class="signin-opt-icons">
-          <a href="/auth/google" class="google-icon" aria-label="sign in with google">
-            <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
-          </a>
-          <a href="#" class="facebook-icon aria-label="sign in with facebook">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
-          </a>
-          <a href="#" class="twitter-icon" aria-label="sign in with twitter">
-            <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
-          </a>
-        </div>
+      <div><b>Sign In using</b></div>
+
+     
+
+      <div class="signin-opt-icons">
+        <a href="/auth/google" aria-label="sign in with google">
+          <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
+        </a>
+        <a href="#" aria-label="sign in with facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+        </a>
+        <a href="#" aria-label="sign in with twitter">
+          <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
+        </a>
       </div>
 
       <div class="formBtns">
@@ -164,47 +223,6 @@
 </main>
 
 <%- include('includes/footer.ejs') %>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-  /* Dark mode styles */
-  .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  /* Dark mode styles for navbar */
-  .dark-mode #navbar {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  /* Dark mode styles for the about section */
-  .dark-mode .about {
-    background-color: #121212;
-    color: #ffffff;
-    padding-bottom: -2rem;
-  }
-
-  /* Styles for the dark mode toggle button */
-  .dark-mode-toggle {
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .dark-mode-toggle i {
-    transition: transform 0.3s ease-in-out;
-    font-size: 1.1em;
-  }
-
-  .btn{
-    font-size: 12px;
-    padding: 20px 20px;
-    letter-spacing: 2px;
-    width: auto;
-    border-radius: 10px
-  }
-</style>
 
 <script>
   function myFunction() {
@@ -218,39 +236,5 @@
       eyeIcon.innerText = "visibility_off";
     }
   }
-  function toggleDarkMode() {
-    const body = document.body;
-    const navbar = document.querySelector(".navbar");
-    const aboutSection = document.querySelector(".about");
-    const darkModeToggle = document.querySelector(".dark-mode-toggle");
-
-    const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
-    var darkModeIconCollection = Array.from(darkModeIcon);
-    
-
-    body.classList.toggle("dark-mode");
-    navbar.classList.toggle("dark-mode");
-    aboutSection.classList.toggle("dark-mode");
-    // darkModeToggle.classList.toggle("dark");
-    
-    darkModeIconCollection.map((darkIcon) => {
-    if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
-      darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    } else {
-      darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    }
-    });
-  }
 </script>
-<script>
-  window.embeddedChatbotConfig = {
-  chatbotId: "fZnpFqGqi_Ol7GFejzNXo",
-  domain: "www.chatbase.co"
-  }
-  </script>
-  <script
-  src="https://www.chatbase.co/embed.min.js"
-  chatbotId="fZnpFqGqi_Ol7GFejzNXo"
-  domain="www.chatbase.co"
-  defer>
-  </script>
+
