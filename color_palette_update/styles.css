@@ -1,0 +1,115 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Default text color */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    padding: 20px; /* Space inside header */
+    text-align: center; /* Center text */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    color: #e0e0e0; /* Light gray for headers */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Inline list items */
+    margin: 0 15px; /* Space between links */
+}
+
+a {
+    color: #00bcd4; /* Electric blue for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+main {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Wrap items */
+    justify-content: center; /* Center content */
+    padding: 20px; /* Space inside main */
+}
+
+.card {
+    background-color: #1e1e1e; /* Slightly lighter dark background for cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the card */
+    margin: 15px; /* Space between cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    width: 300px; /* Fixed width for cards */
+}
+
+.card img {
+    max-width: 100%; /* Responsive images */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.button {
+    background-color: #6200ea; /* Deep purple for buttons */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Space inside the button */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+}
+
+input[type="text"], textarea {
+    background-color: #333; /* Dark background for inputs */
+    color: #ffffff; /* White text */
+    border: 1px solid #555; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Space inside inputs */
+    width: 100%; /* Full width */
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #00bcd4; /* Electric blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+footer {
+    text-align: center; /* Center text */
+    padding: 20px; /* Space inside footer */
+    background-color: #1e1e1e; /* Dark background for footer */
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e; /* Dark background for loading */
+    color: #00bcd4; /* Electric blue text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 10px; /* Reduce margins on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+        width: calc(100% - 20px); /* Full-width cards on small screens */
+    }
+
+    .button {
+        width: 100%; /* Full-width buttons on small screens */
+    }
+}
