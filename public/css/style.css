@@ -244,9 +244,10 @@ a{
 }
 
 .AI:hover{
-  font-size: 1.20rem;
+  transform: scale(1.2);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 
 .barIcon {
   font-size: 1.5rem;
@@ -360,6 +361,12 @@ a{
   color: white;
   font-weight: 700;
   text-transform: uppercase;
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.about h1:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white; 
+  transform: scale(1.05);
 }
 
 /* --------------- Dashboard CSS --------------- */
@@ -372,11 +379,18 @@ a{
   width: 50%;
 }
 
-.dashboard h1 {
-  padding: 50px 50px 20px;
-  margin-top: 20px;
-  text-align: left;
-  font-size: 32px;
+.dashboard {
+  padding: 20px; 
+}
+
+.dashboard-h1 {
+  color: #fff;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+}
+
+.dashboard-h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); 
 }
 
 .dashboard h3,
@@ -1042,7 +1056,7 @@ footer {
   height: 15vh;
   width: 100%;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 footer a {
@@ -1724,7 +1738,12 @@ form {
 
 .about .about-us-logo {
   width: 400px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.about-image:hover .about-us-logo {
+      transform: scale(1.1); /* Increase size to 110% */
+    }
 
 .about-content .about-image {
   overflow: visible;
@@ -2378,7 +2397,7 @@ button:disabled{
 }
 
 #captchabtn{
-  width: 100%;
+  width: 70%;
     padding: 10px;
     border-radius: 10px;
 }
@@ -3925,7 +3944,7 @@ footer {
   height: 15vh;
   width: 100%;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 footer a {
@@ -6735,7 +6754,7 @@ footer a:hover {
 footer {
   width: 100%;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 footer a {
@@ -9655,6 +9674,7 @@ button,
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
+  border-radius: 2rem;
 }
 
 .cardEx:hover:before {
@@ -9668,6 +9688,7 @@ button,
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 2rem;
 }
 
 .cardEx .info {
@@ -9948,6 +9969,7 @@ img {
   padding: 20px 100px;
   margin: 60px 0;
   margin-top: 120px;
+  margin-bottom: -1.5rem;
 }
 
 #newsletter .news-text h4 {
@@ -10814,6 +10836,7 @@ form {
   width: 60%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2rem;
 }
 
 .container1 .about-image {
