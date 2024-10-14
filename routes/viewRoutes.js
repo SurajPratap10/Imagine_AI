@@ -1,9 +1,16 @@
 const express = require("express");
-
+const app = express();
 const router = express.Router();
 
-router.get("/", (_req, res, _next) => {
-  res.render("home", { path: "/" }); // passed path to track active <a> class in header.ejs
+router.get('/', (req, res) => {
+  res.render('intro', { path: '/' });  // Fixed syntax error
+});
+
+
+
+// Serve the home page after intro
+router.get("/home", (_req, res, _next) => {
+  res.render("home", { path: "/home" });
 });
 
 router.get("/generateImg", (_req, res, _next) => {
