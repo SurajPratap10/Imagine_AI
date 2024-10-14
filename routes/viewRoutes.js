@@ -2,11 +2,9 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('intro', { path: '/' });  // Fixed syntax error
+router.get("/", (req, res) => {
+  res.render("intro", { path: "/" }); // Fixed syntax error
 });
-
-
 
 // Serve the home page after intro
 router.get("/home", (_req, res, _next) => {
