@@ -1,245 +1,230 @@
-<header>
-  <div class="navbar">
-    <div class="nav-container">
-      <!-- Dark mode toggle button -->
-      <div
-        id="dark-mode-icon-mobile"
-        class="dark-mode-toggle dark-mode-icon"
-        onclick="toggleDarkMode()"
-      >
-        <i class="fa-sharp fa-solid fa-sun"></i>
-      </div>
-      <div class="logo-image">
-        <a href="/"
-          ><img
-            src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
-            class="home-logo"
-            alt="home-logo"
-            loading="lazy"
-          />
-        </a>
-      </div>
-      <div class="nav-links hide-sm nav-style" id="mainNav">
-        <div class="left-nav-links navs">
-          <div class="logo">
-            <a
-              class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>"
-              href="/"
-              >HOME</a
-            >
-          </div>
-          <div class="imagh">
-            <a
-              class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
-              href="/generateImg"
-              >IMAGINE - AI</a
-            >
-          </div>
-          <div class="abth">
-            <a
-              class="AI white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
-              class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
-              href="/aboutUs"
-              >ABOUT - US</a
-            >
-          </div>
-          <div class="conh">
-            <a
-              class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
-              href="/contactUs"
-              >CONTACT - US</a
-            >
-          </div>
-          <!-- Rest of the nav links -->
-        <div class="team">
-          <a class="AI white-color hover-effect <%= path === '/team' ? 'active' : '' %>" href="/team">COMMUNITY</a>
+ <header>
+    <div class="navbar">
+      <div class="nav-container">
+        <!-- Dark mode toggle button -->
+        <div
+          id="dark-mode-icon-mobile"
+          class="dark-mode-toggle dark-mode-icon"
+          onclick="toggleDarkMode()"
+        >
+          <i class="fa-sharp fa-solid fa-sun"></i>
         </div>
+        <div class="logo-image">
+          <a href="/"
+            ><img
+              src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
+              class="home-logo"
+              alt="home-logo"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="nav-links hide-sm nav-style" id="mainNav">
+          <div class="left-nav-links navs">
+            <div class="logo">
+              <a
+                class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>"
+                href="/"
+                >HOME</a
+              >
+            </div>
+            <div class="imagh">
+              <a
+                class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+                href="/generateImg"
+                >IMAGINE - AI</a
+              >
+            </div>
+            <div class="abth">
+              <a
+                class="AI white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
+                class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                href="/aboutUs"
+                >ABOUT - US</a
+              >
+            </div>
+            <div class="conh">
+              <a
+                class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                href="/contactUs"
+                >CONTACT - US</a
+              >
+            </div>
+            <!-- Rest of the nav links -->
+          <div class="team">
+            <a class="AI white-color hover-effect <%= path === '/team' ? 'active' : '' %>" href="/team">COMMUNITY</a>
+          </div>
 <!-- Rest of the right-nav-links -->
 
-        </div>
-        <div class="right-nav-links">
-          <!-- Dark mode toggle button -->
-          <div
-            id="dark-mode-icon-desktop"
-            class="dark-mode-toggle dark-mode-icon"
-            onclick="toggleDarkMode()"
-          >
-            <i class="fa-sharp fa-solid fa-sun"></i>
           </div>
-          <div>
-            <a
-              class="AI white-color hover-effect"
-              href="https://openai.com/dall-e-2/"
-              target="_blank"
-              >DALL.E 2 - OpenAI API</a
+          <div class="right-nav-links">
+            <!-- Dark mode toggle button -->
+            <div
+              id="dark-mode-icon-desktop"
+              class="dark-mode-toggle dark-mode-icon"
+              onclick="toggleDarkMode()"
             >
+              <i class="fa-sharp fa-solid fa-sun"></i>
+            </div>
+            <div>
+              <a
+                class="AI white-color hover-effect"
+                href="https://openai.com/dall-e-2/"
+                target="_blank"
+                >DALL.E 2 - OpenAI API</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <a class="login AI white-color" id="header-btn2" href="/login"
-          >Login</a
-        >
-      </div>
-      <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect">
-        <i class="fa-solid fa-bars"></i>
+        <div>
+          <a class="login AI white-color" id="header-btn2" href="/login"
+            >Login</a
+          >
+        </div>
+        <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<style>
-  .nav-style {
-    display: flex;
-    justify-content: space-between;
-  }
-  .navs {
-    justify-content: space-evenly;
-  }
-
-  .nav-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-  }
-
-  /* Light mode styles */
-  /* .light-mode {    } */
-  .AI {
-    display: inline-block;
-    padding: 10px;
-    margin-left: 25px;
-  }
-  /* Light mode styles
-  .light-mode {
-  } */
-
-  /* Dark mode styles */
-  .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  /* Dark mode styles for navbar */
-  .dark-mode #navbar {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  /* Dark mode styles for the about section */
-  .dark-mode .about {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  /* Styles for the dark mode toggle button */
-  .dark-mode-toggle {
-    width: fit-content;
-    backdrop-filter: blur(4px);
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 999;
-  }
-
-  .dark-mode-toggle i {
-    transition: transform 0.3s ease-in-out;
-    font-size: 1.1em;
-  }
-
-  #dark-mode-icon-mobile {
-    position: absolute;
-    right: 20%;
-    display: none;
-  }
-
-  #dark-mode-icon-desktop {
-    font-size: 1.1rem;
-    display: block;
-  }
-
-  @media (max-width: 989px) {
-    #dark-mode-icon-mobile {
-      display: block;
+  <style>
+    /*adjusting nav-bar elements*/
+    .nav-style {
+      display: flex;
+      justify-content: space-between;
     }
+    .navs {
+      justify-content: space-evenly;
+    }
+    /*adding hover effects to each nav elements*/
+
+    .nav-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Light mode styles */
+    /* .light-mode {    } */
+    .AI {
+      display: inline-block;
+      padding: 10px;
+      margin-left: 25px;
+    }
+    /* Light mode styles
+    .light-mode {
+    } */
+
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Dark mode styles for navbar */
+    .dark-mode #navbar {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Dark mode styles for the about section */
+    .dark-mode .about {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Styles for the dark mode toggle button */
+    .dark-mode-toggle {
+      width: fit-content;
+      backdrop-filter: blur(4px);
+      padding: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .dark-mode-toggle i {
+      transition: transform 0.3s ease-in-out;
+      font-size: 1.1em;
+    }
+
+    #dark-mode-icon-mobile {
+      position: absolute;
+      right: 20%;
+      display: none;
+    }
+
     #dark-mode-icon-desktop {
-      display: none;
-    }
-  }
-
-  @media (max-width: 900px) {
-    .navbar {
-      display: none;
-    }
-
-    #dark-mode-icon-mobile {
+      font-size: 1.1rem;
       display: block;
     }
-  }
-  .navbar {
-  position: fixed;; /* Or fixed */
-  
-}
-#header-btn2 {
-  padding: 10px 20px; /* Adjust padding for size */
-  border: none; /* Remove any border */
-  border-radius: 5px; /* Add rounded corners */
-  font-size: 16px; /* Adjust the font size */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  z-index: 100; /* Ensure it's on top of other elements */
-  position: relative; /* Make sure it stays in place */
-  transition: background-color 0.3s ease; /* Smooth background color change on hover */
-  
-}
-#header-btn2:hover {
-  transform: scale(1.1); /* Increase the size by 10% */
-}
 
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script>
-  // GSAP animation
-  document.addEventListener("DOMContentLoaded", () => {
-    gsap.from(".navbar", {
-      duration: 1.5,    // Animation duration
-      y: -100,          // Slide from left (negative x)
-      opacity: 0,       // Start invisible
-      ease: "power3.out",  // Easing function for smooth transition
-      delay: 0.5        // Delay to start animation
-    });
-
- 
-   
-  });
-</script>
-
-
-<script>
-  
-
-  function toggleDarkMode() {
-    const body = document.body;
-    const navbar = document.querySelector(".navbar");
-    const aboutSection = document.querySelector(".about");
-    const darkModeToggle = document.querySelector(".dark-mode-toggle");
-
-    const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
-    var darkModeIconCollection = Array.from(darkModeIcon);
-
-    body.classList.toggle("dark-mode");
-    navbar.classList.toggle("dark-mode");
-    aboutSection.classList.toggle("dark-mode");
-    // darkModeToggle.classList.toggle("dark");
-
-    darkModeIconCollection.map((darkIcon) => {
-      if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-        darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
-      } else {
-        darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    @media (max-width: 989px) {
+      #dark-mode-icon-mobile {
+        display: block;
       }
+      #dark-mode-icon-desktop {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        display: none;
+      }
+
+      #dark-mode-icon-mobile {
+        display: block;
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script>
+    // GSAP animation
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".navbar", {
+        duration: 1.5,    // Animation duration
+        y: -100,          // Slide from left (negative x)
+        opacity: 0,       // Start invisible
+        ease: "power3.out",  // Easing function for smooth transition
+        delay: 0.5        // Delay to start animation
+      });
+  
+   
+     
     });
-  }
-</script>
+  </script>
+
+
+  <script>
+    
+
+    function toggleDarkMode() {
+      const body = document.body;
+      const navbar = document.querySelector(".navbar");
+      const aboutSection = document.querySelector(".about");
+      const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+      var darkModeIconCollection = Array.from(darkModeIcon);
+
+      body.classList.toggle("dark-mode");
+      navbar.classList.toggle("dark-mode");
+      aboutSection.classList.toggle("dark-mode");
+      // darkModeToggle.classList.toggle("dark");
+
+      darkModeIconCollection.map((darkIcon) => {
+        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
+          darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        } else {
+          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+      });
+    }
+  </script>
 
 </body>
+
+
