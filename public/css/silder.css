@@ -12,7 +12,7 @@ padding-top:50px;
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 600;
-    color: #fff;
+    color: #e6a8a8;
     line-height: 1.2;
     max-width: 650px;
     margin: 0 auto 1.5rem;
@@ -32,6 +32,7 @@ a:hover { text-decoration: none; }
  
 .team-social li {
     display: inline-block;
+    position: relative;
 }
 .team-social li a {
     font-size: 14px;
@@ -59,7 +60,7 @@ a:hover { text-decoration: none; }
     width: 100%;
     max-width: 365px;
     margin: 0 auto;
-    background: rgba( 255, 255, 255, 0.25 );
+    background: rgba(61, 58, 58, 0.25);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
@@ -90,7 +91,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
     width: 100%;
     left: 0;
-    opacity: 0;
+    opacity: 0.25;
     visibility: hidden;
     padding: 20px 0;
     bottom: -20%;

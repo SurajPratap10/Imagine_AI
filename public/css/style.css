@@ -56,7 +56,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #cb6445, #e1286f, #19bffb, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   overflow: overlay;
@@ -73,7 +73,7 @@ body {
   width: 100%;
   height: 100vh;
 
-  background: white;
+  background: rgb(213, 198, 198);
 }
 .loader {
   width: 250px;
@@ -87,7 +87,7 @@ body {
   font-family: helvetica, arial, sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  color: #e73c7e;
+  color: #f52876;
   letter-spacing: 0.2em;
 }
 .loader::before,
@@ -145,6 +145,10 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar :hover{
+  color: rgb(246, 15, 246);
+  font-weight: 700;
+}
 
 @media (max-width: 900px) {
   .navbar {
@@ -181,7 +185,7 @@ a {
   text-decoration: none;
 }
 .hover-effect:hover {
-  color: white;
+  color: rgb(227, 222, 207);
   text-decoration: none;
   border: none;
 }
@@ -253,7 +257,7 @@ a {
 }
 
 .barIcon:hover i {
-  color: #03045e;
+  color: #070a9c;
 }
 
 .hide-sm {
@@ -319,7 +323,7 @@ a {
 }
 
 #header-btn2:hover {
-  background-color: rgb(130, 8, 130);
+  background-color: rgb(96, 8, 168);
 }
 
 /* --------------- About CSS --------------- */
@@ -362,7 +366,7 @@ a {
 }
 
 .about h1:hover {
-  text-shadow: 0 0 10px white, 0 0 20px white;
+  text-shadow: 0 0 10px rgb(168, 159, 159), 0 0 20px rgb(192, 183, 183);
   transform: scale(1.05);
 }
 
@@ -493,7 +497,7 @@ button,
 }
 
 .btn:hover {
-  background-color: #7152ee;
+  background-color: #633ff6;
 }
 
 .dashboard .right {
@@ -673,6 +677,7 @@ button,
   outline: none;
   animation: animate 5s linear infinite;
   padding-top: 90px;
+  font-size: large;
 }
 
 .showcase form {
@@ -876,7 +881,7 @@ img {
 }
 
 #newsletter .news-text p span {
-  color: #ffbd27;
+  color: #b7830a;
 }
 
 #newsletter .news-form {
@@ -933,6 +938,7 @@ footer .content {
 footer .content p,
 a {
   color: #fff;
+  font-size: medium;
 }
 
 footer .content .box {
@@ -1031,7 +1037,7 @@ footer .bottom {
 }
 
 footer .bottom a {
-  color: #134d58;
+  color: #093741;
 }
 
 footer a {
