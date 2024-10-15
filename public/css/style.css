@@ -1,5 +1,3 @@
-
-
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -14,20 +12,20 @@
   margin: 0;
   padding: 0;
 }
-.hvr-eff{
+.hvr-eff {
   position: relative;
 }
-.hvr-eff::after{
-content: " ";
-position: absolute;
-bottom: -2px;
-left: 0;
-width: 0;
-transition: .5s;
-background-color: var(--accent-color); 
-height: 2px;
+.hvr-eff::after {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  transition: 0.5s;
+  background-color: var(--accent-color);
+  height: 2px;
 }
-.hvr-eff:hover::after{
+.hvr-eff:hover::after {
   width: 100%;
 }
 :root {
@@ -92,21 +90,19 @@ button:hover {
   background: linear-gradient(135deg, var(--accent-color), var(--hover-accent));
 }
 
-
 /*----------------enhancing scroll bar-----------------*/
 ::-webkit-scrollbar {
-  width: .6rem !important;
+  width: 0.6rem !important;
   background-color: rgb(24, 16, 16);
 }
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(-45deg,rgb(10, 127, 177), transparent);
+  background-image: linear-gradient(-45deg, rgb(10, 127, 177), transparent);
   /* Adjust the height as needed */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(-45deg,rgb(1, 89, 127), transparent);
+  background-image: linear-gradient(-45deg, rgb(1, 89, 127), transparent);
 }
-
 
 /* --------------- Body CSS --------------- */
 
@@ -115,7 +111,13 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #ffffff; /* Light text for contrast with the dark background */
-  background: linear-gradient(-45deg, #2e2e2e, #1a1a1a, #4b0082, #ffa500); /* Dark theme with deep colors */
+  background: linear-gradient(
+    -45deg,
+    #2e2e2e,
+    #1a1a1a,
+    #4b0082,
+    #ffa500
+  ); /* Dark theme with deep colors */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   overflow: overlay;
@@ -194,7 +196,13 @@ body {
   width: 100%;
   overflow: hidden;
   z-index: 100;
-  background: linear-gradient(-45deg, #1a1a1a, #121212, #001f3f, #800080); /* Dark theme with accent colors */
+  background: linear-gradient(
+    -45deg,
+    #1a1a1a,
+    #121212,
+    #001f3f,
+    #800080
+  ); /* Dark theme with accent colors */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #fff;
@@ -235,7 +243,7 @@ body {
   border: none;
 
 }*/
-a{
+a {
   text-decoration: none;
   color: #00ffff; /* Electric blue for links */
 }
@@ -306,13 +314,12 @@ a{
   color: #ffffff; /* White text for better visibility */
 }
 
-.AI:hover{
+.AI:hover {
   transform: scale(1.2);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: #00ffff; /* Electric blue on hover */
   transition: color 300ms; /* Smooth transition for color change */
 }
-
 
 .barIcon {
   font-size: 1.5rem;
@@ -377,6 +384,7 @@ a{
 }
 
 #header-btn2 {
+  border-radius: 10px !important;
   font-family: "League Spartan", sans-serif;
   text-decoration: none;
   font-size: 18px; /* Corrected typo from 18x to 18px */
@@ -446,18 +454,17 @@ a{
 }
 
 .dashboard {
-  padding: 20px; 
+  padding: 20px;
 }
 
 .dashboard-h1 {
   color: #ffffff; /* White text for high contrast */
-  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .dashboard-h1:hover {
   transform: scale(1.05);
   text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
-}
 }
 
 .dashboard h3,
@@ -500,6 +507,9 @@ a{
   to {
     opacity: 1;
   }
+}
+.btn {
+  margin-bottom: 10px !important;
 }
 
 button,
@@ -561,7 +571,6 @@ button,
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Keep the shadow for depth */
   transition: 0.5s;
   background-color: rgba(30, 30, 30, 0.8); /* Dark background for flow effect */
-}
 }
 
 .btn:hover {
@@ -638,8 +647,9 @@ button,
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(34, 34, 34, 0.7), /* Dark overlay for a more sophisticated look */
-    rgba(34, 34, 34, 0.3)  /* Lighter dark overlay to enhance the background */
+    rgba(34, 34, 34, 0.7),
+    /* Dark overlay for a more sophisticated look */ rgba(34, 34, 34, 0.3)
+      /* Lighter dark overlay to enhance the background */
   );
   z-index: 2;
   transition: 0.5s all;
@@ -666,7 +676,12 @@ button,
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s all;
-  background-color: rgba(34, 34, 34, 0.7); /* Optional dark background for info section */
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.7
+  ); /* Optional dark background for info section */
 }
 
 .cardEx:hover .info {
@@ -744,7 +759,12 @@ button,
   outline: none;
   animation: animate 5s linear infinite;
   padding-top: 90px;
-  background-color: rgba(34, 34, 34, 0.8); /* Optional: dark semi-transparent background */
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.8
+  ); /* Optional: dark semi-transparent background */
   border-radius: 10px; /* Optional: rounded corners for a sleek look */
   padding: 90px 20px; /* Add padding for better spacing */
 }
@@ -818,7 +838,6 @@ form select:hover {
 
 .get-api-text {
   color: #ffffff; /* Keep text color white for high contrast */
-  
 }
 
 .get-api-text a {
@@ -1386,15 +1405,14 @@ form .responsive-cell-block input {
     padding: 50px 0px;
   }
 
-    .contact-top {
-      z-index: -1;
+  .contact-top {
+    z-index: -1;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
 
   .contact-top h1 {
     padding-top: 50px;
@@ -1819,8 +1837,8 @@ form {
 }
 
 .about-image:hover .about-us-logo {
-      transform: scale(1.1); /* Increase size to 110% */
-    }
+  transform: scale(1.1); /* Increase size to 110% */
+}
 
 .about-content .about-image {
   overflow: visible;
@@ -1995,11 +2013,11 @@ form {
   padding: 20px 70px;
 }
 
-button:disabled{
+button:disabled {
   cursor: not-allowed;
 }
 
-#captchaicon{
+#captchaicon {
   position: unset;
   color: aqua;
 }
@@ -2462,29 +2480,29 @@ button:disabled{
   gap: 20px;
 }
 
-#captcha{
+#captcha {
   display: inline-block;
   width: 100px;
   color: grey;
   background-image: url("https://artlogic-res.cloudinary.com/w_1200,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/gazelli/images/view/006fb757e68812eda0429108860bfc07p/gazell.io-gibson-martelli-captcha-background.png");
   font-weight: bolder;
-  opacity: .3;
+  opacity: 0.3;
   padding: 10px;
   border-radius: 5px;
 }
 
-#captchabtn{
+#captchabtn {
   width: 70%;
-    padding: 10px;
-    border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#captcha + input{
+#captcha + input {
   display: inline-block;
   width: 300px;
 }
 
-#captchaicon{
+#captchaicon {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -2494,11 +2512,11 @@ button:disabled{
   margin: 13px 8px auto;
 }
 
-#captchaContainer{
+#captchaContainer {
   display: flex;
   width: 500px;
   justify-content: center;
-   align-items: baseline;
+  align-items: baseline;
   margin: auto;
 }
 @media (max-width: 648px) {
@@ -2506,15 +2524,15 @@ button:disabled{
     justify-content: center;
   }
 
-  #captchaContainer{
+  #captchaContainer {
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  #captchaicon{
-    margin:  13px 8px;
+  #captchaicon {
+    margin: 13px 8px;
   }
 }
 
@@ -3210,12 +3228,12 @@ body {
 }
 
 /*new hover effect*/
-a:hover{
+a:hover {
   color: white;
   text-decoration: none;
 }
 /*removeing hover underline*/
-.undln{
+.undln {
   text-decoration: none;
 }
 /*.undln:hover::after {
@@ -3695,7 +3713,7 @@ form select {
 
 .showcase form input,
 form select:hover {
-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .get-api-text {
@@ -3728,8 +3746,8 @@ transform: translateY(0px);
   background-size: 15px;
   background-position: right 15px center;
 }
-select option{
-  background-color: var(--primary-color)!important;
+select option {
+  background-color: var(--primary-color) !important;
 }
 button span {
   position: relative;
@@ -4229,7 +4247,7 @@ form .responsive-cell-block input {
   width: 100%;
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
-  border-radius:10px ;
+  border-radius: 10px;
   box-shadow: 16px 14px 20px #0000008c;
 }
 
@@ -4465,7 +4483,7 @@ form {
   color: skyblue;
 }
 .contact-text .fa-envelope {
-  color: 	#DB4437;
+  color: #db4437;
 }
 .contact-text .fa-location-dot {
   color: yellow;
@@ -5229,7 +5247,7 @@ button:disabled {
   .showcase form input,
   form select {
     width: 300px;
-      background-color: transparent;
+    background-color: transparent;
   }
 
   img {
@@ -5808,20 +5826,20 @@ section .container2 {
   margin: 0;
   padding: 0;
 }
-.hvr-eff{
+.hvr-eff {
   position: relative;
 }
-.hvr-eff::after{
-content: " ";
-position: absolute;
-bottom: -2px;
-left: 0;
-width: 0;
-transition: .5s;
-background-color: #fff;
-height: 2px;
+.hvr-eff::after {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  transition: 0.5s;
+  background-color: #fff;
+  height: 2px;
 }
-.hvr-eff:hover::after{
+.hvr-eff:hover::after {
   width: 100%;
 }
 :root {
@@ -5833,16 +5851,16 @@ height: 2px;
 /* ---------- Enhancing the Scroll-Bar ---------- */
 
 ::-webkit-scrollbar {
-  width: .6rem !important;
+  width: 0.6rem !important;
   background-color: rgb(24, 16, 16);
 }
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(-45deg,rgb(10, 127, 177), transparent);
+  background-image: linear-gradient(-45deg, rgb(10, 127, 177), transparent);
   /* Adjust the height as needed */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(-45deg,rgb(1, 89, 127), transparent);
+  background-image: linear-gradient(-45deg, rgb(1, 89, 127), transparent);
 }
 
 /* --------------- Body CSS --------------- */
@@ -6517,7 +6535,6 @@ form select:hover {
 
 .get-api-text {
   color: white;
-  
 }
 
 .get-api-text a {
@@ -7084,15 +7101,14 @@ form .responsive-cell-block input {
     padding: 50px 0px;
   }
 
-    .contact-top {
-      z-index: -1;
+  .contact-top {
+    z-index: -1;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
 
   .contact-top h1 {
     padding-top: 50px;
@@ -7538,7 +7554,7 @@ form {
   margin-bottom: 40px;
 }
 
-.feature .headline{
+.feature .headline {
   padding: 20px;
 }
 
@@ -7691,11 +7707,11 @@ form {
   padding: 20px 70px;
 }
 
-button:disabled{
+button:disabled {
   cursor: not-allowed;
 }
 
-#captchaicon{
+#captchaicon {
   position: unset;
   color: aqua;
 }
@@ -8154,29 +8170,29 @@ button:disabled{
   gap: 20px;
 }
 
-#captcha{
+#captcha {
   display: inline-block;
   width: 100px;
   color: grey;
   background-image: url("https://artlogic-res.cloudinary.com/w_1200,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/gazelli/images/view/006fb757e68812eda0429108860bfc07p/gazell.io-gibson-martelli-captcha-background.png");
   font-weight: bolder;
-  opacity: .3;
+  opacity: 0.3;
   padding: 10px;
   border-radius: 5px;
 }
 
-#captchabtn{
+#captchabtn {
   width: 100%;
-    padding: 10px;
-    border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#captcha + input{
+#captcha + input {
   display: inline-block;
   width: 300px;
 }
 
-#captchaicon{
+#captchaicon {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -8186,11 +8202,11 @@ button:disabled{
   margin: 13px 8px auto;
 }
 
-#captchaContainer{
+#captchaContainer {
   display: flex;
   width: 500px;
   justify-content: center;
-   align-items: baseline;
+  align-items: baseline;
   margin: auto;
 }
 @media (max-width: 648px) {
@@ -8198,15 +8214,15 @@ button:disabled{
     justify-content: center;
   }
 
-  #captchaContainer{
+  #captchaContainer {
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  #captchaicon{
-    margin:  13px 8px;
+  #captchaicon {
+    margin: 13px 8px;
   }
 }
 
@@ -8649,7 +8665,7 @@ button:disabled{
     flex-direction: column;
   }
 
-  .about-text{
+  .about-text {
     width: 90%;
   }
 }
@@ -8683,7 +8699,7 @@ button:disabled{
   gap: 20px;
 }
 
-#captcha{
+#captcha {
   display: inline-block;
   width: 100px;
   color: grey;
@@ -8694,10 +8710,10 @@ button:disabled{
   border-radius: 5px;
 }
 
-#captchabtn{
+#captchabtn {
   width: 100%;
-    padding: 10px;
-    border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #captcha + input {
@@ -8776,7 +8792,7 @@ button:disabled{
     /* height: 100%; */
   }
 
-  .button{
+  .button {
     flex-direction: column;
   }
 }
@@ -9917,7 +9933,7 @@ form select {
 
 .showcase form input,
 form select:hover {
-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .get-api-text {
@@ -9950,8 +9966,8 @@ transform: translateY(0px);
   background-size: 15px;
   background-position: right 15px center;
 }
-select option{
-  background-color: var(--primary-color)!important;
+select option {
+  background-color: var(--primary-color) !important;
 }
 button span {
   position: relative;
@@ -10449,7 +10465,7 @@ form .responsive-cell-block input {
   width: 100%;
   font-size: 1rem;
   padding: 0.313rem 0.938rem;
-  border-radius:10px ;
+  border-radius: 10px;
   box-shadow: 16px 14px 20px #0000008c;
 }
 
@@ -10685,7 +10701,7 @@ form {
   color: skyblue;
 }
 .contact-text .fa-envelope {
-  color: 	#DB4437;
+  color: #db4437;
 }
 .contact-text .fa-location-dot {
   color: yellow;
@@ -11441,7 +11457,7 @@ button:disabled {
   .showcase form input,
   form select {
     width: 300px;
-      background-color: transparent;
+    background-color: transparent;
   }
 
   img {
@@ -11483,7 +11499,7 @@ button:disabled {
     flex-direction: column;
   }
 
-  .about-text{
+  .about-text {
     width: 90%;
   }
 }
@@ -11611,7 +11627,7 @@ button:disabled {
     /* height: 100%; */
   }
 
-  .button{
+  .button {
     flex-direction: column;
   }
 }
@@ -11905,17 +11921,17 @@ button:disabled {
 }
 
 @media (max-width: 338px) {
-.btn-pos{
-  font-size: 10px;
-}
+  .btn-pos {
+    font-size: 10px;
+  }
 
-.btn12{
-  width: 90%;
-}
+  .btn12 {
+    width: 90%;
+  }
 
-.headline{
-  padding: 0 20px;
-}
+  .headline {
+    padding: 0 20px;
+  }
   .nav-links {
     position: relative;
     top: 55%;
@@ -12024,4 +12040,3 @@ section .container2 {
   width: 100px;
   margin-bottom: 20px;
 }
-

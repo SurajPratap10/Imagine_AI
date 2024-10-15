@@ -1,28 +1,43 @@
 <div class="hamburger" onclick="sidebartoggle()">
-    <i class="bi bi-list"></i>
+  <i class="bi bi-list"></i>
+</div>
+<div class="sidebar">
+  <div class="crossicon" onclick="sidebartoggle()">&#10005;</div>
+  <div class="content">
+    <a
+      class="white-color hover-effect <%= path === '/' ? 'active' : '' %>"
+      href="/"
+      >HOME</a
+    >
+    <a
+      class="white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+      href="/generateImg"
+      >IMAGINE - AI</a
+    >
+    <a
+      class="white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
+      href="/aboutUs"
+      >ABOUT US</a
+    >
+    <a
+      class="white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+      href="/contactUs"
+      >CONTACT US</a
+    >
+    <a
+      class="white-color hover-effect <%= path === '/team' ? 'active' : '' %>"
+      href="/team"
+      >COMMUNITY</a
+    >
+    <a class="hover-effect" href="https://openai.com/dall-e-2/" target="_blank"
+      >DALL.E 2 - OpenAI API</a
+    >
+    <a class="white-color" id="header-btn2" href="/login">Login</a>
   </div>
-  <div class="sidebar">
-   <div class="crossicon" onclick="sidebartoggle()">&#10005;</div>
-   <div class="content">
-    <a class="white-color hover-effect <%= path === '/' ? 'active' : '' %>" href="/">HOME</a>
-          <a class="white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
-            href="/generateImg">IMAGINE -
-            AI</a>
-          <a class="white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>" href="/aboutUs">ABOUT -
-            US</a>
-          <a class="white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>" href="/contactUs">CONTACT -
-            US</a>
-            <a class="white-color hover-effect <%= path === '/team' ? 'active' : '' %>" href="/team">COMMUNITY</a>
-            <a class="hover-effect"  href="https://openai.com/dall-e-2/" target="_blank">DALL.E 2 -
-              OpenAI API</a>
-              <a class="white-color" id="header-btn2" href="/login">Login</a>
-   </div>
-  
-  </div>
+</div>
 
-
-  <style>
-.hamburger{
+<style>
+  .hamburger {
     cursor: pointer;
     position: fixed;
     top: 20px;
@@ -31,30 +46,28 @@
     width: 50px;
     display: none;
     z-index: 99;
-    }
-
-    .hamburger i{
-      padding: 5px 10px;
-    background-color: whitesmoke;
-     border-radius: 10px;
-    }
-
-  @media (max-width:900px){
-    .hamburger{
-      display: block;
-    }
-
-   
   }
 
-  @media (max-width:900px){
-    .sidebar{
+  .hamburger i {
+    padding: 5px 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 900px) {
+    .hamburger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .sidebar {
       display: none;
     }
   }
 
-  .sidebar{
-    position:fixed;
+  .sidebar {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,20 +76,18 @@
     height: 100%;
     top: 0;
     right: 0;
-    transition: all 0.2s ;
+    transition: all 0.2s;
     transform: translateX(100%);
     z-index: 999;
   }
-  .sidebar .content{
+  .sidebar .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     gap: 50px;
-   
-
   }
-  .crossicon{
+  .crossicon {
     position: fixed;
     top: 0px;
     right: 20px;
@@ -85,32 +96,29 @@
     cursor: pointer;
   }
 
-  .content a:hover{
+  .content a:hover {
     color: white;
   }
+</style>
 
+<script>
+  // sidebar script
 
-  </style>
-
-  <script>
-    // sidebar script
-
-const hamburgere1=document.querySelector(".hamburger");
-  const sidebarE1=document.querySelector(".sidebar");
-  function sidebartoggle(){
+  const hamburgere1 = document.querySelector(".hamburger");
+  const sidebarE1 = document.querySelector(".sidebar");
+  function sidebartoggle() {
     // hamburgere1.style.setProperty('display', 'none');
-    if(sidebarE1.style.transform==='translateX(100%)'){
-      sidebarE1.style.setProperty('transform', 'translateX(0)');
-    }
-    else{
-      sidebarE1.style.setProperty('transform', 'translateX(100%)');
+    if (sidebarE1.style.transform === "translateX(100%)") {
+      sidebarE1.style.setProperty("transform", "translateX(0)");
+    } else {
+      sidebarE1.style.setProperty("transform", "translateX(100%)");
     }
   }
 
   // function sidbarinvissible(){
   //   // hamburgere1.style.setProperty('display', 'block');
-    
+
   //   sidebarE1.style.setProperty('transform', 'translateX(100%)');
 
   // }
-  </script>
+</script>
