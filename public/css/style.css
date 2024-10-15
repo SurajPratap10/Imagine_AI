@@ -2964,6 +2964,9 @@ section .container2 {
 #email::placeholder {
   color: aqua;
 }
+#email:hover {
+  box-shadow: rgb(255, 255, 255) 0px 0px 15px !important;
+}
 
 .upper img {
   width: 100px;
