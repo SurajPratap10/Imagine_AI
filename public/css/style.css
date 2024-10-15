@@ -146,7 +146,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -3011,7 +3011,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -5832,7 +5832,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -9188,7 +9188,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
