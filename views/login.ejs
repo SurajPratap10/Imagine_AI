@@ -1,20 +1,19 @@
-<%- include('includes/PRE.ejs') %> 
-<%- include('includes/header.ejs') %>
-<%- include('includes/sidebar.ejs') %>
+<%- include('includes/PRE.ejs') %> <%- include('includes/header.ejs') %> <%-
+include('includes/sidebar.ejs') %>
 
 <head>
   <style>
     body {
       background-color: #121212;
       color: #ffffff;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
     form {
       max-width: 600px;
       max-height: fit-content; /* Increased width for more space */
       margin: 40px auto 50px; /* Adjusted top margin to prevent touching navbar */
-       /* Reduced padding */
+      /* Reduced padding */
       background-color: #1b1b1b;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -22,7 +21,7 @@
 
     h1 {
       text-align: center;
-       /* Reduced the bottom margin */
+      /* Reduced the bottom margin */
       font-size: 10rem;
       color: #00ffff;
     }
@@ -34,7 +33,9 @@
       color: #ffffff;
     }
 
-    input[type="email"], input[type="password"], input[type="text"] {
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
       width: 100%;
       padding: 15px;
       margin-top: 10px;
@@ -48,29 +49,29 @@
     }
 
     .eye-container {
-    position: relative; /* Create a positioning context for the absolute element */
+      position: relative; /* Create a positioning context for the absolute element */
     }
 
+    #eye {
+      color: aqua;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      left: auto;
+      transform: none;
+      cursor: pointer;
+    }
 
-
-    #eye{
-              color: aqua;
-              position: absolute;
-              top: 10px;
-              right: 15px;
-              left: auto;
-              transform: none;
-              cursor: pointer;
-            }
-
-    input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
+    input[type="email"]:hover,
+    input[type="password"]:hover,
+    input[type="text"]:hover {
       background-color: #333;
     }
 
     .form-control {
       margin-bottom: 20px;
     }
-    #eye{
+    #eye {
       align-self: right;
     }
 
@@ -111,7 +112,6 @@
       border-radius: 25px;
       transition: background-color 0.3s;
       cursor: pointer;
-
     }
 
     .signin-opt-icons a img {
@@ -162,20 +162,40 @@
 
       <div class="form-control">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter Email address" 
-               onkeyup="handleChange(event)" aria-describedby="emailError"/>
-        <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email address"
+          onkeyup="handleChange(event)"
+          aria-describedby="emailError"
+        />
+        <p class="error hidden" id="emailError" role="alert">
+          Enter Valid Email
+        </p>
       </div>
 
       <div class="form-control">
         <label for="password">Password</label>
         <div class="eye-container">
-          <input type="password" id="password" name="password" placeholder="Enter password" 
-                 onkeyup="handleChange(event)" aria-describedby="passwordError" />
-          <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            onkeyup="handleChange(event)"
+            aria-describedby="passwordError"
+          />
+          <span
+            class="material-symbols-outlined"
+            id="eye"
+            onclick="myFunction()"
+            >visibility_off</span
+          >
         </div>
         <p class="error hidden" id="passwordError" role="alert">
-          Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)
+          Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1
+          number (0-9)
         </p>
       </div>
 
@@ -183,15 +203,26 @@
         <label for="captcha-input">Captcha</label>
         <div id="captchaContainer">
           <div id="captcha"></div>
-          <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">autorenew</span>
-          <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
+          <span
+            id="captchaicon"
+            class="material-symbols-outlined"
+            onclick="generateCaptcha()"
+            role="button"
+            aria-label="auto renew captcha"
+            >autorenew</span
+          >
+          <input
+            type="text"
+            name="captcha"
+            required
+            placeholder="Enter Captcha"
+            id="captcha-input"
+          />
         </div>
         <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
       </div>
 
-      <div><b>Sign In using</b></div>
-
-     
+      <div style="font-weight: bold; color: white">SIGN IN Using</div>
 
       <div class="signin-opt-icons">
         <a href="/auth/google" aria-label="sign in with google">
@@ -206,19 +237,36 @@
       </div>
 
       <div class="formBtns">
-        <button id="submit" type="submit" class="btn sign-in-btn btn-login-submit" aria-label="submit" disabled>
+        <button
+          id="submit"
+          type="submit"
+          class="btn sign-in-btn btn-login-submit"
+          aria-label="submit"
+          disabled
+        >
           <span>Submit</span>
           <div class="flow"></div>
         </button>
       </div>
 
-      <div class="get-api-text">
-        <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
+      <div class="get-api-text" style="font-size: 15px">
+        <p>
+          No account?
+          <a href="/signup" aria-label="go to signup page">SIGN UP</a>
+        </p>
       </div>
     </form>
 
-    <div id="successToast" class="toast success-toast" aria-label="success message"></div>
-    <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
+    <div
+      id="successToast"
+      class="toast success-toast"
+      aria-label="success message"
+    ></div>
+    <div
+      id="errorToast"
+      class="toast error-toast"
+      aria-label="error message"
+    ></div>
   </section>
 </main>
 
@@ -237,4 +285,3 @@
     }
   }
 </script>
-

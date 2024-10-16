@@ -15,6 +15,7 @@
 .hvr-eff {
   position: relative;
 }
+
 .hvr-eff::after {
   content: " ";
   position: absolute;
@@ -318,7 +319,7 @@ a {
   transform: scale(1.2);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: #00ffff; /* Electric blue on hover */
-  transition: color 300ms; /* Smooth transition for color change */
+  transition: color 700ms !important; /* Smooth transition for color change */
 }
 
 .barIcon {
@@ -838,16 +839,22 @@ form select:hover {
 
 .get-api-text {
   color: #ffffff; /* Keep text color white for high contrast */
+  margin-bottom: 7px !important;
 }
 
 .get-api-text a {
   color: #d3d3d3; /* Change link color to light gray for subtle contrast */
   text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
   transition: 0.3s ease-in-out;
 }
 
 .get-api-text a:hover {
   color: #00d4ff; /* Change link color to electric blue on hover */
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+
   transition: 0.3s ease-in-out;
 }
 
