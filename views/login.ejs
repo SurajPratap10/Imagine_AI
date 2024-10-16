@@ -52,7 +52,8 @@ include('includes/sidebar.ejs') %>
       position: relative; /* Create a positioning context for the absolute element */
     }
 
-    #eye {
+  
+    #eye{
       color: aqua;
       position: absolute;
       top: 10px;
@@ -65,6 +66,8 @@ include('includes/sidebar.ejs') %>
     input[type="email"]:hover,
     input[type="password"]:hover,
     input[type="text"]:hover {
+
+    input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
       background-color: #333;
     }
 
@@ -197,6 +200,7 @@ include('includes/sidebar.ejs') %>
           Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1
           number (0-9)
         </p>
+        <p><a href="/forgot-password" aria-label="forgot password">Forgot Password?</a></p>
       </div>
 
       <div class="form-control">
@@ -222,7 +226,11 @@ include('includes/sidebar.ejs') %>
         <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
       </div>
 
+
       <div style="font-weight: bold; color: white">SIGN IN Using</div>
+
+      <div><b>Sign In using</b></div>
+
 
       <div class="signin-opt-icons">
         <a href="/auth/google" aria-label="sign in with google">
@@ -284,4 +292,7 @@ include('includes/sidebar.ejs') %>
       eyeIcon.innerText = "visibility_off";
     }
   }
+
+</script>
+
 </script>
