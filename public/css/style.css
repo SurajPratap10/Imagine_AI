@@ -12050,3 +12050,7 @@ section .container2 {
   width: 100px;
   margin-bottom: 20px;
 }
+.signin-opt-icons img {
+  max-width: 20% !important;
+  height: auto !important;
+}
