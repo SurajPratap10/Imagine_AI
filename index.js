@@ -105,7 +105,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/openai", require("./routes/openaiRoutes"));
 app.use("/auth", require("./routes/auth.js"));
-
+app.use("/send-feedback",require("./routes/feedback.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>
