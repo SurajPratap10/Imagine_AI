@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 //EJS AS RENDER ENGINE
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views")); //look for views in views folder
+app.set("views", path.join(__dirname, "views"));
 
 //ENABLING BODY PARSER:
 app.use(express.json());

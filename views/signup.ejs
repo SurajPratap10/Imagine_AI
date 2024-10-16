@@ -6,6 +6,15 @@
 
         <head>
           <style>
+            #image-form{
+              max-width: 600px;
+      max-height: fit-content; /* Increased width for more space */
+      margin: 40px auto 50px; /* Adjusted top margin to prevent touching navbar */
+       /* Reduced padding */
+      background-color: #1b1b1b;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            }
             #captchaicon{
             cursor: pointer;
           }
@@ -68,7 +77,11 @@
               transform: none;
               cursor: pointer;
             }
+            .form-control input:hover{
+              background-color: grey;
+            }
           </style>
+
         </head>
       </head>
       <%- include('includes/navbar.ejs') %>
@@ -118,10 +131,11 @@
                   </span>
                 <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
               </div>
-              <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
+              <button  onclick="checkCaptcha()" style="background-color: #00b3b3; color: black; width:100% ;" id="captchabtn">Verify Captcha</button>
             </div>
+          
             <div class="signup-opt">
-              <h2>Sign Up using</h2>
+              <div style="font-weight: bold;">Sign Up Using</div>
               <div class="signup-opt-icons">
                 <!-- signup using google -->
                 <a href="/auth/google" class="google-button" aria-label="sign up with google"><svg xmlns="http://www.w3.org/2000/svg" height="2em"

@@ -1,9 +1,14 @@
 const express = require("express");
-
+const app = express();
 const router = express.Router();
 
-router.get("/", (_req, res, _next) => {
-  res.render("home", { path: "/" }); // passed path to track active <a> class in header.ejs
+router.get("/", (req, res) => {
+  res.render("intro", { path: "/" }); // Fixed syntax error
+});
+
+// Serve the home page after intro
+router.get("/home", (_req, res, _next) => {
+  res.render("home", { path: "/home" });
 });
 
 router.get("/generateImg", (_req, res, _next) => {
@@ -29,6 +34,7 @@ router.get("/login", (req, res, next) => {
 router.get("/signup", (_req, res, _next) => {
   res.render("signup", { path: "/signup" });
 });
+
 router.get("/slider", (_req, res, _next) => {
   res.render("slider", { path: "/slider" });
 });
@@ -36,4 +42,17 @@ router.get("/slider", (_req, res, _next) => {
 router.get("/privacypolicy", (req, res, next) => {
   res.render("privacypolicy", { path: "privacypolicy" });
 });
+
+// Render forgot password page
+router.get("/forgot-password", (req, res) => {
+  res.render("forgot-password", { path: "/forgot-password" });
+});
+
+// Handle forgot password form submission
+router.post("/forgot-password", (req, res) => {
+  const { email } = req.body;
+  // Implement password recovery logic here (e.g., send recovery email)
+  res.redirect("/login");
+});
+
 module.exports = router;

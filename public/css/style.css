@@ -24,20 +24,76 @@ bottom: -2px;
 left: 0;
 width: 0;
 transition: .5s;
-background-color: #fff;
+background-color: var(--accent-color); 
 height: 2px;
 }
 .hvr-eff:hover::after{
   width: 100%;
 }
 :root {
-  --primary-color: rgb(32, 32, 32);
-  --navbar-color: #03045e;
+  --primary-color: #2e2e2e; /* Dark grey background */
+  --secondary-color: #1a1a1a; /* Even darker grey background */
+  --navbar-color: #4b0082; /* Indigo for the navbar */
+  --accent-color: #ffa500; /* Orange accent color */
+  --hover-accent: #ff4500; /* OrangeRed hover effect */
   scroll-behavior: smooth;
 }
 
-/* ---------- Enhancing the Scroll-Bar ---------- */
+body {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
 
+nav {
+  background-color: var(--navbar-color);
+}
+
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--hover-accent);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--hover-accent);
+}
+
+/* Specific overrides to ensure all pink/blue effects are changed */
+.background-effect {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.header {
+  background-color: var(--navbar-color);
+}
+
+.footer {
+  background-color: var(--navbar-color);
+}
+
+.card {
+  background-color: var(--secondary-color);
+}
+
+.card:hover {
+  background-color: var(--hover-accent);
+}
+
+/* Additional elements if any */
+.special-effect {
+  background: linear-gradient(135deg, var(--accent-color), var(--hover-accent));
+}
+
+
+/*----------------enhancing scroll bar-----------------*/
 ::-webkit-scrollbar {
   width: .6rem !important;
   background-color: rgb(24, 16, 16);
@@ -51,14 +107,15 @@ height: 2px;
   background-image: linear-gradient(-45deg,rgb(1, 89, 127), transparent);
 }
 
+
 /* --------------- Body CSS --------------- */
 
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: #ffffff; /* Light text for contrast with the dark background */
+  background: linear-gradient(-45deg, #2e2e2e, #1a1a1a, #4b0082, #ffa500); /* Dark theme with deep colors */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   overflow: overlay;
@@ -74,8 +131,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-
-  background: white;
+  background: #1a1a1a; /* Dark background for the loading screen */
 }
 .loader {
   width: 250px;
@@ -89,7 +145,7 @@ body {
   font-family: helvetica, arial, sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  color: #e73c7e;
+  color: #00ffff; /* Electric blue text color */
   letter-spacing: 0.2em;
 }
 .loader::before,
@@ -98,7 +154,7 @@ body {
   display: block;
   width: 15px;
   height: 15px;
-  background: #e73c7e;
+  background: #00ffff; /* Electric blue for the loading dots */
   position: absolute;
   animation: load 0.7s infinite alternate ease-in-out;
 }
@@ -138,7 +194,7 @@ body {
   width: 100%;
   overflow: hidden;
   z-index: 100;
-  background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #1a1a1a, #121212, #001f3f, #800080); /* Dark theme with accent colors */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #fff;
@@ -181,16 +237,21 @@ body {
 }*/
 a{
   text-decoration: none;
+  color: #00ffff; /* Electric blue for links */
 }
 .hover-effect:hover {
-  color: white;
+  color: #00ffff; /* Electric blue on hover */
   text-decoration: none;
   border: none;
 }
 
 .hover-effect:hover::after {
-  transition: 300ms;
-  width: 100%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #800080; /* Deep purple underline effect */
+  transition: width 300ms;
 }
 
 /* .hover-effect::after {
@@ -233,6 +294,7 @@ a{
 
 .nav-links li {
   font-family: "League Spartan", sans-serif;
+  color: #00ffff; /* Electric blue for text color */
 }
 
 .AI {
@@ -241,21 +303,26 @@ a{
   font-weight: bold;
   display: inline-block;
   padding: 0;
+  color: #ffffff; /* White text for better visibility */
 }
 
 .AI:hover{
-  font-size: 1.20rem;
+  transform: scale(1.2);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #00ffff; /* Electric blue on hover */
+  transition: color 300ms; /* Smooth transition for color change */
 }
+
 
 .barIcon {
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 1rem;
+  color: #ffffff; /* White color for icons */
 }
 
 .barIcon:hover i {
-  color: #03045e;
+  color: #00ffff; /* Electric blue on hover */
 }
 
 .hide-sm {
@@ -274,10 +341,8 @@ a{
     left: 0;
     width: 100vw;
     padding: 2rem;
-    background: linear-gradient(-45deg, #7152ee, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    box-shadow: 0 0.5px 5px #d9d9d9;
+    background: #1a1a1a; /* Dark background for mobile navigation */
+    box-shadow: 0 0.5px 5px rgba(255, 255, 255, 0.1); /* Subtle shadow */
   }
 
   .left-nav-links,
@@ -305,8 +370,8 @@ a{
   display: inline-block;
   width: 8px;
   height: 8px;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
+  border-top: 2px solid #ffffff; /* White for better visibility on dark background */
+  border-right: 2px solid #ffffff; /* White for better visibility on dark background */
   transform: rotate(45deg);
   margin-left: 5px;
 }
@@ -314,14 +379,16 @@ a{
 #header-btn2 {
   font-family: "League Spartan", sans-serif;
   text-decoration: none;
-  font-size: 18x;
+  font-size: 18px; /* Corrected typo from 18x to 18px */
   padding: 6px 14px;
-  background-color: rgb(78, 7, 78);
+  background-color: #800080; /* Deep purple for the button */
+  color: #ffffff; /* White text for better visibility */
   border-radius: 2px;
+  transition: background-color 300ms; /* Smooth transition for hover effect */
 }
 
 #header-btn2:hover {
-  background-color: rgb(130, 8, 130);
+  background-color: #00ffff; /* Electric blue on hover */
 }
 
 /* --------------- About CSS --------------- */
@@ -357,9 +424,15 @@ a{
 
 .about h1 {
   font-size: 2.1rem;
-  color: white;
+  color: #ffffff; /* White text for contrast against the dark background *
   font-weight: 700;
   text-transform: uppercase;
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.about h1:hover {
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
+  transform: scale(1.05);
 }
 
 /* --------------- Dashboard CSS --------------- */
@@ -372,11 +445,19 @@ a{
   width: 50%;
 }
 
-.dashboard h1 {
-  padding: 50px 50px 20px;
-  margin-top: 20px;
-  text-align: left;
-  font-size: 32px;
+.dashboard {
+  padding: 20px; 
+}
+
+.dashboard-h1 {
+  color: #ffffff; /* White text for high contrast */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+}
+
+.dashboard-h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
+}
 }
 
 .dashboard h3,
@@ -423,7 +504,8 @@ a{
 
 button,
 .btn {
-  background-color: black;
+  background-color: #1a1a1a; /* Dark background for the button */
+  color: #ffffff; /* White text for high contrast */
   color: #fff;
   white-space: nowrap;
   font-size: 20px;
@@ -476,12 +558,15 @@ button,
   top: -80px;
   width: 250px;
   height: 200px;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Keep the shadow for depth */
   transition: 0.5s;
+  background-color: rgba(30, 30, 30, 0.8); /* Dark background for flow effect */
+}
 }
 
 .btn:hover {
-  background-color: #7152ee;
+  background-color: rgba(50, 0, 255, 0.6); /* Deep purple on hover */
+  box-shadow: inset 0 0 50px rgba(0, 255, 255, 0.5); /* Electric blue glow on hover */
 }
 
 .dashboard .right {
@@ -529,17 +614,18 @@ button,
   width: 280px;
   height: 360px;
   padding: 2rem 1rem;
-  background: #fff;
+  background: #1c1c1c; /* Dark background for the card */
   position: relative;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.7); /* Slightly darker shadow for depth */
   transition: 0.5s ease-in-out;
   margin-bottom: 20px;
 }
 
 .cardEx:hover {
-  transform: translateY(20px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+  transform: translateY(-5px); /* Optional: Lift effect on hover */
 }
 
 .cardEx:before {
@@ -552,8 +638,8 @@ button,
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(136, 134, 137, 0.5),
-    rgb(240, 237, 240)
+    rgba(34, 34, 34, 0.7), /* Dark overlay for a more sophisticated look */
+    rgba(34, 34, 34, 0.3)  /* Lighter dark overlay to enhance the background */
   );
   z-index: 2;
   transition: 0.5s all;
@@ -576,10 +662,11 @@ button,
 .cardEx .info {
   position: relative;
   z-index: 3;
-  color: #000000;
+  color: #ffffff; /* Change text color to white for contrast */
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s all;
+  background-color: rgba(34, 34, 34, 0.7); /* Optional dark background for info section */
 }
 
 .cardEx:hover .info {
@@ -588,7 +675,7 @@ button,
 }
 
 .cardEx .info h1 {
-  color: #000000;
+  color: #00d4ff; /* Use electric blue for headings */
   text-transform: uppercase;
   margin: 0;
   padding-left: 20px;
@@ -652,11 +739,14 @@ button,
   display: flex;
   font-size: 2rem;
   letter-spacing: 1px;
-  color: rgb(255, 255, 255);
+  color: #00d4ff; /* Change text color to electric blue */
   text-align: center;
   outline: none;
   animation: animate 5s linear infinite;
   padding-top: 90px;
+  background-color: rgba(34, 34, 34, 0.8); /* Optional: dark semi-transparent background */
+  border-radius: 10px; /* Optional: rounded corners for a sleek look */
+  padding: 90px 20px; /* Add padding for better spacing */
 }
 
 .showcase form {
@@ -690,7 +780,7 @@ button,
 .show-password-typo {
   font-size: 15px;
   font-weight: 500;
-  color: rgb(255, 255, 255);
+  color: #ffffff; /* Keep the text white for contrast */
   text-align: center;
 }
 
@@ -704,7 +794,8 @@ form select {
   border: 2px solid aqua;
   border-radius: 5px;
   margin-bottom: 1rem;
-  color: aqua;
+  color: #ffffff; /* Change text color to white for better contrast */
+  background-color: #1e1e1e; /* Dark background for input fields */
   text-decoration: none;
   transition: transform 0.5s;
   cursor: text;
@@ -726,18 +817,18 @@ form select:hover {
 }
 
 .get-api-text {
-  color: white;
+  color: #ffffff; /* Keep text color white for high contrast */
   
 }
 
 .get-api-text a {
-  color: gray;
+  color: #d3d3d3; /* Change link color to light gray for subtle contrast */
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
 
 .get-api-text a:hover {
-  color: cyan;
+  color: #00d4ff; /* Change link color to electric blue on hover */
   transition: 0.3s ease-in-out;
 }
 
@@ -1042,7 +1133,7 @@ footer {
   height: 15vh;
   width: 100%;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 footer a {
@@ -1724,7 +1815,12 @@ form {
 
 .about .about-us-logo {
   width: 400px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.about-image:hover .about-us-logo {
+      transform: scale(1.1); /* Increase size to 110% */
+    }
 
 .about-content .about-image {
   overflow: visible;
@@ -2378,7 +2474,7 @@ button:disabled{
 }
 
 #captchabtn{
-  width: 100%;
+  width: 70%;
     padding: 10px;
     border-radius: 10px;
 }
@@ -3925,7 +4021,7 @@ footer {
   height: 15vh;
   width: 100%;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 footer a {
@@ -6735,7 +6831,7 @@ footer a:hover {
 footer {
   width: 100%;
   color: white;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 footer a {
@@ -9655,6 +9751,7 @@ button,
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
+  border-radius: 2rem;
 }
 
 .cardEx:hover:before {
@@ -9668,6 +9765,7 @@ button,
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 2rem;
 }
 
 .cardEx .info {
@@ -9948,6 +10046,7 @@ img {
   padding: 20px 100px;
   margin: 60px 0;
   margin-top: 120px;
+  margin-bottom: -1.5rem;
 }
 
 #newsletter .news-text h4 {
@@ -10814,6 +10913,7 @@ form {
   width: 60%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2rem;
 }
 
 .container1 .about-image {
