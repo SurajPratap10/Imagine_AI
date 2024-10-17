@@ -183,7 +183,6 @@ body {
 a {
   text-decoration: none;
   color: #00ffff; /* Electric blue for links */
-
 }
 .hover-effect:hover {
   color: #00ffff; /* Electric blue on hover */
