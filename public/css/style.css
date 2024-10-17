@@ -72,7 +72,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  background: #1a1a1a;  /* Dark background for the loading screen */
+  background: #1a1a1a; /* Dark background for the loading screen */
 }
 .loader {
   width: 250px;
@@ -182,7 +182,7 @@ body {
 }*/
 a {
   text-decoration: none;
-  color: #00ffff; /*Electric blue for links */
+  color: #00ffff; /* Electric blue for links */
 
 }
 .hover-effect:hover {
