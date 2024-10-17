@@ -2800,35 +2800,41 @@ button:disabled{
   }
 
   #newsletter {
-    padding: 10px;
-  }
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Optional padding for spacing */
+}
 
-  #newsletter .news-text {
-    width: 50%;
-  }
+#newsletter .news-text {
+    margin-bottom: 20px; /* Space between text and form */
+}
 
-  #newsletter .news-text h4 {
+#newsletter .news-text h4 {
+    font-size: 22px;
+}
+
+#newsletter .news-text p {
     font-size: 18px;
-  }
+}
 
-  #newsletter .news-text p {
-    font-size: 16px;
-  }
+#newsletter .news-form {
+    display: flex;
+    flex-direction: column; 
+    width: 100%; 
+}
 
-  #newsletter .news-form {
-    width: 48%;
-  }
+#newsletter .news-form input {
+    height: 2rem;
+    font-size: 14px;
+    margin-bottom: 10px; 
+}
 
-  #newsletter .news-form input {
-    padding: 0px 2px;
-    height: 20px;
-    font-size: 12px;
-  }
-
-  #newsletter .news-form button {
-    font-size: 8px;
-    padding: 0px 6px;
-  }
+#newsletter .news-form button {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    padding: 2px 6px;
 }
 
 @media (max-width: 400px) {
