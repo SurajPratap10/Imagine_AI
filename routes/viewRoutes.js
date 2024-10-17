@@ -55,4 +55,8 @@ router.post("/forgot-password", (req, res) => {
   res.redirect("/login");
 });
 
+router.get("/feedback", (_req, res, next) => {
+  res.render("feedback", { path: "/feedback" });
+});
+
 module.exports = router;
