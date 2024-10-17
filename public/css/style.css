@@ -55,8 +55,8 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #ffffff;/* Light text for contrast with the dark background */
-  background: linear-gradient(-45deg, #2e2e2e, #1a1a1a, #4b0082, #ffa500);  /* Dark theme with deep colors */
+  color: #ffffff; /* Light text for contrast with the dark background */
+  background: linear-gradient(-45deg, #2e2e2e, #1a1a1a, #4b0082, #ffa500); /* Dark theme with deep colors */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   overflow: overlay;
@@ -182,6 +182,7 @@ body {
 }*/
 a {
   text-decoration: none;
+  color: #00ffff; /*Electric blue for links */
 
 }
 .hover-effect:hover {
@@ -366,7 +367,7 @@ a {
 }
 
 .about h1:hover {
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue  glow on hover */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
   transform: scale(1.05);
 }
 
@@ -497,7 +498,7 @@ button,
 }
 
 .btn:hover {
-  background-color: rgba(50, 0, 255, 0.6);/* Deep purple on hover */
+  background-color: rgba(50, 0, 255, 0.6); /* Deep purple on hover */
   box-shadow: inset 0 0 50px rgba(0, 255, 255, 0.5); /* Electric blue glow on hover */
 }
 
@@ -679,7 +680,7 @@ button,
   animation: animate 5s linear infinite;
   padding-top: 90px;
   background-color: rgba(34, 34, 34, 0.8); /* Optional: dark semi-transparent background */
-  border-radius: 10px;  /* Optional: rounded corners for a sleek look */
+  border-radius: 10px; /* Optional: rounded corners for a sleek look */
   padding: 90px 20px; /* Add padding for better spacing */
 }
 
