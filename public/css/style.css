@@ -2097,7 +2097,7 @@ button:disabled{
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
@@ -4928,7 +4928,7 @@ button:disabled {
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
@@ -7793,7 +7793,7 @@ button:disabled{
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
@@ -10935,7 +10935,7 @@ form {
 
 .about {
   padding: 20px 0;
-  display: grid;
+  /* display: grid; */
 }
 
 .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
@@ -11149,7 +11149,7 @@ button:disabled {
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
