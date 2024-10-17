@@ -203,6 +203,10 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar :hover{
+  color: rgb(246, 15, 246);
+  font-weight: 700;
+}
 
 @media (max-width: 1180px) {
   .navbar {
@@ -952,7 +956,7 @@ img {
 }
 
 #newsletter .news-text p span {
-  color: #ffbd27;
+  color: #b7830a;
 }
 
 #newsletter .news-form {
@@ -1009,6 +1013,7 @@ footer .content {
 footer .content p,
 a {
   color: #fff;
+  font-size: medium;
 }
 
 footer .content .box {
@@ -1107,7 +1112,7 @@ footer .bottom {
 }
 
 footer .bottom a {
-  color: #134d58;
+  color: #093741;
 }
 
 footer a {
