@@ -6988,6 +6988,8 @@ span {
 }
 
 .contact-top h3 {
+  color: white;
+  font-size: 18px;
   padding-bottom: 20px;
 }
 
@@ -10401,6 +10403,7 @@ span {
 }
 
 .contact-top-text {
+  color: white;
   width: 60% !important;
 }
 
