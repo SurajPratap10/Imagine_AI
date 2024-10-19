@@ -30,7 +30,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
     "nodemailer": "^6.9.15",
-    "openai": "^4.67.1",
+    "openai": "^4.68.1",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
     "password-validator": "^5.3.0",
