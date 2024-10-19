@@ -73,7 +73,7 @@
 <%- include('includes/navbar.ejs') %>
 <main class="parent">
     <section class="form-container">
-        <form class="form" id="feedbackForm">
+        <forms class="form" id="feedbackForm">
             <div class="form-field">
                 <label for="name">NAME</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -87,10 +87,11 @@
                 <textarea id="feedback" name="feedback" placeholder="Type your Feedback" required></textarea>
             </div>
             <button type="submit" class="submit-btn">SUBMIT</button>
-        </form>
+        </forms>
     </section>
 </main>
-
+<%- include('includes/footer.ejs') %>
+<%- include('includes/topToBottomScrollButton.ejs') %>
 <script>
 
     document.getElementById("feedbackForm").addEventListener('submit',async(e)=>{
