@@ -3,9 +3,9 @@
 .spinner {
   position: fixed;
   z-index: 999;
-  height: 2em;
-  width: 2em;
-  overflow: show;
+  height: 100px;
+  width: 100px;
+  overflow:visible;
   margin: auto;
   top: 0;
   left: 0;
@@ -14,8 +14,11 @@
   display: none;
 }
 .show {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 /* Transparent Overlay */
 .spinner:before {
@@ -26,7 +29,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8));
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
 
   background: -webkit-radial-gradient(
     rgba(27, 26, 26, 0.8),
@@ -47,15 +51,18 @@
   content: "Please wait,while we load image for you.";
   display: block;
   font-size: 10px;
-  width: 1em;
-  height: 1em;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  border-color: #ffffff transparent #ffffff transparent;
+  animation: spinner 1.2s linear infinite;
   margin-top: -0.5em;
   -webkit-animation: spinner 150ms infinite linear;
   -moz-animation: spinner 150ms infinite linear;
   -ms-animation: spinner 150ms infinite linear;
   -o-animation: spinner 150ms infinite linear;
   animation: spinner 150ms infinite linear;
-  border-radius: 0.5em;
   -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0,
     rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0,
     rgba(255, 255, 255, 0.75) 0 1.5em 0 0,
@@ -74,8 +81,26 @@
     rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
 }
 
+.spinner::before {
+  content: "Please wait, while we load the image for you.";
+  position: absolute;
+  top: 120px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
 /* Animation */
 
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);
