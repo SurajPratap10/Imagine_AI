@@ -1,251 +1,323 @@
-<%- include('includes/PRE.ejs') %> 
-<%- include('includes/header.ejs') %>
-<%- include('includes/sidebar.ejs') %>
+<%- include('includes/PRE.ejs') %>
+  <%- include('includes/header.ejs') %>
+    <%- include('includes/sidebar.ejs') %>
 
-<head>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: 'Poppins', sans-serif;
-    }
+      <head>
+        <style>
+          body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+          }
 
-    form {
-      max-width: 600px;
-      max-height: fit-content; /* Increased width for more space */
-      margin: 40px auto 50px; /* Adjusted top margin to prevent touching navbar */
-       /* Reduced padding */
-      background-color: #1b1b1b;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    }
+          form {
+            max-width: 600px;
+            max-height: fit-content;
+            margin: 40px auto 50px;
+            background-color: #1b1b1b;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+          }
 
-    h1 {
-      text-align: center;
-       /* Reduced the bottom margin */
-      font-size: 10rem;
-      color: #00ffff;
-    }
+          h1 {
+            text-align: center;
+            font-size: 10rem;
+            color: #00ffff;
+          }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #ffffff;
-    }
+          label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ffffff;
+          }
 
-    input[type="email"], input[type="password"], input[type="text"] {
-      width: 100%;
-      padding: 15px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 2px solid #333;
-      background-color: #262626;
-      color: #ffffff;
-      box-sizing: border-box;
-      padding-right: 40px; /* To accommodate eye icon in the password field */
-    }
+          input[type="email"],
+          input[type="password"],
+          input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 2px solid #333;
+            background-color: #262626;
+            color: #ffffff;
+            box-sizing: border-box;
+            padding-right: 40px;
+            /* To accommodate eye icon in the password field */
+          }
 
-    .eye-container {
-    position: relative; /* Create a positioning context for the absolute element */
-    }
+          .eye-container {
+            position: relative;
+            /* Create a positioning context for the absolute element */
+          }
 
-    #eye{
-      color: aqua;
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      left: auto;
-      transform: none;
-      cursor: pointer;
-    }
+          #eye {
+            color: aqua;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+          }
 
-    input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
-      background-color: #333;
-    }
+          input[type="email"]:hover,
+          input[type="password"]:hover,
+          input[type="text"]:hover {
+            background-color: #333;
+          }
 
-    .form-control {
-      margin-bottom: 20px;
-    }
-    #eye{
-      align-self: right;
-    }
+          .form-control {
+            margin-bottom: 20px;
+          }
 
-    #captchaContainer {
-      display: flex;
-      align-items: center;
-    }
+          #captchaContainer {
+            display: flex;
+            align-items: center;
+          }
 
-    #captcha {
-      margin-right: 10px;
-    }
+          #captcha {
+            margin-right: 10px;
+          }
 
-    button {
-      width: 100%;
-      padding: 15px;
-      background-color: #00b3b3;
-      color: white;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+          button {
+            width: 100%;
+            padding: 15px;
+            background-color: #00b3b3;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
 
-    button:hover {
-      background-color: #00cccc;
-    }
+          button:hover {
+            background-color: #00cccc;
+          }
 
-    .sign-in-button {
-      display: block;
-      width: 70%;
-      padding: 15px;
-      background-color: #00b3b3;
-      text-align: center;
-      color: white;
-      font-weight: bold;
-      font-size: 1.2rem;
-      border-radius: 25px;
-      transition: background-color 0.3s;
-      cursor: pointer;
-    }
+          .sign-in-button {
+            display: block;
+            width: 70%;
+            padding: 15px;
+            background-color: #00b3b3;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+          }
 
-    .signin-opt-icons a img {
-      width: 40px;
-      transition: transform 0.2s ease;
-    }
+          .signin-opt-icons a img {
+            width: 40px;
+            transition: transform 0.2s ease;
+          }
 
-    .signin-opt-icons a img:hover {
-      transform: scale(1.1);
-    }
+          .signin-opt-icons a img:hover {
+            transform: scale(1.1);
+          }
 
-    .get-api-text {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.9rem;
-    }
+          .get-api-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+          }
 
-    .get-api-text a {
-      color: #00ffff;
-      text-decoration: none;
-    }
+          .get-api-text a {
+            color: #00ffff;
+            text-decoration: none;
+          }
 
-    .get-api-text a:hover {
-      text-decoration: underline;
-    }
+          .get-api-text a:hover {
+            text-decoration: underline;
+          }
 
-    /* Dark Mode */
-    .dark-mode {
-      background-color: #121212;
-      color: #ffffff;
-    }
+          /* Toast Styles */
+          .toast {
+            position: fixed;
+            top: 20px;
+            /* Position from the top */
+            right: 20px;
+            /* Position from the right */
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: opacity 0.3s;
+            display: none;
+            /* Hidden by default */
+            min-width: 250px;
+            /* Minimum width for toast */
+          }
 
-    /* Media Query for mobile responsiveness */
-    @media (max-width: 480px) {
-      form {
-        padding: 15px;
-      }
-    }
-  </style>
-</head>
+          .success-toast {
+            background-color: #4caf50;
+            /* Green */
+            color: white;
+          }
 
-<%- include('includes/navbar.ejs') %>
+          .error-toast {
+            background-color: #f44336;
+            /* Red */
+            color: white;
+          }
 
-<main>
-  <section class="showcase about" id="showcase">
-    <form id="image-form" action="index.html" aria-label="Login Form">
-      <h1 class="AI">SIGN IN</h1>
+          /* Dark Mode */
+          .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+          }
 
-      <div class="form-control">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter Email address" 
-               onkeyup="handleChange(event)" aria-describedby="emailError"/>
-        <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
-      </div>
+          /* Media Query for mobile responsiveness */
+          @media (max-width: 480px) {
+            form {
+              padding: 15px;
+            }
+          }
+        </style>
+      </head>
 
-      <div class="form-control">
-        <label for="password">Password</label>
-        <div class="eye-container">
-          <input type="password" id="password" name="password" placeholder="Enter password" 
-                 onkeyup="handleChange(event)" aria-describedby="passwordError" />
-          <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
-        </div>
-        <p class="error hidden" id="passwordError" role="alert">
-          Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)
-        </p>
-        <p><a href="/forgot-password" aria-label="forgot password">Forgot Password?</a></p>
-      </div>
+      <%- include('includes/navbar.ejs') %>
 
-      <div class="form-control">
-        <label for="captcha-input">Captcha</label>
-        <div id="captchaContainer">
-          <div id="captcha"></div>
-          <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">autorenew</span>
-          <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
-        </div>
-        <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
-      </div>
+        <main>
+          <section class="showcase about" id="showcase">
+            <form id="image-form" action="index.html" aria-label="Login Form">
+              <h1 class="AI">SIGN IN</h1>
 
-      <div><b>Sign In using</b></div>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email address"
+                  onkeyup="handleChange(event)" aria-describedby="emailError" />
+                <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
+              </div>
 
-      <div class="signin-opt-icons">
-        <a href="/auth/google" aria-label="sign in with google">
-          <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
-        </a>
-        <a href="#" aria-label="sign in with facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
-        </a>
-        <a href="#" aria-label="sign in with twitter">
-          <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
-        </a>
-      </div>
+              <div class="form-control">
+                <label for="password">Password</label>
+                <div class="eye-container">
+                  <input type="password" id="password" name="password" placeholder="Enter password"
+                    onkeyup="handleChange(event)" aria-describedby="passwordError" />
+                  <span class="material-symbols-outlined" id="eye" onclick="myFunction()">visibility_off</span>
+                </div>
+                <p class="error hidden" id="passwordError" role="alert">
+                  Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)
+                </p>
+                <p><a href="/forgot-password" aria-label="forgot password">Forgot Password?</a></p>
+              </div>
 
-      <div class="formBtns">
-        <button id="submit" type="submit" class="btn sign-in-btn btn-login-submit" aria-label="submit" disabled>
-          <span>Submit</span>
-          <div class="flow"></div>
-        </button>
-      </div>
+              <div class="form-control">
+                <label for="captcha-input">Captcha</label>
+                <div id="captchaContainer">
+                  <div id="captcha"></div>
+                  <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button"
+                    aria-label="auto renew captcha">autorenew</span>
+                  <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
+                </div>
+                <button onclick="checkCaptcha()" id="captchabtn">Verify Captcha</button>
+              </div>
 
-      <div class="get-api-text">
-        <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
-      </div>
-    </form>
+              <div><b>Sign In using</b></div>
 
-    <div id="successToast" class="toast success-toast" aria-label="success message"></div>
-    <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
-  </section>
-</main>
+              <div class="signin-opt-icons">
+                <a href="/auth/google" aria-label="sign in with google">
+                  <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
+                </a>
+                <a href="#" aria-label="sign in with facebook">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+                </a>
+                <a href="#" aria-label="sign in with twitter">
+                  <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
+                </a>
+              </div>
 
-<%- include('includes/footer.ejs') %>
+              <div class="formBtns">
+                <button id="submit" type="submit" class="btn sign-in-btn btn-login-submit" aria-label="submit" disabled>
+                  <span>Submit</span>
+                  <div class="flow"></div>
+                </button>
+              </div>
 
-<script>
-  function myFunction() {
-    var x = document.getElementById("password");
-    var eyeIcon = document.getElementById("eye");
-    if (x.type === "password") {
-      x.type = "text";
-      eyeIcon.innerText = "visibility";
-    } else {
-      x.type = "password";
-      eyeIcon.innerText = "visibility_off";
-    }
-  }
-</script>
-<div class="gtranslate_wrapper"></div>
+              <div class="get-api-text">
+                <p>No account? <a href="/signup" aria-label="go to signup page">Signup</a></p>
+              </div>
+            </form>
 
-<script>
+            <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+            <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
+          </section>
+        </main>
 
-window.gtranslateSettings = {
-  "default_language":"en",
-  "detect_browser_language":true,
-  "wrapper_selector":".gtranslate_wrapper"
-}
+        <%- include('includes/footer.ejs') %>
 
-</script>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("password");
+              var eyeIcon = document.getElementById("eye");
+              if (x.type === "password") {
+                x.type = "text";
+                eyeIcon.innerText = "visibility";
+              } else {
+                x.type = "password";
+                eyeIcon.innerText = "visibility_off";
+              }
+            }
 
-<script 
-  src="https://cdn.gtranslate.net/widgets/latest/float.js"
-  defer
-></script>
+            function showToast(message, isSuccess) {
+              const toast = isSuccess ? document.getElementById('successToast') : document.getElementById('errorToast');
+              toast.innerText = message;
+              toast.style.display = 'block'; // Show the toast
+              toast.style.opacity = '1'; // Make it visible
+
+              // Automatically hide after 3 seconds
+              setTimeout(() => {
+                toast.style.opacity = '0'; // Fade out
+                setTimeout(() => {
+                  toast.style.display = 'none'; // Hide the toast
+                }, 300); // Wait for fade out to finish
+              }, 3000);
+            }
+
+            // Form submission
+            document.getElementById('image-form').addEventListener('submit', function (event) {
+              event.preventDefault(); // Prevent form from submitting the traditional way
+              const email = document.getElementById('email').value;
+              const password = document.getElementById('password').value;
+              const captchaInput = document.getElementById('captcha-input').value;
+
+              // Basic validation (you can enhance this)
+              if (!email || !password || !captchaInput) {
+                showToast('Please fill in all fields.', false);
+                return;
+              }
+
+              // Example API call (replace with your actual API call)
+              fetch('/api/submit-form', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  email: email,
+                  password: password,
+                  captcha: captchaInput
+                }),
+              })
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+                })
+                .then(data => {
+                  // Assuming data has a success property
+                  if (data.success) {
+                    showToast('Form submitted successfully!', true);
+                  } else {
+                    showToast(data.message || 'Error occurred during submission.', false);
+                  }
+                })
+                .catch(error => {
+                  showToast('An error occurred: ' + error.message, false);
+                });
+            });
+          </script>
