@@ -462,6 +462,24 @@ a{
   transform: scale(1.05);
   text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
 }
+
+form .responsive-cell-block input {
+  line-height: 48px;
+  background: transparent;
+  width: 100%;
+  color: #fffefe;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+form .responsive-cell-block input:focus {
+  box-shadow: 0 0 0 2px #0077b5;
 }
 
 .dashboard h3,
