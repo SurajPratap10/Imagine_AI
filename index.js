@@ -20,7 +20,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     secret: "SECRET",
-  })
+  }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -83,13 +83,13 @@ passport.use(
         // Handle authentication errors
         return done(error, false);
       }
-    }
-  )
+    },
+  ),
 );
 
 app.get(
   "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
+  passport.authenticate("google", { scope: ["profile", "email"] }),
 );
 
 app.get(
@@ -98,7 +98,7 @@ app.get(
   function (req, res) {
     // Successful authentication, redirect success.
     res.redirect("/success");
-  }
+  },
 );
 //STATIC FOLDER:
 app.use(express.static(path.join(__dirname, "public")));
@@ -114,7 +114,7 @@ app.use("/send-feedback", require("./routes/feedback.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>
-  console.log(`Server started on port ${port}`)
+  console.log(`Server started on port ${port}`),
 );
 // Connecting to DB
 
