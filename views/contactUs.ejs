@@ -1,5 +1,6 @@
+<%- include('includes/PRE.ejs') %>
 <%- include('includes/header.ejs') %>
-  <%- include('includes/sidebar.ejs') %>
+  
     <link rel="stylesheet" href="../public/css/style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
     <style>
@@ -59,7 +60,7 @@
         width: 100% !important;
       }
       .contact-box{
-        width: 50rem;
+        /* width: 50rem; */
         padding: 0rem 2rem;
         margin-top: 40px;
       }
@@ -67,6 +68,10 @@
         margin-top: 10px;
         font-size: 25px;
       }
+      /* .cards{
+        padding: 10px 33px;
+        width: max-content;
+      } */
       .context{
         height: 5rem;
         transition: all .38s ease;
@@ -86,8 +91,191 @@
       }
     </style>
     </head>
-    <%- include('includes/navbar.ejs') %>
       <main>
+        <header>
+          <div class="navbar">
+            <div class="nav-container">
+              <!-- Dark mode toggle button -->
+              <div
+                id="dark-mode-icon-mobile"
+                class="dark-mode-toggle dark-mode-icon"
+                onclick="toggleDarkMode()"
+              >
+                <i class="fa-sharp fa-solid fa-sun"></i>
+              </div>
+              <div class="logo-image">
+                <a href="/"
+                  ><img
+                    src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
+                    class="home-logo"
+                    alt="home-logo"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div class="nav-links hide-sm nav-style" id="mainNav">
+                <div class="left-nav-links navs">
+                  <div class="logo">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>"
+                      href="/"
+                      >HOME</a
+                    >
+                  </div>
+                  <div class="imagh">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+                      href="/generateImg"
+                      >IMAGINE - AI</a
+                    >
+                  </div>
+                  <div class="abth">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
+                      class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                      href="/aboutUs"
+                      >ABOUT - US</a
+                    >
+                  </div>
+                  <div class="conh">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                      href="/contactUs"
+                      >CONTACT - US</a
+                    >
+                  </div>
+                  <!-- Rest of the nav links -->
+                <div class="team">
+                  <a class="AI white-color hover-effect <%= path === '/team' ? 'active' : '' %>" href="/team">COMMUNITY</a>
+                </div>
+      <!-- Rest of the right-nav-links -->
+      
+                </div>
+                <div class="right-nav-links">
+                  <!-- Dark mode toggle button -->
+                  <div
+                    id="dark-mode-icon-desktop"
+                    class="dark-mode-toggle dark-mode-icon"
+                    onclick="toggleDarkMode()"
+                  >
+                    <i class="fa-sharp fa-solid fa-sun"></i>
+                  </div>
+                  <div>
+                    <a
+                      class="AI white-color hover-effect"
+                      href="https://openai.com/dall-e-2/"
+                      target="_blank"
+                      >DALL.E 2 - OpenAI API</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a class="login AI white-color" id="header-btn2" href="/login"
+                  >Login</a
+                >
+              </div>
+              <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </header>
+      
+        <style>
+          /*adjusting nav-bar elements*/
+          .nav-style {
+            display: flex;
+            justify-content: space-between;
+          }
+          .navs {
+            justify-content: space-evenly;
+          }
+          /*adding hover effects to each nav elements*/
+      
+          .nav-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+          }
+      
+          /* Light mode styles */
+          /* .light-mode {    } */
+          .AI {
+            display: inline-block;
+            padding: 10px;
+            margin-left: 25px;
+          }
+          /* Light mode styles
+          .light-mode {
+          } */
+      
+          /* Dark mode styles */
+          .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+          }
+      
+          /* Dark mode styles for navbar */
+          .dark-mode #navbar {
+            background-color: #121212;
+            color: #ffffff;
+          }
+      
+          /* Dark mode styles for the about section */
+          .dark-mode .about {
+            background-color: #121212;
+            color: #ffffff;
+          }
+      
+          /* Styles for the dark mode toggle button */
+          .dark-mode-toggle {
+            width: fit-content;
+            backdrop-filter: blur(4px);
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 999;
+          }
+      
+          .dark-mode-toggle i {
+            transition: transform 0.3s ease-in-out;
+            font-size: 1.1em;
+          }
+      
+          #dark-mode-icon-mobile {
+            position: absolute;
+            right: 20%;
+            display: none;
+          }
+      
+          #dark-mode-icon-desktop {
+            font-size: 1.1rem;
+            display: block;
+          }
+      
+          @media (max-width: 989px) {
+            #dark-mode-icon-mobile {
+              display: block;
+            }
+            #dark-mode-icon-desktop {
+              display: none;
+            }
+          }
+      
+          @media (max-width: 900px) {
+            .navbar {
+              display: none;
+            }
+      
+            #dark-mode-icon-mobile {
+              display: block;
+            }
+          }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+       
         <section class="Contact-Us">
           <div class="contact-top" id="slide">
             <h1>Contact Us</h1>
@@ -751,4 +939,22 @@
     chatbotId="fZnpFqGqi_Ol7GFejzNXo"
     domain="www.chatbase.co"
     defer>
-    </script>
+    </script>  
+    <div class="gtranslate_wrapper"></div>
+
+<script>
+
+window.gtranslateSettings = {
+  "default_language":"en",
+  "detect_browser_language":true,
+  "wrapper_selector":".gtranslate_wrapper"
+}
+
+</script>
+
+<script 
+  src="https://cdn.gtranslate.net/widgets/latest/float.js"
+  defer
+></script>
+
+    </main>

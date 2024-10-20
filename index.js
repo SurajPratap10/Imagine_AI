@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 //EJS AS RENDER ENGINE
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views")); //look for views in views folder
+app.set("views", path.join(__dirname, "views"));
 
 //ENABLING BODY PARSER:
 app.use(express.json());
@@ -105,7 +105,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/openai", require("./routes/openaiRoutes"));
 app.use("/auth", require("./routes/auth.js"));
-
+app.use("/send-feedback", require("./routes/feedback.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>
