@@ -1,7 +1,10 @@
 const nodemailer = require("nodemailer");
 
+
 exports.feedbackController = async (req, res) => {
   const { name, email, feedback } = req.body;
+
+
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -18,10 +21,19 @@ exports.feedbackController = async (req, res) => {
   };
 
   try {
+
     await transporter.sendMail(mailOptions);
-    res.status(200).send("Feedback sent successfully");
+    res.status(200).json({ message: "Feedback sent successfully" });
   } catch (error) {
-    res.status(500).send("Error sending feedback");
-    console.log(error.message);
+    console.error("Error sending feedback:", {
+      message: error.message,
+      stack: error.stack,
+      additionalInfo: {
+        user: email,
+        feedback: feedback,
+      },
+    });
+
+    res.status(500).json({ error: "Error sending feedback. Please try again later." });
   }
 };
