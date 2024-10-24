@@ -112,6 +112,7 @@ app.use("/openai", require("./routes/openaiRoutes"));
 app.use("/auth", require("./routes/auth.js"));
 app.use("/send-feedback", require("./routes/feedback.js"));
 app.use("/subscribe", require("./routes/subscribe.js"));
+app.use("/contact-us", require("./routes/contactUs.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>
