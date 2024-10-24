@@ -3,7 +3,11 @@ const {
   signupController,
   loginController,
 } = require("../controllers/authController");
-const { validate, signupValidation, loginValidation } = require("../middlewares/authValidator");
+const {
+  validate,
+  signupValidation,
+  loginValidation,
+} = require("../middlewares/authValidator");
 const router = express.Router();
 
 router.post("/signup", signupValidation, validate, signupController);
