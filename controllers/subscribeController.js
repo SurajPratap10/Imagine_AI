@@ -24,7 +24,6 @@ const subscribeToEmail = async (req, res) => {
     console.log(`Email sent successfully to ${email}`);
     res.status(200).send("Subscription successful. Thank you email sent!");
   } catch (error) {
-
     console.error("Error sending email: ", {
       message: error.message,
       stack: error.stack,

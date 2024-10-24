@@ -1,6 +1,5 @@
 const { check, validationResult } = require("express-validator");
 
-
 exports.emailValidation = [
   check("email")
     .isEmail()

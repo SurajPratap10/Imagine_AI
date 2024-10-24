@@ -1,6 +1,9 @@
 const express = require("express");
 const { feedbackController } = require("../controllers/feedbackController");
-const { feedbackValidation, validate } = require("../middlewares/feedbackValidator");
+const {
+  feedbackValidation,
+  validate,
+} = require("../middlewares/feedbackValidator");
 
 const router = express.Router();
 
