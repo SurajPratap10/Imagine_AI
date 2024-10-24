@@ -1,5 +1,5 @@
 // models/Feedback.js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const contactUsSchema = new mongoose.Schema({
   firstName: {
@@ -30,4 +30,4 @@ const contactUsSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('ContactUs', contactUsSchema);
+module.exports = mongoose.model("ContactUs", contactUsSchema);
