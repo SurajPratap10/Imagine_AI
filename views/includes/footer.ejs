@@ -171,32 +171,38 @@
 
 
           document.addEventListener('DOMContentLoaded', function () {
-            var subscribeButton = document.getElementById('subscribe_button');
+          var subscribeButton = document.getElementById('subscribe_button');
+          var form = document.getElementById('subscription-form');
 
-            subscribeButton.addEventListener('click', function (event) {
+          subscribeButton.addEventListener('click', function (event) {
               event.preventDefault();
 
               var emailInput = document.getElementById('email_input');
               var email = emailInput.value.trim();
 
               if (validateEmail(email)) {
-
-                showMessage('Thank you for subscribing!');
+                  
+                  fetch('/subscribe', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ email })
+                  }).then(response => {
+                      if (response.ok) {
+                          toastr.success('Thank you for subscribing! A confirmation email has been sent.', 'Success');
+                      } else {
+                          toastr.warning('Something went wrong. Please try again later.', 'Error');
+                      }
+                  });
               } else {
-                console.log('Please enter a valid Gmail address.');
-                toastr["warning"]("Please provide valid Email Id.", "Validation")
+                  toastr.warning("Please provide a valid Gmail address.", "Validation");
               }
-            });
+          });
 
-            function validateEmail(email) {
+          function validateEmail(email) {
               var emailRegex = /^[^\s@]+@gmail\.com$/i;
               return emailRegex.test(email);
-            }
-
-            function showMessage(msg) {
-              toastr.success(msg, "Success");
-            }
-          })
+          }
+      });
 
         </script>
 
