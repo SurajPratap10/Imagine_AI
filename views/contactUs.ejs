@@ -334,67 +334,70 @@
                           <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                             First Name
                           </p>
-
+                
                           <input style="width: 100%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
-
                             type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
                           <p class="hidden contactError" id="FirstNameError">
-                            First Name must be atleast 3 characters long.
+                            First Name must be at least 3 characters long.
                           </p>
                         </div>
-                        <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                
+                        <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12">
                           <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                             Last Name
                           </p>
-
                           <input class="input inputText" id="indfi-4" name="LastName" placeholder="Doe" type="text"
-
                             pattern="[A-Za-z]{3,}" required onkeyup="handleChange(event)">
                           <p class="hidden contactError" id="LastNameError">
-                            Last Name must be atleast 3 characters long.
+                            Last Name must be at least 3 characters long.
                           </p>
                         </div>
                       </div>
-                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                
+                      <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                           Email
                         </p>
-
+                
                         <input class="input inputText" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
-
                           onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="emailError">
-                          Please enter Valid Email.
+                          Please enter a valid Email.
                         </p>
                       </div>
-                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                
+                      <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12">
                         <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                           Phone Number
                         </p>
                         <input class="input inputText" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
                           onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="PhoneNumberError">
-                          Please enter Valid Phone Number.
+                          Please enter a valid Phone Number.
                         </p>
                       </div>
+                
                       <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
                         <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
                           Give your Valuable Feedback
                         </p>
-                        <input class="textinput feedback inputText" id="i5vyy-6" type="text"
-                          placeholder="Type your Feedback" name="feedback" onkeyup="handleChange(event)"
-                          required>
+                        <input class="textinput feedback inputText" id="i5vyy-6" type="text" placeholder="Type your Feedback"
+                          name="feedback" onkeyup="handleChange(event)" required>
                         <p class="hidden contactError" id="feedbackError">
                           Describe your message within 10 to 50 words.
                         </p>
                       </div>
                     </div>
                   </div>
+                
                   <div class="btn-wrapper" style="display: contents;">
-                    <button class="btn" aria-label="submit" id="phone-link1">
+                    <!-- Add type="submit" to button -->
+                    <button class="btn" aria-label="submit" id="phone-link1" type="submit">
                       <span class="btn-pos Span">Submit</span>
                       <div class="flow"></div>
                     </button>
+                  </div>
+                </form>
 
 
 
@@ -861,7 +864,7 @@
 
                   </div>
               </div>
-              </form>
+             
             </div>
           </div>
 
@@ -904,7 +907,36 @@
                 font-size: 1.1em;
               }
             </style>
-
+            <script>
+              document.getElementById('contactform').addEventListener('submit', async (event) => {
+                event.preventDefault(); 
+                const formData = {
+                  firstName: document.querySelector('input[name="FirstName"]').value,
+                  lastName: document.querySelector('input[name="LastName"]').value,
+                  email: document.querySelector('input[name="email"]').value,
+                  phoneNumber: document.querySelector('input[name="PhoneNumber"]').value,
+                  feedback: document.querySelector('input[name="feedback"]').value,
+                };
+            
+                try {
+                  const response = await fetch('http://localhost:5001/contact-us/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData),
+                  });
+            
+                  const data = await response.json();
+                  if (response.ok) {
+                    alert('Thank you for your feedback!');
+                  } else {
+                    alert(`Error: ${data.error}`);
+                  }
+                } catch (error) {
+                  console.error('Error submitting feedback:', error);
+                  alert('An error occurred while submitting feedback.');
+                }
+              });
+            </script>
             <script>
               function toggleDarkMode() {
                 const body = document.body;
