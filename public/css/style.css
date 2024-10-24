@@ -298,6 +298,7 @@ a{
 }
 
 .AI {
+  border-radius: 12px;
   padding: 0rem 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -307,6 +308,7 @@ a{
 }
 
 .AI:hover{
+  background-color: #e31153;
   transform: scale(1.2);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: #00ffff; /* Electric blue on hover */
