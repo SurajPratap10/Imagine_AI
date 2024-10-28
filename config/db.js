@@ -1,6 +1,4 @@
-
 // i just made some changes so that it can add connection options to improve performance and handle potential issues and want to log more details about the error, such as the error code so that it ,may create more easiness and reusble of code.
-
 
 const mongoose = require("mongoose");
 
