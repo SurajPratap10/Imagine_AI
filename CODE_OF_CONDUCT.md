@@ -1,75 +1,159 @@
-# ImagineAI Official Code of Conduct
+# ✨ImagineAI Official Code of Conduct✨
 
-## Introduction
+---
 
-The Code of Conduct provides a summary of our expectations of behaviour and the standard set for interactions within our community, which we - the contributors to ImagineAI, commit to providing a kind, friendly, harassment-free and safe environment for all contributors.
+## 🌟Our Pledge
 
-## Scope
+---
 
-This Code of Conduct applies within the ImagineAI community, and also applies when an individual is officially representing our community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+We as members, contributors, and leaders pledge to make participation in our
+community a harassment-free experience for everyone, regardless of age, body
+size, visible or invisible disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic status,
+nationality, personal appearance, race, religion, or sexual identity
+and orientation.
 
-## Supported Behaviour
+We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.
 
-We expect all participants in our community to:
+---
 
-- Demonstrate empathy and kindness towards other people
-- Being respectful of differing opinions, viewpoints, and experiences
-- Giving and gracefully accepting constructive feedback
-- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-- Focusing on what is best not just for us as individuals, but for the overall community
+## 🚦Our Standards
 
-## Unacceptable Behaviour
+Examples of behavior that contributes to a positive environment for our
+community include:
 
-The following behaviours are inadmissible within our community:
+- 💖Demonstrating empathy and kindness toward other people
+- 🤝Being respectful of differing opinions, viewpoints, and experiences
+- 📝Giving and gracefully accepting constructive feedback
+- 🌱Accepting responsibility and apologizing to those affected by our mistakes,
+  and learning from the experience
+- 🎯Focusing on what is best not just for us as individuals, but for the
+  overall community
 
-- Harassment, discrimination, or any form of harmful behaviour.
-- Offensive, derogatory, or disrespectful language or comments.
-- Intimidation, threats, or personal attacks.
-- Spamming, trolling, or any form of disruptive behaviour.
-- Any other conduct that violates the principles outlined in this Code of Conduct.
+Examples of unacceptable behavior include:
 
-## Enforcement
+- 🚫The use of sexualized language or imagery, and sexual attention or
+  advances of any kind
+- 🛑Trolling, insulting or derogatory comments, and personal or political attacks
+- ⚠️Public or private harassment
+- 🔒Publishing others' private information, such as a physical or email
+  address, without their explicit permission
+- ❌Other conduct which could reasonably be considered inappropriate in a
+  professional setting
 
-Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported to the community leaders responsible for enforcement at surajpratap20002003@gmail.com
+---
 
+## 👨‍⚖️Enforcement Responsibilities
+
+Community leaders are responsible for clarifying and enforcing our standards of
+acceptable behavior and will take appropriate and fair corrective action in
+response to any behavior that they deem inappropriate, threatening, offensive,
+or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject
+comments, commits, code, wiki edits, issues, and other contributions that are
+not aligned to this Code of Conduct, and will communicate reasons for moderation
+decisions when appropriate.
+
+---
+
+## 🌐Scope
+
+This Code of Conduct applies within all community spaces, and also applies when
+an individual is officially representing the community in public spaces.
+Examples of representing our community include using an official e-mail address,
+posting via an official social media account, or acting as an appointed
+representative at an online or offline event.
+
+---
+
+## 📋Pull Request Guidelines
+
+Contributions, including pull requests, must align with this Code of Conduct.
+All contributors are expected to submit work that fosters a positive and inclusive community.
+Inappropriate behavior, language, or content in pull requests may result in the rejection of
+the contribution and further enforcement actions as outlined in the guidelines.
+
+---
+
+## 🛡️Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported to the community leaders responsible for enforcement at
+.
 All complaints will be reviewed and investigated promptly and fairly.
 
-All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+All community leaders are obligated to respect the privacy and security of the
+reporter of any incident.
 
-**Enforcement Guidelines**
+---
 
-Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
+## 📖Enforcement Guidelines
 
-**1. Correction**
+Community leaders will follow these Community Impact Guidelines in determining
+the consequences for any action they deem in violation of this Code of Conduct:
 
-- Community Impact: Use of inappropriate language or other behaviour deemed unprofessional or unwelcoming in the community.
+### 1. ✏️Correction
 
-- Consequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behaviour was inappropriate. A public apology may be requested.
+**Community Impact**: Use of inappropriate language or other behavior deemed
+unprofessional or unwelcome in the community.
 
-**2. Warning**
+**Consequence**: A private, written warning from community leaders, providing
+clarity around the nature of the violation and an explanation of why the
+behavior was inappropriate. A public apology may be requested.
 
-- Community Impact: A violation through a single incident or series of actions.
+### 2. ⚠️Warning
 
-- Consequence: A warning with consequences for continued behaviour. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+**Community Impact**: A violation through a single incident or series
+of actions.
 
-**3. Temporary Ban**
+**Consequence**: A warning with consequences for continued behavior. No
+interaction with the people involved, including unsolicited interaction with
+those enforcing the Code of Conduct, for a specified period of time. This
+includes avoiding interactions in community spaces as well as external channels
+like social media. Violating these terms may lead to a temporary or
+permanent ban.
 
-- Community Impact: A serious violation of community standards, including sustained inappropriate behaviour.
+### 3. ⏳Temporary Ban
 
-- Consequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+**Community Impact**: A serious violation of community standards, including
+sustained inappropriate behavior.
 
-**4. Permanent Ban**
+**Consequence**: A temporary ban from any sort of interaction or public
+communication with the community for a specified period of time. No public or
+private interaction with the people involved, including unsolicited interaction
+with those enforcing the Code of Conduct, is allowed during this period.
+Violating these terms may lead to a permanent ban.
 
-- Community Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behaviour, harassment of an individual, or aggression toward or disparagement of classes of individuals.
+### 4. 🚫Permanent Ban
 
-- Consequence: A permanent ban from any sort of public interaction within the community.
+**Community Impact**: Demonstrating a pattern of violation of community
+standards, including sustained inappropriate behavior, harassment of an
+individual, or aggression toward or disparagement of classes of individuals.
 
-## Attribution
+**Consequence**: A permanent ban from any sort of public interaction within
+the community.
 
-This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
+---
 
-Community Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.
+## 📜Attribution
+
+This Code of Conduct is adapted from the [Contributor Covenant][homepage],
+version 2.0, available at
+https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+
+Community Impact Guidelines were inspired by [Mozilla's code of conduct
+enforcement ladder](https://github.com/mozilla/diversity).
+
+[homepage]: https://www.contributor-covenant.org
+
+For answers to common questions about this code of conduct, see the FAQ at
+https://www.contributor-covenant.org/faq. Translations are available at
+https://www.contributor-covenant.org/translations.
+
+---
 
 ## Conclusion
 
-We are commited to creating a welcoming and inclusive environment that values collaboration, respect, and empathy. By contributing to the ImagineAI Organization, you must agree to follow this Code of Conduct and make a positive and lasting impact on the community by sharing your knowledge and skills,by being a supportive and welcoming member.
+We are commited to creating a welcoming and inclusive environment that values collaboration, respect, and empathy. By contributing to the **ImagineAI** Organization, you must agree to follow this Code of Conduct and make a positive and lasting impact on the community by sharing your knowledge and skills,by being a supportive and welcoming member.

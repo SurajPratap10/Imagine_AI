@@ -458,7 +458,7 @@ a{
   transform: scale(1.05);
   text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
 }
-}
+
 
 .dashboard h3,
 .dashboard h4 {
@@ -485,6 +485,7 @@ a{
 
 .main-content-wrapper h2 {
   font-size: 18px;
+  text-align: left;
 }
 
 .main-content {
@@ -562,7 +563,7 @@ button,
   transition: 0.5s;
   background-color: rgba(30, 30, 30, 0.8); /* Dark background for flow effect */
 }
-}
+
 
 .btn:hover {
   background-color: rgba(50, 0, 255, 0.6); /* Deep purple on hover */
@@ -1808,6 +1809,7 @@ form {
 }
 
 .about-description {
+  color: white;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -6987,6 +6989,8 @@ span {
 }
 
 .contact-top h3 {
+  color: white;
+  font-size: 18px;
   padding-bottom: 20px;
 }
 
@@ -10400,6 +10404,7 @@ span {
 }
 
 .contact-top-text {
+  color: white;
   width: 60% !important;
 }
 
@@ -10863,9 +10868,15 @@ form {
 }
 
 .about-description {
+  color: white;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.feature h2{
+  color: white;
+  font-size: 18px;
 }
 
 .about .about-us-logo {
@@ -10898,8 +10909,15 @@ form {
 }
 
 .headline {
+  font-size: 34px;
   color: #ffffff;
   margin-top: 100px;
+}
+
+.headline:hover{
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
+    transform: scale(1.05);
+  
 }
 
 .header {
