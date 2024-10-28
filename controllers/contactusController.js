@@ -45,12 +45,10 @@ exports.contactusController = async (req, res) => {
 
     await transporter.sendMail(mailOptions);
 
-    res
-      .status(200)
-      .json({
-        message: "Feedback submitted successfully and mail sent to the mail id",
-        newFeedback,
-      });
+    res.status(200).json({
+      message: "Feedback submitted successfully and mail sent to the mail id",
+      newFeedback,
+    });
   } catch (error) {
     console.error("Error submitting feedback:", error);
     res
