@@ -182,7 +182,7 @@
 
               if (validateEmail(email)) {
                   
-                  fetch('/subscribe', {
+                  fetch('localhost:5001/subscribe/', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({ email })
