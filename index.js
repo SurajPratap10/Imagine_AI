@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 //EJS AS RENDER ENGINE
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views")); //look for views in views folder
+app.set("views", path.join(__dirname, "views"));
 
 //ENABLING BODY PARSER:
 app.use(express.json());
@@ -102,10 +102,15 @@ app.get(
 );
 //STATIC FOLDER:
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "contributor")));
+
+app.get("/file", (req, res) => {
+  res.sendFile(path.join(__dirname, "contributor", "contributor.html"));
+});
 
 app.use("/openai", require("./routes/openaiRoutes"));
 app.use("/auth", require("./routes/auth.js"));
-
+app.use("/send-feedback", require("./routes/feedback.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>

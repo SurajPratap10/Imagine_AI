@@ -51,17 +51,15 @@
     position: relative; /* Create a positioning context for the absolute element */
     }
 
-
-
     #eye{
-              color: aqua;
-              position: absolute;
-              top: 10px;
-              right: 15px;
-              left: auto;
-              transform: none;
-              cursor: pointer;
-            }
+      color: aqua;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      left: auto;
+      transform: none;
+      cursor: pointer;
+    }
 
     input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
       background-color: #333;
@@ -111,7 +109,6 @@
       border-radius: 25px;
       transition: background-color 0.3s;
       cursor: pointer;
-
     }
 
     .signin-opt-icons a img {
@@ -177,6 +174,7 @@
         <p class="error hidden" id="passwordError" role="alert">
           Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol (@$%#^&*), 1 number (0-9)
         </p>
+        <p><a href="/forgot-password" aria-label="forgot password">Forgot Password?</a></p>
       </div>
 
       <div class="form-control">
@@ -191,8 +189,6 @@
 
       <div><b>Sign In using</b></div>
 
-     
-
       <div class="signin-opt-icons">
         <a href="/auth/google" aria-label="sign in with google">
           <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" />
@@ -201,7 +197,7 @@
           <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
         </a>
         <a href="#" aria-label="sign in with twitter">
-          <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" />
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v2.png" alt="twitterx--v2"/>
         </a>
       </div>
 
@@ -237,4 +233,19 @@
     }
   }
 </script>
+<div class="gtranslate_wrapper"></div>
 
+<script>
+
+window.gtranslateSettings = {
+  "default_language":"en",
+  "detect_browser_language":true,
+  "wrapper_selector":".gtranslate_wrapper"
+}
+
+</script>
+
+<script 
+  src="https://cdn.gtranslate.net/widgets/latest/float.js"
+  defer
+></script>
