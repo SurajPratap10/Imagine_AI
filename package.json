@@ -29,7 +29,7 @@
     "husky": "^9.1.6",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.2",
-    "nodemailer": "^6.9.15",
+    "nodemailer": "^6.9.16",
     "openai": "^4.67.1",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
