@@ -40,8 +40,8 @@ app.use((err, _req, res, _next) => {
 //OAUTH
 var userProfile;
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Duplicate app.use(passport.initialize()) and app.use(passport.session()): The code includes duplicate calls to app.use(passport.initialize()) and app.use(passport.session()). You only need to call them once in your application. You can remove the duplicate lines to avoid unnecessary redundancy.
 
@@ -111,6 +111,7 @@ app.get("/file", (req, res) => {
 app.use("/openai", require("./routes/openaiRoutes"));
 app.use("/auth", require("./routes/auth.js"));
 app.use("/send-feedback", require("./routes/feedback.js"));
+app.use("/contact", require("./routes/contact.js"));
 app.use(viewRoutes);
 
 app.listen(process.env.PORT, () =>

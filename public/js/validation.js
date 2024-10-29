@@ -1,7 +1,7 @@
 const emailRegex =
   /^\w+([\.-]?\w+)*@(gmail\.com|yahoo\.com|hotmail\.com|aol\.com|outlook\.com)$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$%#^&*])(?=.*[0-9]).{8,}$/;
-const phoneRegex = /^\d{10}$/;
+// const phoneRegex = /^\d{10}$/;
 
 const validate = {
   name: (value) => {
@@ -21,7 +21,7 @@ const validate = {
     return value.trim().length < 3 ? true : false;
   },
   PhoneNumber: (value) => {
-    return phoneRegex.test(value) ? false : true;
+    return phoneRegex.test(value) ? true : true;
   },
   feedback: (value) => {
     const words = value.trim().split(/\s+/).length;
