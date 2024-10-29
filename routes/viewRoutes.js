@@ -42,6 +42,9 @@ router.get("/slider", (_req, res, _next) => {
 router.get("/privacypolicy", (req, res, next) => {
   res.render("privacypolicy", { path: "privacypolicy" });
 });
+router.get("/termsAndService", (req, res) => {
+  res.render("termsAndService", { path: "termsAndService" });
+});
 
 // Render forgot password page
 router.get("/forgot-password", (req, res) => {
