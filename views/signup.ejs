@@ -331,6 +331,71 @@ include('includes/topToBottomScrollButton.ejs') %>
     border-radius: 10px;
   }
 </style>
+=======
+                <a href="#" aria-label="sign up with twitter">
+                  <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="39" height="39" viewBox="0 0 50 50" class="twitter-icon">
+                    <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+            <div class="formBtns">
+              <button type="submit" class="btn sign-in-btn btn-signup-submit" href="index.html" id="submit" aria-label="submit" disabled>
+                <span >Submit</span>
+                <div class="flow"></div>
+              </button>
+            </div>
+            <div class="get-api-text">
+              <p>Already have an account? <a href="/login" aria-label="go to signin page">Signin</a></p>
+            </div>
+          </form>
+          <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+          <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
+        </section>
+        <%- include('includes/footer.ejs') %>
+          <%- include('includes/topToBottomScrollButton.ejs') %>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+          
+            /* Dark mode styles */
+            .dark-mode {
+              background-color: #121212;
+              color: #ffffff;
+            }
+          
+            /* Dark mode styles for navbar */
+            .dark-mode #navbar {
+              background-color: #121212;
+              color: #ffffff;
+            }
+          
+            /* Dark mode styles for the about section */
+            .dark-mode .about {
+              background-color: #121212;
+              color: #ffffff;
+              padding-bottom: -2rem;
+            }
+          
+            /* Styles for the dark mode toggle button */
+            .dark-mode-toggle {
+              font-size: 24px;
+              cursor: pointer;
+            }
+          
+            .dark-mode-toggle i {
+              transition: transform 0.3s ease-in-out;
+              font-size: 1.1em;
+            }
+          
+            .btn{
+              font-size: 12px;
+              padding: 20px 20px;
+              letter-spacing: 2px;
+              width: auto;
+              border-radius: 10px
+            }
+          </style>
 <script>
   function showPassword() {
     var x = document.getElementById("password");
@@ -388,8 +453,19 @@ include('includes/topToBottomScrollButton.ejs') %>
   };
 </script>
 <script
+  chatbotId: "rRGhO-tiXZz89Yeg1wTKc",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
   src="https://www.chatbase.co/embed.min.js"
-  chatbotId="fZnpFqGqi_Ol7GFejzNXo"
+  chatbotId="rRGhO-tiXZz89Yeg1wTKc"
   domain="www.chatbase.co"
   defer
 ></script>
+  defer>
+  </script>
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  

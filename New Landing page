@@ -1,0 +1,95 @@
+<style>
+    .landing-page { background-color: #fff; display: flex; padding-bottom: 15px; flex-direction: column; overflow: hidden; }
+    .background-wrapper { background-color: #fff; display: flex; width: 100%; flex-direction: column; overflow: hidden; }
+    @media (max-width: 991px) { .background-wrapper { max-width: 100%; } }
+    .content-container { display: flex; flex-direction: column; position: relative; min-height: 1009px; width: 100%; padding: 0 29px 41px; }
+    @media (max-width: 991px) { .content-container { max-width: 100%; padding: 0 20px; } }
+    .background-image { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; }
+    .navbar { position: relative; background-color: rgba(21, 20, 29, 0.25); display: flex; height: 70px; width: 100%; padding-top: 19px; flex-direction: column; align-items: center; color: #fff; justify-content: start; font: 16px Raleway, sans-serif; }
+    @media (max-width: 991px) { .navbar { max-width: 100%; } }
+    .navbar-container { display: flex; width: 100%; max-width: 1417px; align-items: center; gap: 40px 100px; justify-content: space-between; flex-wrap: wrap; }
+    @media (max-width: 991px) { .navbar-container { max-width: 100%; } }
+    .brand-logo { font-size: 32px; font-weight: 500; line-height: 1; align-self: stretch; margin: auto 0; }
+    .nav-menu { align-self: stretch; display: flex; min-width: 240px; align-items: center; gap: 11px; font-family: Inter, sans-serif; color: #8f9bb7; font-weight: 400; line-height: 1; justify-content: center; flex-wrap: wrap; margin: auto 0; }
+    @media (max-width: 991px) { .nav-menu { max-width: 100%; } }
+    .nav-link { align-self: stretch; gap: 8px; color: #fff; white-space: nowrap; margin: auto 0; padding: 8px; }
+    @media (max-width: 991px) { .nav-link { white-space: initial; } }
+    .login-button { border-radius: 160px; background-color: #7286ff; align-self: stretch; display: flex; flex-direction: column; font-weight: 600; line-height: 1; justify-content: center; width: 165px; margin: auto 0; padding: 2px; }
+    .login-button-text { border-radius: 160px; background-color: #141219; overflow: hidden; padding: 14px 55px; }
+    @media (max-width: 991px) { .login-button-text { padding: 0 20px; } }
+    .separator { min-height: 1px; width: 1335px; max-width: 100%; }
+    .blog-link { position: relative; color: #8f9bb7; text-decoration-line: underline; z-index: 10; margin: -34px 254px 0 0; font: 400 16px/18px Inter, sans-serif; }
+    @media (max-width: 991px) { .blog-link { margin-right: 10px; } }
+    .hero-title { position: relative; color: #000; margin: 65px 43px 0 17px; font: 700 51px/68px Raleway, sans-serif; }
+    @media (max-width: 991px) { .hero-title { max-width: 100%; font-size: 40px; line-height: 59px; margin: 40px 10px 0 0; } }
+    .content-wrapper { position: relative; margin: 22px 0 0 21px; }
+    @media (max-width: 991px) { .content-wrapper { max-width: 100%; } }
+    .two-column-layout { gap: 20px; display: flex; }
+    @media (max-width: 991px) { .two-column-layout { flex-direction: column; align-items: stretch; gap: 0; } }
+    .main-column { display: flex; flex-direction: column; line-height: normal; width: 73%; margin-left: 0; }
+    @media (max-width: 991px) { .main-column { width: 100%; } }
+    .text-content { position: relative; display: flex; width: 100%; flex-direction: column; }
+    @media (max-width: 991px) { .text-content { max-width: 100%; margin-top: 40px; } }
+    .description { color: #fff; font: 400 20px/31px Raleway, sans-serif; }
+    @media (max-width: 991px) { .description { max-width: 100%; } }
+    .image-gallery { align-self: center; display: flex; margin-top: 167px; width: 865px; max-width: 100%; align-items: start; gap: 40px 44px; justify-content: space-between; flex-wrap: wrap; }
+    @media (max-width: 800px) { .image-gallery { margin-top: 40px; } }
+    .gallery-image { aspect-ratio: 0.67; object-fit:contain; object-position: center; width:200px; border-radius: 3px; }
+    .side-column { display: flex; flex-direction: column; line-height: normal; width: 27%; margin-left: 20px; }
+    @media (max-width: 991px) { .side-column { width: 100%; } }
+    .side-image { aspect-ratio: 0.57; object-fit:contain; object-position:center ; width: 100%; flex-grow: 1;height: fit-content; }
+    @media (max-width: 991px) { .side-image { margin-top: 40px; } }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    
+ 
+    </style>
+    
+    <section class="landing-page">
+      <div class="background-wrapper">
+        <div class="content-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/74961bf345a7caa59e3189c17f0b3e769e842aca4ad5b1df5c9e7fdac6389a72?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="background-image" />
+          <header class="navbar">
+            <div class="navbar-container">
+              <div class="brand-logo">IMAGINE - AI</div>
+              <nav class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Imagine-AI</a>
+                <a href="#" class="nav-link">About us</a>
+                <a href="#" class="nav-link">contact us</a>
+                <a href="#" class="nav-link">Community</a>
+              </nav>
+              <button class="login-button">
+                <span class="login-button-text">LOGIN</span>
+              </button>
+            </div>
+          </header>
+          <div class="separator"></div>
+          <a href="#" class="blog-link">DALL.E 2 - OpenAI API</a>
+          <h1 class="hero-title">
+            <span style="color: #fff;">Unleash Your Imagination with IMAGINE - AI: Stunning,
+            One-of-a-Kind Images Powered by DALL-E 2</span>
+                
+          </h1>
+          <div class="content-wrapper">
+            <div class="two-column-layout">
+              <div class="main-column">
+                <div class="text-content">
+                  <p class="description">
+                    IMAGINE - AI, built on OpenAI's advanced DALL-E 2 technology, revolutionizes the way we create visual content by breaking the boundaries of creativity and imagination. This mobile-responsive image generator, developed using Node.js and Express, allows you to transform simple prompts or keywords into breathtaking, unique visuals. Whether you're an artist, designer, or content creator, IMAGINE - AI offers a seamless solution for generating original, high-quality images in moments. Say goodbye to creative limitations—let the power of AI help bring your visions to life with images that are unlike anything you've seen before.
+                  </p>
+                  <div class="image-gallery">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff3e0b7e3f9e6b551d2e342bd778a0edfc47a851e8f7538583a056c32ae07ae2?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="AI-generated image 1" class="gallery-image" />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c5746ae68b9a0cd4866dfd2a3caf6773400923bac51e8f501e01a0e6aedf731?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="AI-generated image 2" class="gallery-image" />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b32d1c82a9ebbfe4a79f64d455a0838217311f56ba1c20d2953e46135ba8813d?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="AI-generated image 3" class="gallery-image" />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6d4cc2dedcf1409764adfda010c071a61abc255670d9fc99eb0e415c98b4408?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="AI-generated image 4" class="gallery-image" />
+                  </div>
+                </div>
+              </div>
+              <div class="side-column">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b091e2eeb20da87a6ded0ba57ed7d7992b6824fe0cf9c97af4248138ea8defe?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="AI-generated showcase image" class="side-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

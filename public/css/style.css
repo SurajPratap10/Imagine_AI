@@ -213,7 +213,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -493,6 +493,7 @@ a {
 
 .main-content-wrapper h2 {
   font-size: 18px;
+  text-align: left;
 }
 
 .main-content {
@@ -573,6 +574,7 @@ button,
   transition: 0.5s;
   background-color: rgba(30, 30, 30, 0.8); /* Dark background for flow effect */
 }
+
 
 .btn:hover {
   background-color: rgba(50, 0, 255, 0.6); /* Deep purple on hover */
@@ -1832,6 +1834,7 @@ form {
 }
 
 .about-description {
+  color: white;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -2121,7 +2124,7 @@ button:disabled {
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
@@ -3129,7 +3132,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -4955,7 +4958,7 @@ button:disabled {
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
@@ -5969,7 +5972,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -7013,6 +7016,8 @@ span {
 }
 
 .contact-top h3 {
+  color: white;
+  font-size: 18px;
   padding-bottom: 20px;
 }
 
@@ -7818,7 +7823,7 @@ button:disabled {
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }
@@ -9352,7 +9357,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar {
     display: none;
   }
@@ -10425,6 +10430,7 @@ span {
 }
 
 .contact-top-text {
+  color: white;
   width: 60% !important;
 }
 
@@ -10888,9 +10894,15 @@ form {
 }
 
 .about-description {
+  color: white;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.feature h2{
+  color: white;
+  font-size: 18px;
 }
 
 .about .about-us-logo {
@@ -10923,8 +10935,15 @@ form {
 }
 
 .headline {
+  font-size: 34px;
   color: #ffffff;
   margin-top: 100px;
+}
+
+.headline:hover{
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Electric blue glow on hover */
+    transform: scale(1.05);
+  
 }
 
 .header {
@@ -10960,7 +10979,7 @@ form {
 
 .about {
   padding: 20px 0;
-  display: grid;
+  /* display: grid; */
 }
 
 .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
@@ -11174,7 +11193,7 @@ button:disabled {
   text-justify: inter-word;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 100px 10px 100px;
+  padding: 0 40px 10px 40px;
   letter-spacing: 1px;
   line-height: 26px;
 }

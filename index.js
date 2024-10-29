@@ -102,6 +102,11 @@ app.get(
 );
 //STATIC FOLDER:
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "contributor")));
+
+app.get("/file", (req, res) => {
+  res.sendFile(path.join(__dirname, "contributor", "contributor.html"));
+});
 
 app.use("/openai", require("./routes/openaiRoutes"));
 app.use("/auth", require("./routes/auth.js"));
