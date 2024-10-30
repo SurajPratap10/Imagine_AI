@@ -1,30 +1,32 @@
 <head>
     <style>
-       .parent{
-            height:100%;
-            width:100%;
+        .parent {
+            height: 100%;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-       }
+        }
+
         .form-container {
             background-color: rgba(0, 0, 0, 0);
             padding: 2rem;
             border-radius: 10px;
             width: 100%;
-            display:flex;
+            display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .form{
+        .form {
             width: 100%;
-            max-width:500px;
+            max-width: 500px;
         }
 
         .form-field {
             margin-bottom: 1rem;
         }
+
         .form-field label {
             display: block;
             color: white;
@@ -32,11 +34,11 @@
             font-weight: bold;
         }
 
-        .form-field input{
-            height:40px;
-          
+        .form-field input {
+            height: 40px;
+
         }
-        
+
         .form-field input,
         .form-field textarea {
             width: 100%;
@@ -46,10 +48,12 @@
             background-color: rgba(0, 0, 0, 0.3);
             color: white;
         }
+
         .form-field input::placeholder,
         .form-field textarea::placeholder {
             color: #5DF8FD;
         }
+
         .submit-btn {
             background-color: black;
             color: white;
@@ -60,8 +64,9 @@
             font-weight: bold;
             width: 100%;
         }
+
         @media screen and (max-width: 500px) {
-            .form-container{
+            .form-container {
                 max-width: 300px;
             }
         }
@@ -70,70 +75,56 @@
 
 
 <%- include('includes/header.ejs') %>
-<%- include('includes/navbar.ejs') %>
-<main class="parent">
-    <section class="form-container">
-        <forms class="form" id="feedbackForm">
-            <div class="form-field">
-                <label for="name">NAME</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-field">
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-field">
-                <label for="feedback">GIVE YOUR VALUABLE FEEDBACK</label>
-                <textarea id="feedback" name="feedback" placeholder="Type your Feedback" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">SUBMIT</button>
-        </forms>
-    </section>
-</main>
-<%- include('includes/footer.ejs') %>
-<%- include('includes/topToBottomScrollButton.ejs') %>
-<script>
+    <%- include('includes/navbar.ejs') %>
+        <main class="parent">
+            <section class="form-container">
+                <forms class="form" id="feedbackForm">
+                    <div class="form-field">
+                        <label for="name">NAME</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="feedback">GIVE YOUR VALUABLE FEEDBACK</label>
+                        <textarea id="feedback" name="feedback" placeholder="Type your Feedback" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </forms>
+            </section>
+        </main>
+        <%- include('includes/footer.ejs') %>
+            <%- include('includes/topToBottomScrollButton.ejs') %>
+                <script>
 
-    document.getElementById("feedbackForm").addEventListener('submit',async(e)=>{
-        e.preventDefault();
-        const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        feedback: document.getElementById('feedback').value,
-        };
-        try {
-        const response = await fetch('/send-feedback', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        });
+                    document.getElementById("feedbackForm").addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const formData = {
+                            name: document.getElementById('name').value,
+                            email: document.getElementById('email').value,
+                            feedback: document.getElementById('feedback').value,
+                        };
+                        try {
+                            const response = await fetch('/send-feedback', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(formData)
+                            });
 
-        if (response.ok) {
-            alert('Feedback sent successfully!');
-        } else {
-            alert('Failed to send feedback');
-        }
-    } catch (error) {
-        alert('Error: ' + error.message);
-    }
-    })
-</script>
-
+                            if (response.ok) {
+                                alert('Feedback sent successfully!');
+                            } else {
+                                alert('Failed to send feedback');
+                            }
+                        } catch (error) {
+                            alert('Error: ' + error.message);
+                        }
+                    })
+                </script>
 <div class="gtranslate_wrapper"></div>
-
-<script>
-
-window.gtranslateSettings = {
-  "default_language":"en",
-  "detect_browser_language":true,
-  "wrapper_selector":".gtranslate_wrapper"
-}
-
-</script>
-
-<script 
-  src="https://cdn.gtranslate.net/widgets/latest/float.js"
-  defer
-></script>
+<script>window.gtranslateSettings = {"default_language":"en","wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
