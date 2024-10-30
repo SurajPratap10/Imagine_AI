@@ -1,0 +1,297 @@
+<%- include('includes/PRE.ejs') %>
+  <%- include('includes/header.ejs') %>
+    <%- include('includes/sidebar.ejs') %>
+
+      <head>
+
+        <head>
+          <style>
+            #image-form{
+              max-width: 600px;
+      max-height: fit-content; /* Increased width for more space */
+      margin: 40px auto 50px; /* Adjusted top margin to prevent touching navbar */
+       /* Reduced padding */
+      background-color: #1b1b1b;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            }
+            #captchaicon{
+            cursor: pointer;
+          }
+
+            .google-icon {
+              vertical-align: middle;
+              fill: teal;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .facebook-icon {
+              vertical-align: middle;
+              fill: teal;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .twitter-icon {
+              vertical-align: middle;
+              fill: teal;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .google-icon:hover {
+              fill: white;
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            .facebook-icon:hover {
+              fill: #3b5998;
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            .twitter-icon:hover {
+              fill: #1da1f2;
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            .icon-boundry {
+              position: relative;
+            }
+
+            #eye {
+              color: aqua;
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              left: auto;
+              transform: none;
+              cursor: pointer;
+            }
+            #confirmPasswordEye{
+              color: aqua;
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              left: auto;
+              transform: none;
+              cursor: pointer;
+            }
+            .form-control input:hover{
+              background-color: grey;
+            }
+          </style>
+
+        </head>
+      </head>
+      <%- include('includes/navbar.ejs') %>
+        <section class="showcase about" id="showcase" style="margin-bottom: 90px;">
+          <form id="image-form" action="index.html" aria-label="Signup Form">
+            <h1 class="AI">SIGN UP</h1>
+            <div class="form-control">
+              <label for="name" style="color: white; margin-left: 20px; margin-bottom: 60px;">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter Name" onkeyup="handleChange(event)" aria-describedby="nameError"/>
+              <p class="error hidden" id="nameError" role="alert">Name should be atleast 5 characters long</p>
+            </div>
+            <div class="form-control">
+              <label for="email" style="color: white; margin-left: 20px; margin-bottom: 40px;">Email</label>
+              <input type="email" id="email" email="email" name="email" placeholder="Enter Email address"
+                onkeyup="handleChange(event)" aria-describedby="emailError"/>
+              <p class="error hidden" id="emailError" role="alert">Enter Valid Email</p>
+            </div>
+            <div class="form-control">
+              <label for="password" style="color: white; margin-left: 20px; margin-bottom: 40px;">Password</label>
+              <div class="icon-boundry">
+                <input type="password" id="password" name="password" placeholder="Enter password"
+                onkeyup="handleChange(event)" aria-describedby="passwordError" required/>
+                <span class="material-symbols-outlined" id="eye" onclick="showPassword()">
+                  visibility_off
+                </span>
+              </div>
+          
+              <p class="error hidden" id="passwordError" role="alert">Minimum 8 characters, 1 uppercase, 1 lowercase, 1 symbol
+                (@$%#^&*), 1 number (0-9)</p>
+            </div>
+            <div class="form-control">
+              <label for="confirmPassword" style="color: white; margin-left: 20px; margin-bottom: 40px;">Confirm Password</label>
+              <div class="icon-boundry">
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Confirm password"
+                onkeyup="handleChange(event)" required/>
+                <span class="material-symbols-outlined" id="confirmPasswordEye" onclick="showConfirmPassword()">
+                  visibility_off
+                </span>
+              </div>
+            </div>
+            <div class="form-control">
+              <label for="captcha-input" style="color: white; display: block;">Captcha</label>
+              <div id="captchaContainer">
+                <div id="captcha"></div>
+                <span id="captchaicon" class="material-symbols-outlined" onclick="generateCaptcha()" role="button" aria-label="auto renew captcha">
+                  autorenew
+                  </span>
+                <input type="text" name="captcha" required placeholder="Enter Captcha" id="captcha-input">
+              </div>
+              <button  onclick="checkCaptcha()" style="background-color: #00b3b3; color: black; width:100% ;" id="captchabtn">Verify Captcha</button>
+            </div>
+          
+            <div class="signup-opt">
+              <div style="font-weight: bold;">Sign Up Using</div>
+              <div class="signup-opt-icons">
+                <!-- signup using google -->
+                <a href="/auth/google" class="google-button" aria-label="sign up with google"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                    viewBox="0 0 488 512" class="google-icon">
+                    <path
+                      d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                  </svg></a>
+
+                <!-- signup using facebook -->
+                <a href="#" aria-label="sign up with facebook">
+                  <!-- Please do the OAuth for facebook here, after completion, delete this comment -->
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="facebook-icon">
+                    <path
+                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                  </svg>
+                </a>
+
+                <!-- signup using twitter -->
+
+                <a href="#" aria-label="sign up with twitter">
+                  <!-- Please do the OAuth for twitter here, after completion, delete this comment -->
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="39" height="39" viewBox="0 0 50 50" class="twitter-icon">
+                    <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+            <div class="formBtns">
+              <button type="submit" class="btn sign-in-btn btn-signup-submit" href="index.html" id="submit" aria-label="submit" disabled>
+                <span >Submit</span>
+                <div class="flow"></div>
+              </button>
+            </div>
+            <div class="get-api-text">
+              <p>Already have an account? <a href="/login" aria-label="go to signin page">Signin</a></p>
+            </div>
+          </form>
+          <div id="successToast" class="toast success-toast" aria-label="success message"></div>
+          <div id="errorToast" class="toast error-toast" aria-label="error message"></div>
+        </section>
+        <%- include('includes/footer.ejs') %>
+          <%- include('includes/topToBottomScrollButton.ejs') %>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+          
+            /* Dark mode styles */
+            .dark-mode {
+              background-color: #121212;
+              color: #ffffff;
+            }
+          
+            /* Dark mode styles for navbar */
+            .dark-mode #navbar {
+              background-color: #121212;
+              color: #ffffff;
+            }
+          
+            /* Dark mode styles for the about section */
+            .dark-mode .about {
+              background-color: #121212;
+              color: #ffffff;
+              padding-bottom: -2rem;
+            }
+          
+            /* Styles for the dark mode toggle button */
+            .dark-mode-toggle {
+              font-size: 24px;
+              cursor: pointer;
+            }
+          
+            .dark-mode-toggle i {
+              transition: transform 0.3s ease-in-out;
+              font-size: 1.1em;
+            }
+          
+            .btn{
+              font-size: 12px;
+              padding: 20px 20px;
+              letter-spacing: 2px;
+              width: auto;
+              border-radius: 10px
+            }
+          </style>
+<script>
+  function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    document.getElementById("eye").innerText = "visibility";
+    } else {
+      x.type = "password";
+    document.getElementById("eye").innerText = "visibility_off";
+    }
+  }
+  function showConfirmPassword() {
+    var x = document.getElementById("confirmPassword");
+    if (x.type === "password") {
+      x.type = "text";
+    document.getElementById("confirmPasswordEye").innerText = "visibility";
+    } else {
+      x.type = "password";
+    document.getElementById("confirmPasswordEye").innerText = "visibility_off";
+    }
+  }
+  function toggleDarkMode() {
+    const body = document.body;
+    const navbar = document.querySelector(".navbar");
+    const aboutSection = document.querySelector(".about");
+    const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+    const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+    var darkModeIconCollection = Array.from(darkModeIcon);
+    console.log(darkModeIconCollection);
+    
+
+    body.classList.toggle("dark-mode");
+    navbar.classList.toggle("dark-mode");
+    aboutSection.classList.toggle("dark-mode");
+    // darkModeToggle.classList.toggle("dark");
+    
+    darkModeIconCollection.map((darkIcon) => {
+    if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
+      darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+      darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+    });
+  }
+</script>
+
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "rRGhO-tiXZz89Yeg1wTKc",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="rRGhO-tiXZz89Yeg1wTKc"
+  domain="www.chatbase.co"
+  defer>
+  </script>
+    <div class="gtranslate_wrapper"></div>
+
+    <script>
+  
+    window.gtranslateSettings = {
+      "default_language":"en",
+      "detect_browser_language":true,
+      "wrapper_selector":".gtranslate_wrapper"
+    }
+  
+    </script>
+  
+    <script 
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+  

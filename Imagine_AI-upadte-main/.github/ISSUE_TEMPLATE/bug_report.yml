@@ -1,0 +1,94 @@
+name: "Bug Report 🐞"
+description: Create a new ticket for a bug.
+title: "[BUG] - Title Goes Here..."
+labels: ["bug"]
+body:
+  - type: textarea
+    id: currentBehavior
+    attributes:
+      label: "Current behaviour"
+      description: What happens, e.g. "The price shown on the button is £400"
+      placeholder: Short and explicit description of current senario...
+    validations:
+      required: true
+  - type: textarea
+    id: expectedBehaviour
+    attributes:
+      label: "Expected behaviour"
+      description: What should happen, e.g. "The price shown on the button is £4"
+      placeholder: Short and explicit description of what should happen...
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+        - All Browsers
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Are you contributing for a program ?
+      multiple: true
+      options:
+        - GSSoC23
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms_checklist_docs
+    attributes:
+      label: 'Checklist'
+      description: 'By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/SurajPratap10/Imagine_AI/blob/main/CODE_OF_CONDUCT.md)'
+      options:
+        - label: 'I have checked the existing [issues](https://github.com/SurajPratap10/Imagine_AI/issues)'
+          required: true
+        - label: 'I have read the [Contributing Guidelines](https://github.com/SurajPratap10/Imagine_AI/blob/main/CONTRIBUTING_GUIDELINES.md)'
+          required: true
+        - label: 'I am willing to work on this issue (optional)'
+          required: false
+        - label: "I am a GSSoC'23 contributor"
+          required: false

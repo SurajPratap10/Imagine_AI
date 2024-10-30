@@ -1,0 +1,195 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<div class="scrollToTopContainer HideElement">
+  <div id="scrollToButton" class="scrollToTopButton" title="Click to scroll top">
+    <i class="bi bi-arrow-up arrow" style="font-size: 30px;"></i>
+  </div>
+  <span class="pulse"></span>
+</div>
+<style>
+  .HideElement {
+    display: none;
+  }
+
+  .scrollToTopContainer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    margin: 0 2rem 2rem 0;
+    z-index: 100000;
+    height: 60px;
+    width: 60px;
+    user-select: none;
+    cursor: pointer;
+    margin-bottom: 70px;
+    margin-right: 0.40px;
+  }
+
+  .scrollToTopButton {
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 5s ease infinite;
+    border: 2.5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 1px salmon;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .scrollToTopButton:hover {
+    box-shadow: 0px 0px 15px 0.2px rgb(255, 182, 174);
+    border: 2px;
+    transform: scale3d(1.18,1.18,1.18);
+  }
+
+  .arrow {
+    color: lightyellow;
+    background-color: transparent;
+    bottom: -5px;
+    position: relative;
+    left: 50%;
+    margin-left: -16px;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    -webkit-animation-name: arrow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+  }
+
+  .pulse {
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    left: -13%;
+    top: -14%;
+    z-index: 0;
+    background-color: transparent;
+    opacity: 0;
+    width: 75px;
+    height: 75px;
+    border: 10px solid #ee7752;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    -webkit-animation: pulse 1s linear infinite 0.3s;
+    -moz-animation: pulse 1s linear infinite 0.3s;
+    border-image: initial;
+  }
+
+  @keyframes arrow {
+    0% {
+      bottom: -5px;
+    }
+
+    75% {
+      bottom: 5px;
+    }
+
+    100% {
+      bottom: -5px;
+    }
+  }
+
+  @-webkit-keyframes arrow {
+    0% {
+      bottom: -5px;
+    }
+
+    75% {
+      bottom: 5px;
+    }
+
+    100% {
+      bottom: -5px;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0);
+      opacity: 0;
+    }
+
+    8% {
+      -webkit-transform: scale(0);
+      opacity: 0;
+    }
+
+    15% {
+      -webkit-transform: scale(0.1);
+      opacity: 1;
+    }
+
+    30% {
+      -webkit-transform: scale(0.5);
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+    }
+  }
+
+  @-moz-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0);
+      opacity: 0;
+    }
+
+    8% {
+      -webkit-transform: scale(0);
+      opacity: 0;
+    }
+
+    15% {
+      -webkit-transform: scale(0.1);
+      opacity: 1;
+    }
+
+    30% {
+      -webkit-transform: scale(0.5);
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+    }
+  }
+</style>
+
+<script>
+
+  let btn = document.querySelector(".scrollToTopContainer");
+  const scrollToTopHandler = () => {
+    if (window.scrollY > 350) {
+      btn.className = "scrollToTopContainer";
+    } else {
+      btn.className = "HideElement scrollToTopContainer";
+    }
+    console.log('scrolled');
+  };
+  window.addEventListener("scroll", scrollToTopHandler);
+
+  document.getElementById("scrollToButton").addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>

@@ -1,0 +1,961 @@
+<%- include('includes/PRE.ejs') %>
+<%- include('includes/header.ejs') %>
+<%- include('includes/navbar.ejs') %>
+<%- include('includes/sidebar.ejs') %>
+  
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+    <style>
+      /* Add your styles here */
+      body {
+        background-color: #fff;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      input,
+      textarea {
+        background-color: #f5f5f5;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .dark-mode input,
+      .dark-mode textarea {
+        background-color: #555;
+        color: #fff;
+      }
+
+      .feedback {
+        height: 150px;
+        width: 500px;
+      }
+
+      .contactError {
+        color: aqua;
+        font-size: 14px;
+      }
+
+      .inputText::placeholder{
+        color: #fff;
+      }
+
+      .form-box {
+        width: 100%;
+      }
+
+      .input-title {
+        font-weight: 600 !important;
+        letter-spacing: .1rem !important;
+        word-spacing: .25rem !important;
+      }
+
+      input {
+        box-shadow: 16px 14px 20px #0003 !important;
+        background: #0008 !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+      }
+      .contact-box{
+        /* width: 50rem; */
+        padding: 0rem 2rem;
+        margin-top: 40px;
+      }
+      .contact-box i{
+        margin-top: 10px;
+        font-size: 25px;
+      }
+      /* .cards{
+        padding: 10px 33px;
+        width: max-content;
+      } */
+      .context{
+        height: 5rem;
+        transition: all .38s ease;
+      }
+      .context:hover{
+        transform: scale(1.1);
+      }
+
+      @media (min-width: 800px) {
+        .input-title {
+          font-size: 1.1rem !important;
+        }
+      }
+
+      .input::placeholder {
+        color: #fffd !important;
+      }
+    </style>
+    </head>
+      <main>
+        <header>
+          <div class="navbar">
+            <div class="nav-container">
+              <!-- Dark mode toggle button -->
+              <div
+                id="dark-mode-icon-mobile"
+                class="dark-mode-toggle dark-mode-icon"
+                onclick="toggleDarkMode()"
+              >
+                <i class="fa-sharp fa-solid fa-sun"></i>
+              </div>
+              <div class="logo-image">
+                <a href="/"
+                  ><img
+                    src="imagine-ai-low-resolution-logo-color-on-transparent-background.png"
+                    class="home-logo"
+                    alt="home-logo"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div class="nav-links hide-sm nav-style" id="mainNav">
+                <div class="left-nav-links navs">
+                  <div class="logo">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/' ? 'active' : '' %>"
+                      href="/"
+                      >HOME</a
+                    >
+                  </div>
+                  <div class="imagh">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/generateImg' ? 'active' : '' %>"
+                      href="/generateImg"
+                      >IMAGINE - AI</a
+                    >
+                  </div>
+                  <div class="abth">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/aboutUs' ? 'active' : '' %>"
+                      class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                      href="/aboutUs"
+                      >ABOUT - US</a
+                    >
+                  </div>
+                  <div class="conh">
+                    <a
+                      class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
+                      href="/contactUs"
+                      >CONTACT - US</a
+                    >
+                  </div>
+                  <!-- Rest of the nav links -->
+                <div class="team">
+                  <a class="AI white-color hover-effect <%= path === '/team' ? 'active' : '' %>" href="/team">COMMUNITY</a>
+                </div>
+      <!-- Rest of the right-nav-links -->
+      
+                </div>
+                <div class="right-nav-links">
+                  <!-- Dark mode toggle button -->
+                  <div
+                    id="dark-mode-icon-desktop"
+                    class="dark-mode-toggle dark-mode-icon"
+                    onclick="toggleDarkMode()"
+                  >
+                    <i class="fa-sharp fa-solid fa-sun"></i>
+                  </div>
+                  <div>
+                    <a
+                      class="AI white-color hover-effect"
+                      href="https://openai.com/dall-e-2/"
+                      target="_blank"
+                      >DALL.E 2 - OpenAI API</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a class="login AI white-color" id="header-btn2" href="/login"
+                  >Login</a
+                >
+              </div>
+              <div onclick="toggleNavbar()" class="barIcon hide-lg hover-effect">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </header>
+      
+        <style>
+          /*adjusting nav-bar elements*/
+          .nav-style {
+            display: flex;
+            justify-content: space-between;
+          }
+          .navs {
+            justify-content: space-evenly;
+          }
+          /*adding hover effects to each nav elements*/
+      
+          .nav-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+          }
+      
+          /* Light mode styles */
+          /* .light-mode {    } */
+          .AI {
+            display: inline-block;
+            padding: 10px;
+            margin-left: 25px;
+          }
+          /* Light mode styles
+          .light-mode {
+          } */
+      
+          /* Dark mode styles */
+          .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+          }
+      
+          /* Dark mode styles for navbar */
+          .dark-mode #navbar {
+            background-color: #121212;
+            color: #ffffff;
+          }
+      
+          /* Dark mode styles for the about section */
+          .dark-mode .about {
+            background-color: #121212;
+            color: #ffffff;
+          }
+      
+          /* Styles for the dark mode toggle button */
+          .dark-mode-toggle {
+            width: fit-content;
+            backdrop-filter: blur(4px);
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 999;
+          }
+      
+          .dark-mode-toggle i {
+            transition: transform 0.3s ease-in-out;
+            font-size: 1.1em;
+          }
+      
+          #dark-mode-icon-mobile {
+            position: absolute;
+            right: 20%;
+            display: none;
+          }
+      
+          #dark-mode-icon-desktop {
+            font-size: 1.1rem;
+            display: block;
+          }
+      
+          @media (max-width: 989px) {
+            #dark-mode-icon-mobile {
+              display: block;
+            }
+            #dark-mode-icon-desktop {
+              display: none;
+            }
+          }
+      
+          @media (max-width: 900px) {
+            .navbar {
+              display: none;
+            }
+      
+            #dark-mode-icon-mobile {
+              display: block;
+            }
+          }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <section class="Contact-Us">
+          <div class="contact-top" id="slide">
+            <h1>Contact Us</h1>
+            <h3>Let's Get in Touch to solve your Queries</h3>
+            <p class="contact-top-text">
+              The IMAGINE - AI, which is built using the OpenAI API library DALL-E 2, aims to solve the problem of
+              limited creativity and imagination. This is a fully mobile responsive image generator built with Node.js
+              and Express that uses OpenAI's Dall-E models to generate images.
+            </p>
+            <div class="contact-middle" id="slide">
+              <div class="content-top">
+                <div class="image-section">
+                  <img loading="lazy" src="contactus.webp" alt="contact-us" style="width:500px;">
+                </div>
+                <div  class="contact-box">
+                  <div style="width: 100%;" class="context" id="slide">
+                    <div class="cards">
+                      <a href="">
+                        <i class="fa-solid fa-phone"></i>
+                      </a>
+                      <p class="contact-text" id="slide">
+                        +91-93047*****
+                      </p>
+                    </div>
+                  </div>
+                  <div style="width: 100%;" class="context" id="slide">
+                    <div  class="cards">
+                      <a href="">
+                        <i class="fa-solid fa-envelope"></i>
+                      </a>
+                      <p class="contact-text" id="slide">
+                        surajpratap20002003@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                  <div style="width: 100%;" class="context" id="slide">
+                    <div class="cards">
+                      <a href="">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </a>
+                      <p class="contact-text" id="slide">
+                        Patna, Bihar, India
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b-2"
+                style="display: flex;">
+                <form class="form-box" id="contactform" method="post">
+                  <div class="container-block form-wrapper" style="padding-bottom:40px; width: 100%;">
+                    <div class="responsive-container-block" style="display: grid; gap: 1.25rem;">
+                      <div class="wrapping" style="flex-direction: column; gap: 1.25rem;">
+                        <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 " id="i10mt-6">
+                          <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                            First Name
+                          </p>
+
+                          <input style="width: 100%;" class="input inputText" id="ijowk-6" name="FirstName" placeholder="John"
+
+                            type="text" pattern="[A-Za-z]{3,}" onkeyup="handleChange(event)" required>
+                          <p class="hidden contactError" id="FirstNameError">
+                            First Name must be atleast 3 characters long.
+                          </p>
+                        </div>
+                        <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                          <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                            Last Name
+                          </p>
+
+                          <input class="input inputText" id="indfi-4" name="LastName" placeholder="Doe" type="text"
+
+                            pattern="[A-Za-z]{3,}" required onkeyup="handleChange(event)">
+                          <p class="hidden contactError" id="LastNameError">
+                            Last Name must be atleast 3 characters long.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Email
+                        </p>
+
+                        <input class="input inputText" id="ipmgh-6" name="email" placeholder="johndoe@gmail.com" type="text"
+
+                          onkeyup="handleChange(event)" required>
+                        <p class="hidden contactError" id="emailError">
+                          Please enter Valid Email.
+                        </p>
+                      </div>
+                      <div class="responsive-cell-block  wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Phone Number
+                        </p>
+                        <input class="input inputText" id="imgis-5" name="PhoneNumber" placeholder="+91 9304******" type="text"
+                          onkeyup="handleChange(event)" required>
+                        <p class="hidden contactError" id="PhoneNumberError">
+                          Please enter Valid Phone Number.
+                        </p>
+                      </div>
+                      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-6">
+                        <p class="text-blk input-title" style="margin: 5px 0; text-transform: uppercase; text-shadow: 0 0 5px #0009;">
+                          Give your Valuable Feedback
+                        </p>
+                        <input class="textinput feedback inputText" id="i5vyy-6" type="text"
+                          placeholder="Type your Feedback" name="feedback" onkeyup="handleChange(event)"
+                          required>
+                        <p class="hidden contactError" id="feedbackError">
+                          Describe your message within 10 to 50 words.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrapper" style="display: contents;">
+                    <button class="btn" aria-label="submit" id="phone-link1">
+                      <span class="btn-pos Span">Submit</span>
+                      <div class="flow"></div>
+                    </button>
+
+
+
+
+                    <style>
+                      /*==================== GOOGLE FONTS ====================*/
+                      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+                      /*==================== VARIABLES CSS ====================*/
+                      :root {
+                        /*========== Colors ==========*/
+                        --text-color: #000000;
+                        --bg-color: #03a9f4;
+
+                        /*========== Font and typography ==========*/
+                        --body-font: "Poppins", sans-serif;
+                        --normal-font-size: 0.938rem;
+                      }
+
+                      @media screen and (min-width: 968px) {
+                        :root {
+                          --normal-font-size: 1rem;
+                        }
+                      }
+
+                      /*==================== BASE ====================*/
+                      *,
+                      *:after,
+                      *:before {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        transition: all 0.2s ease;
+                      }
+
+
+                      /*==================== REUSABLE CSS CLASSES ====================*/
+                      .container {
+                        max-width: 1024px;
+                        margin: 0 auto;
+                        padding: 3rem 0;
+                        min-height: 100vh;
+                        display: grid;
+                        place-items: center;
+
+                      }
+
+                      .sec__container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        max-width: 90%;
+                        margin: 40px auto;
+                        justify-content: center;
+                        z-index: 1;
+                      }
+
+                      /*==================== SOCIAL SHARE ====================*/
+                      .share__box {
+                        --clr-primary: #03a9f4;
+                        --clr-accent: #060606;
+                        --clr-icon: #878787;
+                        --clr-border: #ebedf9;
+                        --clr-light: #ffffff;
+                        --clr-dark: #111111;
+                        --transition: all 0.2s ease;
+
+                        --clr-facebook: #1877f2;
+                        --clr-twitter: #46c1f6;
+                        --clr-instagram: #e1306c;
+                        --clr-whatsapp: #25d366;
+                        --clr-linkedin: #0072b1;
+
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 400px;
+                        width: 100%;
+                        border-radius: 15px;
+                        text-align: center;
+                        padding: 20px;
+                        background-color: var(--clr-light);
+                      }
+
+                      ::selection {
+                        background-color: var(--clr-primary);
+                        color: var(--clr-light);
+                      }
+
+                      .share__box header {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid var(--clr-border);
+                      }
+
+                      .share__box header h2 {
+                        font-size: 1.4rem;
+                        color: var(--clr-accent);
+                      }
+
+                      .share__box .content {
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: 15px;
+                      }
+
+                      .share__box .content p {
+                        font-size: 1rem;
+                        color: var(--clr-accent);
+                      }
+
+                      .share__box .content .social__links {
+                        display: flex;
+                        flex: 1;
+                        width: 100%;
+                        gap: 10px;
+                      }
+
+                      .share__box .content .social__links .social__link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 2rem;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 4px;
+                        text-decoration: none;
+                        border: 1px solid var(--clr-border);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .social__links [data-attr="facebook"] {
+                        color: var(--clr-facebook);
+                      }
+
+                      .share__box .content .social__links [data-attr="facebook"].active,
+                      .share__box .content .social__links [data-attr="facebook"]:hover {
+                        border-color: var(--clr-facebook);
+                      }
+
+                      .share__box .content .social__links [data-attr="twitter"] {
+                        color: var(--clr-twitter);
+                      }
+
+                      .share__box .content .social__links [data-attr="twitter"].active,
+                      .share__box .content .social__links [data-attr="twitter"]:hover {
+                        border-color: var(--clr-twitter);
+                      }
+
+                      .share__box .content .social__links [data-attr="instagram"] {
+                        color: var(--clr-instagram);
+                      }
+
+                      .share__box .content .social__links [data-attr="instagram"].active,
+                      .share__box .content .social__links [data-attr="instagram"]:hover {
+                        border-color: var(--clr-instagram);
+                      }
+
+                      .share__box .content .social__links [data-attr="whatsapp"] {
+                        color: var(--clr-whatsapp);
+                      }
+
+                      .share__box .content .social__links [data-attr="whatsapp"].active,
+                      .share__box .content .social__links [data-attr="whatsapp"]:hover {
+                        border-color: var(--clr-whatsapp);
+                      }
+
+                      .share__box .content .social__links [data-attr="linkedin"] {
+                        color: var(--clr-linkedin);
+                      }
+
+                      .share__box .content .social__links [data-attr="linkedin"].active,
+                      .share__box .content .social__links [data-attr="linkedin"]:hover {
+                        border-color: var(--clr-linkedin);
+                      }
+
+                      .share__box .content .field__wrp {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0 80px;
+                        border-radius: 4px;
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp.active {
+                        border-color: var(--clr-primary);
+                      }
+
+                      .share__box .content .field__wrp i {
+                        width: 20px;
+                        color: var(--clr-icon);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp.active i {
+                        color: var(--clr-primary);
+                      }
+
+                      .share__box .content .field__wrp #inputField {
+                        flex: 1;
+                        padding: 0 10px;
+                        height: 50px;
+                        border: none;
+                        outline: none;
+                        font-size: 1rem;
+                        max-width: calc(100% - 110px);
+                        color: var(--clr-accent);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp.active #inputField {
+                        color: var(--clr-primary);
+                      }
+
+                      .share__box .content .field__wrp #copyBtn {
+                        border-radius: 4px;
+                        padding: 8px 15px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        width: 160px;
+                        font-weight: 700;
+                        border: 2px solid var(--clr-primary);
+                        color: var(--clr-light);
+                        background: var(--clr-primary);
+                        transition: var(--transition);
+                      }
+
+                      .share__box .content .field__wrp #copyBtn:hover {
+                        background: var(--clr-light);
+                        color: var(--clr-primary);
+                      }
+
+                      #copyBtn:hover {
+                        background: var(--clr-light);
+                        color: var(--clr-primary);
+                      }
+
+                      /*==================== MEDIA QUERIES ====================*/
+
+                      /* For small devices */
+                      @media screen and (min-width: 500px) {}
+
+                      /* For medium devices */
+                      @media screen and (min-width: 767px) {}
+
+                      body::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 50%;
+                        border-radius: 100%;
+                        bottom: -50%;
+                        left: 25%;
+                        box-shadow: 0 50px 400px rgb(48, 51, 107);
+                        transform: rotate(-180deg);
+                      }
+
+                      body::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 50%;
+                        border-radius: 100%;
+                        top: -50%;
+                        left: 25%;
+                        box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        animation: animate_1 10s infinite;
+                      }
+
+                      /* gradient-bg-style */
+                      .gradient-bg::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 100%;
+                        top: 0%;
+                        left: -50%;
+                        box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        animation: animate_2 10s infinite;
+                      }
+
+                      .gradient-bg::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 100%;
+                        top: 0%;
+                        right: -50%;
+                        bottom: -1000px;
+                        box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        animation: animate_3 10s infinite;
+                      }
+
+                      /* animate-1 */
+                      @keyframes animate_1 {
+                        25% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 150px 300px rgb(142, 68, 173);
+                        }
+
+                        75% {
+                          box-shadow: 0 150px 300px rgba(93, 248, 240, 1);
+                        }
+
+                        100% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+                      }
+
+                      @-webkit-keyframes animate_1 {
+                        25% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 150px 300px rgb(142, 68, 173);
+                        }
+
+                        75% {
+                          box-shadow: 0 150px 300px rgba(93, 248, 240, 1);
+                        }
+
+                        100% {
+                          box-shadow: 0 150px 300px rgba(243, 86, 146, 1);
+                        }
+                      }
+
+                      /* animate-2 */
+                      @keyframes animate_2 {
+                        25% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+                      }
+
+                      @-webkit-keyframes animate_2 {
+                        25% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+                      }
+
+                      /* animate-3 */
+                      @keyframes animate_3 {
+                        25% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+                      }
+
+                      @-webkit-keyframes animate_3 {
+                        25% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+
+                        50% {
+                          box-shadow: 0 0 350px 300px rgba(243, 86, 146, 0.7);
+                        }
+
+                        75% {
+                          box-shadow: 0 0 350px 300px rgb(142, 68, 173);
+                        }
+
+                        100% {
+                          box-shadow: 0 0 350px 100px rgba(93, 248, 240, 1);
+                        }
+                      }
+                    </style>
+
+                    <script>
+                      // getting all attributes
+                      const shareBox = document.querySelector(".share__box"),
+                        socialLink = document.querySelectorAll(".social__link"),
+                        shareField = document.querySelector(".field__wrp"),
+                        copyBtn = document.querySelector("#copyBtn");
+                      var shareFieldInput = document.querySelector("#inputField");
+
+                      for (let i = 0; i < socialLink.length; i++) {
+                        socialLink[i].addEventListener("click", () => {
+                          for (let j = 0; j < socialLink.length; j++) {
+                            if (socialLink[j].classList.contains("active")) {
+                              socialLink[j].classList.remove("active");
+                            }
+                          }
+
+                          var socialLinkValue = socialLink[i].dataset.link; //getting social link value from data-link attribute
+                          shareFieldInput.setAttribute("value", socialLinkValue); //setting social link value from data-link attribute to input field value
+                          socialLink[i].classList.add("active");
+                          shareField.classList.add("active");
+                          for (let k = 0; k < socialLink.length; k++) {
+                            if (document.execCommand("copy")) {
+                              //if selected value is copied
+                              copyBtn.onclick = () => {
+                                shareFieldInput.select(); //select input value
+                                document.execCommand("copy");
+                                shareField.classList.add("active");
+                                copyBtn.innerText = "Copied";
+                                var curInputVal = shareFieldInput.value;
+                                setTimeout(() => {
+                                  shareField.classList.remove("active");
+                                  copyBtn.innerText = "Copy";
+                                  shareFieldInput.setAttribute("value", "example.com/share-link");
+                                  socialLink[i].classList.remove("active");
+                                  window.getSelection().removeAllRanges();
+                                }, 5000); 
+                              };
+                            }
+                          }
+                        });
+                      }
+
+
+                    </script>
+
+
+
+
+
+                  </div>
+              </div>
+              </form>
+            </div>
+          </div>
+
+          <%- include('includes/footer.ejs') %>
+            <!-- Over riding footer style -->
+            <style>
+              footer {
+                z-index: -1;
+              }
+
+              /* Light mode styles */
+              .light-mode {}
+
+              /* Dark mode styles */
+              .dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+              }
+
+              /* Dark mode styles for navbar */
+              .dark-mode #navbar {
+                background-color: #121212;
+                color: #ffffff;
+              }
+
+              /* Dark mode styles for the about section */
+              .dark-mode .about {
+                background-color: #121212;
+                color: #ffffff;
+              }
+
+              /* Styles for the dark mode toggle button */
+              .dark-mode-toggle {
+                font-size: 24px;
+                cursor: pointer;
+              }
+
+              .dark-mode-toggle i {
+                transition: transform 0.3s ease-in-out;
+                font-size: 1.1em;
+              }
+            </style>
+
+            <script>
+              function toggleDarkMode() {
+                const body = document.body;
+                const navbar = document.querySelector(".navbar");
+                const aboutSection = document.querySelector(".about");
+                const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+                const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
+                var darkModeIconCollection = Array.from(darkModeIcon);
+
+                body.classList.toggle("dark-mode");
+                navbar.classList.toggle("dark-mode");
+                aboutSection.classList.toggle("dark-mode");
+                // darkModeToggle.classList.toggle("dark");
+
+                darkModeIconCollection.map((darkIcon) => {
+                  if (darkIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+                    darkIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i>';
+                  } else {
+                    darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                  }
+                });
+              }
+            </script>
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "rRGhO-tiXZz89Yeg1wTKc",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="fZnpFqGqi_Ol7GFejzNXo"
+    domain="www.chatbase.co"
+    defer>
+    </script>  
+    <div class="gtranslate_wrapper"></div>
+
+<script>
+
+window.gtranslateSettings = {
+  "default_language":"en",
+  "detect_browser_language":true,
+  "wrapper_selector":".gtranslate_wrapper"
+}
+
+</script>
+
+<script 
+  src="https://cdn.gtranslate.net/widgets/latest/float.js"
+  defer
+></script>
+
+    </main>

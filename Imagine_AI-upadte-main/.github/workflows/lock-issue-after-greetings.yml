@@ -1,0 +1,44 @@
+name: Lock Issue with Greetings
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add Comment
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue } = context.payload;
+            const author = issue.user.login;
+            const issueNumber = issue.number;
+            const comment = `Hello @${author}! \n Thank you for raising this issue. \n\nPlease make sure to follow our [Contributing Guidelines.](https://github.com/SurajPratap10/Imagine_AI/blob/main/CONTRIBUTING-GUIDELINES.md) \nDon't forget to ⭐ our [Imagine AI.](https://github.com/SurajPratap10/Imagine_AI) \n\nOur review team will carefully assess the issue and reach out to you soon!\n We appreciate your patience!`;
+            const { owner, repo } = context.repo;
+
+            await github.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: issueNumber,
+              body: comment
+            });
+
+      - name: Lock Issue
+        uses: dessant/repo-lockdown@v3
+        with:
+          close-issue: false
+          process-only: "issues"
+          issue-labels: "🔒 locked"
+          exclude-issue-labels: "gssoc23"
+          skip-closed-issue-comment: true
+          issue-comment: >
+            To reduce notifications, issues are locked. Your issue will be unlocked when we add the label, `gssoc23`.
