@@ -9,26 +9,28 @@
     <style>
         body {
             font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-            background-color: #f9f9f9;
+            background-color: #5c5e3f;
             margin: 0;
-            padding: 0;
+            padding: auto;
         }
 
         .donation-card {
             max-width: 600px;
             margin: 50px auto;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgb(208, 195, 131);
+            box-shadow: 0 4px 8px rgba(149, 193, 212, 0.1);
             border-radius: 10px;
             padding: 30px;
+         /* display: flex;
+         justify-content: space-between; */
             text-align: center;
         }
 
-        .donation-card h2 {
-            color: #333;
-        }
-
         .donation-card h3 {
+            color: hsl(0, 7%, 28%);
+        }
+`
+        .donation-card h4 {
             margin-top: 0;
             color: #28a745;
         }
@@ -38,7 +40,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-right: 30px ;
+            margin-right: 35px ;
         }
 
         .toggle-label {
@@ -74,9 +76,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
+            background-color: #1f1515;
+            transition: .2s;
+            border-radius: 20px;
         }
 
         .slider:before {
@@ -86,13 +88,13 @@
             width: 26px;
             left: 4px;
             bottom: 4px;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             transition: .4s;
             border-radius: 50%;
         }
 
         input:checked + .slider {
-            background-color: #28a745;
+            background-color: #5dcf76;
         }
 
         input:checked + .slider:before {
@@ -112,7 +114,8 @@
         }
 
         .amount-buttons button:hover {
-            background-color: #0056b3;
+            background-color: #576ae4;
+            color: #1f1515;
         }
 
 
@@ -131,6 +134,9 @@
         .input-container {
             text-align: left;
             margin-bottom: 20px;
+            padding: auto;
+font-family: 'Times New Roman', Times, serif;
+            overflow: hidden;
         }
 
         .input-container label {
@@ -167,7 +173,8 @@
         /* Terms and Conditions */
         .terms {
             font-size: 14px;
-            color: #777;
+            font-style: italic;
+            color: #302828;
             margin-top: 20px;
             text-align: center;
         }
@@ -178,8 +185,8 @@
 
     <div class="donation-card">
         <!-- Title -->
-        <h3><b>Together, We Can Heal the World</b></h3>
-        <h2>Select Gift Frequency</h2>
+        <h2><b>Together, We Can Heal the World</b></h2>
+        <h3>Select Gift Frequency</h3>
 
         <!-- Toggle Button for Frequency -->
         <div class="toggle-container">
@@ -193,7 +200,7 @@
 
         <!-- Donation Amount Buttons -->
         <h2>Select Amount</h2>
-        <div class="amount-buttons">
+        <div class="amount-buttons" >
             <button type="button" onclick="selectAmount(10)">₹10</button>
             <button type="button" onclick="selectAmount(50)">₹50</button>
             <button type="button" onclick="selectAmount(100)">₹100</button>
