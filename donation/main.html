@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="shortcut icon" href="https://biobranch.vercel.app/images/favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .donation-card {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .donation-card h2 {
+            color: #333;
+        }
+
+        .donation-card h3 {
+            margin-top: 0;
+            color: #28a745;
+        }
+
+        /* Toggle Button for Frequency */
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 30px ;
+        }
+
+        .toggle-label {
+            font-size: 16px;
+            margin-right: 15px;
+            color: #555;
+            margin-left: 20px;
+        }
+
+        .toggle-label1{
+            font-size: 16px;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #28a745;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Donation Amount Buttons */
+        .amount-buttons button {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .amount-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+
+        /* Checkbox for transaction coverage */
+        .checkbox-container {
+            margin: 28px ;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Input fields with labels */
+        .input-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .input-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Donate Now Button */
+        .donate-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Terms and Conditions */
+        .terms {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="donation-card">
+        <!-- Title -->
+        <h3><b>Together, We Can Heal the World</b></h3>
+        <h2>Select Gift Frequency</h2>
+
+        <!-- Toggle Button for Frequency -->
+        <div class="toggle-container">
+            <span class="toggle-label">One-Time</span>
+            <label class="switch">
+                <input type="checkbox" id="giftFrequency" onchange="toggleFrequencyLabel()">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label1" id="frequencyLabel">Monthly</span>
+        </div>
+
+        <!-- Donation Amount Buttons -->
+        <h2>Select Amount</h2>
+        <div class="amount-buttons">
+            <button type="button" onclick="selectAmount(10)">₹10</button>
+            <button type="button" onclick="selectAmount(50)">₹50</button>
+            <button type="button" onclick="selectAmount(100)">₹100</button>
+            <button type="button" onclick="selectAmount(200)">₹200</button>
+            <button type="button" onclick="selectAmount(500)">₹500</button>
+            <button type="button" onclick="selectAmount(1000)">₹1000</button>
+        </div>
+
+        <!-- Checkbox for transaction coverage -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="coverTransaction">
+            <label for="coverTransaction">Yes, I'll generously add ₹50 each month to cover the transaction fees.</label>
+        </div>
+
+        <!-- Name and Email Input with Labels -->
+        <div class="input-container">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="input-container">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Donate Now Button -->
+        <button class="donate-btn" onclick="donateNow()">Donate Now</button>
+
+        <!-- Terms and Conditions -->
+        <p class="terms">By clicking Donate Now, you agree to our <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.</p>
+    </div>
+
+    <script>
+        // JavaScript to handle the toggle button for gift frequency
+        function toggleFrequencyLabel() {
+            const toggle = document.getElementById('giftFrequency');
+            const label = document.getElementById('frequencyLabel');
+
+            if (toggle.checked) {
+                label.textContent = "Monthly";
+            }
+                //  else {
+            //     label.textContent = "One-Time";
+            // }
+        }
+
+        // JavaScript to handle selecting the donation amount
+        let selectedAmount = 0;
+
+        function selectAmount(amount) {
+            selectedAmount = amount;
+            alert("You selected ₹" + amount);
+        }
+
+        // JavaScript to handle the donation process
+        function donateNow() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const coverTransaction = document.getElementById('coverTransaction').checked;
+            const frequency = document.getElementById('giftFrequency').checked ? 'Monthly' : 'One-Time';
+
+            if (!name || !email || selectedAmount === 0) {
+                alert("Please fill out all fields and select an amount.");
+                return;
+            }
+
+            let donationMessage = `Name: ${name}\nEmail: ${email}\nDonation Frequency: ${frequency}\nAmount: ₹${selectedAmount}`;
+            if (coverTransaction) {
+                donationMessage += "\nYou opted to cover ₹50 for transaction fees.";
+            }
+
+            alert("Donation Submitted:\n\n" + donationMessage);
+        }
+    </script>
+
+</body>
+</html>
