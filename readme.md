@@ -240,7 +240,6 @@ git push -u origin <your_branch_name>
 
 ---
 
-
 ## Stargazers ❤️
 
 <div align='left'>
@@ -261,5 +260,3 @@ git push -u origin <your_branch_name>
 
   <p align="right"><a href="#top">Back to Top</a></p>
   </div>
-
-  
