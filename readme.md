@@ -238,5 +238,28 @@ git push -u origin <your_branch_name>
 
 <a href="https://github.com/SurajPratap10/Imagine_AI/graphs/contributors"><img src="https://contrib.rocks/image?repo=SurajPratap10/Imagine_AI"></a>
 
+---
+
+
+## Stargazers ❤️
+
+<div align='left'>
+
+[![Stargazers repo roster for SurajPratap10/Imagine_AI](https://reporoster.com/stars/dark/SurajPratap10/Imagine_AI)](https://github.com/SurajPratap10/Imagine_AI/stargazers)
+
+</div>
+
+## Forkers ❤️
+
+[![Forkers repo roster for SurajPratap10/Imagine_AI](https://reporoster.com/forks/dark/SurajPratap10/Imagine_AI)](https://github.com/SurajPratap10/Imagine_AI/network/members)
+
+---
+
+<h3 align="center"> Happy Coding ❤️🚀</h3>
+
+---
+
   <p align="right"><a href="#top">Back to Top</a></p>
   </div>
+
+  
