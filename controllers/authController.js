@@ -3,91 +3,85 @@ const passwordValidator = require("password-validator");
 const userModel = require("../models/users");
 
 exports.sendToken = async (user, res) => {
-  const token = user.getSignedToken(res);
-  res.status(201).json({ user, token });
+  try {
+    const token = user.getSignedToken(); // Ensure getSignedToken is defined in user model
+    res.status(201).json({ user, token });
+  } catch (error) {
+    console.error("Token generation error:", error);
+    res.status(500).json({ error: "Failed to generate token" });
+  }
 };
+
 exports.signupController = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
+    // Name validation
     if (name.length < 5) {
-      res
-        .status(400)
-        .json({ error: "invalid name!!!! Name should be atleast 5 char long" });
-      return;
+      return res.status(400).json({ error: "Name should be at least 5 characters long." });
     }
 
+    // Email validation
     if (!emailValidator.validate(email)) {
-      res.status(400).json({ error: "invalid email!!!!" });
-      return;
+      return res.status(400).json({ error: "Invalid email address." });
     }
-    // validate password as--> Min 8 char, one upper case,one lowercase,one digit
 
-    const passwordSchema = new passwordValidator();
-    passwordSchema
-      .is()
-      .min(8) // Minimum length 8
-      .is()
-      .max(100) // Maximum length 100
-      .has()
-      .uppercase() // Must have uppercase letters
-      .has()
-      .lowercase() // Must have lowercase letters
-      .has()
-      .digits(1); // Must have at least 1 digits
+    // Password validation: Min 8 characters, at least one uppercase, one lowercase, one digit
+    const passwordSchema = new passwordValidator()
+      .is().min(8)
+      .is().max(100)
+      .has().uppercase()
+      .has().lowercase()
+      .has().digits(1);
 
     if (!passwordSchema.validate(password)) {
-      res.status(400).json({
-        error:
-          "Password Should be of atleast 8 char long and should contain 1 upper case, 1 lower case and 1 digit",
+      return res.status(400).json({
+        error: "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit."
       });
-      return;
     }
 
-    const emailExists = await userModel.find({ email });
-
-    if (emailExists.length > 0) {
-      console.log(emailExists);
-      //email already exists
-      res.status(409).json({ error: "Email already exists" });
-    } else {
-      const user = await userModel.create({ name, email, password });
-      this.sendToken(user, res);
+    // Check if email already exists
+    const existingUser = await userModel.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({ error: "Email already exists" });
     }
+
+    // Create new user and send token
+    const user = await userModel.create({ name, email, password });
+    return this.sendToken(user, res);
+
   } catch (error) {
-    console.log("Error: " + error);
-    res.status(404).json({ error: "Something Went Wrong!!! Try Again" });
+    console.error("Signup error:", error);
+    return res.status(500).json({ error: "An error occurred. Please try again." });
   }
 };
 
 exports.loginController = async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    // Validate email format
     if (!emailValidator.validate(email)) {
-      res.status(400).json({ error: "invalid email!!!!" });
-      return;
+      return res.status(400).json({ error: "Invalid email address." });
     }
-    const user_list = await userModel.find({ email });
 
-    if (user_list.length === 0) {
-      res.status(400).json({ error: "No such Email Exists!!!!" });
-      return;
-    } else {
-      //email is in our DB..let's check for matching password
-      const user = user_list[0];
-      const matched = await user.matchPassword(password);
-
-      if (!matched) {
-        //invalid-password
-        res.status(400).json({ error: "Invalid Password" });
-        return;
-      } else {
-        //if matched..get the tokens
-        this.sendToken(user, res);
-      }
+    // Check if email exists
+    const user = await userModel.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "No user found with this email." });
     }
+
+    // Check if password matches
+    const isMatch = await user.matchPassword(password);
+    if (!isMatch) {
+      return res.status(400).json({ error: "Invalid password." });
+    }
+
+    // Send token if login is successful
+    return this.sendToken(user, res);
+
   } catch (error) {
-    console.log("Error: " + error);
-    res.status(500).json({ error: "Someting Went Wrong!!! Try Again" });
+    console.error("Login error:", error);
+    return res.status(500).json({ error: "An error occurred. Please try again." });
   }
 };
