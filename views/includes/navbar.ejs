@@ -47,7 +47,13 @@
               <a
                 class="AI white-color hover-effect <%= path === '/contactUs' ? 'active' : '' %>"
                 href="/contactUs"
-                >CONTACT - US</a
+                >CONTACT - US</a>
+							</div>
+            <div class="feedbackh">
+              <a
+                class="AI white-color hover-effect <%= path === '/feedback' ? 'active' : '' %>"
+                href="/feedback"
+                >FEEDBACK</a
               >
             </div>
             <!-- Rest of the nav links -->
@@ -202,27 +208,33 @@
     
 
     function toggleDarkMode() {
-      const body = document.body;
-      const navbar = document.querySelector(".navbar");
-      const aboutSection = document.querySelector(".about");
-      const darkModeToggle = document.querySelector(".dark-mode-toggle");
+    const body = document.body;
+    const navbar = document.querySelector(".navbar");
+    const sections = document.querySelectorAll("main ,section, .about");
+    const darkModeIcon = document.querySelectorAll(".dark-mode-icon i");
 
-      const darkModeIcon = document.getElementsByClassName("dark-mode-icon");
-      var darkModeIconCollection = Array.from(darkModeIcon);
+    body.classList.toggle("dark-mode");
+    navbar.classList.toggle("dark-mode");
+    sections.forEach(section => {
+      section.classList.toggle("dark-mode");
+    });
 
-      body.classList.toggle("dark-mode");
-      navbar.classList.toggle("dark-mode");
-      aboutSection.classList.toggle("dark-mode");
-      // darkModeToggle.classList.toggle("dark");
+    darkModeIcon.forEach(icon => {
+      icon.classList.toggle("fa-sun");
+      icon.classList.toggle("fa-moon");
+    });
 
-      darkModeIconCollection.map((darkIcon) => {
-        if (darkIcon.innerHTML === '<i class="fa-solid fa-moon" aria-hidden="true"></i>') {
-          darkIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        } else {
-          darkIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        }
-      });
+    // Store dark mode preference in local storage
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+  }
+
+  // On page load, apply the theme based on local storage
+  document.addEventListener("DOMContentLoaded", () => {
+    const isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+    if (isDarkMode) {
+      toggleDarkMode(); // Apply dark mode if it was enabled
     }
+  });
   </script>
 
 </body>

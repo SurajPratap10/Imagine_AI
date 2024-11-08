@@ -34,6 +34,7 @@ router.get("/login", (req, res, next) => {
 router.get("/signup", (_req, res, _next) => {
   res.render("signup", { path: "/signup" });
 });
+
 router.get("/slider", (_req, res, _next) => {
   res.render("slider", { path: "/slider" });
 });
@@ -41,4 +42,21 @@ router.get("/slider", (_req, res, _next) => {
 router.get("/privacypolicy", (req, res, next) => {
   res.render("privacypolicy", { path: "privacypolicy" });
 });
+
+// Render forgot password page
+router.get("/forgot-password", (req, res) => {
+  res.render("forgot-password", { path: "/forgot-password" });
+});
+
+// Handle forgot password form submission
+router.post("/forgot-password", (req, res) => {
+  const { email } = req.body;
+  // Implement password recovery logic here (e.g., send recovery email)
+  res.redirect("/login");
+});
+
+router.get("/feedback", (_req, res, next) => {
+  res.render("feedback", { path: "/feedback" });
+});
+
 module.exports = router;
