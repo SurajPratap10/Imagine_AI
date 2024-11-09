@@ -12043,3 +12043,22 @@ section .container2 {
   margin-bottom: 20px;
 }
 
+.email-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.email-input:hover {
+  transform: translateZ(5px) scale(1.02); /* Creates a 3D lift effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.email-input:focus {
+  border-color: #4a90e2; /* Optional: Changes border color on focus */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Slightly more intense shadow on focus */
+}
