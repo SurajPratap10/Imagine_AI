@@ -26,7 +26,7 @@
     "express-session": "^1.17.3",
     "gsap": "^3.12.5",
     "hbs": "^4.2.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.0",
     "nodemailer": "^6.9.15",
