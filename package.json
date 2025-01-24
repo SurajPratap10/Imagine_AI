@@ -24,7 +24,7 @@
     "email-validator": "^2.0.4",
     "express": "^4.21.1",
     "express-session": "^1.17.3",
-    "gsap": "^3.12.5",
+    "gsap": "^3.12.7",
     "hbs": "^4.2.0",
     "husky": "^9.1.6",
     "jsonwebtoken": "^9.0.2",
