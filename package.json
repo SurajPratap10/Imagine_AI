@@ -23,7 +23,7 @@
     "ejs": "^3.1.9",
     "email-validator": "^2.0.4",
     "express": "^4.21.1",
-    "express-session": "^1.17.3",
+    "express-session": "^1.18.2",
     "gsap": "^3.12.5",
     "hbs": "^4.2.0",
     "husky": "^9.1.6",
