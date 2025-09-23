@@ -28,7 +28,7 @@
     "hbs": "^4.2.0",
     "husky": "^9.1.6",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.8.0",
+    "mongoose": "^8.18.2",
     "nodemailer": "^6.9.15",
     "openai": "^4.69.0",
     "passport": "^0.6.0",
