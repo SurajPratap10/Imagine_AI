@@ -40,6 +40,6 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^19.2.2",
     "jest": "^29.7.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.11"
   }
 }
