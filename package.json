@@ -31,7 +31,7 @@
     "mongoose": "^8.8.0",
     "nodemailer": "^7.0.11",
     "openai": "^4.69.0",
-    "passport": "^0.6.0",
+    "passport": "^0.7.0",
     "passport-google-oauth": "^2.0.0",
     "password-validator": "^5.3.0",
     "vanilla-toast": "^0.5.0"
